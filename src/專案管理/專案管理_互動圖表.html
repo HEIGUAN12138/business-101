@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>專案管理互動工具集</title>
+    <title>项目管理交互工具集</title>
     <style>
         * {
             margin: 0;
@@ -403,80 +403,80 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>專案管理互動工具集</h1>
-            <p>五種專案管理工具的實踐應用</p>
+            <h1>项目管理交互工具集</h1>
+            <p>五种项目管理工具的实践应用</p>
         </div>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab(0)">甘特圖建構器</button>
-            <button class="tab-button" onclick="switchTab(1)">關鍵路徑分析</button>
-            <button class="tab-button" onclick="switchTab(2)">實獲值儀表板</button>
+            <button class="tab-button active" onclick="switchTab(0)">甘特图建构器</button>
+            <button class="tab-button" onclick="switchTab(1)">关键路径分析</button>
+            <button class="tab-button" onclick="switchTab(2)">实获值仪表板</button>
             <button class="tab-button" onclick="switchTab(3)">敏捷Sprint看板</button>
-            <button class="tab-button" onclick="switchTab(4)">風險評估矩陣</button>
+            <button class="tab-button" onclick="switchTab(4)">风险评估矩阵</button>
         </div>
 
-        <!-- Tab 1: 甘特圖建構器 -->
+        <!-- Tab 1: 甘特图建构器 -->
         <div class="tab-content active">
-            <h2 class="section-title">甘特圖建構器</h2>
-            <p>輸入任務資訊，自動生成專業甘特圖</p>
+            <h2 class="section-title">甘特图建构器</h2>
+            <p>输入任务信息，自动生成专业甘特图</p>
 
             <div class="input-group">
-                <label>任務名稱</label>
+                <label>任务名称</label>
                 <input type="text" id="taskName" placeholder="例如：需求分析">
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                 <div class="input-group">
-                    <label>開始周（1-12）</label>
+                    <label>开始周（1-12）</label>
                     <input type="number" id="startWeek" min="1" max="12" value="1">
                 </div>
                 <div class="input-group">
-                    <label>持續周數</label>
+                    <label>持续周数</label>
                     <input type="number" id="duration" min="1" max="12" value="2">
                 </div>
             </div>
 
             <div class="button-group">
-                <button onclick="addGanttTask()">新增任務</button>
+                <button onclick="addGanttTask()">添加任务</button>
                 <button onclick="clearGanttTasks()" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">清除所有</button>
             </div>
 
             <div class="chart-container">
-                <h3 style="margin-bottom: 20px; color: #333;">專案進度表</h3>
+                <h3 style="margin-bottom: 20px; color: #333;">项目进度表</h3>
                 <div class="gantt-chart" id="ganttChart"></div>
             </div>
 
             <div class="output-box" id="ganttInfo"></div>
         </div>
 
-        <!-- Tab 2: 關鍵路徑分析 -->
+        <!-- Tab 2: 关键路径分析 -->
         <div class="tab-content">
-            <h2 class="section-title">關鍵路徑法（CPM）分析器</h2>
-            <p>輸入活動及依賴關係，計算關鍵路徑和浮動時間</p>
+            <h2 class="section-title">关键路径法（CPM）分析器</h2>
+            <p>输入活动及依赖关系，计算关键路径和浮动时间</p>
 
             <div class="input-group">
-                <label>活動名稱</label>
+                <label>活动名称</label>
                 <input type="text" id="actName" placeholder="例如：A">
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
                 <div class="input-group">
-                    <label>持續期（天）</label>
+                    <label>持续期（天）</label>
                     <input type="number" id="duration_cpm" min="1" value="5">
                 </div>
                 <div class="input-group">
-                    <label>前置活動</label>
-                    <input type="text" id="predecessor" placeholder="例如：A,B（留空表示無）">
+                    <label>前置活动</label>
+                    <input type="text" id="predecessor" placeholder="例如：A,B（留空表示无）">
                 </div>
                 <div class="input-group">
-                    <label>成本（萬元）</label>
+                    <label>成本（万元）</label>
                     <input type="number" id="cost_cpm" min="0" value="10">
                 </div>
             </div>
 
             <div class="button-group">
-                <button onclick="addCPMActivity()">新增活動</button>
-                <button onclick="calculateCPM()">計算關鍵路徑</button>
+                <button onclick="addCPMActivity()">添加活动</button>
+                <button onclick="calculateCPM()">计算关键路径</button>
                 <button onclick="clearCPMActivities()" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">清除</button>
             </div>
 
@@ -484,15 +484,15 @@
                 <table class="table-style" id="cpmTable">
                     <thead>
                         <tr>
-                            <th>活動</th>
+                            <th>活动</th>
                             <th>前置</th>
-                            <th>持續期</th>
-                            <th>最早開始</th>
+                            <th>持续期</th>
+                            <th>最早开始</th>
                             <th>最早完成</th>
-                            <th>最遲開始</th>
-                            <th>最遲完成</th>
-                            <th>浮動時間</th>
-                            <th>關鍵</th>
+                            <th>最迟开始</th>
+                            <th>最迟完成</th>
+                            <th>浮动时间</th>
+                            <th>关键</th>
                         </tr>
                     </thead>
                     <tbody id="cpmTableBody"></tbody>
@@ -501,39 +501,39 @@
             </div>
         </div>
 
-        <!-- Tab 3: 實獲值管理儀表板 -->
+        <!-- Tab 3: 实获值管理仪表板 -->
         <div class="tab-content">
-            <h2 class="section-title">實獲值管理（EVM）儀表板</h2>
-            <p>監控專案進度和成本績效</p>
+            <h2 class="section-title">实获值管理（EVM）仪表板</h2>
+            <p>监控项目进度和成本绩效</p>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px;">
                 <div class="input-group">
-                    <label>計劃價值（PV, 萬元）</label>
+                    <label>计划价值（PV, 万元）</label>
                     <input type="number" id="pv_evm" min="0" value="100">
                 </div>
                 <div class="input-group">
-                    <label>實獲值（EV, 萬元）</label>
+                    <label>实获值（EV, 万元）</label>
                     <input type="number" id="ev_evm" min="0" value="80">
                 </div>
                 <div class="input-group">
-                    <label>實際成本（AC, 萬元）</label>
+                    <label>实际成本（AC, 万元）</label>
                     <input type="number" id="ac_evm" min="0" value="90">
                 </div>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                 <div class="input-group">
-                    <label>完成時預算（BAC, 萬元）</label>
+                    <label>完成时预算（BAC, 万元）</label>
                     <input type="number" id="bac_evm" min="0" value="500">
                 </div>
                 <div class="input-group">
-                    <label>計劃完成時間（月）</label>
+                    <label>计划完成时间（月）</label>
                     <input type="number" id="planDuration_evm" min="1" value="12">
                 </div>
             </div>
 
             <div class="button-group">
-                <button onclick="calculateEVM()">計算績效指標</button>
+                <button onclick="calculateEVM()">计算绩效指针</button>
                 <button onclick="clearEVM()" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">清除</button>
             </div>
 
@@ -545,16 +545,16 @@
 
         <!-- Tab 4: 敏捷Sprint看板 -->
         <div class="tab-content">
-            <h2 class="section-title">敏捷Sprint看板模擬</h2>
-            <p>拖拽卡片在各列之間移動，模擬敏捷開發流程</p>
+            <h2 class="section-title">敏捷Sprint看板模拟</h2>
+            <p>拖拽卡片在各列之间移动，模拟敏捷开发流程</p>
 
             <div class="input-group">
-                <label>新建故事/任務</label>
-                <input type="text" id="newTask" placeholder="例如：實現登入功能">
+                <label>新建故事/任务</label>
+                <input type="text" id="newTask" placeholder="例如：实现登录功能">
             </div>
 
             <div class="button-group">
-                <button onclick="addKanbanTask()">新增任務到待做</button>
+                <button onclick="addKanbanTask()">添加任务到待做</button>
                 <button onclick="resetKanban()" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">重置看板</button>
             </div>
 
@@ -564,7 +564,7 @@
                     <div id="kanban-todo" ondrop="allowDrop(event)" ondragover="allowDragOver(event)"></div>
                 </div>
                 <div class="kanban-column">
-                    <div class="kanban-title">進行中（Doing）</div>
+                    <div class="kanban-title">进行中（Doing）</div>
                     <div id="kanban-doing" ondrop="allowDrop(event)" ondragover="allowDragOver(event)"></div>
                 </div>
                 <div class="kanban-column">
@@ -574,24 +574,24 @@
             </div>
 
             <div class="output-box" id="kanbanStats" style="margin-top: 20px;">
-                <h3>Sprint 統計</h3>
+                <h3>Sprint 统计</h3>
                 <p id="kanbanMetrics"></p>
             </div>
         </div>
 
-        <!-- Tab 5: 風險評估矩陣 -->
+        <!-- Tab 5: 风险评估矩阵 -->
         <div class="tab-content">
-            <h2 class="section-title">專案風險評估矩陣</h2>
-            <p>識別、評估和追蹤專案風險</p>
+            <h2 class="section-title">项目风险评估矩阵</h2>
+            <p>识别、评估和追踪项目风险</p>
 
             <div class="input-group">
-                <label>風險描述</label>
-                <input type="text" id="riskDesc" placeholder="例如：關鍵技術人員離職">
+                <label>风险描述</label>
+                <input type="text" id="riskDesc" placeholder="例如：关键技术人员离职">
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
                 <div class="input-group">
-                    <label>發生概率</label>
+                    <label>发生概率</label>
                     <select id="riskProb">
                         <option value="1">低（20%）</option>
                         <option value="2">中（50%）</option>
@@ -599,7 +599,7 @@
                     </select>
                 </div>
                 <div class="input-group">
-                    <label>影響程度</label>
+                    <label>影响程度</label>
                     <select id="riskImpact">
                         <option value="1">低</option>
                         <option value="2">中</option>
@@ -609,22 +609,22 @@
             </div>
 
             <div class="input-group">
-                <label>應對策略</label>
+                <label>应对策略</label>
                 <select id="riskStrategy">
                     <option value="避免">避免（Avoid）</option>
-                    <option value="減輕">減輕（Mitigate）</option>
-                    <option value="轉移">轉移（Transfer）</option>
+                    <option value="减轻">减轻（Mitigate）</option>
+                    <option value="转移">转移（Transfer）</option>
                     <option value="接受">接受（Accept）</option>
                 </select>
             </div>
 
             <div class="button-group">
-                <button onclick="addRisk()">新增風險</button>
+                <button onclick="addRisk()">添加风险</button>
                 <button onclick="clearRisks()" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);">清除所有</button>
             </div>
 
             <div class="output-box">
-                <h3 style="margin-bottom: 20px;">風險評估矩陣</h3>
+                <h3 style="margin-bottom: 20px;">风险评估矩阵</h3>
                 <div class="risk-matrix">
                     <div class="matrix-grid">
                         <div class="matrix-cell matrix-header"></div>
@@ -632,31 +632,31 @@
                         <div class="matrix-cell matrix-header">概率中</div>
                         <div class="matrix-cell matrix-header">概率高</div>
 
-                        <div class="matrix-cell matrix-header">影響高</div>
+                        <div class="matrix-cell matrix-header">影响高</div>
                         <div class="matrix-cell matrix-medium" id="risk-1-3">中等</div>
                         <div class="matrix-cell matrix-high" id="risk-2-3">高</div>
-                        <div class="matrix-cell matrix-high" id="risk-3-3">極高</div>
+                        <div class="matrix-cell matrix-high" id="risk-3-3">极高</div>
 
-                        <div class="matrix-cell matrix-header">影響中</div>
+                        <div class="matrix-cell matrix-header">影响中</div>
                         <div class="matrix-cell matrix-low" id="risk-1-2">低</div>
                         <div class="matrix-cell matrix-medium" id="risk-2-2">中等</div>
                         <div class="matrix-cell matrix-high" id="risk-3-2">高</div>
 
-                        <div class="matrix-cell matrix-header">影響低</div>
+                        <div class="matrix-cell matrix-header">影响低</div>
                         <div class="matrix-cell matrix-low" id="risk-1-1">低</div>
                         <div class="matrix-cell matrix-low" id="risk-2-1">低</div>
                         <div class="matrix-cell matrix-medium" id="risk-3-1">中等</div>
                     </div>
                 </div>
 
-                <h3 style="margin-top: 30px; margin-bottom: 15px;">風險登記簿</h3>
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">风险登记簿</h3>
                 <table class="table-style">
                     <thead>
                         <tr>
-                            <th>風險描述</th>
-                            <th>優先級</th>
-                            <th>應對策略</th>
-                            <th>狀態</th>
+                            <th>风险描述</th>
+                            <th>优先级</th>
+                            <th>应对策略</th>
+                            <th>状态</th>
                         </tr>
                     </thead>
                     <tbody id="riskTableBody"></tbody>
@@ -665,18 +665,18 @@
         </div>
 
         <div class="footer">
-            <p>專案管理互動工具集 | 用於教學和實踐用途</p>
+            <p>项目管理交互工具集 | 用于教学和实践用途</p>
         </div>
     </div>
 
     <script>
-        // 全局數據結構
+        // 全局数据结构
         let ganttTasks = [];
         let cpmActivities = [];
         let riskRegister = [];
         let taskCounter = 0;
 
-        // Tab 切換
+        // Tab 切换
         function switchTab(index) {
             const contents = document.querySelectorAll('.tab-content');
             const buttons = document.querySelectorAll('.tab-button');
@@ -688,14 +688,14 @@
             });
         }
 
-        // ===== Tab 1: 甘特圖 =====
+        // ===== Tab 1: 甘特图 =====
         function addGanttTask() {
             const name = document.getElementById('taskName').value;
             const start = parseInt(document.getElementById('startWeek').value);
             const duration = parseInt(document.getElementById('duration').value);
 
             if (!name) {
-                alert('請輸入任務名稱');
+                alert('请输入任务名称');
                 return;
             }
 
@@ -748,10 +748,10 @@
                 Math.max(...ganttTasks.map(t => t.start + t.duration - 1)) : 0;
 
             info.innerHTML = `
-                <h3>甘特圖統計</h3>
-                <p><strong>總任務數：</strong> ${ganttTasks.length}</p>
-                <p><strong>預計完成時間：</strong> 第 ${totalDuration} 周</p>
-                <p><strong>任務清單：</strong></p>
+                <h3>甘特图统计</h3>
+                <p><strong>总任务数：</strong> ${ganttTasks.length}</p>
+                <p><strong>预计完成时间：</strong> 第 ${totalDuration} 周</p>
+                <p><strong>任务清单：</strong></p>
                 <ul>
                     ${ganttTasks.map(t =>
                         `<li>${t.name}（第 ${t.start}-${t.start + t.duration - 1} 周）</li>`
@@ -774,7 +774,7 @@
             const cost = parseInt(document.getElementById('cost_cpm').value);
 
             if (!name) {
-                alert('請輸入活動名稱');
+                alert('请输入活动名称');
                 return;
             }
 
@@ -793,11 +793,11 @@
 
         function calculateCPM() {
             if (cpmActivities.length === 0) {
-                alert('請先新增活動');
+                alert('请先添加活动');
                 return;
             }
 
-            // 前向傳遞
+            // 前向传递
             cpmActivities.forEach(act => {
                 if (act.predecessor.length === 0) {
                     act.es = 0;
@@ -813,7 +813,7 @@
 
             const projectEnd = Math.max(...cpmActivities.map(a => a.ef));
 
-            // 後向傳遞
+            // 后向传递
             cpmActivities.forEach(act => {
                 const dependent = cpmActivities.filter(a => a.predecessor.includes(act.name));
                 if (dependent.length === 0) {
@@ -858,10 +858,10 @@
             const criticalPath = cpmActivities.filter(a => a.isCritical).map(a => a.name).join(' → ');
             const result = document.getElementById('cpmResult');
             result.innerHTML = `
-                <h3>計算結果</h3>
-                <p><strong>專案最短完成時間：</strong> ${projectEnd} 天</p>
-                <p><strong>關鍵路徑：</strong> ${criticalPath}</p>
-                <p><strong>總成本：</strong> ${cpmActivities.reduce((sum, a) => sum + a.cost, 0)} 萬元</p>
+                <h3>计算结果</h3>
+                <p><strong>项目最短完成时间：</strong> ${projectEnd} 天</p>
+                <p><strong>关键路径：</strong> ${criticalPath}</p>
+                <p><strong>总成本：</strong> ${cpmActivities.reduce((sum, a) => sum + a.cost, 0)} 万元</p>
             `;
         }
 
@@ -891,53 +891,53 @@
             const dashboard = document.getElementById('evmDashboard');
             dashboard.innerHTML = `
                 <div class="metric-card">
-                    <div class="metric-label">進度績效指數 (SPI)</div>
+                    <div class="metric-label">进度绩效指数 (SPI)</div>
                     <div class="metric-value" style="color: ${spi < 1 ? '#ff6b6b' : '#51cf66'}">${spi}</div>
-                    <div class="metric-label">${spi < 1 ? '進度滯後' : '進度領先'}</div>
+                    <div class="metric-label">${spi < 1 ? '进度滞后' : '进度领先'}</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-label">成本績效指數 (CPI)</div>
+                    <div class="metric-label">成本绩效指数 (CPI)</div>
                     <div class="metric-value" style="color: ${cpi < 1 ? '#ff6b6b' : '#51cf66'}">${cpi}</div>
-                    <div class="metric-label">${cpi < 1 ? '成本超支' : '成本節約'}</div>
+                    <div class="metric-label">${cpi < 1 ? '成本超支' : '成本节约'}</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-label">進度差異 (SV)</div>
+                    <div class="metric-label">进度差异 (SV)</div>
                     <div class="metric-value" style="color: ${sv < 0 ? '#ff6b6b' : '#51cf66'}">${sv}</div>
-                    <div class="metric-label">萬元</div>
+                    <div class="metric-label">万元</div>
                 </div>
                 <div class="metric-card">
-                    <div class="metric-label">成本差異 (CV)</div>
+                    <div class="metric-label">成本差异 (CV)</div>
                     <div class="metric-value" style="color: ${cv < 0 ? '#ff6b6b' : '#51cf66'}">${cv}</div>
-                    <div class="metric-label">萬元</div>
+                    <div class="metric-label">万元</div>
                 </div>
             `;
 
             const analysis = document.getElementById('evmAnalysis');
             analysis.innerHTML = `
-                <h3>詳細分析</h3>
+                <h3>详细分析</h3>
                 <table class="table-style">
                     <tr>
                         <td><strong>完成百分比</strong></td>
                         <td>${completion}%</td>
                     </tr>
                     <tr>
-                        <td><strong>完成時估計成本 (EAC)</strong></td>
-                        <td>${eac.toFixed(0)} 萬元</td>
+                        <td><strong>完成时估计成本 (EAC)</strong></td>
+                        <td>${eac.toFixed(0)} 万元</td>
                     </tr>
                     <tr>
-                        <td><strong>成本超支預測</strong></td>
+                        <td><strong>成本超支预测</strong></td>
                         <td style="color: ${costVariance > 0 ? '#ff6b6b' : '#51cf66'}">
-                            ${costVariance > 0 ? '+' : ''}${costVariance.toFixed(0)} 萬元
+                            ${costVariance > 0 ? '+' : ''}${costVariance.toFixed(0)} 万元
                         </td>
                     </tr>
                     <tr>
-                        <td><strong>預計完成時間</strong></td>
-                        <td>${scheduleVariance} 個月</td>
+                        <td><strong>预计完成时间</strong></td>
+                        <td>${scheduleVariance} 个月</td>
                     </tr>
                     <tr>
-                        <td><strong>專案狀態</strong></td>
+                        <td><strong>项目状态</strong></td>
                         <td style="font-weight: bold; color: ${spi < 0.9 || cpi < 0.9 ? '#ff6b6b' : '#51cf66'}">
-                            ${spi < 0.9 || cpi < 0.9 ? '⚠️ 需要關注' : '✓ 正常'}
+                            ${spi < 0.9 || cpi < 0.9 ? '⚠️ 需要关注' : '✓ 正常'}
                         </td>
                     </tr>
                 </table>
@@ -958,7 +958,7 @@
         function addKanbanTask() {
             const task = document.getElementById('newTask').value;
             if (!task) {
-                alert('請輸入任務描述');
+                alert('请输入任务描述');
                 return;
             }
 
@@ -1003,9 +1003,9 @@
             const total = todo + doing + done;
 
             document.getElementById('kanbanMetrics').innerHTML = `
-                <strong>待做：</strong> ${todo} 項 |
-                <strong>進行中：</strong> ${doing} 項 |
-                <strong>已完成：</strong> ${done} 項 |
+                <strong>待做：</strong> ${todo} 项 |
+                <strong>进行中：</strong> ${doing} 项 |
+                <strong>已完成：</strong> ${done} 项 |
                 <strong>完成率：</strong> ${total > 0 ? ((done / total) * 100).toFixed(0) : 0}%
             `;
         }
@@ -1018,7 +1018,7 @@
             updateKanbanStats();
         }
 
-        // ===== Tab 5: 風險矩陣 =====
+        // ===== Tab 5: 风险矩阵 =====
         function addRisk() {
             const desc = document.getElementById('riskDesc').value;
             const prob = parseInt(document.getElementById('riskProb').value);
@@ -1026,13 +1026,13 @@
             const strategy = document.getElementById('riskStrategy').value;
 
             if (!desc) {
-                alert('請輸入風險描述');
+                alert('请输入风险描述');
                 return;
             }
 
             const priority = prob * impact;
             let priorityLabel = '低';
-            if (priority >= 6) priorityLabel = '極高';
+            if (priority >= 6) priorityLabel = '极高';
             else if (priority >= 5) priorityLabel = '高';
             else if (priority >= 3) priorityLabel = '中等';
 
@@ -1061,7 +1061,7 @@
                 const row = document.createElement('tr');
                 let bgColor = '#d4edda';
                 if (risk.priority === '高') bgColor = '#f8d7da';
-                if (risk.priority === '極高') bgColor = '#f5c6cb';
+                if (risk.priority === '极高') bgColor = '#f5c6cb';
 
                 row.style.backgroundColor = bgColor;
                 row.innerHTML = `
@@ -1085,7 +1085,7 @@
         }
 
         function updateRiskMatrix() {
-            // 重置所有單元格
+            // 重置所有单元格
             for (let p = 1; p <= 3; p++) {
                 for (let i = 1; i <= 3; i++) {
                     const cell = document.getElementById(`risk-${p}-${i}`);
@@ -1093,7 +1093,7 @@
                     let label = '低';
                     let bgClass = 'matrix-low';
                     if (priority >= 6) {
-                        label = '極高';
+                        label = '极高';
                         bgClass = 'matrix-high';
                     } else if (priority >= 5) {
                         label = '高';

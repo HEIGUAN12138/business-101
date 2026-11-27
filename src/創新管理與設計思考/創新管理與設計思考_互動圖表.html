@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>創新管理與設計思考 - 互動圖表</title>
+    <title>创新管理与设计思考 - 交互图表</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
         * {
@@ -333,22 +333,22 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>創新管理與設計思考</h1>
-            <p>互動工具 - 探索創新的多個維度</p>
+            <h1>创新管理与设计思考</h1>
+            <p>交互工具 - 探索创新的多个维度</p>
         </div>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab(event, 'design-thinking')">設計思考五階段</button>
-            <button class="tab-button" onclick="switchTab(event, 'innovation-types')">創新類型比較</button>
-            <button class="tab-button" onclick="switchTab(event, 'three-horizons')">三個地平線</button>
-            <button class="tab-button" onclick="switchTab(event, 'portfolio-assess')">創新組合評估</button>
-            <button class="tab-button" onclick="switchTab(event, 'disruptive-judge')">破壞式創新判斷</button>
+            <button class="tab-button active" onclick="switchTab(event, 'design-thinking')">设计思考五阶段</button>
+            <button class="tab-button" onclick="switchTab(event, 'innovation-types')">创新类型比较</button>
+            <button class="tab-button" onclick="switchTab(event, 'three-horizons')">三个地平线</button>
+            <button class="tab-button" onclick="switchTab(event, 'portfolio-assess')">创新组合评估</button>
+            <button class="tab-button" onclick="switchTab(event, 'disruptive-judge')">破坏式创新判断</button>
         </div>
 
-        <!-- Tab 1: 設計思考五階段 -->
+        <!-- Tab 1: 设计思考五阶段 -->
         <div id="design-thinking" class="tab-content active">
-            <h2>設計思考五階段流程圖</h2>
-            <p style="color: #666; margin: 10px 0 30px 0;">從同理心到測試的完整創新循環</p>
+            <h2>设计思考五阶段流程图</h2>
+            <p style="color: #666; margin: 10px 0 30px 0;">从同理心到测试的完整创新循环</p>
 
             <div class="chart-container">
                 <canvas id="designThinkingChart"></canvas>
@@ -360,7 +360,7 @@
                         <div class="stage-circle">1</div>
                         <div class="stage-text">
                             <h4>同理心</h4>
-                            <p>理解使用者需求和痛點</p>
+                            <p>理解用户需求和痛点</p>
                         </div>
                     </div>
                 </div>
@@ -369,8 +369,8 @@
                     <div class="stage-description">
                         <div class="stage-circle" style="background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);">2</div>
                         <div class="stage-text">
-                            <h4>定義</h4>
-                            <p>清晰陳述真實問題</p>
+                            <h4>定义</h4>
+                            <p>清晰陈述真实问题</p>
                         </div>
                     </div>
                 </div>
@@ -379,8 +379,8 @@
                     <div class="stage-description">
                         <div class="stage-circle" style="background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);">3</div>
                         <div class="stage-text">
-                            <h4>發想</h4>
-                            <p>生成多個創新想法</p>
+                            <h4>发想</h4>
+                            <p>生成多个创新想法</p>
                         </div>
                     </div>
                 </div>
@@ -390,7 +390,7 @@
                         <div class="stage-circle" style="background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);">4</div>
                         <div class="stage-text">
                             <h4>原型</h4>
-                            <p>快速製作可測試版本</p>
+                            <p>快速制作可测试版本</p>
                         </div>
                     </div>
                 </div>
@@ -399,66 +399,66 @@
                     <div class="stage-description">
                         <div class="stage-circle" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">5</div>
                         <div class="stage-text">
-                            <h4>測試</h4>
-                            <p>與使用者驗證並迭代</p>
+                            <h4>测试</h4>
+                            <p>与用户验证并迭代</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="info-box">
-                <strong>💡 關鍵要點：</strong><br>
-                設計思考是迭代的循環，不是線性流程。根據測試回饋，你可能需要回到同理心或定義階段重新開始。
+                <strong>💡 关键要点：</strong><br>
+                设计思考是迭代的循环，不是线性流程。根据测试回馈，你可能需要回到同理心或定义阶段重新开始。
             </div>
         </div>
 
-        <!-- Tab 2: 創新類型比較 -->
+        <!-- Tab 2: 创新类型比较 -->
         <div id="innovation-types" class="tab-content">
-            <h2>創新類型比較器</h2>
-            <p style="color: #666; margin: 10px 0 30px 0;">三種創新類型的特點分析</p>
+            <h2>创新类型比较器</h2>
+            <p style="color: #666; margin: 10px 0 30px 0;">三种创新类型的特点分析</p>
 
             <table class="comparison-table">
                 <thead>
                     <tr>
-                        <th>維度</th>
-                        <th>漸進式創新</th>
-                        <th>突破式創新</th>
-                        <th>破壞式創新</th>
+                        <th>维度</th>
+                        <th>渐进式创新</th>
+                        <th>突破式创新</th>
+                        <th>破坏式创新</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>定義</strong></td>
-                        <td>逐步改進現有產品</td>
-                        <td>推出全新產品類型</td>
-                        <td>用簡單廉價方式顛覆市場</td>
+                        <td><strong>定义</strong></td>
+                        <td>逐步改进现有产品</td>
+                        <td>推出全新产品类型</td>
+                        <td>用简单廉价方式颠覆市场</td>
                     </tr>
                     <tr>
-                        <td><strong>創新幅度</strong></td>
+                        <td><strong>创新幅度</strong></td>
                         <td><span class="innovation-type-good">小</span></td>
                         <td><span class="innovation-type-moderate">大</span></td>
                         <td><span class="innovation-type-moderate">大</span></td>
                     </tr>
                     <tr>
                         <td><strong>初期性能</strong></td>
-                        <td><span class="innovation-type-good">優於現有</span></td>
-                        <td><span class="innovation-type-good">優於現有</span></td>
-                        <td><span class="innovation-type-poor">低於現有</span></td>
+                        <td><span class="innovation-type-good">优于现有</span></td>
+                        <td><span class="innovation-type-good">优于现有</span></td>
+                        <td><span class="innovation-type-poor">低于现有</span></td>
                     </tr>
                     <tr>
-                        <td><strong>投資規模</strong></td>
+                        <td><strong>投资规模</strong></td>
                         <td><span class="innovation-type-good">低</span></td>
                         <td><span class="innovation-type-moderate">中</span></td>
                         <td><span class="innovation-type-moderate">中</span></td>
                     </tr>
                     <tr>
-                        <td><strong>投資回期</strong></td>
+                        <td><strong>投资回期</strong></td>
                         <td><span class="innovation-type-good">短（1-2年）</span></td>
                         <td><span class="innovation-type-moderate">中期（3-5年）</span></td>
-                        <td><span class="innovation-type-poor">長期（5-10年）</span></td>
+                        <td><span class="innovation-type-poor">长期（5-10年）</span></td>
                     </tr>
                     <tr>
-                        <td><strong>市場風險</strong></td>
+                        <td><strong>市场风险</strong></td>
                         <td><span class="innovation-type-good">低</span></td>
                         <td><span class="innovation-type-moderate">中</span></td>
                         <td><span class="innovation-type-poor">高</span></td>
@@ -470,10 +470,10 @@
                         <td><span class="innovation-type-poor">低（10-20%）</span></td>
                     </tr>
                     <tr>
-                        <td><strong>市場影響</strong></td>
-                        <td><span class="innovation-type-moderate">改進現有</span></td>
-                        <td><span class="innovation-type-good">創造新類型</span></td>
-                        <td><span class="innovation-type-good">顛覆產業</span></td>
+                        <td><strong>市场影响</strong></td>
+                        <td><span class="innovation-type-moderate">改进现有</span></td>
+                        <td><span class="innovation-type-good">创造新类型</span></td>
+                        <td><span class="innovation-type-good">颠覆产业</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -483,15 +483,15 @@
             </div>
 
             <div class="info-box">
-                <strong>💡 最佳實踐：</strong><br>
-                企業應該同時進行三種創新：漸進式保持現金流，突破式開拓新市場，破壞式為未來做準備。
+                <strong>💡 最佳实践：</strong><br>
+                企业应该同时进行三种创新：渐进式保持现金流，突破式开拓新市场，破坏式为未来做准备。
             </div>
         </div>
 
-        <!-- Tab 3: 三個地平線 -->
+        <!-- Tab 3: 三个地平线 -->
         <div id="three-horizons" class="tab-content">
-            <h2>三個地平線框架可視化</h2>
-            <p style="color: #666; margin: 10px 0 30px 0;">如何平衡短期利潤和長期創新</p>
+            <h2>三个地平线框架可视化</h2>
+            <p style="color: #666; margin: 10px 0 30px 0;">如何平衡短期利润和长期创新</p>
 
             <div class="chart-container">
                 <canvas id="threeHorizonsChart"></canvas>
@@ -499,90 +499,90 @@
 
             <div style="margin-top: 40px;">
                 <div class="tool-section">
-                    <h3>📊 投資分配建議</h3>
+                    <h3>📊 投资分配建议</h3>
                     <div class="metric-grid">
                         <div class="metric-box">
                             <div class="value">60-70%</div>
-                            <div class="label">地平線 1<br>（現有業務改進）</div>
+                            <div class="label">地平线 1<br>（现有业务改进）</div>
                         </div>
                         <div class="metric-box">
                             <div class="value">20-30%</div>
-                            <div class="label">地平線 2<br>（新市場開拓）</div>
+                            <div class="label">地平线 2<br>（新市场开拓）</div>
                         </div>
                         <div class="metric-box">
                             <div class="value">10%</div>
-                            <div class="label">地平線 3<br>（面向未來探索）</div>
+                            <div class="label">地平线 3<br>（面向未来探索）</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="tool-section" style="border-left: 5px solid #10b981;">
-                    <h3>地平線 1 - 核心業務改進</h3>
-                    <p><strong>時間：</strong> 0-1 年 | <strong>目標：</strong> 優化現有業務</p>
-                    <p style="margin-top: 10px;">改進現有產品功能、成本優化、運營效率提升</p>
+                    <h3>地平线 1 - 内核业务改进</h3>
+                    <p><strong>时间：</strong> 0-1 年 | <strong>目标：</strong> 优化现有业务</p>
+                    <p style="margin-top: 10px;">改进现有产品功能、成本优化、运营效率提升</p>
                 </div>
 
                 <div class="tool-section" style="border-left: 5px solid #f59e0b;">
-                    <h3>地平線 2 - 新市場開拓</h3>
-                    <p><strong>時間：</strong> 1-3 年 | <strong>目標：</strong> 進入新領域</p>
-                    <p style="margin-top: 10px;">進入相鄰市場、新產品線、新客戶群體</p>
+                    <h3>地平线 2 - 新市场开拓</h3>
+                    <p><strong>时间：</strong> 1-3 年 | <strong>目标：</strong> 进入新领域</p>
+                    <p style="margin-top: 10px;">进入相邻市场、新产品线、新客户群体</p>
                 </div>
 
                 <div class="tool-section" style="border-left: 5px solid #667eea;">
-                    <h3>地平線 3 - 面向未來探索</h3>
-                    <p><strong>時間：</strong> 3+ 年 | <strong>目標：</strong> 培育未來業務</p>
-                    <p style="margin-top: 10px;">技術研發、新概念驗證、顛覆性創新探索</p>
+                    <h3>地平线 3 - 面向未来探索</h3>
+                    <p><strong>时间：</strong> 3+ 年 | <strong>目标：</strong> 培育未来业务</p>
+                    <p style="margin-top: 10px;">技术研发、新概念验证、颠覆性创新探索</p>
                 </div>
             </div>
 
             <div class="info-box">
-                <strong>💡 關鍵洞察：</strong><br>
-                地平線 3 的失敗可以接受（預期失敗率 70-90%），因為目標是學習。但地平線 1 的失敗會影響企業生存。
+                <strong>💡 关键洞察：</strong><br>
+                地平线 3 的失败可以接受（预期失败率 70-90%），因为目标是学习。但地平线 1 的失败会影响企业生存。
             </div>
         </div>
 
-        <!-- Tab 4: 創新組合評估 -->
+        <!-- Tab 4: 创新组合评估 -->
         <div id="portfolio-assess" class="tab-content">
-            <h2>創新組合評估器</h2>
-            <p style="color: #666; margin: 10px 0 30px 0;">評估你的創新組合是否平衡</p>
+            <h2>创新组合评估器</h2>
+            <p style="color: #666; margin: 10px 0 30px 0;">评估你的创新组合是否平衡</p>
 
             <div class="tool-section">
-                <h3>📋 輸入你的創新專案數據</h3>
+                <h3>📋 输入你的创新项目数据</h3>
                 <div class="input-group">
                     <div class="input-item">
-                        <label>地平線 1 的專案數</label>
+                        <label>地平线 1 的项目数</label>
                         <input type="number" id="h1-projects" value="15" min="0">
                     </div>
                     <div class="input-item">
-                        <label>地平線 2 的專案數</label>
+                        <label>地平线 2 的项目数</label>
                         <input type="number" id="h2-projects" value="8" min="0">
                     </div>
                     <div class="input-item">
-                        <label>地平線 3 的專案數</label>
+                        <label>地平线 3 的项目数</label>
                         <input type="number" id="h3-projects" value="2" min="0">
                     </div>
                 </div>
 
                 <div class="input-group">
                     <div class="input-item">
-                        <label>地平線 1 預期成功率 (%)</label>
+                        <label>地平线 1 预期成功率 (%)</label>
                         <input type="number" id="h1-success" value="75" min="0" max="100">
                     </div>
                     <div class="input-item">
-                        <label>地平線 2 預期成功率 (%)</label>
+                        <label>地平线 2 预期成功率 (%)</label>
                         <input type="number" id="h2-success" value="40" min="0" max="100">
                     </div>
                     <div class="input-item">
-                        <label>地平線 3 預期成功率 (%)</label>
+                        <label>地平线 3 预期成功率 (%)</label>
                         <input type="number" id="h3-success" value="15" min="0" max="100">
                     </div>
                 </div>
 
-                <button class="button" onclick="assessPortfolio()">評估我的組合</button>
+                <button class="button" onclick="assessPortfolio()">评估我的组合</button>
             </div>
 
             <div id="portfolio-result" class="result-box" style="display: none;">
-                <h4>📊 你的創新組合評估結果</h4>
+                <h4>📊 你的创新组合评估结果</h4>
                 <div id="portfolio-details"></div>
                 <div class="chart-container" style="height: 300px; margin-top: 20px;">
                     <canvas id="portfolioChart"></canvas>
@@ -590,61 +590,61 @@
             </div>
 
             <div class="info-box">
-                <strong>💡 評估建議：</strong><br>
-                • 專案分配應達到 60:30:10 比例<br>
-                • 期望成功專案數：H1 約 11-12 個 | H2 約 3-4 個 | H3 約 0-1 個<br>
-                • 如果 H2 和 H3 專案數太少，企業面臨長期增長危機
+                <strong>💡 评估建议：</strong><br>
+                • 项目分配应达到 60:30:10 比例<br>
+                • 期望成功项目数：H1 约 11-12 个 | H2 约 3-4 个 | H3 约 0-1 个<br>
+                • 如果 H2 和 H3 项目数太少，企业面临长期增长危机
             </div>
         </div>
 
-        <!-- Tab 5: 破壞式創新判斷 -->
+        <!-- Tab 5: 破坏式创新判断 -->
         <div id="disruptive-judge" class="tab-content">
-            <h2>破壞式創新判斷工具</h2>
-            <p style="color: #666; margin: 10px 0 30px 0;">判斷一個創新是否具有破壞式特徵</p>
+            <h2>破坏式创新判断工具</h2>
+            <p style="color: #666; margin: 10px 0 30px 0;">判断一个创新是否具有破坏式特征</p>
 
             <div class="tool-section">
-                <h3>🔍 評估一個創新想法</h3>
+                <h3>🔍 评估一个创新想法</h3>
                 <div class="input-group">
                     <div class="input-item" style="grid-column: 1 / -1;">
-                        <label>創新想法名稱</label>
-                        <input type="text" id="innovation-name" placeholder="例：電動滑板車">
+                        <label>创新想法名称</label>
+                        <input type="text" id="innovation-name" placeholder="例：电动滑板车">
                     </div>
                 </div>
 
-                <h4 style="margin-top: 20px; margin-bottom: 15px;">請評分以下特徵（1-5 分）：</h4>
+                <h4 style="margin-top: 20px; margin-bottom: 15px;">请评分以下特征（1-5 分）：</h4>
                 <div style="display: grid; gap: 15px;">
                     <div class="input-item">
-                        <label>🎯 初期性能是否低於現有方案？</label>
+                        <label>🎯 初期性能是否低于现有方案？</label>
                         <input type="range" id="feature-1" min="1" max="5" value="3">
                         <small id="score-1" style="color: #667eea; font-weight: 600;">得分：3/5</small>
                     </div>
                     <div class="input-item">
-                        <label>💰 價格是否明顯低於現有方案？</label>
+                        <label>💰 价格是否明显低于现有方案？</label>
                         <input type="range" id="feature-2" min="1" max="5" value="3">
                         <small id="score-2" style="color: #667eea; font-weight: 600;">得分：3/5</small>
                     </div>
                     <div class="input-item">
-                        <label>🎁 是否針對非消費者或低階市場？</label>
+                        <label>🎁 是否针对非消费者或低级市场？</label>
                         <input type="range" id="feature-3" min="1" max="5" value="3">
                         <small id="score-3" style="color: #667eea; font-weight: 600;">得分：3/5</small>
                     </div>
                     <div class="input-item">
-                        <label>📈 性能改進軌跡是否向上？</label>
+                        <label>📈 性能改进轨迹是否向上？</label>
                         <input type="range" id="feature-4" min="1" max="5" value="3">
                         <small id="score-4" style="color: #667eea; font-weight: 600;">得分：3/5</small>
                     </div>
                     <div class="input-item">
-                        <label>🌐 是否建立了新的價值網路？</label>
+                        <label>🌐 是否创建了新的价值网络？</label>
                         <input type="range" id="feature-5" min="1" max="5" value="3">
                         <small id="score-5" style="color: #667eea; font-weight: 600;">得分：3/5</small>
                     </div>
                 </div>
 
-                <button class="button" style="margin-top: 20px;" onclick="judgeDisruptive()">評估破壞式創新程度</button>
+                <button class="button" style="margin-top: 20px;" onclick="judgeDisruptive()">评估破坏式创新程度</button>
             </div>
 
             <div id="disruption-result" class="result-box" style="display: none;">
-                <h4>📊 破壞式創新評估結果</h4>
+                <h4>📊 破坏式创新评估结果</h4>
                 <div id="disruption-details"></div>
                 <div class="chart-container" style="height: 300px; margin-top: 20px;">
                     <canvas id="disruptionChart"></canvas>
@@ -652,18 +652,18 @@
             </div>
 
             <div class="info-box">
-                <strong>💡 破壞式創新的特徵：</strong><br>
-                • 初期性能可能較弱，但逐步改進<br>
-                • 針對傳統企業不關注的市場<br>
-                • 以低成本或簡單性為優勢<br>
-                • 最終可能顛覆整個行業<br>
-                <strong>總分超過 18 分：</strong> 具有較強的破壞式創新特徵
+                <strong>💡 破坏式创新的特征：</strong><br>
+                • 初期性能可能较弱，但逐步改进<br>
+                • 针对传统企业不关注的市场<br>
+                • 以低成本或简单性为优势<br>
+                • 最终可能颠覆整个行业<br>
+                <strong>总分超过 18 分：</strong> 具有较强的破坏式创新特征
             </div>
         </div>
     </div>
 
     <script>
-        // 語言支持和數據
+        // 语言支持和数据
         const chartOptions = {
             responsive: true,
             maintainAspectRatio: false,
@@ -684,7 +684,7 @@
 
         let charts = {};
 
-        // Tab 切換
+        // Tab 切换
         function switchTab(evt, tabName) {
             const tabcontents = document.getElementsByClassName("tab-content");
             for (let i = 0; i < tabcontents.length; i++) {
@@ -699,19 +699,19 @@
             document.getElementById(tabName).classList.add("active");
             evt.currentTarget.classList.add("active");
 
-            // 重新繪製圖表
+            // 重新绘制图表
             setTimeout(() => {
                 if (charts[tabName]) charts[tabName].resize();
             }, 100);
         }
 
-        // 初始化設計思考圖表
+        // 初始化设计思考图表
         function initDesignThinkingChart() {
             const ctx = document.getElementById('designThinkingChart').getContext('2d');
             charts['design-thinking'] = new Chart(ctx, {
                 type: 'radar',
                 data: {
-                    labels: ['同理心', '定義', '發想', '原型', '測試'],
+                    labels: ['同理心', '定义', '发想', '原型', '测试'],
                     datasets: [{
                         label: '重要程度',
                         data: [95, 90, 85, 95, 90],
@@ -734,26 +734,26 @@
             });
         }
 
-        // 初始化創新類型圖表
+        // 初始化创新类型图表
         function initInnovationTypesChart() {
             const ctx = document.getElementById('innovationTypesChart').getContext('2d');
             charts['innovation-types'] = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['投資規模', '成功率', '市場風險', '投資回期'],
+                    labels: ['投资规模', '成功率', '市场风险', '投资回期'],
                     datasets: [
                         {
-                            label: '漸進式創新',
+                            label: '渐进式创新',
                             data: [20, 75, 20, 15],
                             backgroundColor: '#10b981'
                         },
                         {
-                            label: '突破式創新',
+                            label: '突破式创新',
                             data: [60, 45, 60, 50],
                             backgroundColor: '#f59e0b'
                         },
                         {
-                            label: '破壞式創新',
+                            label: '破坏式创新',
                             data: [50, 15, 80, 70],
                             backgroundColor: '#ef4444'
                         }
@@ -776,16 +776,16 @@
             });
         }
 
-        // 初始化三個地平線圖表
+        // 初始化三个地平线图表
         function initThreeHorizonsChart() {
             const ctx = document.getElementById('threeHorizonsChart').getContext('2d');
             charts['three-horizons'] = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: ['現在', '1年', '2年', '3年', '4年', '5年'],
+                    labels: ['现在', '1年', '2年', '3年', '4年', '5年'],
                     datasets: [
                         {
-                            label: '地平線 1 - 現有業務',
+                            label: '地平线 1 - 现有业务',
                             data: [80, 82, 85, 85, 85, 80],
                             borderColor: '#10b981',
                             borderWidth: 3,
@@ -793,7 +793,7 @@
                             backgroundColor: 'rgba(16, 185, 129, 0.1)'
                         },
                         {
-                            label: '地平線 2 - 新市場',
+                            label: '地平线 2 - 新市场',
                             data: [0, 5, 15, 25, 35, 40],
                             borderColor: '#f59e0b',
                             borderWidth: 3,
@@ -801,7 +801,7 @@
                             backgroundColor: 'rgba(245, 158, 11, 0.1)'
                         },
                         {
-                            label: '地平線 3 - 未來業務',
+                            label: '地平线 3 - 未来业务',
                             data: [0, 0, 2, 5, 10, 15],
                             borderColor: '#667eea',
                             borderWidth: 3,
@@ -827,7 +827,7 @@
             });
         }
 
-        // 創新組合評估
+        // 创新组合评估
         function assessPortfolio() {
             const h1 = parseInt(document.getElementById('h1-projects').value) || 0;
             const h2 = parseInt(document.getElementById('h2-projects').value) || 0;
@@ -847,23 +847,23 @@
 
             const detailsHtml = `
                 <div class="result-item">
-                    <strong>地平線分佈：</strong><br>
-                    地平線 1：${h1} 專案（${h1Pct}%）- 預期成功 ${h1SuccessCount} 個<br>
-                    地平線 2：${h2} 專案（${h2Pct}%）- 預期成功 ${h2SuccessCount} 個<br>
-                    地平線 3：${h3} 專案（${h3Pct}%）- 預期成功 ${h3SuccessCount} 個
+                    <strong>地平线分布：</strong><br>
+                    地平线 1：${h1} 项目（${h1Pct}%）- 预期成功 ${h1SuccessCount} 个<br>
+                    地平线 2：${h2} 项目（${h2Pct}%）- 预期成功 ${h2SuccessCount} 个<br>
+                    地平线 3：${h3} 项目（${h3Pct}%）- 预期成功 ${h3SuccessCount} 个
                 </div>
                 <div class="result-item">
-                    <strong>評估結果：</strong><br>
-                    ${h1Pct >= 60 && h1Pct <= 70 ? '✅ 地平線 1 分配合理' : '⚠️ 地平線 1 分配需調整'}<br>
-                    ${h2Pct >= 20 && h2Pct <= 30 ? '✅ 地平線 2 分配合理' : '⚠️ 地平線 2 分配需調整'}<br>
-                    ${h3Pct >= 10 && h3Pct <= 15 ? '✅ 地平線 3 分配合理' : '⚠️ 地平線 3 分配需調整'}
+                    <strong>评估结果：</strong><br>
+                    ${h1Pct >= 60 && h1Pct <= 70 ? '✅ 地平线 1 分配合理' : '⚠️ 地平线 1 分配需调整'}<br>
+                    ${h2Pct >= 20 && h2Pct <= 30 ? '✅ 地平线 2 分配合理' : '⚠️ 地平线 2 分配需调整'}<br>
+                    ${h3Pct >= 10 && h3Pct <= 15 ? '✅ 地平线 3 分配合理' : '⚠️ 地平线 3 分配需调整'}
                 </div>
             `;
 
             document.getElementById('portfolio-details').innerHTML = detailsHtml;
             document.getElementById('portfolio-result').style.display = 'block';
 
-            // 繪製組合圖表
+            // 绘制组合图表
             if (charts['portfolio-assess']) {
                 charts['portfolio-assess'].destroy();
             }
@@ -871,7 +871,7 @@
             charts['portfolio-assess'] = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['地平線 1', '地平線 2', '地平線 3'],
+                    labels: ['地平线 1', '地平线 2', '地平线 3'],
                     datasets: [{
                         data: [h1, h2, h3],
                         backgroundColor: ['#10b981', '#f59e0b', '#667eea'],
@@ -883,7 +883,7 @@
             });
         }
 
-        // 更新範圍滑塊值顯示
+        // 更新范围滑块值显示
         document.addEventListener('DOMContentLoaded', function() {
             for (let i = 1; i <= 5; i++) {
                 const slider = document.getElementById('feature-' + i);
@@ -895,41 +895,41 @@
             }
         });
 
-        // 破壞式創新判斷
+        // 破坏式创新判断
         function judgeDisruptive() {
-            const name = document.getElementById('innovation-name').value || '這個創新想法';
+            const name = document.getElementById('innovation-name').value || '这个创新想法';
             const scores = [1, 2, 3, 4, 5].map(i => parseInt(document.getElementById('feature-' + i).value) || 0);
             const total = scores.reduce((a, b) => a + b, 0);
 
             let assessment = '';
             if (total >= 20) {
-                assessment = '🟢 具有強烈的破壞式創新特徵。這個想法很可能在未來顛覆市場。';
+                assessment = '🟢 具有强烈的破坏式创新特征。这个想法很可能在未来颠覆市场。';
             } else if (total >= 15) {
-                assessment = '🟡 具有中等破壞式創新特徵。需要進一步驗證市場機會和改進潛力。';
+                assessment = '🟡 具有中等破坏式创新特征。需要进一步验证市场机会和改进潜力。';
             } else {
-                assessment = '🔴 破壞式創新特徵較弱。可能更適合作為突破式或漸進式創新。';
+                assessment = '🔴 破坏式创新特征较弱。可能更适合作为突破式或渐进式创新。';
             }
 
             const detailsHtml = `
                 <div class="result-item">
-                    <strong>${name} 評估：</strong><br>
-                    總分：${total} / 25<br>
+                    <strong>${name} 评估：</strong><br>
+                    总分：${total} / 25<br>
                     ${assessment}
                 </div>
                 <div class="result-item">
-                    <strong>詳細評分：</strong><br>
+                    <strong>详细评分：</strong><br>
                     初期性能：${scores[0]}/5<br>
-                    價格優勢：${scores[1]}/5<br>
-                    目標市場：${scores[2]}/5<br>
-                    改進潛力：${scores[3]}/5<br>
-                    生態建設：${scores[4]}/5
+                    价格优势：${scores[1]}/5<br>
+                    目标市场：${scores[2]}/5<br>
+                    改进潜力：${scores[3]}/5<br>
+                    生态建设：${scores[4]}/5
                 </div>
             `;
 
             document.getElementById('disruption-details').innerHTML = detailsHtml;
             document.getElementById('disruption-result').style.display = 'block';
 
-            // 繪製評估圖表
+            // 绘制评估图表
             if (charts['disruptive-judge']) {
                 charts['disruptive-judge'].destroy();
             }
@@ -937,9 +937,9 @@
             charts['disruptive-judge'] = new Chart(ctx, {
                 type: 'radar',
                 data: {
-                    labels: ['初期性能', '價格優勢', '目標市場', '改進潛力', '生態建設'],
+                    labels: ['初期性能', '价格优势', '目标市场', '改进潜力', '生态建设'],
                     datasets: [{
-                        label: '破壞式創新特徵',
+                        label: '破坏式创新特征',
                         data: scores,
                         borderColor: '#667eea',
                         backgroundColor: 'rgba(102, 126, 234, 0.1)',
@@ -960,7 +960,7 @@
             });
         }
 
-        // 初始化所有圖表
+        // 初始化所有图表
         window.addEventListener('DOMContentLoaded', function() {
             initDesignThinkingChart();
             initInnovationTypesChart();

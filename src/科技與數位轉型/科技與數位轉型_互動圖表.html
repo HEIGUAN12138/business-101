@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>科技與數位轉型 - 互動圖表</title>
+    <title>科技与数字化转型 - 交互图表</title>
     <style>
         * {
             margin: 0;
@@ -443,80 +443,80 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>科技與數位轉型</h1>
-            <p>互動圖表與計算工具</p>
+            <h1>科技与数字化转型</h1>
+            <p>交互图表与计算工具</p>
         </div>
 
         <div class="tabs-container">
-            <button class="tab-button active" onclick="showTab('maturity')">數位轉型成熟度評估</button>
-            <button class="tab-button" onclick="showTab('cloud')">雲端服務模式比較</button>
-            <button class="tab-button" onclick="showTab('saas')">SaaS 關鍵指標計算器</button>
-            <button class="tab-button" onclick="showTab('network')">平台經濟網路效應</button>
-            <button class="tab-button" onclick="showTab('transformation')">轉型演進階段</button>
-            <button class="tab-button" onclick="showTab('change')">Kotter 八步驟變革</button>
-            <button class="tab-button" onclick="showTab('gig')">零工經濟分析</button>
+            <button class="tab-button active" onclick="showTab('maturity')">数字化转型成熟度评估</button>
+            <button class="tab-button" onclick="showTab('cloud')">云端服务模式比较</button>
+            <button class="tab-button" onclick="showTab('saas')">SaaS 关键指针计算器</button>
+            <button class="tab-button" onclick="showTab('network')">平台经济网络效应</button>
+            <button class="tab-button" onclick="showTab('transformation')">转型演高级段</button>
+            <button class="tab-button" onclick="showTab('change')">Kotter 八步骤变革</button>
+            <button class="tab-button" onclick="showTab('gig')">零工经济分析</button>
         </div>
 
         <div class="content">
-            <!-- Tab 1: 數位轉型成熟度評估 -->
+            <!-- Tab 1: 数字化转型成熟度评估 -->
             <div id="maturity" class="tab-content active">
-                <h2 class="section-title">數位轉型成熟度評估</h2>
-                <p style="margin-bottom: 30px; font-size: 1em; color: #4a5568;">評估企業在數位轉型中的成熟度，從初級到世界級。選擇符合貴公司現狀的等級：</p>
+                <h2 class="section-title">数字化转型成熟度评估</h2>
+                <p style="margin-bottom: 30px; font-size: 1em; color: #4a5568;">评估企业在数字化转型中的成熟度，从初级到世界级。选择符合贵公司现状的等级：</p>
 
                 <div class="maturity-grid" id="maturityGrid">
                     <div class="maturity-cell maturity-level-1" onclick="selectMaturity(1)">
-                        <div class="maturity-cell-title">1. 初級</div>
-                        <div class="maturity-cell-desc">數位化甚少，主要依賴人工流程與紙本記錄</div>
+                        <div class="maturity-cell-title">1. 初级</div>
+                        <div class="maturity-cell-desc">数字化甚少，主要依赖人工流程与纸本记录</div>
                     </div>
                     <div class="maturity-cell maturity-level-2" onclick="selectMaturity(2)">
                         <div class="maturity-cell-title">2. 初步</div>
-                        <div class="maturity-cell-desc">開始數位化部分流程，建立基本 IT 系統</div>
+                        <div class="maturity-cell-desc">开始数字化部分流程，创建基本 IT 系统</div>
                     </div>
                     <div class="maturity-cell maturity-level-3" onclick="selectMaturity(3)">
                         <div class="maturity-cell-title">3. 中等</div>
-                        <div class="maturity-cell-desc">大部分流程數位化，利用數據優化業務</div>
+                        <div class="maturity-cell-desc">大部分流程数字化，利用数据优化业务</div>
                     </div>
                     <div class="maturity-cell maturity-level-4" onclick="selectMaturity(4)">
-                        <div class="maturity-cell-title">4. 高級</div>
-                        <div class="maturity-cell-desc">整合性數位平台，AI 應用逐步展開</div>
+                        <div class="maturity-cell-title">4. 高级</div>
+                        <div class="maturity-cell-desc">集成性数字平台，AI 应用逐步展开</div>
                     </div>
                     <div class="maturity-cell maturity-level-5" onclick="selectMaturity(5)">
-                        <div class="maturity-cell-title">5. 世界級</div>
-                        <div class="maturity-cell-desc">全數位化生態，AI 驅動決策與創新</div>
+                        <div class="maturity-cell-title">5. 世界级</div>
+                        <div class="maturity-cell-desc">全数字化生态，AI 驱动决策与创新</div>
                     </div>
                 </div>
 
                 <div id="maturityResult" class="result-box" style="display: none;">
-                    <div class="result-title">轉型建議</div>
+                    <div class="result-title">转型建议</div>
                     <div class="result-text" id="maturityResultText"></div>
                 </div>
             </div>
 
-            <!-- Tab 2: 雲端服務模式比較 -->
+            <!-- Tab 2: 云端服务模式比较 -->
             <div id="cloud" class="tab-content">
-                <h2 class="section-title">雲端服務模式比較</h2>
+                <h2 class="section-title">云端服务模式比较</h2>
 
                 <table class="comparison-table">
                     <thead>
                         <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
                             <th>特性</th>
-                            <th>IaaS (基礎設施)</th>
+                            <th>IaaS (基础设施)</th>
                             <th>PaaS (平台)</th>
-                            <th>SaaS (軟體)</th>
+                            <th>SaaS (软件)</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>企業維護責任</strong></td>
+                            <td><strong>企业维护责任</strong></td>
                             <td><span class="badge badge-high">最多</span></td>
                             <td><span class="badge badge-medium">中等</span></td>
                             <td><span class="badge badge-low">最少</span></td>
                         </tr>
                         <tr>
-                            <td><strong>成本結構</strong></td>
-                            <td>高前期投資</td>
-                            <td>中等投資</td>
-                            <td>月費訂閱</td>
+                            <td><strong>成本结构</strong></td>
+                            <td>高前期投资</td>
+                            <td>中等投资</td>
+                            <td>月费订阅</td>
                         </tr>
                         <tr>
                             <td><strong>定制能力</strong></td>
@@ -525,25 +525,25 @@
                             <td><span class="badge badge-low">最低</span></td>
                         </tr>
                         <tr>
-                            <td><strong>上市時間</strong></td>
-                            <td>較長 (6-12月)</td>
+                            <td><strong>上市时间</strong></td>
+                            <td>较长 (6-12月)</td>
                             <td>中等 (2-4月)</td>
-                            <td>快速 (1-2週)</td>
+                            <td>快速 (1-2周)</td>
                         </tr>
                         <tr>
-                            <td><strong>技術要求</strong></td>
-                            <td><span class="badge badge-high">需要高技術</span></td>
-                            <td><span class="badge badge-medium">需要開發能力</span></td>
-                            <td><span class="badge badge-low">無需技術</span></td>
+                            <td><strong>技术要求</strong></td>
+                            <td><span class="badge badge-high">需要高技术</span></td>
+                            <td><span class="badge badge-medium">需要开发能力</span></td>
+                            <td><span class="badge badge-low">无需技术</span></td>
                         </tr>
                         <tr>
-                            <td><strong>適用企業</strong></td>
-                            <td>大企業、高定制</td>
-                            <td>創業公司、快速迭代</td>
-                            <td>所有規模企業</td>
+                            <td><strong>适用企业</strong></td>
+                            <td>大企业、高定制</td>
+                            <td>创业公司、快速迭代</td>
+                            <td>所有规模企业</td>
                         </tr>
                         <tr>
-                            <td><strong>典型產品</strong></td>
+                            <td><strong>典型产品</strong></td>
                             <td>AWS EC2, Azure VM</td>
                             <td>Heroku, Google App Engine</td>
                             <td>Microsoft 365, Slack</td>
@@ -552,37 +552,37 @@
                 </table>
 
                 <div style="margin-top: 30px; padding: 20px; background: #edf2f7; border-radius: 8px;">
-                    <h3 style="margin-bottom: 15px; color: #2d3748; font-weight: 600;">成本比較 (年度)</h3>
+                    <h3 style="margin-bottom: 15px; color: #2d3748; font-weight: 600;">成本比较 (年度)</h3>
                     <div class="grid-2">
                         <div class="card">
                             <div class="card-title">IaaS 例: AWS</div>
                             <div class="card-value">$50,000+</div>
-                            <div class="card-desc">中等規模應用，需技術運維</div>
+                            <div class="card-desc">中等规模应用，需技术运维</div>
                         </div>
                         <div class="card">
                             <div class="card-title">PaaS 例: Heroku</div>
                             <div class="card-value">$5,000-20,000</div>
-                            <div class="card-desc">快速開發與部署</div>
+                            <div class="card-desc">快速开发与部署</div>
                         </div>
                         <div class="card">
                             <div class="card-title">SaaS 例: Salesforce</div>
                             <div class="card-value">$1,200-5,000</div>
-                            <div class="card-desc">按使用者數計費</div>
+                            <div class="card-desc">按用户数计费</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 3: SaaS 關鍵指標計算器 -->
+            <!-- Tab 3: SaaS 关键指针计算器 -->
             <div id="saas" class="tab-content">
-                <h2 class="section-title">SaaS 關鍵指標計算器</h2>
+                <h2 class="section-title">SaaS 关键指针计算器</h2>
 
                 <div class="chart-container">
-                    <div class="chart-title">月度經常性收入 (MRR) 與客戶生命周期價值</div>
+                    <div class="chart-title">月度经常性收入 (MRR) 与客户生命周期价值</div>
 
                     <div class="slider-group">
                         <div class="slider-label">
-                            <span>付費使用者數</span>
+                            <span>付费用户数</span>
                             <span id="mrrUserValue">1,000</span>
                         </div>
                         <input type="range" min="100" max="10000" value="1000" step="100" oninput="updateMRR()">
@@ -590,7 +590,7 @@
 
                     <div class="slider-group">
                         <div class="slider-label">
-                            <span>月平均訂閱價 ($)</span>
+                            <span>月平均订阅价 ($)</span>
                             <span id="mrrPriceValue">99</span>
                         </div>
                         <input type="range" min="10" max="1000" value="99" step="10" oninput="updateMRR()">
@@ -598,7 +598,7 @@
 
                     <div class="slider-group">
                         <div class="slider-label">
-                            <span>平均客戶生命週期 (月)</span>
+                            <span>平均客户生命周期 (月)</span>
                             <span id="mrrLtvValue">36</span>
                         </div>
                         <input type="range" min="6" max="120" value="36" step="6" oninput="updateMRR()">
@@ -606,24 +606,24 @@
 
                     <div class="grid-2" style="margin-top: 30px;">
                         <div class="card">
-                            <div class="card-title">月度經常性收入 (MRR)</div>
+                            <div class="card-title">月度经常性收入 (MRR)</div>
                             <div class="card-value" id="mrrResult">$99,000</div>
-                            <div class="card-desc">每月穩定收入</div>
+                            <div class="card-desc">每月稳定收入</div>
                         </div>
                         <div class="card">
-                            <div class="card-title">年度經常性收入 (ARR)</div>
+                            <div class="card-title">年度经常性收入 (ARR)</div>
                             <div class="card-value" id="arrResult">$1,188,000</div>
-                            <div class="card-desc">年度預期收入</div>
+                            <div class="card-desc">年度预期收入</div>
                         </div>
                         <div class="card">
-                            <div class="card-title">客戶生命週期價值 (LTV)</div>
+                            <div class="card-title">客户生命周期价值 (LTV)</div>
                             <div class="card-value" id="ltvResult">$3,564,000</div>
-                            <div class="card-desc">總客戶貢獻額</div>
+                            <div class="card-desc">总客户贡献额</div>
                         </div>
                         <div class="card">
                             <div class="card-title">月均 LTV</div>
                             <div class="card-value" id="ltvPerCustomerResult">$3,564</div>
-                            <div class="card-desc">每客戶生命週期價值</div>
+                            <div class="card-desc">每客户生命周期价值</div>
                         </div>
                     </div>
                 </div>
@@ -633,20 +633,20 @@
 
                     <div class="slider-group">
                         <div class="slider-label">
-                            <span>客戶取得成本 (CAC) ($)</span>
+                            <span>客户取得成本 (CAC) ($)</span>
                             <span id="cacValue">1000</span>
                         </div>
                         <input type="range" min="100" max="10000" value="1000" step="100" oninput="updateCAC()">
                     </div>
 
                     <div id="cacResult" class="result-box" style="margin-top: 20px;">
-                        <div class="result-title">LTV/CAC 比率評估</div>
+                        <div class="result-title">LTV/CAC 比率评估</div>
                         <div class="result-text" id="cacResultText"></div>
                     </div>
                 </div>
 
                 <div class="chart-container">
-                    <div class="chart-title">客戶流失率 (Monthly Churn) 影響分析</div>
+                    <div class="chart-title">客户流失率 (Monthly Churn) 影响分析</div>
 
                     <div class="slider-group">
                         <div class="slider-label">
@@ -657,23 +657,23 @@
                     </div>
 
                     <div id="churnResult" class="result-box" style="margin-top: 20px;">
-                        <div class="result-title">流失率評估</div>
+                        <div class="result-title">流失率评估</div>
                         <div class="result-text" id="churnResultText"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 4: 平台經濟網路效應 -->
+            <!-- Tab 4: 平台经济网络效应 -->
             <div id="network" class="tab-content">
-                <h2 class="section-title">平台經濟網路效應模擬</h2>
-                <p style="margin-bottom: 30px; color: #4a5568;">根據 Metcalfe 定律，網路價值與使用者數平方成正比。觀察不同規模平台的相對價值：</p>
+                <h2 class="section-title">平台经济网络效应模拟</h2>
+                <p style="margin-bottom: 30px; color: #4a5568;">根据 Metcalfe 定律，网络价值与用户数平方成正比。观察不同规模平台的相对价值：</p>
 
                 <div class="chart-container">
-                    <div class="chart-title">使用者數與平台價值關係</div>
+                    <div class="chart-title">用户数与平台价值关系</div>
 
                     <div class="slider-group">
                         <div class="slider-label">
-                            <span>平台 A 使用者數 (百萬)</span>
+                            <span>平台 A 用户数 (百万)</span>
                             <span id="networkUserAValue">10</span>
                         </div>
                         <input type="range" min="1" max="50" value="10" step="1" oninput="updateNetworkEffect()">
@@ -681,7 +681,7 @@
 
                     <div class="slider-group">
                         <div class="slider-label">
-                            <span>平台 B 使用者數 (百萬)</span>
+                            <span>平台 B 用户数 (百万)</span>
                             <span id="networkUserBValue">5</span>
                         </div>
                         <input type="range" min="1" max="50" value="5" step="1" oninput="updateNetworkEffect()">
@@ -701,63 +701,63 @@
                     </div>
 
                     <div id="networkResult" class="result-box" style="margin-top: 20px;">
-                        <div class="result-title">網路效應分析</div>
+                        <div class="result-title">网络效应分析</div>
                         <div class="result-text" id="networkResultText"></div>
                     </div>
                 </div>
 
                 <div class="chart-container">
-                    <div class="chart-title">贏者通吃現象：成長對比</div>
+                    <div class="chart-title">赢者通吃现象：成长对比</div>
                     <table class="comparison-table">
                         <thead>
                             <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                                <th>指標</th>
-                                <th>領先者 (Facebook 規模)</th>
-                                <th>後進者 (新平台)</th>
+                                <th>指针</th>
+                                <th>领先者 (Facebook 规模)</th>
+                                <th>后进者 (新平台)</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>使用者基數</strong></td>
-                                <td>30 億</td>
-                                <td>500 萬</td>
+                                <td><strong>用户基数</strong></td>
+                                <td>30 亿</td>
+                                <td>500 万</td>
                             </tr>
                             <tr>
-                                <td><strong>相對平台價值</strong></td>
+                                <td><strong>相对平台价值</strong></td>
                                 <td><span class="badge badge-high">100%</span></td>
                                 <td><span class="badge badge-low">0.003%</span></td>
                             </tr>
                             <tr>
-                                <td><strong>追趕需要</strong></td>
+                                <td><strong>追赶需要</strong></td>
                                 <td>-</td>
-                                <td>投入 10 倍資本，3-5 年時間</td>
+                                <td>投入 10 倍资本，3-5 年时间</td>
                             </tr>
                             <tr>
-                                <td><strong>競爭前景</strong></td>
-                                <td>幾乎不可能被超越</td>
-                                <td>除非有 10 倍差異化價值</td>
+                                <td><strong>竞争前景</strong></td>
+                                <td>几乎不可能被超越</td>
+                                <td>除非有 10 倍差异化价值</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- Tab 5: 轉型演進階段 -->
+            <!-- Tab 5: 转型演高级段 -->
             <div id="transformation" class="tab-content">
-                <h2 class="section-title">數位轉型演進階段</h2>
-                <p style="margin-bottom: 30px; color: #4a5568;">企業數位轉型通常經歷三個遞進的階段，每個階段帶來不同的商業價值：</p>
+                <h2 class="section-title">数字化转型演高级段</h2>
+                <p style="margin-bottom: 30px; color: #4a5568;">企业数字化转型通常经历三个递进的阶段，每个阶段带来不同的商业价值：</p>
 
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第一階段：數位化 (Digitization)</div>
+                            <div class="timeline-year">第一阶段：数字化 (Digitization)</div>
                             <div class="timeline-text">
-                                <strong>目標：</strong> 將模擬流程轉為數位流程<br>
-                                <strong>例子：</strong> 紙本菜單→電子菜單、手工記帳→會計軟體<br>
-                                <strong>商業成果：</strong> 效率提升 20-30%、成本降低 15-25%<br>
-                                <strong>週期：</strong> 1-2 年<br>
-                                <strong>成功率：</strong> 70-80% (技術成本主要)
+                                <strong>目标：</strong> 将模拟流程转为数字流程<br>
+                                <strong>例子：</strong> 纸本菜单→电子菜单、手工记帐→会计软件<br>
+                                <strong>商业成果：</strong> 效率提升 20-30%、成本降低 15-25%<br>
+                                <strong>周期：</strong> 1-2 年<br>
+                                <strong>成功率：</strong> 70-80% (技术成本主要)
                             </div>
                         </div>
                     </div>
@@ -765,13 +765,13 @@
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第二階段：數位優化 (Digitalization)</div>
+                            <div class="timeline-year">第二阶段：数字优化 (Digitalization)</div>
                             <div class="timeline-text">
-                                <strong>目標：</strong> 利用數據和系統優化現有流程<br>
-                                <strong>例子：</strong> AI 推薦系統提升轉化率、數據驅動定價<br>
-                                <strong>商業成果：</strong> 營收提升 10-20%、利潤率改善 5-15%<br>
-                                <strong>週期：</strong> 2-3 年<br>
-                                <strong>成功率：</strong> 50-60% (組織執行難)
+                                <strong>目标：</strong> 利用数据和系统优化现有流程<br>
+                                <strong>例子：</strong> AI 推荐系统提升转化率、数据驱动定价<br>
+                                <strong>商业成果：</strong> 营业收入提升 10-20%、利润率改善 5-15%<br>
+                                <strong>周期：</strong> 2-3 年<br>
+                                <strong>成功率：</strong> 50-60% (组织运行难)
                             </div>
                         </div>
                     </div>
@@ -779,13 +779,13 @@
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第三階段：數位轉型 (Digital Transformation)</div>
+                            <div class="timeline-year">第三阶段：数字化转型 (Digital Transformation)</div>
                             <div class="timeline-text">
-                                <strong>目標：</strong> 重新定義商業模式和價值主張<br>
-                                <strong>例子：</strong> Netflix 從 DVD 到串流，微信從通訊到超級應用<br>
-                                <strong>商業成果：</strong> 新市場開創、收入模式重構、5-10 倍增長潛力<br>
-                                <strong>週期：</strong> 3-5 年<br>
-                                <strong>成功率：</strong> 20-30% (戰略、組織、執行全面變革)
+                                <strong>目标：</strong> 重新定义商业模式和价值主张<br>
+                                <strong>例子：</strong> Netflix 从 DVD 到串流，微信从通信到超级应用<br>
+                                <strong>商业成果：</strong> 新市场开创、收入模式重构、5-10 倍增长潜力<br>
+                                <strong>周期：</strong> 3-5 年<br>
+                                <strong>成功率：</strong> 20-30% (战略、组织、运行全面变革)
                             </div>
                         </div>
                     </div>
@@ -793,238 +793,238 @@
 
                 <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                     <div class="card">
-                        <div class="card-title">數位轉型最常見的失敗原因</div>
+                        <div class="card-title">数字化转型最常见的失败原因</div>
                         <div style="color: #4a5568; font-size: 0.95em;">
-                            1. 缺乏 CEO 承諾 (40%)<br>
-                            2. 組織變革困難 (35%)<br>
-                            3. 技術債務 (25%)<br>
+                            1. 缺乏 CEO 承诺 (40%)<br>
+                            2. 组织变革困难 (35%)<br>
+                            3. 技术债务 (25%)<br>
                             4. 人才短缺 (30%)<br>
-                            5. 改變流程被抵抗 (50%)
+                            5. 改变流程被抵抗 (50%)
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-title">轉型成功的關鍵因素</div>
+                        <div class="card-title">转型成功的关键因素</div>
                         <div style="color: #4a5568; font-size: 0.95em;">
-                            1. CEO 親自推動和投入<br>
-                            2. 明確的商業目標(不是技術目標)<br>
-                            3. 持續的人才投資與培養<br>
-                            4. 試驗和快速迭代的文化<br>
-                            5. 激勵與績效對齊
+                            1. CEO 亲自推动和投入<br>
+                            2. 明确的商业目标(不是技术目标)<br>
+                            3. 持续的人才投资与培养<br>
+                            4. 试验和快速迭代的文化<br>
+                            5. 激励与绩效对齐
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 6: Kotter 八步驟變革管理 -->
+            <!-- Tab 6: Kotter 八步骤变革管理 -->
             <div id="change" class="tab-content">
-                <h2 class="section-title">Kotter 八步驟變革管理互動流程</h2>
-                <p style="margin-bottom: 30px; color: #4a5568;">Kotter 變革模型的八個階段。點擊各階段了解細節：</p>
+                <h2 class="section-title">Kotter 八步骤变革管理交互流程</h2>
+                <p style="margin-bottom: 30px; color: #4a5568;">Kotter 变革模型的八个阶段。点击各阶段了解细节：</p>
 
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第 1 步：營造緊迫感</div>
-                            <div class="timeline-text">明確傳達為什麼必須改變。例如："競爭對手搶走了我們 20% 的市場份額。"不要等待完美時機，危機正是變革的驅動力。</div>
+                            <div class="timeline-year">第 1 步：营造紧迫感</div>
+                            <div class="timeline-text">明确传达为什么必须改变。例如："竞争对手抢走了我们 20% 的市场份额。"不要等待完美时机，危机正是变革的驱动力。</div>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第 2 步：建立變革聯盟</div>
-                            <div class="timeline-text">組建跨部門領導團隊，包括 CEO、CFO、業務單位領導、基層經理代表。這個團隊要足夠強大，能推動全組織變革。</div>
+                            <div class="timeline-year">第 2 步：创建变革联盟</div>
+                            <div class="timeline-text">组建跨部门领导团队，包括 CEO、CFO、业务单位领导、基层经理代表。这个团队要足够强大，能推动全组织变革。</div>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第 3 步：確立願景和戰略</div>
-                            <div class="timeline-text">不是技術目標，而是業務目標。例如："從軟體公司變成雲端公司"。願景要簡潔、令人鼓舞、能指導日常決策。</div>
+                            <div class="timeline-year">第 3 步：确立愿景和战略</div>
+                            <div class="timeline-text">不是技术目标，而是业务目标。例如："从软件公司变成云端公司"。愿景要简洁、令人鼓舞、能指导日常决策。</div>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第 4 步：有效傳達願景</div>
-                            <div class="timeline-text">通過多通路、多次傳達。CEO 演講、部門會議、內部通訊、員工故事分享。重複傳達直到員工能背誦你的願景。</div>
+                            <div class="timeline-year">第 4 步：有效传达愿景</div>
+                            <div class="timeline-text">通过多渠道、多次传达。CEO 演讲、部门会议、内部通信、员工故事分享。重复传达直到员工能背诵你的愿景。</div>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第 5 步：授權員工自主行動</div>
-                            <div class="timeline-text">移除阻礙創新的流程和權力結構。例如："簽字權限從 5 層簽核改為 2 層"。給予一線團隊決策權，而非事事上報。</div>
+                            <div class="timeline-year">第 5 步：授权员工自主行动</div>
+                            <div class="timeline-text">移除阻碍创新的流程和权力结构。例如："签字权限从 5 层签核改为 2 层"。给予一线团队决策权，而非事事上报。</div>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第 6 步：營造短期成功</div>
-                            <div class="timeline-text">不要等 3-5 年才看成果。在 6 個月內設定可達成的小目標並慶祝。成功的小案例激勵整個組織繼續努力。</div>
+                            <div class="timeline-year">第 6 步：营造短期成功</div>
+                            <div class="timeline-text">不要等 3-5 年才看成果。在 6 个月内设置可达成的小目标并庆祝。成功的小案例激励整个组织继续努力。</div>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第 7 步：鞏固成果並推動進一步變革</div>
-                            <div class="timeline-text">一旦初期專案成功，利用這一動力推進更深層的變革。避免自滿和退縮。重複第 1-6 步進行下一輪變革。</div>
+                            <div class="timeline-year">第 7 步：巩固成果并推动进一步变革</div>
+                            <div class="timeline-text">一旦初期项目成功，利用这一动力推进更深层的变革。避免自满和退缩。重复第 1-6 步进行下一轮变革。</div>
                         </div>
                     </div>
 
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
-                            <div class="timeline-year">第 8 步：將新行為文化化</div>
-                            <div class="timeline-text">確保新行為被內化為企業文化。在績效評估、提拔決策、獎金分配中體現新價值觀。新行為必須成為"我們怎樣做事"的一部分。</div>
+                            <div class="timeline-year">第 8 步：将新行为文化化</div>
+                            <div class="timeline-text">确保新行为被内化为企业文化。在绩效评估、提拔决策、奖金分配中体现新价值观。新行为必须成为"我们怎样做事"的一部分。</div>
                         </div>
                     </div>
                 </div>
 
                 <div style="margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                     <div class="card">
-                        <div class="card-title">變革常見失敗原因</div>
+                        <div class="card-title">变革常见失败原因</div>
                         <div style="color: #4a5568; font-size: 0.95em;">
-                            1. 缺乏緊迫感(40%)<br>
-                            2. 聯盟不夠強大(35%)<br>
-                            3. 願景不清楚(30%)<br>
-                            4. 溝通不足(50%)<br>
-                            5. 移除障礙不夠<br>
-                            6. 宣佈勝利太早
+                            1. 缺乏紧迫感(40%)<br>
+                            2. 联盟不够强大(35%)<br>
+                            3. 愿景不清楚(30%)<br>
+                            4. 沟通不足(50%)<br>
+                            5. 移除障碍不够<br>
+                            6. 宣布胜利太早
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-title">變革成功關鍵因素</div>
+                        <div class="card-title">变革成功关键因素</div>
                         <div style="color: #4a5568; font-size: 0.95em;">
-                            1. CEO 親自推動<br>
-                            2. 清晰的業務願景<br>
-                            3. 強有力的變革聯盟<br>
-                            4. 持續有效的溝通<br>
+                            1. CEO 亲自推动<br>
+                            2. 清晰的业务愿景<br>
+                            3. 强有力的变革联盟<br>
+                            4. 持续有效的沟通<br>
                             5. 早期成功案例<br>
-                            6. 長期承諾(3-5 年+)
+                            6. 长期承诺(3-5 年+)
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 7: 零工經濟分析 -->
+            <!-- Tab 7: 零工经济分析 -->
             <div id="gig" class="tab-content">
-                <h2 class="section-title">零工經濟商業模式分析</h2>
-                <p style="margin-bottom: 30px; color: #4a5568;">比較傳統僱傭和零工經濟的特徵與權衡：</p>
+                <h2 class="section-title">零工经济商业模式分析</h2>
+                <p style="margin-bottom: 30px; color: #4a5568;">比较传统雇佣和零工经济的特征与权衡：</p>
 
                 <table class="comparison-table">
                     <thead>
                         <tr style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
-                            <th>維度</th>
-                            <th>傳統僱傭（員工）</th>
-                            <th>零工經濟（承包商）</th>
-                            <th>演變趨勢</th>
+                            <th>维度</th>
+                            <th>传统雇佣（员工）</th>
+                            <th>零工经济（承包商）</th>
+                            <th>演变趋势</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>工作時間</strong></td>
-                            <td>固定工時(9-5)</td>
-                            <td>靈活，自主選擇</td>
-                            <td>演演算法實質管理</td>
+                            <td><strong>工作时间</strong></td>
+                            <td>固定工时(9-5)</td>
+                            <td>灵活，自主选择</td>
+                            <td>算法实质管理</td>
                         </tr>
                         <tr>
-                            <td><strong>工資</strong></td>
-                            <td>固定月薪 + 獎金</td>
-                            <td>按任務/時間計費</td>
-                            <td>動態定價，工人無法預測</td>
+                            <td><strong>工资</strong></td>
+                            <td>固定月薪 + 奖金</td>
+                            <td>按任务/时间计费</td>
+                            <td>动态定价，工人无法预测</td>
                         </tr>
                         <tr>
                             <td><strong>福利</strong></td>
-                            <td>健保、退休金、假期</td>
-                            <td>無福利</td>
-                            <td>逐漸要求提供基本福利</td>
+                            <td>医保、退休金、假期</td>
+                            <td>无福利</td>
+                            <td>逐渐要求提供基本福利</td>
                         </tr>
                         <tr>
-                            <td><strong>工傷保險</strong></td>
-                            <td>公司負責</td>
-                            <td>工人自購(昂貴)</td>
+                            <td><strong>工伤保险</strong></td>
+                            <td>公司负责</td>
+                            <td>工人自购(昂贵)</td>
                             <td>法律要求平台提供</td>
                         </tr>
                         <tr>
-                            <td><strong>職業發展</strong></td>
-                            <td>升職路徑清晰</td>
-                            <td>無路徑，技能積累難轉移</td>
-                            <td>缺乏認可</td>
+                            <td><strong>职业发展</strong></td>
+                            <td>升职路径清晰</td>
+                            <td>无路径，技能积累难转移</td>
+                            <td>缺乏认可</td>
                         </tr>
                         <tr>
                             <td><strong>成本控制(平台)</strong></td>
                             <td>固定成本高</td>
-                            <td>變動成本低</td>
+                            <td>变动成本低</td>
                             <td>福利要求增加成本</td>
                         </tr>
                         <tr>
-                            <td><strong>靈活性</strong></td>
-                            <td>低，招聘和裁員需時間</td>
+                            <td><strong>灵活性</strong></td>
+                            <td>低，招聘和裁员需时间</td>
                             <td>高，需求高就多招，需求低就少用</td>
-                            <td>平台的優勢</td>
+                            <td>平台的优势</td>
                         </tr>
                         <tr>
                             <td><strong>法律地位</strong></td>
-                            <td>受完整勞動法保護</td>
+                            <td>受完整劳动法保护</td>
                             <td>法律地位模糊</td>
-                            <td>各國開始明確定義</td>
+                            <td>各国开始明确定义</td>
                         </tr>
                     </tbody>
                 </table>
 
                 <div style="margin-top: 40px;">
-                    <h3 class="chart-title">零工經濟的三大商業模式</h3>
+                    <h3 class="chart-title">零工经济的三大商业模式</h3>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
                         <div class="card">
-                            <div class="card-title">1. 交通運輸（Uber）</div>
+                            <div class="card-title">1. 交通运输（Uber）</div>
                             <div style="color: #4a5568; font-size: 0.9em; margin-top: 10px;">
-                                <strong>工作者投入：</strong>自己的車<br>
-                                <strong>平台收入：</strong>15-20% 傭金<br>
-                                <strong>工人實際時薪：</strong>$12-18/時<br>
-                                <strong>主要成本：</strong>車、油、保險<br>
-                                <strong>爭議：</strong>分類地位、最低工資
+                                <strong>工作者投入：</strong>自己的车<br>
+                                <strong>平台收入：</strong>15-20% 佣金<br>
+                                <strong>工人实际时薪：</strong>$12-18/时<br>
+                                <strong>主要成本：</strong>车、油、保险<br>
+                                <strong>争议：</strong>分类地位、最低工资
                             </div>
                         </div>
 
                         <div class="card">
-                            <div class="card-title">2. 外送服務</div>
+                            <div class="card-title">2. 外送服务</div>
                             <div style="color: #4a5568; font-size: 0.9em; margin-top: 10px;">
-                                <strong>工作者投入：</strong>機車/電動車<br>
-                                <strong>平台收入：</strong>25-35% 傭金<br>
-                                <strong>工人實際時薪：</strong>$9-15/時<br>
-                                <strong>主要成本：</strong>機車、油、維修<br>
-                                <strong>爭議：</strong>天氣風險、安全保險
+                                <strong>工作者投入：</strong>机车/电动车<br>
+                                <strong>平台收入：</strong>25-35% 佣金<br>
+                                <strong>工人实际时薪：</strong>$9-15/时<br>
+                                <strong>主要成本：</strong>机车、油、维修<br>
+                                <strong>争议：</strong>天气风险、安全保险
                             </div>
                         </div>
 
                         <div class="card">
-                            <div class="card-title">3. 自由職業（Fiverr）</div>
+                            <div class="card-title">3. 自由职业（Fiverr）</div>
                             <div style="color: #4a5568; font-size: 0.9em; margin-top: 10px;">
-                                <strong>工作者投入：</strong>技能、電腦<br>
-                                <strong>平台收入：</strong>20-30% 傭金<br>
-                                <strong>工人實際時薪：</strong>$15-100+/時<br>
-                                <strong>主要成本：</strong>軟體、設備<br>
-                                <strong>爭議：</strong>無底薪保障
+                                <strong>工作者投入：</strong>技能、电脑<br>
+                                <strong>平台收入：</strong>20-30% 佣金<br>
+                                <strong>工人实际时薪：</strong>$15-100+/时<br>
+                                <strong>主要成本：</strong>软件、设备<br>
+                                <strong>争议：</strong>无底薪保障
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="result-box" style="margin-top: 30px;">
-                    <div class="result-title">未來監管趨勢預測</div>
+                    <div class="result-title">未来监管趋势预测</div>
                     <div class="result-text">
-                        全球正從"完全自由"向"有序監管"轉變：<br><br>
-                        • <strong>短期(1-2 年)：</strong> 基本工傷保險和最低工資保障成為標配<br>
-                        • <strong>中期(2-5 年)：</strong> 健保、帶薪假期等基本福利被逐步要求<br>
-                        • <strong>長期(5+ 年)：</strong> 工作者地位明確定義，可能出現"第三類勞動者"分類<br><br>
-                        結果：平台成本上升，消費者價格上漲，但工作者保護提升。贏家是誰？取決於平台能否在提高成本的同時保持創新和效率。
+                        全球正从"完全自由"向"有序监管"转变：<br><br>
+                        • <strong>短期(1-2 年)：</strong> 基本工伤保险和最低工资保障成为标配<br>
+                        • <strong>中期(2-5 年)：</strong> 医保、带薪假期等基本福利被逐步要求<br>
+                        • <strong>长期(5+ 年)：</strong> 工作者地位明确定义，可能出现"第三类劳动者"分类<br><br>
+                        结果：平台成本上升，消费者价格上涨，但工作者保护提升。赢家是谁？取决于平台能否在提高成本的同时保持创新和效率。
                     </div>
                 </div>
             </div>
@@ -1062,11 +1062,11 @@
             resultBox.style.display = 'block';
 
             const recommendations = {
-                1: '建議優先進行數位化，將紙本流程電子化。選擇合適的雲端平台(SaaS)快速上手。',
-                2: '繼續完善數位系統，建立數據收集機制。開始試驗數位優化(如數據分析)。',
-                3: '深化數據應用，探索 AI/ML 在業務中的應用。考慮平台化或生態建設。',
-                4: '推進 AI 決策系統，優化核心業務流程。考慮新商業模式創新。',
-                5: '維持領先地位，持續創新。探索新興技術(如區塊鏈、IoT)的應用機會。'
+                1: '建议优先进行数字化，将纸本流程电子化。选择合适的云端平台(SaaS)快速上手。',
+                2: '继续完善数字系统，创建数据收集机制。开始试验数字优化(如数据分析)。',
+                3: '深化数据应用，探索 AI/ML 在业务中的应用。考虑平台化或生态建设。',
+                4: '推进 AI 决策系统，优化内核业务流程。考虑新商业模式创新。',
+                5: '维持领先地位，持续创新。探索新兴技术(如区块链、IoT)的应用机会。'
             };
 
             resultText.textContent = recommendations[level];
@@ -1104,11 +1104,11 @@
 
             let assessment = '';
             if (ratio >= 3) {
-                assessment = `✅ 優秀 (LTV/CAC = ${ratio.toFixed(2)})：可持續增長，利潤空間充足。可積極投入市場推廣。`;
+                assessment = `✅ 优秀 (LTV/CAC = ${ratio.toFixed(2)})：可持续增长，利润空间充足。可积极投入市场推广。`;
             } else if (ratio >= 1.5) {
-                assessment = `⚠️ 中等 (LTV/CAC = ${ratio.toFixed(2)})：可持續但利潤有限。需優化成本或提升客戶價值。`;
+                assessment = `⚠️ 中等 (LTV/CAC = ${ratio.toFixed(2)})：可持续但利润有限。需优化成本或提升客户价值。`;
             } else {
-                assessment = `❌ 不健康 (LTV/CAC = ${ratio.toFixed(2)})：獲客成本過高，不可持續。需大幅優化。`;
+                assessment = `❌ 不健康 (LTV/CAC = ${ratio.toFixed(2)})：获客成本过高，不可持续。需大幅优化。`;
             }
 
             resultText.textContent = assessment;
@@ -1126,13 +1126,13 @@
 
             let assessment = '';
             if (churn <= 3) {
-                assessment = `✅ 優秀 (${churn.toFixed(1)}%)：客戶粘著度很高，可持續增長。保持當前策略。`;
+                assessment = `✅ 优秀 (${churn.toFixed(1)}%)：客户粘着度很高，可持续增长。保持当前策略。`;
             } else if (churn <= 5) {
-                assessment = `🟡 可接受 (${churn.toFixed(1)}%)：行業平均水準。可考慮改進客戶成功計畫以降低流失。`;
+                assessment = `🟡 可接受 (${churn.toFixed(1)}%)：行业平均水准。可考虑改进客户成功计划以降低流失。`;
             } else if (churn <= 10) {
-                assessment = `⚠️ 需改善 (${churn.toFixed(1)}%)：高於優秀水準。需重點關注客戶滿意度和產品改進。`;
+                assessment = `⚠️ 需改善 (${churn.toFixed(1)}%)：高于优秀水准。需重点关注客户满意度和产品改进。`;
             } else {
-                assessment = `❌ 嚴重 (${churn.toFixed(1)}%)：客戶流失過快，商業模式存在問題。需根本性改進。`;
+                assessment = `❌ 严重 (${churn.toFixed(1)}%)：客户流失过快，商业模式存在问题。需根本性改进。`;
             }
 
             resultText.textContent = assessment;
@@ -1156,7 +1156,7 @@
 
             const ratio = (valueA / valueB).toFixed(1);
             const resultText = document.getElementById('networkResultText');
-            resultText.textContent = `平台 A 的網路價值是平台 B 的 ${ratio} 倍。這展示了網路效應的威力——使用者數只多 2 倍，但平台價值卻多 ${ratio} 倍。這就是為什麼領先者很難被超越。`;
+            resultText.textContent = `平台 A 的网络价值是平台 B 的 ${ratio} 倍。这展示了网络效应的威力——用户数只多 2 倍，但平台价值却多 ${ratio} 倍。这就是为什么领先者很难被超越。`;
         }
 
         // Initialize on load

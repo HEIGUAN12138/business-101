@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>市場研究方法論 互動圖表工具</title>
+    <title>市场研究方法论 交互图表工具</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -213,82 +213,82 @@
 <body>
 
     <header>
-        <h1>市場研究方法論 互動圖表工具</h1>
-        <p>市場規模估算器｜樣本量計算器｜研究方法選擇器</p>
+        <h1>市场研究方法论 交互图表工具</h1>
+        <p>市场规模估算器｜样本量计算器｜研究方法选择器</p>
     </header>
 
     <div class="container">
         <div class="tabs">
             <button class="tab-button active" onclick="switchTab(0)">TAM/SAM/SOM 估算器</button>
-            <button class="tab-button" onclick="switchTab(1)">樣本量計算器</button>
-            <button class="tab-button" onclick="switchTab(2)">研究方法選擇器</button>
+            <button class="tab-button" onclick="switchTab(1)">样本量计算器</button>
+            <button class="tab-button" onclick="switchTab(2)">研究方法选择器</button>
         </div>
 
-        <!-- 標籤1：TAM/SAM/SOM 估算器 -->
+        <!-- 标签1：TAM/SAM/SOM 估算器 -->
         <div id="tab0" class="tab-content active">
-            <h2>TAM/SAM/SOM 市場規模估算器</h2>
+            <h2>TAM/SAM/SOM 市场规模估算器</h2>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="globalMarket">全球/國家市場規模（TAM，美元）<span class="info-icon">?</span></label>
+                    <label for="globalMarket">全球/国家市场规模（TAM，美元）<span class="info-icon">?</span></label>
                     <input type="number" id="globalMarket" placeholder="例如：1000000000" value="1000000000">
                 </div>
                 <div class="form-group">
-                    <label for="targetSegment">目標市場細分佔比（%）<span class="info-icon">?</span></label>
+                    <label for="targetSegment">目标市场细分占比（%）<span class="info-icon">?</span></label>
                     <input type="number" id="targetSegment" placeholder="例如：10" value="10" min="0" max="100">
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="geographicReach">企業地理範圍佔比（%）<span class="info-icon">?</span></label>
+                    <label for="geographicReach">企业地理范围占比（%）<span class="info-icon">?</span></label>
                     <input type="number" id="geographicReach" placeholder="例如：5" value="5" min="0" max="100">
                 </div>
                 <div class="form-group">
-                    <label for="marketShare">企業市場佔有率目標（%）<span class="info-icon">?</span></label>
+                    <label for="marketShare">企业市场占有率目标（%）<span class="info-icon">?</span></label>
                     <input type="number" id="marketShare" placeholder="例如：3" value="3" min="0" max="100">
                 </div>
             </div>
 
-            <button class="calc-button" onclick="calculateTAMSAMSOM()">計算市場規模</button>
+            <button class="calc-button" onclick="calculateTAMSAMSOM()">计算市场规模</button>
 
             <div id="tamResult" class="result-box" style="display:none;">
-                <h3 style="margin-bottom: 15px; color: #333;">計算結果</h3>
+                <h3 style="margin-bottom: 15px; color: #333;">计算结果</h3>
                 <div class="result-item">
-                    <strong>TAM（全部可達市場）：</strong>
+                    <strong>TAM（全部可达市场）：</strong>
                     <span class="result-value" id="tamValue">$0</span>
                 </div>
                 <div class="result-item">
-                    <strong>SAM（可服務市場）：</strong>
+                    <strong>SAM（可服务市场）：</strong>
                     <span class="result-value" id="samValue">$0</span>
                 </div>
                 <div class="result-item">
-                    <strong>SOM（可獲得市場）：</strong>
+                    <strong>SOM（可获得市场）：</strong>
                     <span class="result-value" id="somValue">$0</span>
                 </div>
 
                 <div class="explanation">
-                    <strong>什麼是TAM/SAM/SOM?</strong><br>
-                    TAM（全部可達市場）是假設產品被所有潛在消費者採用時的市場規模。<br>
-                    SAM（可服務市場）是企業基於地理位置、產品線等限制能實際達到的市場。<br>
-                    SOM（可獲得市場）是考慮競爭因素後，企業實際能獲得的市場份額。
+                    <strong>什么是TAM/SAM/SOM?</strong><br>
+                    TAM（全部可达市场）是假设产品被所有潜在消费者采用时的市场规模。<br>
+                    SAM（可服务市场）是企业基于地理位置、产品线等限制能实际达到的市场。<br>
+                    SOM（可获得市场）是考虑竞争因素后，企业实际能获得的市场份额。
                 </div>
             </div>
         </div>
 
-        <!-- 標籤2：樣本量計算器 -->
+        <!-- 标签2：样本量计算器 -->
         <div id="tab1" class="tab-content">
-            <h2>樣本量計算器</h2>
+            <h2>样本量计算器</h2>
 
-            <p style="margin-bottom: 20px; color: #666;">用於估算進行問卷調查或實驗所需的最小樣本量。</p>
+            <p style="margin-bottom: 20px; color: #666;">用于估算进行问卷调查或实验所需的最小样本量。</p>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="population">總體規模（人數）<span class="info-icon">?</span></label>
+                    <label for="population">总体规模（人数）<span class="info-icon">?</span></label>
                     <input type="number" id="population" placeholder="例如：1000000" value="1000000">
                 </div>
                 <div class="form-group">
-                    <label for="confidence">信心水準（%）<span class="info-icon">?</span></label>
+                    <label for="confidence">信心水准（%）<span class="info-icon">?</span></label>
                     <select id="confidence">
                         <option value="90">90%（Z=1.645）</option>
                         <option value="95" selected>95%（Z=1.96）</option>
@@ -299,95 +299,95 @@
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="marginOfError">容許誤差（%）<span class="info-icon">?</span></label>
+                    <label for="marginOfError">容许误差（%）<span class="info-icon">?</span></label>
                     <input type="number" id="marginOfError" placeholder="例如：5" value="5" min="1" max="20">
                 </div>
                 <div class="form-group">
-                    <label for="expectedProportion">預期比例（%）<span class="info-icon">?</span></label>
+                    <label for="expectedProportion">预期比例（%）<span class="info-icon">?</span></label>
                     <input type="number" id="expectedProportion" placeholder="例如：50" value="50" min="1" max="99">
                 </div>
             </div>
 
-            <button class="calc-button" onclick="calculateSampleSize()">計算樣本量</button>
+            <button class="calc-button" onclick="calculateSampleSize()">计算样本量</button>
 
             <div id="sampleResult" class="result-box" style="display:none;">
-                <h3 style="margin-bottom: 15px; color: #333;">計算結果</h3>
+                <h3 style="margin-bottom: 15px; color: #333;">计算结果</h3>
                 <div class="result-item">
-                    <strong>所需最小樣本量：</strong>
+                    <strong>所需最小样本量：</strong>
                     <span class="result-value" id="sampleValue">0</span> 人
                 </div>
                 <div class="result-item">
-                    <strong>建議樣本量（含15%緩衝）：</strong>
+                    <strong>建议样本量（含15%缓冲）：</strong>
                     <span class="result-value" id="bufferSampleValue">0</span> 人
                 </div>
 
                 <div class="explanation">
-                    <strong>如何理解結果?</strong><br>
-                    最小樣本量是統計學上所需的最低數量。實務上，建議加15-20%緩衝以應對回應率不足等情況。<br>
-                    信心水準越高、容許誤差越小，所需樣本量越大。
+                    <strong>如何理解结果?</strong><br>
+                    最小样本量是统计学上所需的最低数量。实务上，建议加15-20%缓冲以应对回应率不足等情况。<br>
+                    信心水准越高、容许误差越小，所需样本量越大。
                 </div>
             </div>
         </div>
 
-        <!-- 標籤3：研究方法選擇器 -->
+        <!-- 标签3：研究方法选择器 -->
         <div id="tab2" class="tab-content">
-            <h2>研究方法選擇器</h2>
+            <h2>研究方法选择器</h2>
 
-            <p style="margin-bottom: 20px; color: #666;">根據你的研究目標、預算和時間限制，獲得推薦的研究方法組合。</p>
+            <p style="margin-bottom: 20px; color: #666;">根据你的研究目标、预算和时间限制，获得推荐的研究方法组合。</p>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="researchGoal">研究目標<span class="info-icon">?</span></label>
+                    <label for="researchGoal">研究目标<span class="info-icon">?</span></label>
                     <select id="researchGoal">
-                        <option value="">--請選擇--</option>
-                        <option value="explore">探索性（發現需求、理解為什麼）</option>
-                        <option value="describe">描述性（了解市場現狀、規模）</option>
-                        <option value="causal">因果性（驗證假設、測試因果）</option>
-                        <option value="optimize">優化性（改進產品、優化體驗）</option>
+                        <option value="">--请选择--</option>
+                        <option value="explore">探索性（发现需求、理解为什么）</option>
+                        <option value="describe">描述性（了解市场现状、规模）</option>
+                        <option value="causal">因果性（验证假设、测试因果）</option>
+                        <option value="optimize">优化性（改进产品、优化体验）</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="budget">預算<span class="info-icon">?</span></label>
+                    <label for="budget">预算<span class="info-icon">?</span></label>
                     <select id="budget">
-                        <option value="">--請選擇--</option>
-                        <option value="low">低預算（&lt;$5,000）</option>
-                        <option value="medium">中預算（$5,000-$25,000）</option>
-                        <option value="high">高預算（$25,000+）</option>
+                        <option value="">--请选择--</option>
+                        <option value="low">低预算（&lt;$5,000）</option>
+                        <option value="medium">中预算（$5,000-$25,000）</option>
+                        <option value="high">高预算（$25,000+）</option>
                     </select>
                 </div>
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="timeline">時間限制<span class="info-icon">?</span></label>
+                    <label for="timeline">时间限制<span class="info-icon">?</span></label>
                     <select id="timeline">
-                        <option value="">--請選擇--</option>
+                        <option value="">--请选择--</option>
                         <option value="urgent">急迫（1-2周）</option>
-                        <option value="medium">適中（1-2個月）</option>
-                        <option value="flexible">充裕（3個月+）</option>
+                        <option value="medium">适中（1-2个月）</option>
+                        <option value="flexible">充裕（3个月+）</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="sampleSize">預期樣本規模<span class="info-icon">?</span></label>
+                    <label for="sampleSize">预期样本规模<span class="info-icon">?</span></label>
                     <select id="sampleSize">
-                        <option value="">--請選擇--</option>
-                        <option value="small">小規模（&lt;50人）</option>
-                        <option value="medium">中規模（50-500人）</option>
-                        <option value="large">大規模（500人+）</option>
+                        <option value="">--请选择--</option>
+                        <option value="small">小规模（&lt;50人）</option>
+                        <option value="medium">中规模（50-500人）</option>
+                        <option value="large">大规模（500人+）</option>
                     </select>
                 </div>
             </div>
 
-            <button class="calc-button" onclick="recommendResearchMethod()">取得推薦</button>
+            <button class="calc-button" onclick="recommendResearchMethod()">取得推荐</button>
 
             <div id="methodResult" class="result-box" style="display:none;">
-                <h3 style="margin-bottom: 15px; color: #333;">推薦的研究方法組合</h3>
+                <h3 style="margin-bottom: 15px; color: #333;">推荐的研究方法组合</h3>
                 <div id="methodRecommendation" style="line-height: 1.8;">
-                    <!-- 動態填充 -->
+                    <!-- 动态填充 -->
                 </div>
 
                 <div class="explanation" style="margin-top: 20px;">
-                    <strong>為什麼推薦這個組合?</strong><br>
+                    <strong>为什么推荐这个组合?</strong><br>
                     <span id="methodExplanation"></span>
                 </div>
             </div>
@@ -395,11 +395,11 @@
     </div>
 
     <footer>
-        市場研究方法論 © 2026
+        市场研究方法论 © 2026
     </footer>
 
     <script>
-        // 標籤切換
+        // 标签切换
         function switchTab(index) {
             const tabs = document.querySelectorAll('.tab-content');
             const buttons = document.querySelectorAll('.tab-button');
@@ -413,7 +413,7 @@
             buttons[index].classList.add('active');
         }
 
-        // TAM/SAM/SOM 計算
+        // TAM/SAM/SOM 计算
         function calculateTAMSAMSOM() {
             const globalMarket = parseFloat(document.getElementById('globalMarket').value) || 0;
             const targetSegment = parseFloat(document.getElementById('targetSegment').value) || 0;
@@ -431,7 +431,7 @@
             document.getElementById('tamResult').style.display = 'block';
         }
 
-        // 樣本量計算
+        // 样本量计算
         function calculateSampleSize() {
             const population = parseInt(document.getElementById('population').value) || 0;
             const confidence = parseFloat(document.getElementById('confidence').value);
@@ -443,10 +443,10 @@
             else if (confidence === 95) zScore = 1.96;
             else zScore = 2.576; // 99%
 
-            // 樣本量公式：n = (Z² × p × (1-p)) / E²
+            // 样本量公式：n = (Z² × p × (1-p)) / E²
             const sampleSize = Math.ceil((zScore * zScore * expectedProportion * (1 - expectedProportion)) / (marginOfError * marginOfError));
 
-            // 有限總體修正
+            // 有限总体修正
             const adjustedSampleSize = Math.ceil((sampleSize * population) / (sampleSize + population - 1));
 
             const bufferSampleSize = Math.ceil(adjustedSampleSize * 1.15);
@@ -457,7 +457,7 @@
             document.getElementById('sampleResult').style.display = 'block';
         }
 
-        // 研究方法推薦
+        // 研究方法推荐
         function recommendResearchMethod() {
             const goal = document.getElementById('researchGoal').value;
             const budget = document.getElementById('budget').value;
@@ -465,57 +465,57 @@
             const sampleSize = document.getElementById('sampleSize').value;
 
             if (!goal || !budget || !timeline || !sampleSize) {
-                alert('請完整填寫所有欄位');
+                alert('请完整填写所有字段');
                 return;
             }
 
             let recommendation = '';
             let explanation = '';
 
-            // 基於目標推薦
+            // 基于目标推荐
             if (goal === 'explore') {
                 if (budget === 'low') {
-                    recommendation = '<strong>推薦方法：</strong><br>• 深度訪談（5-10人）<br>• 焦點團體（1-2組）<br><br><strong>特點：</strong> 成本低、執行快，適合早期探索。<br><strong>缺點：</strong> 樣本小，結果難以推廣。';
-                    explanation = '探索性研究重在深度理解，而非統計推論。低預算應優先進行定性研究發現洞察，後續再驗證。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 深度访谈（5-10人）<br>• 焦点团体（1-2组）<br><br><strong>特点：</strong> 成本低、运行快，适合早期探索。<br><strong>缺点：</strong> 样本小，结果难以推广。';
+                    explanation = '探索性研究重在深度理解，而非统计推论。低预算应优先进行定性研究发现洞察，后续再验证。';
                 } else if (budget === 'medium') {
-                    recommendation = '<strong>推薦方法：</strong><br>• 焦點團體（2-3組）<br>• 深度訪談（8-15人）<br>• 使用者觀察（2周）<br><br><strong>特點：</strong> 綜合質化研究，深入理解。<br><strong>缺點：</strong> 耗時較長。';
-                    explanation = '中等預算可進行多種定性方法組合，確保全面理解消費者需求、行為與動機。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 焦点团体（2-3组）<br>• 深度访谈（8-15人）<br>• 用户观察（2周）<br><br><strong>特点：</strong> 综合质化研究，深入理解。<br><strong>缺点：</strong> 耗时较长。';
+                    explanation = '中等预算可进行多种定性方法组合，确保全面理解消费者需求、行为与动机。';
                 } else {
-                    recommendation = '<strong>推薦方法：</strong><br>• 民族誌研究（長期觀察）<br>• 深度訪談（15-20人）<br>• 焦點團體（3-4組）<br><br><strong>特點：</strong> 最深入的理解，發現隱性需求。<br><strong>缺點：</strong> 投資大、耗時長。';
-                    explanation = '高預算支持沉浸式研究，能發現消費者難以表達的深層需求與動機。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 民族志研究（长期观察）<br>• 深度访谈（15-20人）<br>• 焦点团体（3-4组）<br><br><strong>特点：</strong> 最深入的理解，发现隐性需求。<br><strong>缺点：</strong> 投资大、耗时长。';
+                    explanation = '高预算支持沉浸式研究，能发现消费者难以表达的深层需求与动机。';
                 }
             } else if (goal === 'describe') {
                 if (budget === 'low') {
-                    recommendation = '<strong>推薦方法：</strong><br>• 次級數據分析（政府統計、報告）<br>• 小規模問卷調查（100-200人）<br><br><strong>特點：</strong> 成本最低，快速了解現狀。<br><strong>缺點：</strong> 次級數據可能過時或不完全符合需求。';
-                    explanation = '描述性研究需要量化數據。低預算應優先利用現有的次級數據，再補充小規模調查。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 次级数据分析（政府统计、报告）<br>• 小规模问卷调查（100-200人）<br><br><strong>特点：</strong> 成本最低，快速了解现状。<br><strong>缺点：</strong> 次级数据可能过时或不完全符合需求。';
+                    explanation = '描述性研究需要量化数据。低预算应优先利用现有的次级数据，再补充小规模调查。';
                 } else if (budget === 'medium') {
-                    recommendation = '<strong>推薦方法：</strong><br>• 問卷調查（300-800人）<br>• 市場統計分析<br><br><strong>特點：</strong> 合理成本內獲得市場全貌。<br><strong>缺點：</strong> 深度有限。';
-                    explanation = '中等預算可進行大規模問卷，結合統計分析描繪市場現狀、消費者特徵與趨勢。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 问卷调查（300-800人）<br>• 市场统计分析<br><br><strong>特点：</strong> 合理成本内获得市场全貌。<br><strong>缺点：</strong> 深度有限。';
+                    explanation = '中等预算可进行大规模问卷，结合统计分析描绘市场现状、消费者特征与趋势。';
                 } else {
-                    recommendation = '<strong>推薦方法：</strong><br>• 大規模問卷調查（1000-3000人）<br>• 多通路數據整合<br>• 高級統計分析<br><br><strong>特點：</strong> 全面、準確、可推廣。<br><strong>缺點：</strong> 無法理解深層原因。';
-                    explanation = '高預算支持大規模調查，確保市場現狀描述的準確性與代表性。可進一步細分市場。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 大规模问卷调查（1000-3000人）<br>• 多渠道数据集成<br>• 高级统计分析<br><br><strong>特点：</strong> 全面、准确、可推广。<br><strong>缺点：</strong> 无法理解深层原因。';
+                    explanation = '高预算支持大规模调查，确保市场现状描述的准确性与代表性。可进一步细分市场。';
                 }
             } else if (goal === 'causal') {
                 if (budget === 'low') {
-                    recommendation = '<strong>推薦方法：</strong><br>• 準實驗（觀察法）<br>• 小規模A/B測試（100-300人）<br><br><strong>特點：</strong> 成本可控，初步驗證。<br><strong>缺點：</strong> 控制不夠嚴格，難以排除混淆變數。';
-                    explanation = '驗證因果關係需要實驗。低預算可進行小規模初步測試，若結果有希望再擴大投資。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 准实验（观察法）<br>• 小规模A/B测试（100-300人）<br><br><strong>特点：</strong> 成本可控，初步验证。<br><strong>缺点：</strong> 控制不够严格，难以排除混淆变量。';
+                    explanation = '验证因果关系需要实验。低预算可进行小规模初步测试，若结果有希望再扩大投资。';
                 } else if (budget === 'medium') {
-                    recommendation = '<strong>推薦方法：</strong><br>• 受控實驗<br>• A/B測試（300-1000人）<br>• 隨機對照試驗<br><br><strong>特點：</strong> 科學嚴格，結果可信。<br><strong>缺點：</strong> 需要技術支持。';
-                    explanation = '中等預算可進行規範的A/B測試與實驗，通過隨機分組與控制變數驗證因果關係。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 受控实验<br>• A/B测试（300-1000人）<br>• 随机对照试验<br><br><strong>特点：</strong> 科学严格，结果可信。<br><strong>缺点：</strong> 需要技术支持。';
+                    explanation = '中等预算可进行规范的A/B测试与实验，通过随机分组与控制变量验证因果关系。';
                 } else {
-                    recommendation = '<strong>推薦方法：</strong><br>• 多組隨機對照實驗<br>• 長期追蹤實驗<br>• 複雜多變數測試<br><br><strong>特點：</strong> 最科學、最可信。<br><strong>缺點：</strong> 投資最大。';
-                    explanation = '高預算支持複雜的多變數實驗與長期追蹤，驗證因果機制與持久效應。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 多组随机对照实验<br>• 长期追踪实验<br>• 复杂多变量测试<br><br><strong>特点：</strong> 最科学、最可信。<br><strong>缺点：</strong> 投资最大。';
+                    explanation = '高预算支持复杂的多变量实验与长期追踪，验证因果机制与持久效应。';
                 }
             } else if (goal === 'optimize') {
                 if (budget === 'low') {
-                    recommendation = '<strong>推薦方法：</strong><br>• 使用者回饋收集<br>• 小規模A/B測試<br>• 行為數據分析<br><br><strong>特點：</strong> 快速迭代，持續改進。<br><strong>缺點：</strong> 改進幅度有限。';
-                    explanation = '優化需要快速回饋迴圈。低預算應依賴現有使用者回饋與小規模測試驅動漸進改善。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 用户回馈收集<br>• 小规模A/B测试<br>• 行为数据分析<br><br><strong>特点：</strong> 快速迭代，持续改进。<br><strong>缺点：</strong> 改进幅度有限。';
+                    explanation = '优化需要快速回馈循环。低预算应依赖现有用户回馈与小规模测试驱动渐进改善。';
                 } else if (budget === 'medium') {
-                    recommendation = '<strong>推薦方法：</strong><br>• 定期A/B測試（500-1000人）<br>• 使用者訪談與回饋<br>• 分析工具（Google Analytics等）<br><br><strong>特點：</strong> 持續改進，成果明顯。<br><strong>缺點：</strong> 需要組織支持。';
-                    explanation = '中等預算支持常規A/B測試與使用者研究迴圈，驅動產品與體驗的持續優化。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 定期A/B测试（500-1000人）<br>• 用户访谈与回馈<br>• 分析工具（Google Analytics等）<br><br><strong>特点：</strong> 持续改进，成果明显。<br><strong>缺点：</strong> 需要组织支持。';
+                    explanation = '中等预算支持常规A/B测试与用户研究循环，驱动产品与体验的持续优化。';
                 } else {
-                    recommendation = '<strong>推薦方法：</strong><br>• 大規模多變數測試<br>• 實時個性化優化<br>• 機器學習模型<br>• 綜合分析平台<br><br><strong>特點：</strong> 深度、即時、自動化。<br><strong>缺點：</strong> 技術複雜。';
-                    explanation = '高預算可建立持續優化系統，運用ML驅動個性化與自動化優化。';
+                    recommendation = '<strong>推荐方法：</strong><br>• 大规模多变量测试<br>• 实时个性化优化<br>• 机器学习模型<br>• 综合分析平台<br><br><strong>特点：</strong> 深度、实时、自动化。<br><strong>缺点：</strong> 技术复杂。';
+                    explanation = '高预算可创建持续优化系统，运用ML驱动个性化与自动化优化。';
                 }
             }
 
@@ -524,7 +524,7 @@
             document.getElementById('methodResult').style.display = 'block';
         }
 
-        // 格式化數字
+        // 格式化数字
         function formatNumber(num) {
             return num.toLocaleString('zh-TW', { maximumFractionDigits: 0 });
         }

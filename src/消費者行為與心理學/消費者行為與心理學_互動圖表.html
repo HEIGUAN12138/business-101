@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>消費者行為與心理學 - 互動工具</title>
+    <title>消费者行为与心理学 - 交互工具</title>
     <style>
         * {
             margin: 0;
@@ -418,57 +418,57 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>消費者行為與心理學</h1>
-            <p>互動工具和模擬器 - 深入理解消費者心理</p>
+            <h1>消费者行为与心理学</h1>
+            <p>交互工具和模拟器 - 深入理解消费者心理</p>
         </div>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab(0)">決策流程圖</button>
-            <button class="tab-button" onclick="switchTab(1)">認知偏誤百科</button>
-            <button class="tab-button" onclick="switchTab(2)">定價心理學</button>
-            <button class="tab-button" onclick="switchTab(3)">消費者區隔</button>
-            <button class="tab-button" onclick="switchTab(4)">購買動機</button>
+            <button class="tab-button active" onclick="switchTab(0)">决策流程图</button>
+            <button class="tab-button" onclick="switchTab(1)">认知偏误百科</button>
+            <button class="tab-button" onclick="switchTab(2)">定价心理学</button>
+            <button class="tab-button" onclick="switchTab(3)">消费者区隔</button>
+            <button class="tab-button" onclick="switchTab(4)">购买动机</button>
         </div>
 
-        <!-- Tab 1: 消費者決策流程圖 -->
+        <!-- Tab 1: 消费者决策流程图 -->
         <div id="tab0" class="tab-content active">
-            <h2 class="section-title">消費者決策流程圖 - 五階段模型</h2>
+            <h2 class="section-title">消费者决策流程图 - 五阶段模型</h2>
 
             <p style="color: #666; margin-bottom: 20px; font-size: 1.05em;">
-                消費者的購買決定遵循五個關鍵階段。點擊下面的每個階段了解詳細資訊。
+                消费者的购买决定遵循五个关键阶段。点击下面的每个阶段了解详细信息。
             </p>
 
             <div class="flow-chart">
                 <div class="flow-box" onclick="showStageDetail(1)">
                     <div style="font-size: 1.5em; margin-bottom: 10px;">🎯</div>
-                    <div>階段 1: 問題認知</div>
-                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">發現問題</div>
+                    <div>阶段 1: 问题认知</div>
+                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">发现问题</div>
                 </div>
                 <div class="arrow">→</div>
                 <div class="flow-box step-2" onclick="showStageDetail(2)">
                     <div style="font-size: 1.5em; margin-bottom: 10px;">🔍</div>
-                    <div>階段 2: 資訊搜尋</div>
-                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">蒐集資訊</div>
+                    <div>阶段 2: 信息搜索</div>
+                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">搜集信息</div>
                 </div>
                 <div class="arrow">→</div>
                 <div class="flow-box step-3" onclick="showStageDetail(3)">
                     <div style="font-size: 1.5em; margin-bottom: 10px;">⚖️</div>
-                    <div>階段 3: 方案評估</div>
-                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">比較選項</div>
+                    <div>阶段 3: 方案评估</div>
+                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">比较选项</div>
                 </div>
             </div>
 
             <div class="flow-chart">
                 <div class="flow-box step-4" onclick="showStageDetail(4)">
                     <div style="font-size: 1.5em; margin-bottom: 10px;">💳</div>
-                    <div>階段 4: 購買決策</div>
-                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">做出決定</div>
+                    <div>阶段 4: 购买决策</div>
+                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">做出决定</div>
                 </div>
                 <div class="arrow">→</div>
                 <div class="flow-box step-5" onclick="showStageDetail(5)">
                     <div style="font-size: 1.5em; margin-bottom: 10px;">⭐</div>
-                    <div>階段 5: 購後行為</div>
-                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">評估滿意度</div>
+                    <div>阶段 5: 购后行为</div>
+                    <div style="font-size: 0.8em; opacity: 0.9; margin-top: 5px;">评估满意度</div>
                 </div>
             </div>
 
@@ -476,181 +476,181 @@
                 <h3 id="stageName" style="color: #667eea; margin-bottom: 15px; font-size: 1.3em;"></h3>
                 <p id="stageDescription" style="color: #555; line-height: 1.8; margin-bottom: 15px;"></p>
                 <div style="background: white; padding: 15px; border-radius: 5px; margin-top: 15px;">
-                    <strong>心理學應用:</strong>
+                    <strong>心理学应用:</strong>
                     <div id="stagePsychology" style="color: #666; margin-top: 10px; line-height: 1.6;"></div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 2: 認知偏誤百科 -->
+        <!-- Tab 2: 认知偏误百科 -->
         <div id="tab1" class="tab-content">
-            <h2 class="section-title">認知偏誤百科</h2>
+            <h2 class="section-title">认知偏误百科</h2>
 
             <p style="color: #666; margin-bottom: 20px; font-size: 1.05em;">
-                點擊下面的任何偏誤了解其定義、例子和營銷應用。
+                点击下面的任何偏误了解其定义、例子和营销应用。
             </p>
 
             <div class="bias-grid">
                 <div class="bias-card" onclick="showBias('anchoring')">
-                    <h3>錨定效應</h3>
-                    <p>過度依賴第一個資訊作為參考</p>
+                    <h3>锚定效应</h3>
+                    <p>过度依赖第一个人信息讯作为参考</p>
                     <div class="bias-example" id="bias-anchoring" style="display: none;">
-                        例: 「原價 $100，現價 $50」讓消費者認為節省了 $50，增加購買意願
+                        例: 「原价 $100，现价 $50」让消费者认为节省了 $50，增加购买意愿
                     </div>
                 </div>
 
                 <div class="bias-card" onclick="showBias('scarcity')">
-                    <h3>稀缺性效應</h3>
-                    <p>稀缺資源被認為更有價值</p>
+                    <h3>稀缺性效应</h3>
+                    <p>稀缺资源被认为更有价值</p>
                     <div class="bias-example" id="bias-scarcity" style="display: none;">
-                        例: 「僅剩 3 件」激發消費者的購買緊急感
+                        例: 「仅剩 3 件」激发消费者的购买紧急感
                     </div>
                 </div>
 
                 <div class="bias-card" onclick="showBias('social')">
-                    <h3>社會認同</h3>
-                    <p>假設他人的行為是正確的</p>
+                    <h3>社会认同</h3>
+                    <p>假设他人的行为是正确的</p>
                     <div class="bias-example" id="bias-social" style="display: none;">
-                        例: 「10,000 人已購買」使消費者認為產品一定不錯
+                        例: 「10,000 人已购买」使消费者认为产品一定不错
                     </div>
                 </div>
 
                 <div class="bias-card" onclick="showBias('sunk')">
-                    <h3>沉沒成本謬誤</h3>
-                    <p>基於已花費的成本做決定</p>
+                    <h3>沉没成本谬误</h3>
+                    <p>基于已花费的成本做决定</p>
                     <div class="bias-example" id="bias-sunk" style="display: none;">
-                        例: 因為已付健身房會費就繼續續費，即使不使用
+                        例: 因为已付健身房会费就继续续费，即使不使用
                     </div>
                 </div>
 
                 <div class="bias-card" onclick="showBias('loss')">
-                    <h3>損失趨避</h3>
-                    <p>避免損失的動力強於獲得的動力</p>
+                    <h3>损失趋避</h3>
+                    <p>避免损失的动力强于获得的动力</p>
                     <div class="bias-example" id="bias-loss" style="display: none;">
-                        例: 「不購買將失去保障」比「購買可獲得保障」更有效
+                        例: 「不购买将失去保障」比「购买可获得保障」更有效
                     </div>
                 </div>
 
                 <div class="bias-card" onclick="showBias('framing')">
-                    <h3>框架效應</h3>
-                    <p>資訊呈現方式影響決策</p>
+                    <h3>框架效应</h3>
+                    <p>信息呈现方式影响决策</p>
                     <div class="bias-example" id="bias-framing" style="display: none;">
-                        例: 「保存 30% 成功率」vs「30% 失敗」導致不同的風險認知
+                        例: 「保存 30% 成功率」vs「30% 失败」导致不同的风险认知
                     </div>
                 </div>
 
                 <div class="bias-card" onclick="showBias('halo')">
-                    <h3>月暈效應</h3>
-                    <p>一個特徵影響整體評價</p>
+                    <h3>月晕效应</h3>
+                    <p>一个特征影响整体评价</p>
                     <div class="bias-example" id="bias-halo" style="display: none;">
-                        例: 漂亮的包裝讓消費者認為產品品質高
+                        例: 漂亮的包装让消费者认为产品质量高
                     </div>
                 </div>
 
                 <div class="bias-card" onclick="showBias('confirmation')">
-                    <h3>確認偏誤</h3>
-                    <p>尋求支持既有信念的資訊</p>
+                    <h3>确认偏误</h3>
+                    <p>寻求支持既有信念的信息</p>
                     <div class="bias-example" id="bias-confirmation" style="display: none;">
-                        例: 只閱讀支持某品牌的評論，忽視批評
+                        例: 只阅读支持某品牌的评论，忽视批评
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 3: 定價心理學模擬器 -->
+        <!-- Tab 3: 定价心理学模拟器 -->
         <div id="tab2" class="tab-content">
-            <h2 class="section-title">定價心理學模擬器</h2>
+            <h2 class="section-title">定价心理学模拟器</h2>
 
             <p style="color: #666; margin-bottom: 20px; font-size: 1.05em;">
-                調整下面的定價和框架，查看如何影響消費者認知和購買意願。
+                调整下面的定价和框架，查看如何影响消费者认知和购买意愿。
             </p>
 
             <div class="simulator-box">
-                <h3 style="color: #667eea; margin-bottom: 20px;">場景：咖啡杯售價</h3>
+                <h3 style="color: #667eea; margin-bottom: 20px;">场景：咖啡杯售价</h3>
 
                 <div class="input-group">
-                    <label>顯示價格:</label>
+                    <label>显示价格:</label>
                     <input type="number" id="priceInput" value="29.99" step="0.01" min="0">
                     <span style="font-weight: bold; color: #667eea; font-size: 1.1em;">$<span id="displayPrice">29.99</span></span>
                 </div>
 
                 <div class="input-group">
-                    <label>標明原價:</label>
+                    <label>标明原价:</label>
                     <input type="number" id="originalInput" value="49.99" step="0.01" min="0">
                 </div>
 
                 <div class="input-group">
                     <label>框架:</label>
                     <select id="framingSelect" onchange="updateFraming()">
-                        <option value="exact">精確價格 ($29.99)</option>
-                        <option value="rounding">四捨五入 ($30)</option>
-                        <option value="monthly">月度金額 ($2.50/月)</option>
+                        <option value="exact">精确价格 ($29.99)</option>
+                        <option value="rounding">四舍五入 ($30)</option>
+                        <option value="monthly">月度金额 ($2.50/月)</option>
                         <option value="discount">折扣百分比 (40% OFF)</option>
                     </select>
                 </div>
 
-                <button onclick="calculatePricing()">計算購買意願</button>
+                <button onclick="calculatePricing()">计算购买意愿</button>
             </div>
 
             <div id="pricingResult" class="result-box">
                 <div style="text-align: left; max-width: 600px; margin: 0 auto;">
-                    <h3 style="margin-bottom: 15px;">分析結果:</h3>
+                    <h3 style="margin-bottom: 15px;">分析结果:</h3>
                     <div id="resultContent" style="text-align: left;"></div>
                 </div>
             </div>
 
             <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin-top: 30px;">
-                <h3 style="color: #667eea; margin-bottom: 15px;">定價心理學洞察:</h3>
+                <h3 style="color: #667eea; margin-bottom: 15px;">定价心理学洞察:</h3>
                 <ul style="color: #555; line-height: 1.8; margin-left: 20px;">
-                    <li><strong>$X.99 定價：</strong>大腦將 $29.99 認知為「20 多元」而非「30」，大幅降低購買心理抵抗</li>
-                    <li><strong>原價框架：</strong>展示「原價 $50」強調折扣，增加「划算感」，提高轉化率</li>
-                    <li><strong>月度定價：</strong>「$2.50/月」感覺比「$30 一次」更便宜，降低心理負擔</li>
-                    <li><strong>百分比折扣：</strong>「40% OFF」比「$20 折扣」看起來更吸引，激發購買慾望</li>
+                    <li><strong>$X.99 定价：</strong>大脑将 $29.99 认知为「20 多元」而非「30」，大幅降低购买心理抵抗</li>
+                    <li><strong>原价框架：</strong>展示「原价 $50」强调折扣，增加「划算感」，提高转化率</li>
+                    <li><strong>月度定价：</strong>「$2.50/月」感觉比「$30 一次」更便宜，降低心理负担</li>
+                    <li><strong>百分比折扣：</strong>「40% OFF」比「$20 折扣」看起来更吸引，激发购买欲望</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Tab 4: 消費者區隔分析器 -->
+        <!-- Tab 4: 消费者区隔分析器 -->
         <div id="tab3" class="tab-content">
-            <h2 class="section-title">消費者區隔分析器</h2>
+            <h2 class="section-title">消费者区隔分析器</h2>
 
             <p style="color: #666; margin-bottom: 20px; font-size: 1.05em;">
-                選擇最符合你的消費者檔案。系統將分析其特徵和營銷策略。
+                选择最符合你的消费者文件。系统将分析其特征和营销策略。
             </p>
 
             <div onclick="analyzeSegment('price')" class="segmentation-option">
-                <h3>💰 價格敏感型消費者</h3>
-                <p><strong>特徵：</strong>對價格極其敏感，總是尋求最優惠、最便宜的選項</p>
-                <p><strong>心理學驅動因素：</strong>損失趨避（害怕浪費金錢）、成本-效益計算</p>
-                <p><strong>最有效的營銷策略：</strong>折扣、比價工具、金額表示（「每月只要 $X」）、免費運費</p>
+                <h3>💰 价格敏感型消费者</h3>
+                <p><strong>特征：</strong>对价格极其敏感，总是寻求最优惠、最便宜的选项</p>
+                <p><strong>心理学驱动因素：</strong>损失趋避（害怕浪费金钱）、成本-效益计算</p>
+                <p><strong>最有效的营销策略：</strong>折扣、比价工具、金额表示（「每月只要 $X」）、免费运费</p>
             </div>
 
             <div onclick="analyzeSegment('status')" class="segmentation-option">
-                <h3>🏆 地位象徵型消費者</h3>
-                <p><strong>特徵：</strong>追求奢侈品牌和高級感，將消費用作身份展示</p>
-                <p><strong>心理學驅動因素：</strong>地位追求、月暈效應、品牌認同</p>
-                <p><strong>最有效的營銷策略：</strong>品牌背書、限量版、VIP 會員、高價定位、名人代言</p>
+                <h3>🏆 地位象征型消费者</h3>
+                <p><strong>特征：</strong>追求奢侈品牌和高级感，将消费用作身份展示</p>
+                <p><strong>心理学驱动因素：</strong>地位追求、月晕效应、品牌认同</p>
+                <p><strong>最有效的营销策略：</strong>品牌背书、限量版、VIP 会员、高价定位、名人代言</p>
             </div>
 
             <div onclick="analyzeSegment('experiential')" class="segmentation-option">
-                <h3>🎯 體驗追求型消費者</h3>
-                <p><strong>特徵：</strong>追求獨特體驗和回憶，願意為經歷付費</p>
-                <p><strong>心理學驅動因素：</strong>情感行銷、社會認同、自我實現</p>
-                <p><strong>最有效的營銷策略：</strong>故事敘述、社群建設、客戶故事分享、互動體驗</p>
+                <h3>🎯 体验追求型消费者</h3>
+                <p><strong>特征：</strong>追求独特体验和回忆，愿意为经历付费</p>
+                <p><strong>心理学驱动因素：</strong>情感营销、社会认同、自我实现</p>
+                <p><strong>最有效的营销策略：</strong>故事叙述、社区建设、客户故事分享、交互体验</p>
             </div>
 
             <div onclick="analyzeSegment('rational')" class="segmentation-option">
-                <h3>🧠 理性決策型消費者</h3>
-                <p><strong>特徵：</strong>進行深度研究，基於事實和數據做決定</p>
-                <p><strong>心理學驅動因素：</strong>認知、資訊搜尋、詳細比較</p>
-                <p><strong>最有效的營銷策略：</strong>詳細規格、比較工具、科學證據、使用者評論、7 天試用</p>
+                <h3>🧠 理性决策型消费者</h3>
+                <p><strong>特征：</strong>进行深度研究，基于事实和数据做决定</p>
+                <p><strong>心理学驱动因素：</strong>认知、信息搜索、详细比较</p>
+                <p><strong>最有效的营销策略：</strong>详细规格、比较工具、科学证据、用户评论、7 天试用</p>
             </div>
 
             <div onclick="analyzeSegment('social')" class="segmentation-option">
-                <h3>👥 社交驅動型消費者</h3>
-                <p><strong>特徵：</strong>受朋友和社群影響，跟隨社交媒體趨勢</p>
-                <p><strong>心理學驅動因素：</strong>社會認同、從眾行為、FOMO</p>
-                <p><strong>最有效的營銷策略：</strong>社群媒體、使用者生成內容、限時優惠、朋友推薦獎勵</p>
+                <h3>👥 社交驱动型消费者</h3>
+                <p><strong>特征：</strong>受朋友和社区影响，跟随社交媒体趋势</p>
+                <p><strong>心理学驱动因素：</strong>社会认同、从众行为、FOMO</p>
+                <p><strong>最有效的营销策略：</strong>社区媒体、用户生成内容、限时优惠、朋友推荐奖励</p>
             </div>
 
             <div id="segmentResult" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 25px; border-radius: 10px; margin-top: 30px; display: none;">
@@ -659,13 +659,13 @@
             </div>
         </div>
 
-        <!-- Tab 5: 購買動機分析器 -->
+        <!-- Tab 5: 购买动机分析器 -->
         <div id="tab4" class="tab-content">
-            <h2 class="section-title">購買動機分析器</h2>
+            <h2 class="section-title">购买动机分析器</h2>
 
             <p style="color: #666; margin-bottom: 20px; font-size: 1.05em;">
-                根據馬斯洛需求層次理論，消費者的購買動機來自五個層次的需求。
-                點擊下面的動機，了解如何將其應用到營銷中。
+                根据马斯洛需求层次理论，消费者的购买动机来自五个层次的需求。
+                点击下面的动机，了解如何将其应用到营销中。
             </p>
 
             <div class="motivation-list">
@@ -676,22 +676,22 @@
 
                 <div class="motivation-item" onclick="analyzeMotive('safety')">
                     <div style="font-size: 1.2em; margin-bottom: 10px;">2️⃣ 安全需求（Safety）</div>
-                    <div style="color: #888; font-size: 0.95em;">安全、保護、穩定、健康</div>
+                    <div style="color: #888; font-size: 0.95em;">安全、保护、稳定、健康</div>
                 </div>
 
                 <div class="motivation-item" onclick="analyzeMotive('social')">
                     <div style="font-size: 1.2em; margin-bottom: 10px;">3️⃣ 社交需求（Social）</div>
-                    <div style="color: #888; font-size: 0.95em;">愛、友誼、歸屬感、社區</div>
+                    <div style="color: #888; font-size: 0.95em;">爱、友谊、归属感、社区</div>
                 </div>
 
                 <div class="motivation-item" onclick="analyzeMotive('esteem')">
                     <div style="font-size: 1.2em; margin-bottom: 10px;">4️⃣ 尊重需求（Esteem）</div>
-                    <div style="color: #888; font-size: 0.95em;">自尊、成就、地位、認可</div>
+                    <div style="color: #888; font-size: 0.95em;">自尊、成就、地位、认可</div>
                 </div>
 
                 <div class="motivation-item" onclick="analyzeMotive('selfactualization')">
-                    <div style="font-size: 1.2em; margin-bottom: 10px;">5️⃣ 自我實現（Self-actualization）</div>
-                    <div style="color: #888; font-size: 0.95em;">個人成長、潛力實現、自我表達</div>
+                    <div style="font-size: 1.2em; margin-bottom: 10px;">5️⃣ 自我实现（Self-actualization）</div>
+                    <div style="color: #888; font-size: 0.95em;">个人成长、潜力实现、自我表达</div>
                 </div>
             </div>
 
@@ -700,180 +700,180 @@
                 <div id="motiveAnalysis" style="line-height: 1.8; margin-bottom: 20px;"></div>
 
                 <div style="background: rgba(255, 255, 255, 0.2); padding: 15px; border-radius: 8px; margin-top: 15px;">
-                    <strong>營銷應用示例:</strong>
+                    <strong>营销应用示例:</strong>
                     <ul id="motiveExamples" style="margin-top: 10px; margin-left: 20px; line-height: 1.8;"></ul>
                 </div>
             </div>
         </div>
 
         <div class="footer">
-            <p>消費者行為與心理學互動工具 | 用於教育和研究目的</p>
-            <p style="font-size: 0.9em; margin-top: 10px;">點擊圖表、卡片或選項以探索更多資訊</p>
+            <p>消费者行为与心理学交互工具 | 用于教育和研究目的</p>
+            <p style="font-size: 0.9em; margin-top: 10px;">点击图表、卡片或选项以探索更多信息</p>
         </div>
     </div>
 
     <script>
         const stageData = {
             1: {
-                name: '階段 1: 問題認知',
-                description: '消費者意識到目前狀態與期望狀態之間存在差異。這可能源於內部觸發（如飢餓）或外部觸發（如廣告）。',
-                psychology: '行銷啟示：通過廣告和資訊激發潛在需求，強調消費者目前狀態的痛點，為常規更新提醒消費者。'
+                name: '阶段 1: 问题认知',
+                description: '消费者意识到目前状态与期望状态之间存在差异。这可能源于内部触发（如饥饿）或外部触发（如广告）。',
+                psychology: '营销启示：通过广告和信息激发潜在需求，强调消费者目前状态的痛点，为常规更新提醒消费者。'
             },
             2: {
-                name: '階段 2: 資訊搜尋',
-                description: '消費者主動搜尋相關資訊以評估解決方案。包括內部搜尋（回憶過往經驗）和外部搜尋（詢問朋友、網路搜尋、閱讀評論）。',
-                psychology: '行銷啟示：確保品牌在搜尋結果中可見（SEO），提供有價值的內容，收集和展示使用者評論，提供產品比較工具。'
+                name: '阶段 2: 信息搜索',
+                description: '消费者主动搜索相关信息以评估解决方案。包括内部搜索（回忆过往经验）和外部搜索（询问朋友、网络搜索、阅读评论）。',
+                psychology: '营销启示：确保品牌在搜索结果中可见（SEO），提供有价值的内容，收集和展示用户评论，提供产品比较工具。'
             },
             3: {
-                name: '階段 3: 方案評估',
-                description: '消費者根據多個屬性評估替代方案，並根據個人的決策規則做出選擇。不同消費者使用不同的評估標準和權重。',
-                psychology: '行銷啟示：強調產品的獨特優勢，使用對比工具幫助決策，針對高涉入產品提供詳細資訊。'
+                name: '阶段 3: 方案评估',
+                description: '消费者根据多个属性评估替代方案，并根据个人的决策规则做出选择。不同消费者使用不同的评估标准和权重。',
+                psychology: '营销启示：强调产品的独特优势，使用对比工具帮助决策，针对高涉入产品提供详细信息。'
             },
             4: {
-                name: '階段 4: 購買決策',
-                description: '消費者基於評估結果做出購買決定。但購買意圖與實際購買存在差異，受情態變化、風險認知、不可預見情況影響。',
-                psychology: '行銷啟示：消除購買摩擦（簡化結賬），降低感知風險（免費試用、退貨保證），利用時間限制和稀缺性加速決策。'
+                name: '阶段 4: 购买决策',
+                description: '消费者基于评估结果做出购买决定。但购买意图与实际购买存在差异，受情态变化、风险认知、不可预见情况影响。',
+                psychology: '营销启示：消除购买摩擦（简化结账），降低感知风险（免费试用、退货保证），利用时间限制和稀缺性加速决策。'
             },
             5: {
-                name: '階段 5: 購後行為',
-                description: '購買完成後，消費者評估購買決定是否正確。滿意度取決於實際績效與期望值的差異。這影響重複購買和口碑。',
-                psychology: '行銷啟示：設定正確的期望，提供優質客服，建立品牌社群，鼓勵使用者評論，處理購後失調。'
+                name: '阶段 5: 购后行为',
+                description: '购买完成后，消费者评估购买决定是否正确。满意度取决于实际绩效与期望值的差异。这影响重复购买和口碑。',
+                psychology: '营销启示：设置正确的期望，提供优质客服，创建品牌社区，鼓励用户评论，处理购后失调。'
             }
         };
 
         const biasData = {
-            'anchoring': '過度依賴第一個接收到的資訊作為評估參考',
-            'scarcity': '稀缺的資源被認為比豐裕的資源更有價值',
-            'social': '消費者假設他人的行為反映了正確的行為方式',
-            'sunk': '基於已花費的無法收回的成本做決定',
-            'loss': '損失帶來的痛苦感約為等額收益快樂感的 2-2.5 倍',
-            'framing': '同一資訊以不同方式呈現時，會影響決策',
-            'halo': '一個突出特徵會影響對其他特徵的整體評價',
-            'confirmation': '尋求支持既有信念的資訊，忽視相反證據'
+            'anchoring': '过度依赖第一个接收到的信息作为评估参考',
+            'scarcity': '稀缺的资源被认为比丰裕的资源更有价值',
+            'social': '消费者假设他人的行为反映了正确的行为方式',
+            'sunk': '基于已花费的无法收回的成本做决定',
+            'loss': '损失带来的痛苦感约为等额收益快乐感的 2-2.5 倍',
+            'framing': '同一信息以不同方式呈现时，会影响决策',
+            'halo': '一个突出特征会影响对其他特征的整体评价',
+            'confirmation': '寻求支持既有信念的信息，忽视相反证据'
         };
 
         const segmentData = {
             'price': {
-                name: '💰 價格敏感型消費者',
-                analysis: `<strong>購買決策特徵:</strong><br>
-                • 總是尋求最優惠的價格，經常跨平台比較<br>
-                • 對促銷、折扣、免費運費敏感<br>
-                • 購買決策快速，以價格為主要決定因素<br>
-                <br><strong>心理學原理:</strong><br>
-                • 損失趨避: 害怕「花太多錢」的損失<br>
-                • 錨定效應: 第一個看到的價格成為參考點<br>
-                <br><strong>營銷策略:</strong><br>
-                • 強調「最低價格保證」<br>
-                • 使用 $X.99 定價策略<br>
-                • 突出折扣百分比和節省金額<br>
-                • 提供月度或分期支付選項`
+                name: '💰 价格敏感型消费者',
+                analysis: `<strong>购买决策特征:</strong><br>
+                • 总是寻求最优惠的价格，经常跨平台比较<br>
+                • 对促销、折扣、免费运费敏感<br>
+                • 购买决策快速，以价格为主要决定因素<br>
+                <br><strong>心理学原理:</strong><br>
+                • 损失趋避: 害怕「花太多钱」的损失<br>
+                • 锚定效应: 第一个看到的价格成为参考点<br>
+                <br><strong>营销策略:</strong><br>
+                • 强调「最低价格保证」<br>
+                • 使用 $X.99 定价策略<br>
+                • 突出折扣百分比和节省金额<br>
+                • 提供月度或分期支付选项`
             },
             'status': {
-                name: '🏆 地位象徵型消費者',
-                analysis: `<strong>購買決策特徵:</strong><br>
-                • 購買昂貴產品以展示身份和品味<br>
-                • 強烈的品牌忠誠度，願意為溢價買單<br>
-                • 受名人代言和品牌聲譽影響<br>
-                <br><strong>心理學原理:</strong><br>
-                • 月暈效應: 品牌知名度 → 產品品質高<br>
-                • 品牌認同: 產品代表自我身份<br>
-                <br><strong>營銷策略:</strong><br>
-                • 強調品牌遺產和獨特性<br>
-                • 提供限量版和獨家產品<br>
-                • VIP 會員計畫和特殊待遇<br>
-                • 與高階品牌和名人合作`
+                name: '🏆 地位象征型消费者',
+                analysis: `<strong>购买决策特征:</strong><br>
+                • 购买昂贵产品以展示身份和品味<br>
+                • 强烈的品牌忠诚度，愿意为溢价买单<br>
+                • 受名人代言和品牌声誉影响<br>
+                <br><strong>心理学原理:</strong><br>
+                • 月晕效应: 品牌知名度 → 产品质量高<br>
+                • 品牌认同: 产品代表自我身份<br>
+                <br><strong>营销策略:</strong><br>
+                • 强调品牌遗产和独特性<br>
+                • 提供限量版和独家产品<br>
+                • VIP 会员计划和特殊待遇<br>
+                • 与高级品牌和名人合作`
             },
             'experiential': {
-                name: '🎯 體驗追求型消費者',
-                analysis: `<strong>購買決策特徵:</strong><br>
-                • 購買不是為了物品本身，而是為了體驗和回憶<br>
-                • 願意為獨特、難忘的體驗支付更高價格<br>
-                • 積極分享購物和使用體驗到社群媒體<br>
-                <br><strong>心理學原理:</strong><br>
-                • 情感行銷: 故事和連接感比產品特性重要<br>
-                • 社會認同: 體驗在社群中的驗證<br>
-                <br><strong>營銷策略:</strong><br>
-                • 講述品牌故事和消費者故事<br>
-                • 創建沉浸式、難忘的購物體驗<br>
-                • 鼓勵使用者生成內容（UGC）<br>
-                • 構建品牌社群和實踐活動`
+                name: '🎯 体验追求型消费者',
+                analysis: `<strong>购买决策特征:</strong><br>
+                • 购买不是为了物品本身，而是为了体验和回忆<br>
+                • 愿意为独特、难忘的体验支付更高价格<br>
+                • 积极分享购物和使用体验到社区媒体<br>
+                <br><strong>心理学原理:</strong><br>
+                • 情感营销: 故事和连接感比产品特性重要<br>
+                • 社会认同: 体验在社区中的验证<br>
+                <br><strong>营销策略:</strong><br>
+                • 讲述品牌故事和消费者故事<br>
+                • 创建沉浸式、难忘的购物体验<br>
+                • 鼓励用户生成内容（UGC）<br>
+                • 构建品牌社区和实践活动`
             },
             'rational': {
-                name: '🧠 理性決策型消費者',
-                analysis: `<strong>購買決策特徵:</strong><br>
-                • 進行詳細研究，閱讀評論和規格<br>
-                • 購買決策時間長，但一旦決定就堅持<br>
-                • 對產品品質、性能、性價比最為關注<br>
-                <br><strong>心理學原理:</strong><br>
-                • 系統 2 思維: 深思熟慮、分析性決策<br>
-                • 資訊搜尋: 需要充分資訊才感到自信<br>
-                <br><strong>營銷策略:</strong><br>
-                • 提供詳細的產品規格和技術資訊<br>
-                • 發布對比工具和決策框架<br>
-                • 展示科學證據和研究支持<br>
-                • 提供免費試用和 7 天無條件退貨`
+                name: '🧠 理性决策型消费者',
+                analysis: `<strong>购买决策特征:</strong><br>
+                • 进行详细研究，阅读评论和规格<br>
+                • 购买决策时间长，但一旦决定就坚持<br>
+                • 对产品质量、性能、性价比最为关注<br>
+                <br><strong>心理学原理:</strong><br>
+                • 系统 2 思维: 深思熟虑、分析性决策<br>
+                • 信息搜索: 需要充分信息才感到自信<br>
+                <br><strong>营销策略:</strong><br>
+                • 提供详细的产品规格和技术信息<br>
+                • 发布对比工具和决策框架<br>
+                • 展示科学证据和研究支持<br>
+                • 提供免费试用和 7 天无条件退货`
             },
             'social': {
-                name: '👥 社交驅動型消費者',
-                analysis: `<strong>購買決策特徵:</strong><br>
-                • 受朋友推薦和社群媒體趨勢影響<br>
-                • 容易產生 FOMO（害怕錯過），衝動購買<br>
-                • 購買後積極分享，尋求社群認可<br>
-                <br><strong>心理學原理:</strong><br>
-                • 社會認同: 他人的購買選擇影響自己<br>
-                • 從眾行為: 跟隨群體的趨勢<br>
-                <br><strong>營銷策略:</strong><br>
-                • 在 Instagram、TikTok、小紅書活躍<br>
-                • 邀請朋友推薦的獎勵計畫<br>
-                • 展示「X 人已購買」和實時購買通知<br>
-                • 與微影響者和普通使用者合作`
+                name: '👥 社交驱动型消费者',
+                analysis: `<strong>购买决策特征:</strong><br>
+                • 受朋友推荐和社区媒体趋势影响<br>
+                • 容易产生 FOMO（害怕错过），冲动购买<br>
+                • 购买后积极分享，寻求社区认可<br>
+                <br><strong>心理学原理:</strong><br>
+                • 社会认同: 他人的购买选择影响自己<br>
+                • 从众行为: 跟随群体的趋势<br>
+                <br><strong>营销策略:</strong><br>
+                • 在 Instagram、TikTok、小红书活跃<br>
+                • 邀请朋友推荐的奖励计划<br>
+                • 展示「X 人已购买」和实时购买通知<br>
+                • 与微影响者和普通用户合作`
             }
         };
 
         const motiveData = {
             'physiological': {
                 name: '1️⃣ 生理需求',
-                analysis: '食物、水、睡眠等基本生存需求。這是最基本的動機層次，但商業應用廣泛。',
+                analysis: '食物、水、睡眠等基本生存需求。这是最基本的动机层次，但商业应用广泛。',
                 examples: [
-                    '食品品牌: 強調新鮮、營養、美味（激發食慾）',
-                    '飲料品牌: 「解渴」、「提神」功能突出',
-                    '睡眠產品: 強調舒適度和睡眠品質改善'
+                    '食品品牌: 强调新鲜、营养、美味（激发食欲）',
+                    '饮料品牌: 「解渴」、「提神」功能突出',
+                    '睡眠产品: 强调舒适度和睡眠质量改善'
                 ]
             },
             'safety': {
                 name: '2️⃣ 安全需求',
-                analysis: '安全、保護、穩定、健康。消費者尋求「無風險」的購買體驗和安心的產品使用。',
+                analysis: '安全、保护、稳定、健康。消费者寻求「无风险」的购买体验和安心的产品使用。',
                 examples: [
-                    '保險產品: 「保護您的家人」、「安心無憂」',
-                    '醫療/健康: 「醫生推薦」、「通過認證」',
-                    '銀行/金融: 「安全、可靠」、「資金保護」'
+                    '保险产品: 「保护您的家人」、「安心无忧」',
+                    '医疗/健康: 「医生推荐」、「通过认证」',
+                    '银行/金融: 「安全、可靠」、「资金保护」'
                 ]
             },
             'social': {
                 name: '3️⃣ 社交需求',
-                analysis: '愛、友誼、歸屬感、社區。消費者購買以建立或加強社交連接。',
+                analysis: '爱、友谊、归属感、社区。消费者购买以创建或加强社交连接。',
                 examples: [
-                    '社交應用: 強調「連接朋友」、「與他人分享」',
-                    '咖啡館: 星巴克的「第三空間」概念',
-                    '奶茶品牌: 「和朋友一起」、「約飲茶」'
+                    '社交应用: 强调「连接朋友」、「与他人分享」',
+                    '咖啡馆: 星巴克的「第三空间」概念',
+                    '奶茶品牌: 「和朋友一起」、「约饮茶」'
                 ]
             },
             'esteem': {
                 name: '4️⃣ 尊重需求',
-                analysis: '自尊、成就、地位、認可。消費者購買以提升自我形象和獲得社會認可。',
+                analysis: '自尊、成就、地位、认可。消费者购买以提升自我形象和获得社会认可。',
                 examples: [
-                    '奢侈品: 「展示您的品味」、「精英象徵」',
-                    '教育課程: 「實現您的潛力」、「成為更好的自己」',
-                    '健身房: 「變得更強壯」、「變得更自信」'
+                    '奢侈品: 「展示您的品味」、「精英象征」',
+                    '教育课程: 「实现您的潜力」、「成为更好的自己」',
+                    '健身房: 「变得更强壮」、「变得更自信」'
                 ]
             },
             'selfactualization': {
-                name: '5️⃣ 自我實現',
-                analysis: '個人成長、潛力實現、自我表達。最高層次的需求，消費者尋求成為他們想成為的人。',
+                name: '5️⃣ 自我实现',
+                analysis: '个人成长、潜力实现、自我表达。最高层次的需求，消费者寻求成为他们想成为的人。',
                 examples: [
-                    '創意工具: 「表達您的創意」、「實現您的藝術潢想」',
-                    '旅遊: 「發現世界」、「開拓視野」',
-                    '個人發展課程: 「成為您最好的自己」、「人生轉變'
+                    '创意工具: 「表达您的创意」、「实现您的艺术潢想」',
+                    '旅游: 「发现世界」、「开拓视野」',
+                    '个人发展课程: 「成为您最好的自己」、「人生转变'
                 ]
             }
         };
@@ -925,38 +925,38 @@
             let buyingIntention = 0;
 
             if (framing === 'exact') {
-                analysis = `<strong>精確定價策略:</strong><br>
-                消費者看到 $${price.toFixed(2)}，精確認知價格。<br>
-                <strong>購買意願評估:</strong> 中等<br>
-                <strong>原因:</strong> 明確但可能顯得「冷硬」，缺乏心理優勢`;
+                analysis = `<strong>精确定价策略:</strong><br>
+                消费者看到 $${price.toFixed(2)}，精确认知价格。<br>
+                <strong>购买意愿评估:</strong> 中等<br>
+                <strong>原因:</strong> 明确但可能显得「冷硬」，缺乏心理优势`;
                 buyingIntention = 50;
             } else if (framing === 'rounding') {
-                analysis = `<strong>四捨五入策略:</strong><br>
-                消費者看到 $${Math.round(price)}，認知被調整為整數。<br>
-                <strong>購買意願評估:</strong> 低<br>
-                <strong>原因:</strong> $30 看起來比 $29.99 貴，購買心理抵抗增加`;
+                analysis = `<strong>四舍五入策略:</strong><br>
+                消费者看到 $${Math.round(price)}，认知被调整为整数。<br>
+                <strong>购买意愿评估:</strong> 低<br>
+                <strong>原因:</strong> $30 看起来比 $29.99 贵，购买心理抵抗增加`;
                 buyingIntention = 40;
             } else if (framing === 'monthly') {
                 const monthly = (price / 12).toFixed(2);
-                analysis = `<strong>月度定價策略:</strong><br>
-                消費者看到 $${monthly}/月，感知成本大幅降低。<br>
-                <strong>購買意願評估:</strong> 很高<br>
-                <strong>原因:</strong> $${monthly} 遠小於 $${price.toFixed(2)}，心理成本極低<br>
-                <strong>技巧:</strong> 訂閱模式轉化率增加 50-70%`;
+                analysis = `<strong>月度定价策略:</strong><br>
+                消费者看到 $${monthly}/月，感知成本大幅降低。<br>
+                <strong>购买意愿评估:</strong> 很高<br>
+                <strong>原因:</strong> $${monthly} 远小于 $${price.toFixed(2)}，心理成本极低<br>
+                <strong>技巧:</strong> 订阅模式转化率增加 50-70%`;
                 buyingIntention = 80;
             } else if (framing === 'discount') {
                 const discount = ((original - price) / original * 100).toFixed(0);
                 analysis = `<strong>折扣百分比策略:</strong><br>
-                消費者看到 ${discount}% OFF（從 $${original.toFixed(2)} 降至 $${price.toFixed(2)}）。<br>
-                <strong>購買意願評估:</strong> 非常高<br>
-                <strong>原因:</strong> 百分比形式強調「節省」，激發稀缺性和損失趨避<br>
-                <strong>技巧:</strong> 轉化率增加 30-40%，特別是在時間限制下`;
+                消费者看到 ${discount}% OFF（从 $${original.toFixed(2)} 降至 $${price.toFixed(2)}）。<br>
+                <strong>购买意愿评估:</strong> 非常高<br>
+                <strong>原因:</strong> 百分比形式强调「节省」，激发稀缺性和损失趋避<br>
+                <strong>技巧:</strong> 转化率增加 30-40%，特别是在时间限制下`;
                 buyingIntention = 85;
             }
 
             document.getElementById('resultContent').innerHTML = analysis +
                 `<br><br><div style="background: white; padding: 15px; border-radius: 5px; margin-top: 15px;">
-                <strong>購買意願指數:</strong><br>
+                <strong>购买意愿指数:</strong><br>
                 <div style="margin-top: 10px;">
                     <div style="width: 100%; height: 30px; background: #e9ecef; border-radius: 15px; overflow: hidden;">
                         <div style="width: ${buyingIntention}%; height: 100%; background: linear-gradient(90deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">

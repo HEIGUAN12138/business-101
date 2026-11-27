@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business 101 — 商業與金融基礎知識</title>
-  <meta name="description" content="Business 101 商業與金融基礎知識學習筆記，涵蓋財務報表、投資策略、公司治理等 34 個核心主題，搭配白話版解說、案例分析與互動圖表。">
+  <title>Business 101 — 商业与金融基础知识</title>
+  <meta name="description" content="Business 101 商业与金融基础知识学习笔记，涵盖财务报表、投资策略、公司治理等 34 个核心主题，搭配白话版解说、案例分析与交互图表。">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e3a5f'/%3E%3Cpath d='M14 46V20a2 2 0 0 1 2-2h10l2 3h20a2 2 0 0 1 2 2v23a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2z' fill='%232c5282'/%3E%3Crect x='20' y='28' width='4' height='14' rx='1' fill='%23ed8936'/%3E%3Crect x='27' y='24' width='4' height='18' rx='1' fill='%2348bb78'/%3E%3Crect x='34' y='30' width='4' height='12' rx='1' fill='%23805ad5'/%3E%3Crect x='41' y='26' width='4' height='16' rx='1' fill='%234299e1'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
@@ -470,17 +470,17 @@
   <div id="app">
     <header>
       <h1><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="36" height="36" style="vertical-align:-6px;margin-right:8px"><rect width="64" height="64" rx="14" fill="#1e3a5f"/><path d="M14 46V20a2 2 0 0 1 2-2h10l2 3h20a2 2 0 0 1 2 2v23a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2z" fill="#2c5282"/><rect x="20" y="28" width="4" height="14" rx="1" fill="#ed8936"/><rect x="27" y="24" width="4" height="18" rx="1" fill="#48bb78"/><rect x="34" y="30" width="4" height="12" rx="1" fill="#805ad5"/><rect x="41" y="26" width="4" height="16" rx="1" fill="#4299e1"/></svg>Business 101</h1>
-      <p class="subtitle">商業與金融基礎知識學習筆記</p>
+      <p class="subtitle">商业与金融基础知识学习笔记</p>
     </header>
     <div class="nav-tabs">
-      <button class="nav-tab active roadmap">學習路線圖</button>
-      <button class="nav-tab">各主題分析</button>
-      <button class="nav-tab cross">跨主題整合分析</button>
-      <button class="nav-tab glossary">術語總表</button>
+      <button class="nav-tab active roadmap">学习路线图</button>
+      <button class="nav-tab">各主题分析</button>
+      <button class="nav-tab cross">跨主题集成分析</button>
+      <button class="nav-tab glossary">术语总表</button>
     </div>
-    <main class="reader section-divider"><div class="content-box loading" style="min-height:60vh">載入中…</div></main>
+    <main class="reader section-divider"><div class="content-box loading" style="min-height:60vh">加载中…</div></main>
     <div class="content-disclaimer">
-      ⚠️ 本站內容由 AI（Claude Opus 4.6）產製，可能有誤。建議搭配其他資源交叉驗證。
+      ⚠️ 本站内容由 AI（Claude Opus 4.6）产制，可能有误。建议搭配其他资源交叉验证。
     </div>
     <footer>
       <a href="https://github.com/cyyeh/business-101" target="_blank" rel="noopener">GitHub</a>
@@ -497,24 +497,62 @@
     let currentTabIdx = 0;
     let activeHomeTab = 'roadmap'; // 'roadmap', 'topics', 'cross', or 'glossary'
 
+    /* 目录名（真实文件路径仍为繁体）→ 简体标题，内部链接跳转时用于匹配 */
+    const DIR_TO_TITLE = {
+      '全球金融體系': '全球金融体系',
+      '物流與金流體系': '物流与金流体系',
+      '財務報表與會計': '财务报表与会计',
+      '商業策略與競爭分析': '商业策略与竞争分析',
+      '行銷與品牌經營': '营销与品牌经营',
+      '創業與公司治理': '创业与公司治理',
+      '總體經濟學基礎': '总体经济学基础',
+      '投資與企業估值': '投资与企业估值',
+      '個體經濟學基礎': '微观经济学基础',
+      '人力資源與組織管理': '人力资源与组织管理',
+      '商業法律與合規': '商业法律与合规',
+      '數據分析與商業決策': '数据分析与商业决策',
+      '科技與數位轉型': '科技与数字化转型',
+      '商業倫理與ESG': '商业伦理与ESG',
+      '國際貿易與跨境商業': '国际贸易与跨境商业',
+      '營運管理': '营运管理',
+      '公司金融': '公司金融',
+      '談判與商業溝通': '谈判与商业沟通',
+      '領導力與組織行為': '领导力与组织行为',
+      '產品管理': '产品管理',
+      '風險管理與保險': '风险管理与保险',
+      '個人財務與理財規劃': '个人财务与理财规划',
+      '專案管理': '项目管理',
+      '消費者行為與心理學': '消费者行为与心理学',
+      '供應鏈管理': '供应链管理',
+      'AI與商業應用': 'AI与商业应用',
+      '創新管理與設計思考': '创新管理与设计思考',
+      '銷售管理': '销售管理',
+      '創業融資與私募股權': '创业融资与私募股权',
+      '行為經濟學與決策科學': '行为经济学与决策科学',
+      '定價策略與收益管理': '定价策略与收益管理',
+      '市場研究方法論': '市场研究方法论',
+      '顧客關係管理': '顾客关系管理',
+      '政府關係與產業政策': '政府关系与产业政策'
+    };
+
     marked.setOptions({ breaks: true, gfm: true });
 
     /* ---- Copy Markdown Button helper ---- */
     function createCopyMdBtn(rawMarkdown) {
       const btn = document.createElement('button');
       btn.className = 'copy-md-btn';
-      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>複製 Markdown';
+      btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>拷贝 Markdown';
       btn.addEventListener('click', async () => {
         try {
           await navigator.clipboard.writeText(rawMarkdown);
           btn.classList.add('copied');
-          btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>已複製！';
+          btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>已拷贝！';
           setTimeout(() => {
             btn.classList.remove('copied');
-            btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>複製 Markdown';
+            btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>拷贝 Markdown';
           }, 2000);
         } catch (e) {
-          btn.textContent = '複製失敗';
+          btn.textContent = '拷贝失败';
         }
       });
       const wrap = document.createElement('div');
@@ -535,9 +573,9 @@
         const h2 = line.match(/^##\s+(.+)/);
         if (h2) {
           const title = h2[1].trim();
-          if (title === '跨主題整合分析') { inCross = true; cur = null; continue; }
-          if (title === '各主題分析') { inCross = false; cur = null; continue; }
-          // skip other ## headers like 本地預覽
+          if (title === '跨主题集成分析') { inCross = true; cur = null; continue; }
+          if (title === '各主题分析') { inCross = false; cur = null; continue; }
+          // skip other ## headers like 本地预览
           cur = null;
           continue;
         }
@@ -555,11 +593,11 @@
         if (lnk) {
           const [, text, url, desc] = lnk;
           let type = 'professional';
-          if (text.includes('白話') || url.includes('白話')) type = 'plain';
+          if (text.includes('白话') || url.includes('白话')) type = 'plain';
           if (url.endsWith('.html')) type = 'interactive';
           if (text.includes('案例') || url.includes('案例')) type = 'casestudy';
-          if (text.includes('練習') || url.includes('練習')) type = 'quiz';
-          if (text.includes('進一步學習') || url.includes('進一步學習')) type = 'further';
+          if (text.includes('练习') || url.includes('练习')) type = 'quiz';
+          if (text.includes('进一步学习') || url.includes('进一步学习')) type = 'further';
           if (inCross) type = 'cross';
           cur.links.push({ text: text.trim(), url: url.trim(), description: desc.trim(), type });
         }
@@ -574,12 +612,12 @@
       for (const line of md.split('\n')) {
         const h2 = line.match(/^##\s+(.+)/);
         if (h2) { currentCategory = h2[1].trim(); continue; }
-        // Match table rows: | 術語 | English | 定義 |
+        // Match table rows: | 术语 | English | 定义 |
         const row = line.match(/^\|\s*(.+?)\s*\|\s*(.+?)\s*\|\s*(.+?)\s*\|$/);
         if (row) {
           const [, term, english, definition] = row;
           // Skip header row
-          if (term === '術語' || term.match(/^-+$/)) continue;
+          if (term === '术语' || term.match(/^-+$/)) continue;
           if (english.match(/^-+$/)) continue;
           entries.push({
             term: term.trim(),
@@ -597,7 +635,7 @@
       return `<div class="search-wrapper" id="search-wrapper">
         <div class="search-input-box">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="text" id="search-input" placeholder="搜尋主題、術語、關鍵字…" autocomplete="off" />
+          <input type="text" id="search-input" placeholder="搜索主题、术语、关键字…" autocomplete="off" />
           <button class="search-clear" id="search-clear" title="清除">&times;</button>
           <span id="index-status" class="index-status">${indexReady ? '' : '索引中…'}</span>
         </div>
@@ -663,7 +701,7 @@
 
         if (titleMatch || descMatches.length > 0) {
           const pro = topic.links.find(l => l.type === 'professional' || l.type === 'cross');
-          const rawDesc = pro ? stripMdLinks(pro.description.replace(/^專業版[，,]\s*/, '')) : stripMdLinks(topic.links[0]?.description || '');
+          const rawDesc = pro ? stripMdLinks(pro.description.replace(/^专业版[，,]\s*/, '')) : stripMdLinks(topic.links[0]?.description || '');
           results.push({
             resultType: 'topic',
             title: topic.title,
@@ -753,8 +791,8 @@
       if (!dropdown) return;
 
       if (results.length === 0) {
-        const indexMsg = indexReady ? '' : '<br><span style="font-size:.82rem">（全文索引建立中，稍後可搜尋更多內容）</span>';
-        dropdown.innerHTML = `<div class="search-no-result">找不到「${query}」相關的結果${indexMsg}</div>`;
+        const indexMsg = indexReady ? '' : '<br><span style="font-size:.82rem">（全文索引创建中，稍后可搜索更多内容）</span>';
+        dropdown.innerHTML = `<div class="search-no-result">找不到「${query}」相关的结果${indexMsg}</div>`;
         dropdown.classList.add('visible');
         return;
       }
@@ -765,7 +803,7 @@
           const english = highlightMatch(r.english, query);
           const desc = highlightMatch(r.description, query);
           return `<a class="search-result-item" href="#" data-glossary-term="${r.title}">
-            <div class="result-icon glossary-icon">詞</div>
+            <div class="result-icon glossary-icon">词</div>
             <div class="result-info">
               <div class="result-title">${title} <span style="font-weight:400;color:var(--text-light);font-size:.85rem">${english}</span></div>
               <div class="result-desc">${desc}</div>
@@ -785,17 +823,17 @@
             <div class="result-info">
               <div class="result-title">${title}</div>
               <div class="result-desc result-snippet">${snippet}</div>
-              <div class="result-badges"><span class="badge content-badge">${typeLabel}內文匹配</span></div>
+              <div class="result-badges"><span class="badge content-badge">${typeLabel}内文匹配</span></div>
             </div>
           </a>`;
         }
         // Topic or cross-topic result (title/desc match)
         const iconClass = r.isCross ? 'cross-icon' : 'topic-icon';
-        const iconText = r.isCross ? '跨' : '題';
+        const iconText = r.isCross ? '跨' : '题';
         const title = highlightMatch(r.title, query);
         const desc = highlightMatch(r.contentSnippet || r.description, query);
         const badges = r.badges ? r.badges.map(b => `<span class="badge">${b}</span>`).join('') : '';
-        const snippetExtra = r.contentSnippet ? `<div class="result-badges"><span class="badge content-badge">${tabLabel({ type: r.contentMatchType })}內文匹配</span></div>` : '';
+        const snippetExtra = r.contentSnippet ? `<div class="result-badges"><span class="badge content-badge">${tabLabel({ type: r.contentMatchType })}内文匹配</span></div>` : '';
         return `<a class="search-result-item" href="#${encodeURIComponent(r.title)}">
           <div class="result-icon ${iconClass}">${iconText}</div>
           <div class="result-info">
@@ -807,7 +845,7 @@
         </a>`;
       }).join('');
 
-      dropdown.innerHTML = items + `<div class="search-hint">共 ${results.length} 筆結果，點擊前往</div>`;
+      dropdown.innerHTML = items + `<div class="search-hint">共 ${results.length} 笔结果，点击前往</div>`;
       dropdown.classList.add('visible');
     }
 
@@ -901,11 +939,12 @@
       const allTopics = [...topicSections, ...crossSections];
       container.querySelectorAll('a[href]').forEach(a => {
         const href = decodeURIComponent(a.getAttribute('href'));
-        // Match links like ../主題名/檔名.md or ./主題名/檔名.md
+        // Match links like ../主题名/文件名.md or ./主题名/文件名.md
         const mdMatch = href.match(/\.\.?\/([^/]+)\/[^/]+\.md$/);
         if (mdMatch) {
           const dirName = mdMatch[1];
-          const topic = allTopics.find(t => t.title === dirName);
+          const cnTitle = DIR_TO_TITLE[dirName];
+          const topic = allTopics.find(t => t.title === dirName || t.title === cnTitle);
           if (topic) {
             a.href = '#' + encodeURIComponent(topic.title);
             a.style.color = 'var(--primary-light)';
@@ -922,20 +961,20 @@
 
     /* ---- Tab label ---- */
     function tabLabel(link) {
-      if (link.type === 'plain') return '白話版';
-      if (link.type === 'interactive') return '互動圖表';
+      if (link.type === 'plain') return '白话版';
+      if (link.type === 'interactive') return '交互图表';
       if (link.type === 'casestudy') return '案例分析';
-      if (link.type === 'quiz') return '練習與自測';
-      if (link.type === 'further') return '進一步學習';
-      if (link.type === 'cross') return '整合分析';
-      return '專業版';
+      if (link.type === 'quiz') return '练习与自测';
+      if (link.type === 'further') return '进一步学习';
+      if (link.type === 'cross') return '集成分析';
+      return '专业版';
     }
 
     /* ---- Extract cross-topic tags from description ---- */
     function extractTopicTags(desc) {
-      const match = desc.match(/橫跨(.+)/);
+      const match = desc.match(/横跨(.+)/);
       if (!match) return [];
-      return match[1].split(/[、，,]/).map(s => s.replace(/[大主題\d一二三四五六七八九十]/g, '').trim()).filter(Boolean);
+      return match[1].split(/[、，,]/).map(s => s.replace(/[大主题\d一二三四五六七八九十]/g, '').trim()).filter(Boolean);
     }
 
     /* ---- Render home ---- */
@@ -944,7 +983,7 @@
 
       const topicCards = topicSections.map(t => {
         const pro = t.links.find(l => l.type === 'professional');
-        const rawDesc = pro ? pro.description.replace(/^專業版[，,]\s*/, '') : t.links[0]?.description || '';
+        const rawDesc = pro ? pro.description.replace(/^专业版[，,]\s*/, '') : t.links[0]?.description || '';
         const desc = stripMdLinks(rawDesc);
         const badges = t.links.map(l => `<span class="badge">${tabLabel(l)}</span>`).join('');
         return `<a class="card" href="#${encodeURIComponent(t.title)}">
@@ -973,9 +1012,9 @@
 
       let mainContent;
       if (isRoadmap) {
-        mainContent = `<main class="reader section-divider"><div class="content-box loading" id="roadmap-content">載入中…</div></main>`;
+        mainContent = `<main class="reader section-divider"><div class="content-box loading" id="roadmap-content">加载中…</div></main>`;
       } else if (isGlossary) {
-        mainContent = `<main class="reader section-divider"><div class="content-box loading" id="glossary-content">載入中…</div></main>`;
+        mainContent = `<main class="reader section-divider"><div class="content-box loading" id="glossary-content">加载中…</div></main>`;
       } else {
         mainContent = `<main class="home section-divider"><div class="grid">${isTopics ? topicCards : crossCards}</div></main>`;
       }
@@ -983,25 +1022,25 @@
       document.getElementById('app').innerHTML = `
         <header>
           <h1><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="36" height="36" style="vertical-align:-6px;margin-right:8px"><rect width="64" height="64" rx="14" fill="#1e3a5f"/><path d="M14 46V20a2 2 0 0 1 2-2h10l2 3h20a2 2 0 0 1 2 2v23a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2z" fill="#2c5282"/><rect x="20" y="28" width="4" height="14" rx="1" fill="#ed8936"/><rect x="27" y="24" width="4" height="18" rx="1" fill="#48bb78"/><rect x="34" y="30" width="4" height="12" rx="1" fill="#805ad5"/><rect x="41" y="26" width="4" height="16" rx="1" fill="#4299e1"/></svg>Business 101</h1>
-          <p class="subtitle">商業與金融基礎知識學習筆記</p>
+          <p class="subtitle">商业与金融基础知识学习笔记</p>
           ${searchBarHTML()}
         </header>
         <div class="nav-tabs">
           <button class="nav-tab${isRoadmap ? ' active roadmap' : ' roadmap'}" data-tab="roadmap">
-            學習路線圖
+            学习路线图
           </button>
           <button class="nav-tab${isTopics ? ' active' : ''}" data-tab="topics">
-            各主題分析<span class="count">${topicSections.length}</span>
+            各主题分析<span class="count">${topicSections.length}</span>
           </button>
           <button class="nav-tab${activeHomeTab === 'cross' ? ' active cross' : ' cross'}" data-tab="cross">
-            跨主題整合分析<span class="count">${crossSections.length}</span>
+            跨主题集成分析<span class="count">${crossSections.length}</span>
           </button>
           <button class="nav-tab${activeHomeTab === 'glossary' ? ' active glossary' : ' glossary'}" data-tab="glossary">
-            術語總表
+            术语总表
           </button>
         </div>
         ${mainContent}
-        <div class="content-disclaimer">⚠️ 本站內容由 AI（Claude Opus 4.6）產製，可能有誤。建議搭配其他資源交叉驗證。</div>
+        <div class="content-disclaimer">⚠️ 本站内容由 AI（Claude Opus 4.6）产制，可能有误。建议搭配其他资源交叉验证。</div>
         <footer>
           <a href="https://github.com/cyyeh/business-101" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="vertical-align:-3px;margin-right:4px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
         </footer>`;
@@ -1053,7 +1092,7 @@
         });
       } catch (e) {
         el.className = 'content-box error';
-        el.textContent = '載入失敗，請重新整理頁面。';
+        el.textContent = '加载失败，请刷新页面。';
       }
     }
 
@@ -1071,7 +1110,7 @@
         convertInternalLinks(el);
       } catch (e) {
         el.className = 'content-box error';
-        el.textContent = '載入失敗，請重新整理頁面。';
+        el.textContent = '加载失败，请刷新页面。';
       }
     }
 
@@ -1083,7 +1122,7 @@
         `<button class="tab${i === currentTabIdx ? ' active' : ''}" data-idx="${i}">${tabLabel(l)}</button>`
       ).join('');
 
-      const backLabel = topic.isCross ? '← 返回跨主題整合分析' : '← 返回各主題分析';
+      const backLabel = topic.isCross ? '← 返回跨主题集成分析' : '← 返回各主题分析';
 
       document.getElementById('app').innerHTML = `
         <header>
@@ -1093,9 +1132,9 @@
         </header>
         <main class="reader">
           ${topic.links.length > 1 ? `<div class="tabs">${tabs}</div>` : ''}
-          <div class="content-box loading" id="md-content">載入中…</div>
+          <div class="content-box loading" id="md-content">加载中…</div>
         </main>
-        <div class="content-disclaimer">⚠️ 本站內容由 AI（Claude Opus 4.6）產製，可能有誤。建議搭配其他資源交叉驗證。</div>
+        <div class="content-disclaimer">⚠️ 本站内容由 AI（Claude Opus 4.6）产制，可能有误。建议搭配其他资源交叉验证。</div>
         <footer>
           <a href="https://github.com/cyyeh/business-101" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" style="vertical-align:-3px;margin-right:4px"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
         </footer>`;
@@ -1124,7 +1163,7 @@
     async function loadContent(link) {
       const el = document.getElementById('md-content');
       el.className = 'content-box loading';
-      el.textContent = '載入中…';
+      el.textContent = '加载中…';
 
       if (link.type === 'interactive') {
         el.className = 'content-box';
@@ -1142,7 +1181,7 @@
         el.prepend(createCopyMdBtn(md));
       } catch (e) {
         el.className = 'content-box error';
-        el.textContent = '載入失敗，請重新整理頁面。';
+        el.textContent = '加载失败，请刷新页面。';
       }
     }
 
@@ -1215,12 +1254,12 @@
       const el = document.getElementById('index-status');
       if (!el) return;
       if (done >= total) {
-        el.textContent = '全文索引就緒';
+        el.textContent = '全文索引就绪';
         el.style.color = '#38a169';
         setTimeout(() => { el.style.opacity = '0'; }, 1500);
       } else {
         const isMobile = window.innerWidth <= 600;
-        el.textContent = isMobile ? '建立索引中' : `建立索引中 ${done}/${total}`;
+        el.textContent = isMobile ? '创建索引中' : `创建索引中 ${done}/${total}`;
       }
     }
 
@@ -1252,7 +1291,7 @@
         }
       } catch (e) {
         document.getElementById('app').innerHTML =
-          '<div class="error" style="padding:4rem">無法載入內容，請確認 README.md 存在。</div>';
+          '<div class="error" style="padding:4rem">无法加载内容，请确认 README.md 存在。</div>';
       }
     }
 

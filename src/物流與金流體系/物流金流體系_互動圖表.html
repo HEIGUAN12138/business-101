@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>物流與金流運作體系 - 互動流程圖</title>
+<title>物流与金流运作体系 - 交互流程图</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Segoe UI', 'Microsoft JhengHei', sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; }
@@ -88,218 +88,218 @@
 <body>
 
 <div class="header">
-  <h1>物流與金流運作體系</h1>
-  <p>點擊各節點查看詳細角色說明 ｜ 切換分頁探索不同面向</p>
+  <h1>物流与金流运作体系</h1>
+  <p>点击各节点查看详细角色说明 ｜ 切换分页探索不同面向</p>
 </div>
 
 <div class="tabs">
-  <div class="tab active" onclick="switchTab('ecommerce')">電商物流金流</div>
-  <div class="tab" onclick="switchTab('international')">國際貿易</div>
-  <div class="tab" onclick="switchTab('roles')">角色總覽</div>
-  <div class="tab" onclick="switchTab('relations')">關聯地圖</div>
+  <div class="tab active" onclick="switchTab('ecommerce')">电商物流金流</div>
+  <div class="tab" onclick="switchTab('international')">国际贸易</div>
+  <div class="tab" onclick="switchTab('roles')">角色总览</div>
+  <div class="tab" onclick="switchTab('relations')">关联地图</div>
 </div>
 
-<!-- ========== 電商場景 ========== -->
+<!-- ========== 电商场景 ========== -->
 <div class="scene active" id="scene-ecommerce">
   <div class="legend">
     <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div>物流角色</div>
     <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div>金流角色</div>
     <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6"></div>平台</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#06b6d4"></div>使用者</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#06b6d4"></div>用户</div>
   </div>
 
-  <div class="section-title">電商交易全流程</div>
-  <div class="section-subtitle">從消費者下單到賣家收款的完整物流與金流路徑</div>
+  <div class="section-title">电商交易全流程</div>
+  <div class="section-subtitle">从消费者下单到卖家收款的完整物流与金流路径</div>
 
   <div class="flow-container">
-    <!-- Row 1: 消費者付款 -->
+    <!-- Row 1: 消费者付款 -->
     <div class="flow-row">
-      <div class="flow-node node-user" onclick="showDetail('consumer')">消費者</div>
+      <div class="flow-node node-user" onclick="showDetail('consumer')">消费者</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-payment" onclick="showDetail('payment_gateway')">第三方支付<br><small>綠界/藍新</small></div>
+      <div class="flow-node node-payment" onclick="showDetail('payment_gateway')">第三方支付<br><small>绿界/蓝新</small></div>
       <div class="arrow">→</div>
-      <div class="flow-node node-payment" onclick="showDetail('issuer')">發卡銀行</div>
+      <div class="flow-node node-payment" onclick="showDetail('issuer')">发卡银行</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-payment" onclick="showDetail('card_network')">卡組織<br><small>Visa/MC</small></div>
+      <div class="flow-node node-payment" onclick="showDetail('card_network')">卡组织<br><small>Visa/MC</small></div>
       <div class="arrow">→</div>
-      <div class="flow-node node-payment" onclick="showDetail('acquirer')">收單銀行</div>
+      <div class="flow-node node-payment" onclick="showDetail('acquirer')">收单银行</div>
     </div>
     <div class="arrow-down">↕ 金流 ↕</div>
     <!-- Row 2: 平台 -->
     <div class="flow-row">
-      <div class="flow-node node-platform" onclick="showDetail('platform')">電商平台<br><small>蝦皮/momo</small></div>
+      <div class="flow-node node-platform" onclick="showDetail('platform')">电商平台<br><small>虾皮/momo</small></div>
     </div>
     <div class="arrow-down">↕ 物流 ↕</div>
-    <!-- Row 3: 物流鏈 -->
+    <!-- Row 3: 物流链 -->
     <div class="flow-row">
-      <div class="flow-node node-user" onclick="showDetail('seller')">賣家/品牌</div>
+      <div class="flow-node node-user" onclick="showDetail('seller')">卖家/品牌</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-logistics" onclick="showDetail('warehouse')">倉儲中心</div>
+      <div class="flow-node node-logistics" onclick="showDetail('warehouse')">仓储中心</div>
       <div class="arrow">→</div>
       <div class="flow-node node-logistics" onclick="showDetail('3pl')">3PL 物流</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-logistics" onclick="showDetail('hub')">區域集散站</div>
+      <div class="flow-node node-logistics" onclick="showDetail('hub')">区域集散站</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-logistics" onclick="showDetail('lastmile')">最後一哩<br><small>宅配/超取</small></div>
+      <div class="flow-node node-logistics" onclick="showDetail('lastmile')">最后一哩<br><small>宅配/超取</small></div>
     </div>
   </div>
 
   <div class="detail-panel" id="detail-panel">
-    <h3>👆 點擊上方任一節點查看說明</h3>
-    <p>每個節點代表物流或金流體系中的一個關鍵角色，點擊即可了解其權責與運作方式。</p>
+    <h3>👆 点击上方任一节点查看说明</h3>
+    <p>每个节点代表物流或金流体系中的一个关键角色，点击即可了解其权责与运作方式。</p>
   </div>
 
-  <div class="section-title">情境走一遍：蝦皮買球鞋</div>
+  <div class="section-title">情境走一遍：虾皮买球鞋</div>
   <div class="scenario">
     <div class="step-list">
       <div class="step-item step-payment" onmouseenter="this.classList.add('highlight')" onmouseleave="this.classList.remove('highlight')">
         <div class="step-num">1</div>
-        <div class="step-content"><strong>消費者下單付款</strong><span>選擇信用卡/Line Pay/ATM，款項進入平台信託帳戶（金流啟動）</span></div>
+        <div class="step-content"><strong>消费者下单付款</strong><span>选择信用卡/Line Pay/ATM，款项进入平台信托帐户（金流启动）</span></div>
       </div>
       <div class="step-item step-both" onmouseenter="this.classList.add('highlight')" onmouseleave="this.classList.remove('highlight')">
         <div class="step-num">2</div>
-        <div class="step-content"><strong>平台通知賣家出貨</strong><span>系統自動派單，賣家收到出貨通知，準備揀貨包裝</span></div>
+        <div class="step-content"><strong>平台通知卖家出货</strong><span>系统自动派单，卖家收到出货通知，准备拣货包装</span></div>
       </div>
       <div class="step-item step-logistics" onmouseenter="this.classList.add('highlight')" onmouseleave="this.classList.remove('highlight')">
         <div class="step-num">3</div>
-        <div class="step-content"><strong>賣家交貨給物流</strong><span>貨物交由 3PL 或平台合作物流商（如黑貓），取得追蹤編號</span></div>
+        <div class="step-content"><strong>卖家交货给物流</strong><span>货物交由 3PL 或平台合作物流商（如黑猫），取得追踪编号</span></div>
       </div>
       <div class="step-item step-logistics" onmouseenter="this.classList.add('highlight')" onmouseleave="this.classList.remove('highlight')">
         <div class="step-num">4</div>
-        <div class="step-content"><strong>幹線運輸 + 區域配送</strong><span>貨物從集貨倉 → 轉運中心 → 區域集散站，逐步靠近消費者</span></div>
+        <div class="step-content"><strong>干线运输 + 区域配送</strong><span>货物从集货仓 → 转运中心 → 区域集散站，逐步靠近消费者</span></div>
       </div>
       <div class="step-item step-logistics" onmouseenter="this.classList.add('highlight')" onmouseleave="this.classList.remove('highlight')">
         <div class="step-num">5</div>
-        <div class="step-content"><strong>最後一哩配送</strong><span>宅配到府/超商取貨/智慧櫃，消費者簽收（物流完成）</span></div>
+        <div class="step-content"><strong>最后一哩配送</strong><span>宅配到府/超商取货/智能柜，消费者签收（物流完成）</span></div>
       </div>
       <div class="step-item step-payment" onmouseenter="this.classList.add('highlight')" onmouseleave="this.classList.remove('highlight')">
         <div class="step-num">6</div>
-        <div class="step-content"><strong>平台撥款給賣家</strong><span>確認收貨後，平台將貨款（扣除手續費）撥入賣家帳戶（金流完成）</span></div>
+        <div class="step-content"><strong>平台拨款给卖家</strong><span>确认收货后，平台将货款（扣除手续费）拨入卖家帐户（金流完成）</span></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ========== 國際貿易場景 ========== -->
+<!-- ========== 国际贸易场景 ========== -->
 <div class="scene" id="scene-international">
-  <div class="section-title">國際貿易物流金流</div>
-  <div class="section-subtitle">涉及跨國運輸、海關、銀行信用介入的完整鏈路</div>
+  <div class="section-title">国际贸易物流金流</div>
+  <div class="section-subtitle">涉及跨国运输、海关、银行信用介入的完整链路</div>
 
   <div class="legend">
     <div class="legend-item"><div class="legend-dot" style="background:#10b981"></div>物流</div>
     <div class="legend-item"><div class="legend-dot" style="background:#3b82f6"></div>金流</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>政府機構</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>銀行</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div>政府机构</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#f59e0b"></div>银行</div>
   </div>
 
   <div class="flow-container">
     <div class="flow-row">
       <div class="flow-node node-user" onclick="showDetail('exporter')">出口商</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-logistics" onclick="showDetail('forwarder')">貨運承攬</div>
+      <div class="flow-node node-logistics" onclick="showDetail('forwarder')">货运承揽</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-logistics" onclick="showDetail('customs_broker')">報關行</div>
+      <div class="flow-node node-logistics" onclick="showDetail('customs_broker')">报关行</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-gov" onclick="showDetail('customs')">出口海關</div>
+      <div class="flow-node node-gov" onclick="showDetail('customs')">出口海关</div>
     </div>
     <div class="arrow-down">↓</div>
     <div class="flow-row">
-      <div class="flow-node node-logistics" onclick="showDetail('carrier')">承運人<br><small>船公司/航空</small></div>
+      <div class="flow-node node-logistics" onclick="showDetail('carrier')">承运人<br><small>船公司/航空</small></div>
       <div class="arrow">→</div>
-      <div class="flow-node node-logistics" onclick="showDetail('insurance')">保險公司</div>
+      <div class="flow-node node-logistics" onclick="showDetail('insurance')">保险公司</div>
     </div>
     <div class="arrow-down">↓</div>
     <div class="flow-row">
-      <div class="flow-node node-gov" onclick="showDetail('customs_import')">進口海關</div>
+      <div class="flow-node node-gov" onclick="showDetail('customs_import')">进口海关</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-logistics" onclick="showDetail('customs_broker')">報關行</div>
+      <div class="flow-node node-logistics" onclick="showDetail('customs_broker')">报关行</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-logistics" onclick="showDetail('warehouse_bonded')">保稅倉</div>
+      <div class="flow-node node-logistics" onclick="showDetail('warehouse_bonded')">保税仓</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-user" onclick="showDetail('importer')">進口商</div>
+      <div class="flow-node node-user" onclick="showDetail('importer')">进口商</div>
     </div>
-    <div class="arrow-down" style="margin: 24px 0;">── 金流路徑（信用狀模式）──</div>
+    <div class="arrow-down" style="margin: 24px 0;">── 金流路径（信用状模式）──</div>
     <div class="flow-row">
-      <div class="flow-node node-bank" onclick="showDetail('issuing_bank')">開狀銀行<br><small>進口商端</small></div>
+      <div class="flow-node node-bank" onclick="showDetail('issuing_bank')">开状银行<br><small>进口商端</small></div>
       <div class="arrow">→</div>
-      <div class="flow-node node-bank" onclick="showDetail('advising_bank')">通知銀行</div>
+      <div class="flow-node node-bank" onclick="showDetail('advising_bank')">通知银行</div>
       <div class="arrow">→</div>
-      <div class="flow-node node-bank" onclick="showDetail('negotiating_bank')">押匯銀行<br><small>出口商端</small></div>
+      <div class="flow-node node-bank" onclick="showDetail('negotiating_bank')">押汇银行<br><small>出口商端</small></div>
     </div>
   </div>
 
   <div class="detail-panel" id="detail-panel-intl">
-    <h3>👆 點擊節點查看國際貿易角色說明</h3>
-    <p>國際貿易涉及更多中介角色，特別是銀行在金流中扮演信用擔保的關鍵功能。</p>
+    <h3>👆 点击节点查看国际贸易角色说明</h3>
+    <p>国际贸易涉及更多中介角色，特别是银行在金流中扮演信用担保的关键功能。</p>
   </div>
 
-  <div class="section-title">信用狀（L/C）運作步驟</div>
+  <div class="section-title">信用状（L/C）运作步骤</div>
   <div class="scenario">
     <div class="step-list">
-      <div class="step-item step-payment"><div class="step-num">1</div><div class="step-content"><strong>進口商向開狀銀行申請開立信用狀</strong><span>銀行評估進口商信用後開出 L/C</span></div></div>
-      <div class="step-item step-payment"><div class="step-num">2</div><div class="step-content"><strong>開狀銀行將 L/C 傳送至通知銀行</strong><span>通知銀行（通常在出口國）將 L/C 轉交出口商</span></div></div>
-      <div class="step-item step-logistics"><div class="step-num">3</div><div class="step-content"><strong>出口商備貨出貨</strong><span>依 L/C 條件準備貨物，安排運輸並取得提單（B/L）</span></div></div>
-      <div class="step-item step-both"><div class="step-num">4</div><div class="step-content"><strong>出口商向押匯銀行提交單據</strong><span>包含提單、商業發票、裝箱單、保險單等</span></div></div>
-      <div class="step-item step-payment"><div class="step-num">5</div><div class="step-content"><strong>押匯銀行審單後墊付貨款</strong><span>出口商即時取得資金，不需等進口商付款</span></div></div>
-      <div class="step-item step-payment"><div class="step-num">6</div><div class="step-content"><strong>開狀銀行收到單據後向進口商收款</strong><span>進口商付款贖單，憑提單提貨（金流+物流閉環完成）</span></div></div>
+      <div class="step-item step-payment"><div class="step-num">1</div><div class="step-content"><strong>进口商向开状银行申请开立信用状</strong><span>银行评估进口商信用后开出 L/C</span></div></div>
+      <div class="step-item step-payment"><div class="step-num">2</div><div class="step-content"><strong>开状银行将 L/C 发送至通知银行</strong><span>通知银行（通常在出口国）将 L/C 转交出口商</span></div></div>
+      <div class="step-item step-logistics"><div class="step-num">3</div><div class="step-content"><strong>出口商备货出货</strong><span>依 L/C 条件准备货物，安排运输并取得提单（B/L）</span></div></div>
+      <div class="step-item step-both"><div class="step-num">4</div><div class="step-content"><strong>出口商向押汇银行提交单据</strong><span>包含提单、商业发票、装箱单、保险单等</span></div></div>
+      <div class="step-item step-payment"><div class="step-num">5</div><div class="step-content"><strong>押汇银行审单后垫付货款</strong><span>出口商实时取得资金，不需等进口商付款</span></div></div>
+      <div class="step-item step-payment"><div class="step-num">6</div><div class="step-content"><strong>开状银行收到单据后向进口商收款</strong><span>进口商付款赎单，凭提单提货（金流+物流闭环完成）</span></div></div>
     </div>
   </div>
 </div>
 
-<!-- ========== 角色總覽 ========== -->
+<!-- ========== 角色总览 ========== -->
 <div class="scene" id="scene-roles">
-  <div class="section-title">所有角色一覽</div>
-  <div class="section-subtitle">物流與金流體系中的關鍵機構及其權責</div>
+  <div class="section-title">所有角色一览</div>
+  <div class="section-subtitle">物流与金流体系中的关键机构及其权责</div>
   <div class="relation-grid" id="roles-grid"></div>
 </div>
 
-<!-- ========== 關聯地圖 ========== -->
+<!-- ========== 关联地图 ========== -->
 <div class="scene" id="scene-relations">
-  <div class="section-title">角色關聯地圖</div>
-  <div class="section-subtitle">各角色之間如何互動與協作</div>
+  <div class="section-title">角色关联地图</div>
+  <div class="section-subtitle">各角色之间如何交互与协作</div>
   <div class="relation-grid" id="relations-grid"></div>
 </div>
 
 <script>
 const details = {
-  consumer: { title: '消費者（Buyer/Consumer）', type: '使用者', color: '#06b6d4', desc: '交易的需求發起方，透過線上或線下通路下單購買商品。', responsibilities: ['選擇商品並完成下單', '選擇付款方式（信用卡、電子支付、ATM等）', '確認收貨並完成交易閉環', '有退換貨的權利與義務'] },
-  seller: { title: '賣家 / 品牌商', type: '使用者', color: '#06b6d4', desc: '商品的供應方，負責備貨、包裝並交付物流。', responsibilities: ['管理商品庫存與上架', '接單後揀貨、包裝、出貨', '處理退換貨與售後服務', '與平台及物流商對接'] },
-  platform: { title: '電商平台', type: '平台', color: '#8b5cf6', desc: '連結買賣雙方的數位市集，同時整合物流與金流服務。', responsibilities: ['提供交易撮合環境', '代管買家款項（信託機制）', '整合物流追蹤系統', '制定交易規則與爭議處理機制', '確認收貨後撥款給賣家'] },
-  payment_gateway: { title: '第三方支付', type: '金流', color: '#3b82f6', desc: '作為買賣雙方的資金中介，提供多元支付工具整合。如綠界（ECPay）、藍新（NewebPay）。', responsibilities: ['整合信用卡、ATM、超商繳費等多種支付方式', '處理交易授權與請款', '提供交易安全機制（SSL、3D驗證）', '定期對帳並撥款給商家'] },
-  issuer: { title: '發卡銀行（Issuer）', type: '金流', color: '#3b82f6', desc: '發行信用卡或金融卡給消費者的金融機構。', responsibilities: ['核發信用卡/金融卡給持卡人', '承擔持卡人的信用風險', '處理消費者的帳單與還款', '提供紅利點數、分期等附加服務'] },
-  card_network: { title: '卡組織（Card Network）', type: '金流', color: '#3b82f6', desc: 'Visa、Mastercard、JCB 等國際支付網路，是金流的「高速公路」。', responsibilities: ['建構全球支付清算網路', '制定交易標準與安全規範', '處理發卡行與收單行之間的交易路由', '管理跨境交易的匯率與結算'] },
-  acquirer: { title: '收單銀行（Acquirer）', type: '金流', color: '#3b82f6', desc: '與商家簽約的金融機構，負責處理商家端的收款。', responsibilities: ['與商家簽訂收單合約', '處理刷卡交易的授權請求', '將款項結算並撥付給商家', '管理商家的風險審核（如拒付處理）'] },
-  warehouse: { title: '倉儲中心', type: '物流', color: '#10b981', desc: '貨物的存放與加工中心，現代倉儲已高度自動化。', responsibilities: ['貨物入庫、存放與庫存管理', '訂單揀貨、分揀與包裝', '提供加值服務（貼標、組合包裝等）', '與WMS系統整合實現即時庫存可視化'] },
-  '3pl': { title: '第三方物流（3PL）', type: '物流', color: '#10b981', desc: '整合運輸、倉儲、配送等功能的外包服務商，如 DHL Supply Chain、嘉里大榮。', responsibilities: ['提供一站式物流外包服務', '管理倉儲與配送網路', '提供逆向物流（退貨處理）', '透過規模經濟降低客戶物流成本'] },
-  hub: { title: '區域集散站', type: '物流', color: '#10b981', desc: '物流網路中的轉運節點，負責貨物的集中與分流。', responsibilities: ['接收幹線運輸到達的貨物', '依目的地進行分流與轉運', '優化配送路線與載具調度', '作為最後一哩配送的起點'] },
-  lastmile: { title: '最後一哩配送', type: '物流', color: '#10b981', desc: '將貨物從集散站送達消費者手中的最終環節。', responsibilities: ['宅配到府並取得簽收', '管理超商取貨與智慧櫃', '處理配送異常（無人簽收、地址錯誤）', '回傳配送狀態至平台系統'] },
-  exporter: { title: '出口商', type: '使用者', color: '#06b6d4', desc: '國際貿易中的賣方，將商品從本國銷售至海外市場。', responsibilities: ['生產或採購出口商品', '準備出口單據（發票、裝箱單等）', '依合約安排運輸與保險', '向押匯銀行提交單據以取得貨款'] },
-  importer: { title: '進口商', type: '使用者', color: '#06b6d4', desc: '國際貿易中的買方，從海外採購商品至本國。', responsibilities: ['與出口商簽訂採購合約', '向銀行申請開立信用狀', '辦理進口報關與繳納關稅', '憑提單至碼頭/機場提貨'] },
-  forwarder: { title: '貨運承攬業者', type: '物流', color: '#10b981', desc: '國際物流的「旅行社」，統籌安排跨國運輸的所有環節。', responsibilities: ['規劃最佳運輸路線與方式', '代訂艙位（海運/空運）', '協調各段運輸的銜接', '處理相關保險與文件'] },
-  customs_broker: { title: '報關行', type: '物流', color: '#10b981', desc: '專業代理進出口通關手續的持照業者。', responsibilities: ['代理海關申報作業', '計算並代繳關稅', '處理檢驗檢疫相關程序', '確保貨物分類編號正確'] },
-  customs: { title: '海關（出口端）', type: '政府', color: '#ef4444', desc: '國家邊境管理機構，監管所有進出口貨物。', responsibilities: ['查驗出口貨物是否合規', '核發出口許可與相關證明', '執行出口管制與統計', '防堵走私與違禁品'] },
-  customs_import: { title: '海關（進口端）', type: '政府', color: '#ef4444', desc: '進口國的海關機構，把關所有入境貨物。', responsibilities: ['查驗進口貨物並核定稅則', '徵收關稅、營業稅等', '執行檢驗檢疫標準', '管理保稅區與自由貿易港區'] },
-  carrier: { title: '承運人', type: '物流', color: '#10b981', desc: '實際執行國際運輸的業者，如長榮海運、華航貨運。', responsibilities: ['提供運輸載具（船舶/飛機/車輛）', '簽發提單（B/L）或空運提單（AWB）', '確保貨物安全運抵目的港', '依時間表提供定期航班/航線'] },
-  insurance: { title: '保險公司', type: '物流', color: '#10b981', desc: '為運輸中的貨物提供風險保障。', responsibilities: ['承保貨物運輸險', '提供信用保險（保障收款風險）', '理賠貨物損失或滅失', '協助風險評估與防損建議'] },
-  issuing_bank: { title: '開狀銀行', type: '銀行', color: '#f59e0b', desc: '受進口商委託開立信用狀的銀行，是國際貿易金流的核心擔保者。', responsibilities: ['審核進口商信用並開立 L/C', '承諾在單據相符時付款', '審查出口商提交的單據', '向進口商收取款項（贖單）'] },
-  advising_bank: { title: '通知銀行', type: '銀行', color: '#f59e0b', desc: '位於出口國，負責將信用狀轉交出口商的銀行。', responsibilities: ['驗證信用狀的真實性', '將 L/C 通知出口商', '必要時加保（Confirming）增強信用'] },
-  negotiating_bank: { title: '押匯銀行', type: '銀行', color: '#f59e0b', desc: '出口商的往來銀行，審查單據後先行墊付貨款。', responsibilities: ['審核出口單據是否符合 L/C 條件', '墊付貨款給出口商', '將單據轉寄開狀銀行索款', '處理單據瑕疵（不符點）'] },
-  warehouse_bonded: { title: '保稅倉', type: '物流', color: '#10b981', desc: '經海關核准的特殊倉儲區域，進口貨物可暫緩繳納關稅。', responsibilities: ['存放尚未完稅的進口貨物', '提供加值加工服務', '管理保稅帳冊與進出記錄', '配合海關監管與盤點'] }
+  consumer: { title: '消费者（Buyer/Consumer）', type: '用户', color: '#06b6d4', desc: '交易的需求发起方，通过在线或线下渠道下单购买商品。', responsibilities: ['选择商品并完成下单', '选择付款方式（信用卡、电子支付、ATM等）', '确认收货并完成交易闭环', '有退换货的权利与义务'] },
+  seller: { title: '卖家 / 品牌商', type: '用户', color: '#06b6d4', desc: '商品的供应方，负责备货、包装并交付物流。', responsibilities: ['管理商品库存与上架', '接单后拣货、包装、出货', '处理退换货与售后服务', '与平台及物流商对接'] },
+  platform: { title: '电商平台', type: '平台', color: '#8b5cf6', desc: '链接买卖双方的数字市集，同时集成物流与金流服务。', responsibilities: ['提供交易撮合环境', '代管买家款项（信托机制）', '集成物流追踪系统', '制定交易规则与争议处理机制', '确认收货后拨款给卖家'] },
+  payment_gateway: { title: '第三方支付', type: '金流', color: '#3b82f6', desc: '作为买卖双方的资金中介，提供多元支付工具集成。如绿界（ECPay）、蓝新（NewebPay）。', responsibilities: ['集成信用卡、ATM、超商缴费等多种支付方式', '处理交易授权与请款', '提供交易安全机制（SSL、3D验证）', '定期对帐并拨款给商家'] },
+  issuer: { title: '发卡银行（Issuer）', type: '金流', color: '#3b82f6', desc: '发行信用卡或金融卡给消费者的金融机构。', responsibilities: ['核发信用卡/金融卡给持卡人', '承担持卡人的信用风险', '处理消费者的帐单与还款', '提供红利点数、分期等附加服务'] },
+  card_network: { title: '卡组织（Card Network）', type: '金流', color: '#3b82f6', desc: 'Visa、Mastercard、JCB 等国际支付网络，是金流的「高速公路」。', responsibilities: ['建构全球支付清算网络', '制定交易标准与安全规范', '处理发卡行与收单行之间的交易路由', '管理跨境交易的汇率与结算'] },
+  acquirer: { title: '收单银行（Acquirer）', type: '金流', color: '#3b82f6', desc: '与商家签约的金融机构，负责处理商家端的收款。', responsibilities: ['与商家签订收单合约', '处理刷卡交易的授权请求', '将款项结算并拨付给商家', '管理商家的风险审核（如拒付处理）'] },
+  warehouse: { title: '仓储中心', type: '物流', color: '#10b981', desc: '货物的存放与加工中心，现代仓储已高度自动化。', responsibilities: ['货物入库、存放与库存管理', '订单拣货、分拣与包装', '提供加值服务（贴标、组合包装等）', '与WMS系统集成实现实时库存可视化'] },
+  '3pl': { title: '第三方物流（3PL）', type: '物流', color: '#10b981', desc: '集成运输、仓储、配送等功能的外包服务商，如 DHL Supply Chain、嘉里大荣。', responsibilities: ['提供一站式物流外包服务', '管理仓储与配送网络', '提供逆向物流（退货处理）', '通过规模经济降低客户物流成本'] },
+  hub: { title: '区域集散站', type: '物流', color: '#10b981', desc: '物流网络中的转运节点，负责货物的集中与分流。', responsibilities: ['接收干线运输到达的货物', '依目的地进行分流与转运', '优化配送路线与载具调度', '作为最后一哩配送的起点'] },
+  lastmile: { title: '最后一哩配送', type: '物流', color: '#10b981', desc: '将货物从集散站送达消费者手中的最终环节。', responsibilities: ['宅配到府并取得签收', '管理超商取货与智能柜', '处理配送异常（无人签收、地址错误）', '回传配送状态至平台系统'] },
+  exporter: { title: '出口商', type: '用户', color: '#06b6d4', desc: '国际贸易中的卖方，将商品从本国销售至海外市场。', responsibilities: ['生产或采购出口商品', '准备出口单据（发票、装箱单等）', '依合约安排运输与保险', '向押汇银行提交单据以取得货款'] },
+  importer: { title: '进口商', type: '用户', color: '#06b6d4', desc: '国际贸易中的买方，从海外采购商品至本国。', responsibilities: ['与出口商签订采购合约', '向银行申请开立信用状', '办理进口报关与缴纳关税', '凭提单至码头/机场提货'] },
+  forwarder: { title: '货运承揽业者', type: '物流', color: '#10b981', desc: '国际物流的「旅行社」，统筹安排跨国运输的所有环节。', responsibilities: ['规划最佳运输路线与方式', '代订舱位（海运/空运）', '协调各段运输的衔接', '处理相关保险与文档'] },
+  customs_broker: { title: '报关行', type: '物流', color: '#10b981', desc: '专业代理进出口通关手续的持照业者。', responsibilities: ['代理海关申报作业', '计算并代缴关税', '处理检验检疫相关进程', '确保货物分类编号正确'] },
+  customs: { title: '海关（出口端）', type: '政府', color: '#ef4444', desc: '国家边境管理机构，监管所有进出口货物。', responsibilities: ['查验出口货物是否合规', '核发出口许可与相关证明', '运行出口管制与统计', '防堵走私与违禁品'] },
+  customs_import: { title: '海关（进口端）', type: '政府', color: '#ef4444', desc: '进口国的海关机构，把关所有入境货物。', responsibilities: ['查验进口货物并核定税则', '征收关税、营业税等', '运行检验检疫标准', '管理保税区与自由贸易港区'] },
+  carrier: { title: '承运人', type: '物流', color: '#10b981', desc: '实际运行国际运输的业者，如长荣海运、华航货运。', responsibilities: ['提供运输载具（船舶/飞机/车辆）', '签发提单（B/L）或空运提单（AWB）', '确保货物安全运抵目的港', '依时间表提供定期航班/航线'] },
+  insurance: { title: '保险公司', type: '物流', color: '#10b981', desc: '为运输中的货物提供风险保障。', responsibilities: ['承保货物运输险', '提供信用保险（保障收款风险）', '理赔货物损失或灭失', '协助风险评估与防损建议'] },
+  issuing_bank: { title: '开状银行', type: '银行', color: '#f59e0b', desc: '受进口商委托开立信用状的银行，是国际贸易金流的核心担保者。', responsibilities: ['审核进口商信用并开立 L/C', '承诺在单据相符时付款', '审查出口商提交的单据', '向进口商收取款项（赎单）'] },
+  advising_bank: { title: '通知银行', type: '银行', color: '#f59e0b', desc: '位于出口国，负责将信用状转交出口商的银行。', responsibilities: ['验证信用状的真实性', '将 L/C 通知出口商', '必要时加保（Confirming）增强信用'] },
+  negotiating_bank: { title: '押汇银行', type: '银行', color: '#f59e0b', desc: '出口商的往来银行，审查单据后先行垫付货款。', responsibilities: ['审核出口单据是否符合 L/C 条件', '垫付货款给出口商', '将单据转寄开状银行索款', '处理单据瑕疵（不符点）'] },
+  warehouse_bonded: { title: '保税仓', type: '物流', color: '#10b981', desc: '经海关核准的特殊仓储区域，进口货物可暂缓缴纳关税。', responsibilities: ['存放尚未完税的进口货物', '提供加值加工服务', '管理保税帐册与进出记录', '配合海关监管与盘点'] }
 };
 
 const relations = [
-  { title: '消費者 ↔ 電商平台', desc: '消費者在平台瀏覽、下單、付款。平台負責訂單管理、金流代管、售後保障。平台是消費者與賣家的核心橋梁。' },
-  { title: '電商平台 ↔ 賣家', desc: '平台提供流量與交易環境，賣家負責供貨與出貨。平台抽取佣金並控制撥款時機，以確認收貨為觸發條件。' },
-  { title: '平台 ↔ 第三方支付', desc: '平台串接第三方支付以提供多元收付工具。第三方支付處理交易授權、清算，並定期撥款給平台/商家。' },
-  { title: '第三方支付 ↔ 發卡銀行/收單銀行', desc: '第三方支付透過收單銀行接入卡組織網路，當消費者刷卡時，交易經發卡行授權、卡組織路由、收單行結算的三方流程。' },
-  { title: '賣家 ↔ 3PL物流', desc: '賣家將倉儲、配送外包給3PL。3PL負責從入庫、揀貨、包裝到配送的全鏈路物流執行。' },
-  { title: '出口商 ↔ 貨運承攬', desc: '出口商委託貨運承攬安排國際運輸。承攬業者統籌訂艙、報關、保險等，是跨國物流的總協調者。' },
-  { title: '貨運承攬 ↔ 承運人', desc: '承攬業者向船公司/航空公司訂艙位，承運人負責實際運輸。承攬業者常透過併貨取得較低運費。' },
-  { title: '報關行 ↔ 海關', desc: '報關行代理進出口商向海關申報。海關依據申報資料查驗貨物、核定稅則、徵收關稅。' },
-  { title: '開狀銀行 ↔ 押匯銀行', desc: '開狀銀行承諾付款，押匯銀行先行墊付。兩者透過國際銀行間的SWIFT網路交換單據與資金。' },
-  { title: '物流完成 → 金流釋放', desc: '核心邏輯：物流的交貨確認（簽收/提單流轉）是金流撥款的前提。無論電商或國貿，「貨到」觸發「付款」是整個體系運作的基石。' },
-  { title: '央行/財金公司 ↔ 所有銀行', desc: '中央銀行透過財金資訊公司（FISC）處理銀行間的跨行清算與資金結算，是金流體系的底層基礎設施。' },
-  { title: '保險公司 ↔ 託運人/承運人', desc: '保險公司為運輸中的貨物提供風險保障。在信用狀交易中，保險單也是押匯的必要文件之一。' }
+  { title: '消费者 ↔ 电商平台', desc: '消费者在平台浏览、下单、付款。平台负责订单管理、金流代管、售后保障。平台是消费者与卖家的核心桥梁。' },
+  { title: '电商平台 ↔ 卖家', desc: '平台提供流量与交易环境，卖家负责供货与出货。平台抽取佣金并控制拨款时机，以确认收货为触发条件。' },
+  { title: '平台 ↔ 第三方支付', desc: '平台串接第三方支付以提供多元收付工具。第三方支付处理交易授权、清算，并定期拨款给平台/商家。' },
+  { title: '第三方支付 ↔ 发卡银行/收单银行', desc: '第三方支付通过收单银行接入卡组织网络，当消费者刷卡时，交易经发卡行授权、卡组织路由、收单行结算的三方流程。' },
+  { title: '卖家 ↔ 3PL物流', desc: '卖家将仓储、配送外包给3PL。3PL负责从入库、拣货、包装到配送的全链路物流运行。' },
+  { title: '出口商 ↔ 货运承揽', desc: '出口商委托货运承揽安排国际运输。承揽业者统筹订舱、报关、保险等，是跨国物流的总协调者。' },
+  { title: '货运承揽 ↔ 承运人', desc: '承揽业者向船公司/航空公司订舱位，承运人负责实际运输。承揽业者常通过并货取得较低运费。' },
+  { title: '报关行 ↔ 海关', desc: '报关行代理进出口商向海关申报。海关依据申报数据查验货物、核定税则、征收关税。' },
+  { title: '开状银行 ↔ 押汇银行', desc: '开状银行承诺付款，押汇银行先行垫付。两者通过国际银行间的SWIFT网络交换单据与资金。' },
+  { title: '物流完成 → 金流释放', desc: '内核逻辑：物流的交货确认（签收/提单流转）是金流拨款的前提。无论电商或国贸，「货到」触发「付款」是整个体系运作的基石。' },
+  { title: '央行/财金公司 ↔ 所有银行', desc: '中央银行通过财金信息公司（FISC）处理银行间的跨行清算与资金结算，是金流体系的底层基础设施。' },
+  { title: '保险公司 ↔ 托运人/承运人', desc: '保险公司为运输中的货物提供风险保障。在信用状交易中，保险单也是押汇的必要文档之一。' }
 ];
 
 const allRoles = Object.entries(details).map(([key, val]) => ({ key, ...val }));

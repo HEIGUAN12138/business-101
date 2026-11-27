@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>總體經濟學基礎 - 互動圖表</title>
+    <title>总体经济学基础 - 交互图表</title>
     <style>
         * {
             margin: 0;
@@ -583,15 +583,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>總體經濟學基礎</h1>
-            <p>互動式教學圖表 - 理解經濟循環、政策與國際貿易</p>
+            <h1>总体经济学基础</h1>
+            <p>交互式教学图表 - 理解经济循环、政策与国际贸易</p>
         </div>
 
         <div class="tabs-container">
-            <button class="tab-button active" onclick="switchTab(event, 'tab1')">景氣循環圖</button>
-            <button class="tab-button" onclick="switchTab(event, 'tab2')">經濟指標儀表板</button>
-            <button class="tab-button" onclick="switchTab(event, 'tab3')">貨幣政策 vs 財政政策</button>
-            <button class="tab-button" onclick="switchTab(event, 'tab4')">匯率與國際貿易</button>
+            <button class="tab-button active" onclick="switchTab(event, 'tab1')">景气循环图</button>
+            <button class="tab-button" onclick="switchTab(event, 'tab2')">经济指针仪表板</button>
+            <button class="tab-button" onclick="switchTab(event, 'tab3')">货币政策 vs 财政政策</button>
+            <button class="tab-button" onclick="switchTab(event, 'tab4')">汇率与国际贸易</button>
         </div>
 
         <div class="content">
@@ -609,7 +609,7 @@
                             <!-- Expansion phase (green) -->
                             <g id="phase-expansion" class="phase-section" onclick="showPhaseInfo('expansion')">
                                 <path d="M 50 200 Q 125 150 200 100" stroke="#10b981" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.7"/>
-                                <text x="120" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#059669">擴張</text>
+                                <text x="120" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#059669">扩张</text>
                                 <text x="120" y="256" text-anchor="middle" font-size="11" fill="#64748b">(Expansion)</text>
                             </g>
 
@@ -635,23 +635,23 @@
                             </g>
 
                             <!-- Axes labels -->
-                            <text x="750" y="220" font-size="12" fill="#64748b">時間</text>
-                            <text x="20" y="100" font-size="12" fill="#64748b">經濟</text>
-                            <text x="15" y="115" font-size="12" fill="#64748b">產出</text>
+                            <text x="750" y="220" font-size="12" fill="#64748b">时间</text>
+                            <text x="20" y="100" font-size="12" fill="#64748b">经济</text>
+                            <text x="15" y="115" font-size="12" fill="#64748b">产出</text>
                         </svg>
                     </div>
 
                     <div class="phase-info" id="phaseInfo">
-                        <h3 id="phaseName">景氣循環四個階段</h3>
-                        <p style="margin-bottom: 20px; color: #64748b;">點擊圖表上的任何階段來查看詳細資訊</p>
+                        <h3 id="phaseName">景气循环四个阶段</h3>
+                        <p style="margin-bottom: 20px; color: #64748b;">点击图表上的任何阶段来查看详细信息</p>
                         <div class="info-grid" id="phaseDetails">
                             <div class="info-item">
-                                <h4>📌 簡介</h4>
-                                <p>景氣循環描述了經濟在擴張和衰退之間的周期性波動。這四個階段反映了經濟活動的自然變化。</p>
+                                <h4>📌 简介</h4>
+                                <p>景气循环描述了经济在扩张和衰退之间的周期性波动。这四个阶段反映了经济活动的自然变化。</p>
                             </div>
                             <div class="info-item">
-                                <h4>💡 核心特點</h4>
-                                <p>每個階段都有不同的經濟特徵、政策應對和投資機會。了解這些幫助預測經濟走勢。</p>
+                                <h4>💡 内核特点</h4>
+                                <p>每个阶段都有不同的经济特征、政策应对和投资机会。了解这些帮助预测经济走势。</p>
                             </div>
                         </div>
                     </div>
@@ -663,7 +663,7 @@
                 <div class="dashboard-container">
                     <!-- GDP Growth -->
                     <div class="dashboard-card">
-                        <h3>GDP成長率</h3>
+                        <h3>GDP成长率</h3>
                         <div class="gauge-container">
                             <svg class="gauge" id="gdpGauge" viewBox="0 0 120 120"></svg>
                         </div>
@@ -675,7 +675,7 @@
 
                     <!-- Inflation Rate -->
                     <div class="dashboard-card">
-                        <h3>通膨率 (CPI)</h3>
+                        <h3>通胀率 (CPI)</h3>
                         <div class="gauge-container">
                             <svg class="gauge" id="inflationGauge" viewBox="0 0 120 120"></svg>
                         </div>
@@ -687,7 +687,7 @@
 
                     <!-- Unemployment Rate -->
                     <div class="dashboard-card">
-                        <h3>失業率</h3>
+                        <h3>失业率</h3>
                         <div class="gauge-container">
                             <svg class="gauge" id="unemploymentGauge" viewBox="0 0 120 120"></svg>
                         </div>
@@ -711,7 +711,7 @@
 
                     <!-- Exchange Rate -->
                     <div class="dashboard-card">
-                        <h3>匯率 (台幣/美元)</h3>
+                        <h3>汇率 (台币/美元)</h3>
                         <div class="gauge-container">
                             <svg class="gauge" id="exchangeGauge" viewBox="0 0 120 120"></svg>
                         </div>
@@ -726,20 +726,20 @@
                         <h3>📊 情境分析</h3>
                         <div class="scenario-content">
                             <div class="scenario-item">
-                                <strong>房價走勢:</strong>
-                                <p id="housePriceScenario">根據當前指標變化...</p>
+                                <strong>房价走势:</strong>
+                                <p id="housePriceScenario">根据当前指针变化...</p>
                             </div>
                             <div class="scenario-item">
-                                <strong>股市表現:</strong>
-                                <p id="stockMarketScenario">根據當前指標變化...</p>
+                                <strong>股市表现:</strong>
+                                <p id="stockMarketScenario">根据当前指针变化...</p>
                             </div>
                             <div class="scenario-item">
-                                <strong>消費行為:</strong>
-                                <p id="consumerScenario">根據當前指標變化...</p>
+                                <strong>消费行为:</strong>
+                                <p id="consumerScenario">根据当前指针变化...</p>
                             </div>
                             <div class="scenario-item">
-                                <strong>企業投資:</strong>
-                                <p id="investmentScenario">根據當前指標變化...</p>
+                                <strong>企业投资:</strong>
+                                <p id="investmentScenario">根据当前指针变化...</p>
                             </div>
                         </div>
                     </div>
@@ -749,73 +749,73 @@
             <!-- TAB 3: Monetary vs Fiscal Policy -->
             <div id="tab3" class="tab-content">
                 <div style="margin-bottom: 30px;">
-                    <h3 style="margin-bottom: 15px; color: #2563eb;">選擇情景:</h3>
+                    <h3 style="margin-bottom: 15px; color: #2563eb;">选择情景:</h3>
                     <div class="scenario-toggle">
-                        <button class="toggle-btn active" onclick="setPolicyScenario('expansionary')">擴張性政策 (刺激經濟)</button>
-                        <button class="toggle-btn" onclick="setPolicyScenario('contractionary')">緊縮性政策 (控制通膨)</button>
+                        <button class="toggle-btn active" onclick="setPolicyScenario('expansionary')">扩张性政策 (刺激经济)</button>
+                        <button class="toggle-btn" onclick="setPolicyScenario('contractionary')">紧缩性政策 (控制通胀)</button>
                     </div>
                 </div>
 
                 <div class="policy-container">
                     <!-- Monetary Policy -->
                     <div class="policy-section monetary">
-                        <h3>💰 貨幣政策 (央行)</h3>
+                        <h3>💰 货币政策 (央行)</h3>
                         <div class="policy-tools">
-                            <div class="policy-tool" onclick="showPolicyEffect('interest-rate', '調整利率')">
-                                <strong>調整利率</strong>
-                                <small>降低/提高央行基準利率</small>
+                            <div class="policy-tool" onclick="showPolicyEffect('interest-rate', '调整利率')">
+                                <strong>调整利率</strong>
+                                <small>降低/提高央行基准利率</small>
                             </div>
-                            <div class="policy-tool" onclick="showPolicyEffect('open-market', '公開市場操作')">
-                                <strong>公開市場操作</strong>
-                                <small>買賣政府債券調整貨幣供給</small>
+                            <div class="policy-tool" onclick="showPolicyEffect('open-market', '公开市场操作')">
+                                <strong>公开市场操作</strong>
+                                <small>买卖政府债券调整货币供给</small>
                             </div>
-                            <div class="policy-tool" onclick="showPolicyEffect('reserve-ratio', '存款準備率')">
-                                <strong>存款準備率</strong>
-                                <small>調整銀行需持有的準備金</small>
+                            <div class="policy-tool" onclick="showPolicyEffect('reserve-ratio', '存款准备率')">
+                                <strong>存款准备率</strong>
+                                <small>调整银行需持有的准备金</small>
                             </div>
-                            <div class="policy-tool" onclick="showPolicyEffect('quantitative-easing', '量化寬鬆')">
-                                <strong>量化寬鬆 (QE)</strong>
-                                <small>大規模購買長期資產</small>
+                            <div class="policy-tool" onclick="showPolicyEffect('quantitative-easing', '量化宽松')">
+                                <strong>量化宽松 (QE)</strong>
+                                <small>大规模购买长期资产</small>
                             </div>
                         </div>
                     </div>
 
                     <!-- Fiscal Policy -->
                     <div class="policy-section fiscal">
-                        <h3>🏛️ 財政政策 (政府)</h3>
+                        <h3>🏛️ 财政政策 (政府)</h3>
                         <div class="policy-tools">
                             <div class="policy-tool" onclick="showPolicyEffect('gov-spending', '政府支出')">
                                 <strong>政府支出</strong>
-                                <small>增加/減少公共部門支出</small>
+                                <small>增加/减少公共部门支出</small>
                             </div>
-                            <div class="policy-tool" onclick="showPolicyEffect('tax-adjustment', '稅收調整')">
-                                <strong>稅收調整</strong>
-                                <small>調整稅率刺激或抑制經濟</small>
+                            <div class="policy-tool" onclick="showPolicyEffect('tax-adjustment', '税收调整')">
+                                <strong>税收调整</strong>
+                                <small>调整税率刺激或抑制经济</small>
                             </div>
-                            <div class="policy-tool" onclick="showPolicyEffect('public-investment', '公共建設')">
-                                <strong>公共建設投資</strong>
-                                <small>基礎設施、道路、橋樑等</small>
+                            <div class="policy-tool" onclick="showPolicyEffect('public-investment', '公共建设')">
+                                <strong>公共建设投资</strong>
+                                <small>基础设施、道路、桥梁等</small>
                             </div>
-                            <div class="policy-tool" onclick="showPolicyEffect('transfer-payments', '補貼/移轉支付')">
-                                <strong>補貼/移轉支付</strong>
-                                <small>失業救濟、社會福利等</small>
+                            <div class="policy-tool" onclick="showPolicyEffect('transfer-payments', '补贴/移转支付')">
+                                <strong>补贴/移转支付</strong>
+                                <small>失业救济、社会福利等</small>
                             </div>
                         </div>
                     </div>
 
                     <!-- Central Effect Panel -->
                     <div class="center-effect">
-                        <h3>📈 政策效應 (在 <span id="scenarioName">擴張</span> 情景)</h3>
+                        <h3>📈 政策效应 (在 <span id="scenarioName">扩张</span> 情景)</h3>
                         <div id="policyEffectText" style="text-align: left; margin-top: 20px; background-color: #f0f9ff; padding: 20px; border-radius: 8px; margin-bottom: 20px; display: none;">
                             <p id="effectDescription" style="color: #0c4a6e;"></p>
                         </div>
                         <div style="margin-top: 20px;">
                             <div class="effect-arrow">↓</div>
-                            <div style="font-weight: 600; margin-bottom: 15px;">對經濟的影響:</div>
+                            <div style="font-weight: 600; margin-bottom: 15px;">对经济的影响:</div>
                             <div id="policyImpact">
                                 <div class="effect-item">GDP ↑</div>
-                                <div class="effect-item">物價 ↑</div>
-                                <div class="effect-item">就業 ↑</div>
+                                <div class="effect-item">物价 ↑</div>
+                                <div class="effect-item">就业 ↑</div>
                             </div>
                         </div>
                     </div>
@@ -825,37 +825,37 @@
             <!-- TAB 4: Exchange Rate & International Trade -->
             <div id="tab4" class="tab-content">
                 <div class="exchange-container">
-                    <h2 style="color: #2563eb; margin-bottom: 20px;">匯率對經濟的影響</h2>
+                    <h2 style="color: #2563eb; margin-bottom: 20px;">汇率对经济的影响</h2>
 
                     <div class="exchange-scenario">
                         <!-- Appreciation Scenario -->
                         <div class="scenario-card active" id="appreciationCard" onclick="switchExchangeScenario('appreciation')">
-                            <h4>📈 台幣升值</h4>
+                            <h4>📈 台币升值</h4>
                             <p style="color: #64748b; margin-bottom: 15px;">1美元 = 25元 (升值)</p>
                             <div class="effect-box positive">
-                                <span>進口商成本下降</span>
+                                <span>进口商成本下降</span>
                                 <span class="emoji">😊</span>
                             </div>
                             <div class="effect-box negative">
-                                <span>出口商收入減少</span>
+                                <span>出口商收入减少</span>
                                 <span class="emoji">😞</span>
                             </div>
                             <div class="effect-box positive">
-                                <span>出國旅遊更便宜</span>
+                                <span>出国旅游更便宜</span>
                                 <span class="emoji">✈️</span>
                             </div>
                             <div class="effect-box negative">
-                                <span>外資吸引力下降</span>
+                                <span>外资吸引力下降</span>
                                 <span class="emoji">📉</span>
                             </div>
                         </div>
 
                         <!-- Depreciation Scenario -->
                         <div class="scenario-card" id="depreciationCard" onclick="switchExchangeScenario('depreciation')">
-                            <h4>📉 台幣貶值</h4>
-                            <p style="color: #64748b; margin-bottom: 15px;">1美元 = 35元 (貶值)</p>
+                            <h4>📉 台币贬值</h4>
+                            <p style="color: #64748b; margin-bottom: 15px;">1美元 = 35元 (贬值)</p>
                             <div class="effect-box negative">
-                                <span>進口商成本上升</span>
+                                <span>进口商成本上升</span>
                                 <span class="emoji">😞</span>
                             </div>
                             <div class="effect-box positive">
@@ -863,11 +863,11 @@
                                 <span class="emoji">😊</span>
                             </div>
                             <div class="effect-box negative">
-                                <span>出國旅遊更昂貴</span>
+                                <span>出国旅游更昂贵</span>
                                 <span class="emoji">💸</span>
                             </div>
                             <div class="effect-box positive">
-                                <span>外資吸引力上升</span>
+                                <span>外资吸引力上升</span>
                                 <span class="emoji">📈</span>
                             </div>
                         </div>
@@ -875,35 +875,35 @@
 
                     <!-- Exchange Rate Slider -->
                     <div class="exchange-slider-container">
-                        <h4>調整匯率 (台幣/美元)</h4>
+                        <h4>调整汇率 (台币/美元)</h4>
                         <div class="slider-container">
                             <input type="range" class="slider" id="exchangeRateSlider" min="20" max="40" step="0.5" value="30" oninput="updateExchangeRate()">
                             <div class="slider-value" id="exchangeRateDisplay">30.0</div>
                         </div>
                         <div class="exchange-info">
-                            <strong id="exchangeInterpretation">當前匯率: 1美元 = 30.0台幣</strong>
-                            <p id="exchangeImplication" style="margin-top: 10px; color: #64748b;">調整滑塊以查看不同匯率水準的影響...</p>
+                            <strong id="exchangeInterpretation">当前汇率: 1美元 = 30.0台币</strong>
+                            <p id="exchangeImplication" style="margin-top: 10px; color: #64748b;">调整滑块以查看不同汇率水准的影响...</p>
                         </div>
                     </div>
 
                     <!-- Trade Balance Diagram -->
                     <div class="trade-diagram">
-                        <h4>貿易收支平衡</h4>
+                        <h4>贸易收支平衡</h4>
                         <div style="margin-top: 25px; font-size: 1.1em;">
                             <div class="trade-box" id="exportBox">
-                                出口<br><span style="color: #2563eb; font-size: 1.3em;">500億</span>
+                                出口<br><span style="color: #2563eb; font-size: 1.3em;">500亿</span>
                             </div>
                             <span class="trade-operator">−</span>
                             <div class="trade-box" id="importBox">
-                                進口<br><span style="color: #059669; font-size: 1.3em;">400億</span>
+                                进口<br><span style="color: #059669; font-size: 1.3em;">400亿</span>
                             </div>
                             <span class="trade-operator">=</span>
                             <div class="trade-box" id="resultBox">
-                                貿易順差<br><span style="color: #059669; font-size: 1.3em;">+100億</span>
+                                贸易顺差<br><span style="color: #059669; font-size: 1.3em;">+100亿</span>
                             </div>
                         </div>
                         <div class="trade-result surplus" id="tradeBalance">
-                            貿易順差: 台灣出口超過進口，外匯收入增加 📊
+                            贸易顺差: 台湾出口超过进口，外汇收入增加 📊
                         </div>
                     </div>
                 </div>
@@ -937,92 +937,92 @@
         // ===== TAB 1: BUSINESS CYCLE =====
         const phaseData = {
             expansion: {
-                name: '擴張期 (Expansion)',
+                name: '扩张期 (Expansion)',
                 characteristics: [
-                    '產出與收入上升',
-                    '失業率下降',
-                    '消費和投資增加',
-                    '通膨開始上升'
+                    '产出与收入上升',
+                    '失业率下降',
+                    '消费和投资增加',
+                    '通胀开始上升'
                 ],
                 indicators: [
-                    'GDP正成長',
-                    '工業生產指數上升',
-                    '消費者信心指數高',
-                    '企業利潤增長'
+                    'GDP正成长',
+                    '工业生产指数上升',
+                    '消费者信心指数高',
+                    '企业利润增长'
                 ],
                 actions: [
-                    '企業：積極擴產和招聘',
-                    '消費者：增加支出',
-                    '央行：監控通膨',
-                    '投資者：增加股票配置'
+                    '企业：积极扩产和招聘',
+                    '消费者：增加支出',
+                    '央行：监控通胀',
+                    '投资者：增加股票配置'
                 ],
-                investment: '股票表現良好，推薦增加權益類投資'
+                investment: '股票表现良好，推荐增加权益类投资'
             },
             peak: {
                 name: '高峰期 (Peak)',
                 characteristics: [
-                    '經濟成長達到最高',
-                    '失業率最低',
-                    '通膨壓力最大',
-                    '產能充分利用'
+                    '经济成长达到最高',
+                    '失业率最低',
+                    '通胀压力最大',
+                    '产能充分利用'
                 ],
                 indicators: [
-                    'GDP成長率達峰值',
-                    '物價指數明顯上升',
+                    'GDP成长率达峰值',
+                    '物价指数明显上升',
                     '短期利率快速提升',
-                    '資產泡沫開始形成'
+                    '资产泡沫开始形成'
                 ],
                 actions: [
-                    '央行：開始加息控通膨',
-                    '政府：減少刺激政策',
-                    '消費者：警惕價格上升',
-                    '投資者：轉向防守性資產'
+                    '央行：开始加息控通胀',
+                    '政府：减少刺激政策',
+                    '消费者：警惕价格上升',
+                    '投资者：转向防守性资产'
                 ],
-                investment: '警惕泡沫，適當減少股票，增加債券配置'
+                investment: '警惕泡沫，适当减少股票，增加债券配置'
             },
             recession: {
                 name: '衰退期 (Recession)',
                 characteristics: [
-                    '產出和收入下降',
-                    '失業率上升',
-                    '企業利潤下滑',
-                    '消費和投資下降'
+                    '产出和收入下降',
+                    '失业率上升',
+                    '企业利润下滑',
+                    '消费和投资下降'
                 ],
                 indicators: [
-                    'GDP負成長',
-                    '工業生產指數下降',
-                    '失業率明顯上升',
-                    '企業倒閉增加'
+                    'GDP负成长',
+                    '工业生产指数下降',
+                    '失业率明显上升',
+                    '企业倒闭增加'
                 ],
                 actions: [
-                    '央行：降息提供流動性',
-                    '政府：實施刺激政策',
-                    '企業：控制成本',
-                    '投資者：精選價值型投資'
+                    '央行：降息提供流动性',
+                    '政府：实施刺激政策',
+                    '企业：控制成本',
+                    '投资者：精选价值型投资'
                 ],
-                investment: '尋找被低估的資產，為未來反彈做準備'
+                investment: '寻找被低估的资产，为未来反弹做准备'
             },
             trough: {
                 name: '谷底期 (Trough)',
                 characteristics: [
-                    '經濟衰退程度最深',
-                    '失業率最高',
-                    '消費和投資最低',
-                    '價格下降明顯'
+                    '经济衰退程度最深',
+                    '失业率最高',
+                    '消费和投资最低',
+                    '价格下降明显'
                 ],
                 indicators: [
-                    'GDP最低點',
-                    '失業率達峰值',
-                    '消費者信心最低',
-                    '企業融資困難'
+                    'GDP最低点',
+                    '失业率达峰值',
+                    '消费者信心最低',
+                    '企业融资困难'
                 ],
                 actions: [
-                    '央行：維持寬鬆政策',
+                    '央行：维持宽松政策',
                     '政府：增加支出',
-                    '企業：等待時機',
-                    '投資者：等待反彈信號'
+                    '企业：等待时机',
+                    '投资者：等待反弹信号'
                 ],
-                investment: '風險收益比最有利，谷底往往是最佳買點'
+                investment: '风险收益比最有利，谷底往往是最佳买点'
             }
         };
 
@@ -1033,25 +1033,25 @@
             let html = `<h3 style="color: #2563eb;">${data.name}</h3>`;
             html += `<div class="info-grid">
                 <div class="info-item">
-                    <h4>📊 經濟特徵</h4>
+                    <h4>📊 经济特征</h4>
                     <ul>
                         ${data.characteristics.map(c => `<li>${c}</li>`).join('')}
                     </ul>
                 </div>
                 <div class="info-item">
-                    <h4>📈 經濟指標</h4>
+                    <h4>📈 经济指针</h4>
                     <ul>
                         ${data.indicators.map(i => `<li>${i}</li>`).join('')}
                     </ul>
                 </div>
                 <div class="info-item">
-                    <h4>⚙️ 企業應對</h4>
+                    <h4>⚙️ 企业应对</h4>
                     <ul>
                         ${data.actions.map(a => `<li>${a}</li>`).join('')}
                     </ul>
                 </div>
                 <div class="info-item">
-                    <h4>💡 投資啟示</h4>
+                    <h4>💡 投资启示</h4>
                     <p>${data.investment}</p>
                 </div>
             </div>`;
@@ -1144,46 +1144,46 @@
 
             // House prices logic
             if (gdp > 5 && interest < 3 && inflation < 3) {
-                housePriceText = '📈 強勢上漲 - 低利率和強勢經濟推高房價';
+                housePriceText = '📈 强势上涨 - 低利率和强势经济推高房价';
             } else if (gdp < 0 && unemployment > 5) {
-                housePriceText = '📉 快速下跌 - 經濟衰退和高失業率打擊需求';
+                housePriceText = '📉 快速下跌 - 经济衰退和高失业率打击需求';
             } else if (interest > 4) {
-                housePriceText = '⚠️ 面臨壓力 - 高利率增加購房成本';
+                housePriceText = '⚠️ 面临压力 - 高利率增加购房成本';
             } else {
-                housePriceText = '➡️ 平穩發展 - 經濟基本面穩定';
+                housePriceText = '➡️ 平稳发展 - 经济基本面稳定';
             }
 
             // Stock market logic
             if (gdp > 4 && inflation < 4 && unemployment < 5) {
-                stockMarketText = '📈 牛市前景 - 強勁經濟成長支撐股市';
+                stockMarketText = '📈 牛市前景 - 强劲经济成长支撑股市';
             } else if (gdp < 0 && inflation > 5) {
-                stockMarketText = '📉 熊市風險 - 衰退和高通膨雙重打擊';
+                stockMarketText = '📉 熊市风险 - 衰退和高通胀双重打击';
             } else if (inflation > 6 && interest > 4) {
-                stockMarketText = '⚠️ 震盪調整 - 高通膨和高利率制約漲幅';
+                stockMarketText = '⚠️ 震荡调整 - 高通胀和高利率制约涨幅';
             } else {
-                stockMarketText = '➡️ 謹慎樂觀 - 逐步消化政策調整';
+                stockMarketText = '➡️ 谨慎乐观 - 逐步消化政策调整';
             }
 
             // Consumer spending logic
             if (gdp > 3 && unemployment < 4 && inflation < 3) {
-                consumerText = '📈 消費繁榮 - 就業穩定和低通膨提升購買力';
+                consumerText = '📈 消费繁荣 - 就业稳定和低通胀提升购买力';
             } else if (unemployment > 6 && gdp < 1) {
-                consumerText = '📉 消費萎靡 - 失業和低增長抑制支出';
+                consumerText = '📉 消费萎靡 - 失业和低增长抑制支出';
             } else if (inflation > 5 && interest > 4) {
-                consumerText = '⚠️ 消費疲弱 - 高成本和高利率損害購買力';
+                consumerText = '⚠️ 消费疲弱 - 高成本和高利率损害购买力';
             } else {
-                consumerText = '➡️ 保持謹慎 - 觀望後市再決策';
+                consumerText = '➡️ 保持谨慎 - 观望后市再决策';
             }
 
             // Investment logic
             if (gdp > 4 && interest < 3 && inflation < 2) {
-                investmentText = '📈 擴張投資 - 最優的投資環境';
+                investmentText = '📈 扩张投资 - 最优的投资环境';
             } else if (gdp < 0 || unemployment > 7) {
-                investmentText = '⚠️ 延緩計畫 - 經濟前景不明朗';
+                investmentText = '⚠️ 延缓计划 - 经济前景不明朗';
             } else if (interest > 5) {
-                investmentText = '📉 融資成本高 - 企業投資意願下降';
+                investmentText = '📉 融资成本高 - 企业投资意愿下降';
             } else {
-                investmentText = '➡️ 精選專案 - 謹慎但穩步推進';
+                investmentText = '➡️ 精选项目 - 谨慎但稳步推进';
             }
 
             document.getElementById('housePriceScenario').textContent = housePriceText;
@@ -1204,7 +1204,7 @@
             event.target.classList.add('active');
 
             // Update scenario name
-            const scenarioName = scenario === 'expansionary' ? '擴張' : '緊縮';
+            const scenarioName = scenario === 'expansionary' ? '扩张' : '紧缩';
             document.getElementById('scenarioName').textContent = scenarioName;
 
             // Hide existing effect
@@ -1215,14 +1215,14 @@
             if (scenario === 'expansionary') {
                 document.getElementById('policyImpact').innerHTML = `
                     <div class="effect-item">GDP ↑ 上升</div>
-                    <div class="effect-item">物價 ↑ 上升</div>
-                    <div class="effect-item">就業 ↑ 上升</div>
+                    <div class="effect-item">物价 ↑ 上升</div>
+                    <div class="effect-item">就业 ↑ 上升</div>
                 `;
             } else {
                 document.getElementById('policyImpact').innerHTML = `
                     <div class="effect-item">GDP ↓ 下降</div>
-                    <div class="effect-item">物價 ↓ 下降</div>
-                    <div class="effect-item">就業 ↓ 下降</div>
+                    <div class="effect-item">物价 ↓ 下降</div>
+                    <div class="effect-item">就业 ↓ 下降</div>
                 `;
             }
         }
@@ -1235,26 +1235,26 @@
 
             if (currentPolicyScenario === 'expansionary') {
                 const expansionaryEffects = {
-                    'interest-rate': '央行降低基準利率，使借貸成本下降。企業和消費者更願意借款投資和消費，促進經濟增長。',
-                    'open-market': '央行購買政府債券，向金融系統注入現金。增加貨幣供給，降低市場利率，刺激投資。',
-                    'reserve-ratio': '降低銀行存款準備率，銀行可用於放貸的資金增加。促進信貸擴張，支持經濟增長。',
-                    'quantitative-easing': '在低利率環境下，央行直接購買長期資產。增加市場流動性，壓低長期利率，刺激資產價格上漲。',
-                    'gov-spending': '政府增加支出（道路、學校、醫院等）。直接創造就業機會和收入，刺激經濟增長。',
-                    'tax-adjustment': '政府降低稅率，提高居民可支配收入。促進消費增加，刺激經濟活動。',
-                    'public-investment': '政府投資基礎設施專案。創造建設就業，增加經濟生產能力，帶動相關產業發展。',
-                    'transfer-payments': '政府增加補貼和福利（失業救濟、養老金等）。直接增加低收入者收入，促進消費。'
+                    'interest-rate': '央行降低基准利率，使借贷成本下降。企业和消费者更愿意借款投资和消费，促进经济增长。',
+                    'open-market': '央行购买政府债券，向金融系统注入现金。增加货币供给，降低市场利率，刺激投资。',
+                    'reserve-ratio': '降低银行存款准备率，银行可用于放贷的资金增加。促进信贷扩张，支持经济增长。',
+                    'quantitative-easing': '在低利率环境下，央行直接购买长期资产。增加市场流动性，压低长期利率，刺激资产价格上涨。',
+                    'gov-spending': '政府增加支出（道路、学校、医院等）。直接创造就业机会和收入，刺激经济增长。',
+                    'tax-adjustment': '政府降低税率，提高居民可支配收入。促进消费增加，刺激经济活动。',
+                    'public-investment': '政府投资基础设施项目。创造建设就业，增加经济生产能力，带动相关产业发展。',
+                    'transfer-payments': '政府增加补贴和福利（失业救济、养老金等）。直接增加低收入者收入，促进消费。'
                 };
                 description = expansionaryEffects[policyId];
             } else {
                 const contractionaryEffects = {
-                    'interest-rate': '央行提高基準利率，增加借貸成本。企業和消費者減少借款投資和消費，控制經濟過熱和通膨。',
-                    'open-market': '央行出售政府債券，從金融系統回收現金。減少貨幣供給，提高市場利率，抑制經濟活動。',
-                    'reserve-ratio': '提高銀行存款準備率，銀行用於放貸的資金減少。抑制信貸擴張，控制經濟增長。',
-                    'quantitative-easing': '央行出售或不再購買資產。減少市場流動性，提高長期利率，抑制資產價格和投資。',
-                    'gov-spending': '政府減少支出。直接降低經濟需求，抑制經濟活動和通膨。',
-                    'tax-adjustment': '政府提高稅率，降低居民可支配收入。減少消費支出，抑制經濟過度增長。',
-                    'public-investment': '政府減少基礎設施投資。減少政府支出和相關就業，控制經濟增速。',
-                    'transfer-payments': '政府減少補貼和福利。減少低收入者收入，降低總體消費需求。'
+                    'interest-rate': '央行提高基准利率，增加借贷成本。企业和消费者减少借款投资和消费，控制经济过热和通胀。',
+                    'open-market': '央行出售政府债券，从金融系统回收现金。减少货币供给，提高市场利率，抑制经济活动。',
+                    'reserve-ratio': '提高银行存款准备率，银行用于放贷的资金减少。抑制信贷扩张，控制经济增长。',
+                    'quantitative-easing': '央行出售或不再购买资产。减少市场流动性，提高长期利率，抑制资产价格和投资。',
+                    'gov-spending': '政府减少支出。直接降低经济需求，抑制经济活动和通胀。',
+                    'tax-adjustment': '政府提高税率，降低居民可支配收入。减少消费支出，抑制经济过度增长。',
+                    'public-investment': '政府减少基础设施投资。减少政府支出和相关就业，控制经济增速。',
+                    'transfer-payments': '政府减少补贴和福利。减少低收入者收入，降低总体消费需求。'
                 };
                 description = contractionaryEffects[policyId];
             }
@@ -1282,19 +1282,19 @@
             const interpretation = document.getElementById('exchangeInterpretation');
             const implication = document.getElementById('exchangeImplication');
 
-            interpretation.textContent = `當前匯率: 1美元 = ${rate.toFixed(1)}台幣`;
+            interpretation.textContent = `当前汇率: 1美元 = ${rate.toFixed(1)}台币`;
 
             if (rate < 25) {
-                implication.textContent = '台幣大幅升值 - 出口商面臨極大壓力，進口商受惠最大。';
+                implication.textContent = '台币大幅升值 - 出口商面临极大压力，进口商受惠最大。';
                 switchExchangeScenario('appreciation');
             } else if (rate < 30) {
-                implication.textContent = '台幣升值 - 出口競爭力下降，進口商成本優勢增加。';
+                implication.textContent = '台币升值 - 出口竞争力下降，进口商成本优势增加。';
                 switchExchangeScenario('appreciation');
             } else if (rate < 35) {
-                implication.textContent = '台幣貶值 - 出口商收入增加，進口商成本上升。';
+                implication.textContent = '台币贬值 - 出口商收入增加，进口商成本上升。';
                 switchExchangeScenario('depreciation');
             } else {
-                implication.textContent = '台幣大幅貶值 - 出口商競爭力大幅提升，進口價格明顯上升。';
+                implication.textContent = '台币大幅贬值 - 出口商竞争力大幅提升，进口价格明显上升。';
                 switchExchangeScenario('depreciation');
             }
 
@@ -1323,17 +1323,17 @@
 
             const balance = exports - imports;
 
-            document.getElementById('exportBox').innerHTML = `出口<br><span style="color: #2563eb; font-size: 1.3em;">${exports}億</span>`;
-            document.getElementById('importBox').innerHTML = `進口<br><span style="color: #059669; font-size: 1.3em;">${imports}億</span>`;
-            document.getElementById('resultBox').innerHTML = `${balance > 0 ? '貿易順差' : '貿易逆差'}<br><span style="color: ${balance > 0 ? '#059669' : '#dc2626'}; font-size: 1.3em;">${balance > 0 ? '+' : ''}${balance}億</span>`;
+            document.getElementById('exportBox').innerHTML = `出口<br><span style="color: #2563eb; font-size: 1.3em;">${exports}亿</span>`;
+            document.getElementById('importBox').innerHTML = `进口<br><span style="color: #059669; font-size: 1.3em;">${imports}亿</span>`;
+            document.getElementById('resultBox').innerHTML = `${balance > 0 ? '贸易顺差' : '贸易逆差'}<br><span style="color: ${balance > 0 ? '#059669' : '#dc2626'}; font-size: 1.3em;">${balance > 0 ? '+' : ''}${balance}亿</span>`;
 
             const tradeBalance = document.getElementById('tradeBalance');
             if (balance > 0) {
                 tradeBalance.className = 'trade-result surplus';
-                tradeBalance.textContent = `貿易順差: 台灣出口超過進口 ${balance}億元，外匯收入增加 📊`;
+                tradeBalance.textContent = `贸易顺差: 台湾出口超过进口 ${balance}亿元，外汇收入增加 📊`;
             } else {
                 tradeBalance.className = 'trade-result deficit';
-                tradeBalance.textContent = `貿易逆差: 台灣進口超過出口 ${Math.abs(balance)}億元，外匯支出增加 📊`;
+                tradeBalance.textContent = `贸易逆差: 台湾进口超过出口 ${Math.abs(balance)}亿元，外汇支出增加 📊`;
             }
         }
 

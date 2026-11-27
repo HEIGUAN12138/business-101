@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>產品管理互動圖表</title>
+    <title>产品管理交互图表</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <style>
         * {
@@ -426,34 +426,34 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>產品管理互動工具箱</h1>
-            <p>5大實戰工具，幫助你做出更好的產品決策</p>
+            <h1>产品管理交互工具箱</h1>
+            <p>5大实战工具，帮助你做出更好的产品决策</p>
         </div>
 
         <div class="tabs">
-            <button class="tab-button active" data-tab="plc">產品生命週期模擬</button>
-            <button class="tab-button" data-tab="mvp">MVP規劃工具</button>
-            <button class="tab-button" data-tab="aarrr">AARRR指標儀表板</button>
-            <button class="tab-button" data-tab="userstory">使用者故事產生器</button>
-            <button class="tab-button" data-tab="kanban">敏捷看板模擬</button>
+            <button class="tab-button active" data-tab="plc">产品生命周期模拟</button>
+            <button class="tab-button" data-tab="mvp">MVP规划工具</button>
+            <button class="tab-button" data-tab="aarrr">AARRR指针仪表板</button>
+            <button class="tab-button" data-tab="userstory">用户故事产生器</button>
+            <button class="tab-button" data-tab="kanban">敏捷看板模拟</button>
         </div>
 
-        <!-- Tab 1: 產品生命週期模擬器 -->
+        <!-- Tab 1: 产品生命周期模拟器 -->
         <div id="plc" class="tab-content active">
-            <h2 class="section-title">產品生命週期模擬器</h2>
+            <h2 class="section-title">产品生命周期模拟器</h2>
 
             <div class="info-box">
-                <strong>提示：</strong>調整滑塊改變各階段的銷售增長，實時看到產品的生命週期曲線變化。
+                <strong>提示：</strong>调整滑块改变各阶段的销售增长，实时看到产品的生命周期曲线变化。
             </div>
 
             <div class="controls">
                 <div class="control-item" style="flex: 1;">
-                    <label>導入期 (0-12月)</label>
+                    <label>导入期 (0-12月)</label>
                     <input type="range" id="intro-sales" min="0" max="50" value="10" step="5">
                     <span id="intro-value">10</span>
                 </div>
                 <div class="control-item" style="flex: 1;">
-                    <label>成長期 (12-24月)</label>
+                    <label>成长期 (12-24月)</label>
                     <input type="range" id="growth-sales" min="50" max="200" value="100" step="10">
                     <span id="growth-value">100</span>
                 </div>
@@ -476,85 +476,85 @@
             <div class="stats">
                 <div class="stat-card">
                     <div class="value" id="peak-sales">100</div>
-                    <div class="label">峰值銷售量</div>
+                    <div class="label">峰值销售量</div>
                 </div>
                 <div class="stat-card">
                     <div class="value" id="growth-rate">250%</div>
-                    <div class="label">成長期增長率</div>
+                    <div class="label">成长期增长率</div>
                 </div>
                 <div class="stat-card">
                     <div class="value" id="total-revenue">2400</div>
-                    <div class="label">生命週期總營收</div>
+                    <div class="label">生命周期总营业收入</div>
                 </div>
             </div>
 
             <div class="info-box">
-                <strong>策略建議：</strong>
+                <strong>策略建议：</strong>
                 <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>導入期：投入營銷教育，建立品牌認知</li>
-                    <li>成長期：優化產品、擴大市場、應對競爭</li>
-                    <li>成熟期：創新改進、成本控制、細分市場</li>
-                    <li>衰退期：開發新產品或優雅退出</li>
+                    <li>导入期：投入营销教育，创建品牌认知</li>
+                    <li>成长期：优化产品、扩大市场、应对竞争</li>
+                    <li>成熟期：创新改进、成本控制、细分市场</li>
+                    <li>衰退期：开发新产品或优雅退出</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Tab 2: MVP規劃工具 -->
+        <!-- Tab 2: MVP规划工具 -->
         <div id="mvp" class="tab-content">
-            <h2 class="section-title">MVP 規劃工具：優先級矩陣</h2>
+            <h2 class="section-title">MVP 规划工具：优先级矩阵</h2>
 
             <div class="info-box">
-                <strong>說明：</strong>使用努力度-影響度矩陣評估功能優先級。快速勝利應最優先開發，其次是戰略功能。
+                <strong>说明：</strong>使用努力度-影响度矩阵评估功能优先级。快速胜利应最优先开发，其次是战略功能。
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;">
                 <div>
                     <h3 style="margin-bottom: 15px;">功能列表</h3>
                     <div id="featureList" style="max-height: 400px; overflow-y: auto;">
-                        <!-- 動態生成 -->
+                        <!-- 动态生成 -->
                     </div>
                 </div>
                 <div style="display: flex; flex-direction: column;">
-                    <h3 style="margin-bottom: 15px;">優先級矩陣</h3>
+                    <h3 style="margin-bottom: 15px;">优先级矩阵</h3>
                     <div style="position: relative; width: 100%; height: 400px; border: 2px solid #ddd; border-radius: 8px; background: white;">
-                        <!-- Y軸 (影響度) -->
+                        <!-- Y轴 (影响度) -->
                         <div style="position: absolute; left: 30px; top: 10px; bottom: 10px; border-left: 2px solid #999; font-size: 0.8em; color: #666;">
-                            <div style="position: absolute; top: -10px; left: -40px;">影響度</div>
+                            <div style="position: absolute; top: -10px; left: -40px;">影响度</div>
                             <div style="position: absolute; bottom: 0; left: -20px;">低</div>
                             <div style="position: absolute; top: 0; left: -20px;">高</div>
                         </div>
-                        <!-- X軸 (努力度) -->
+                        <!-- X轴 (努力度) -->
                         <div style="position: absolute; left: 30px; bottom: 30px; right: 10px; border-bottom: 2px solid #999; font-size: 0.8em; color: #666;">
                             <div style="position: absolute; left: -40px; bottom: -20px;">努力度低</div>
                             <div style="position: absolute; right: -40px; bottom: -20px;">努力度高</div>
                         </div>
-                        <!-- 四個象限 -->
+                        <!-- 四个象限 -->
                         <div id="quadrant-qw" style="position: absolute; left: 30px; top: 10px; width: 45%; height: 45%; background: rgba(132, 250, 176, 0.2); border-right: 1px dashed #ccc; border-bottom: 1px dashed #ccc; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 0.9em; font-weight: bold; color: #333;">快速勝利</span>
+                            <span style="font-size: 0.9em; font-weight: bold; color: #333;">快速胜利</span>
                         </div>
                         <div id="quadrant-strategic" style="position: absolute; left: 30px; bottom: 30px; width: 45%; height: 45%; background: rgba(250, 112, 154, 0.2); border-right: 1px dashed #ccc; border-top: 1px dashed #ccc; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 0.9em; font-weight: bold; color: #333;">戰略計劃</span>
+                            <span style="font-size: 0.9em; font-weight: bold; color: #333;">战略计划</span>
                         </div>
                         <div id="quadrant-filler" style="position: absolute; right: 10px; top: 10px; width: 45%; height: 45%; background: rgba(168, 237, 234, 0.2); border-left: 1px dashed #ccc; border-bottom: 1px dashed #ccc; display: flex; align-items: center; justify-content: center;">
                             <span style="font-size: 0.9em; font-weight: bold; color: #333;">填充功能</span>
                         </div>
                         <div id="quadrant-waste" style="position: absolute; right: 10px; bottom: 30px; width: 45%; height: 45%; background: rgba(255, 154, 86, 0.2); border-left: 1px dashed #ccc; border-top: 1px dashed #ccc; display: flex; align-items: center; justify-content: center;">
-                            <span style="font-size: 0.9em; font-weight: bold; color: #333;">時間浪費</span>
+                            <span style="font-size: 0.9em; font-weight: bold; color: #333;">时间浪费</span>
                         </div>
-                        <!-- 功能點 -->
+                        <!-- 功能点 -->
                         <div id="matrixPoints"></div>
                     </div>
                 </div>
             </div>
 
-            <h3 style="margin-top: 30px;">添加功能進行評估</h3>
+            <h3 style="margin-top: 30px;">添加功能进行评估</h3>
             <div class="controls">
                 <div class="control-item" style="flex: 1;">
-                    <label>功能名稱</label>
-                    <input type="text" id="featureName" placeholder="例如：推薦演算法">
+                    <label>功能名称</label>
+                    <input type="text" id="featureName" placeholder="例如：推荐算法">
                 </div>
                 <div class="control-item" style="flex: 1;">
-                    <label>影響度 (1-10)</label>
+                    <label>影响度 (1-10)</label>
                     <input type="number" id="featureImpact" min="1" max="10" value="5">
                 </div>
                 <div class="control-item" style="flex: 1;">
@@ -566,17 +566,17 @@
             <button class="btn btn-secondary" onclick="clearFeatures()">清空所有</button>
         </div>
 
-        <!-- Tab 3: AARRR指標儀表板 -->
+        <!-- Tab 3: AARRR指针仪表板 -->
         <div id="aarrr" class="tab-content">
-            <h2 class="section-title">AARRR海盜指標儀表板</h2>
+            <h2 class="section-title">AARRR海盗指针仪表板</h2>
 
             <div class="info-box">
-                <strong>說明：</strong>輸入各階段的轉化率，實時看到使用者從取得到推薦的完整漏斗。
+                <strong>说明：</strong>输入各阶段的转化率，实时看到用户从取得到推荐的完整漏斗。
             </div>
 
             <div class="controls">
                 <div class="control-item" style="flex: 1;">
-                    <label>初始使用者數</label>
+                    <label>初始用户数</label>
                     <input type="number" id="initial-users" value="100000" step="1000">
                 </div>
                 <div class="control-item" style="flex: 1;">
@@ -588,157 +588,157 @@
                     <input type="number" id="retention-rate" value="30" min="0" max="100" step="5">
                 </div>
                 <div class="control-item" style="flex: 1;">
-                    <label>轉化率 (%)</label>
+                    <label>转化率 (%)</label>
                     <input type="number" id="revenue-rate" value="5" min="0" max="100" step="1">
                 </div>
                 <div class="control-item" style="flex: 1;">
-                    <label>推薦率 (%)</label>
+                    <label>推荐率 (%)</label>
                     <input type="number" id="referral-rate" value="20" min="0" max="100" step="5">
                 </div>
             </div>
 
-            <button class="btn btn-primary" onclick="updateFunnel()">計算漏斗</button>
+            <button class="btn btn-primary" onclick="updateFunnel()">计算漏斗</button>
 
             <div class="funnel">
                 <div class="funnel-stage a">
                     <span>🎯 取得 (Acquisition)</span><br>
-                    <strong id="funnel-a">100,000 使用者</strong>
+                    <strong id="funnel-a">100,000 用户</strong>
                 </div>
                 <div class="funnel-stage r1">
                     <span>⚡ 激活 (Activation)</span><br>
-                    <strong id="funnel-r1">40,000 使用者</strong>
+                    <strong id="funnel-r1">40,000 用户</strong>
                 </div>
                 <div class="funnel-stage r2">
                     <span>📱 留存 (Retention)</span><br>
-                    <strong id="funnel-r2">12,000 使用者</strong>
+                    <strong id="funnel-r2">12,000 用户</strong>
                 </div>
                 <div class="funnel-stage revenue">
                     <span>💰 收益 (Revenue)</span><br>
-                    <strong id="funnel-revenue">600 付費使用者</strong>
+                    <strong id="funnel-revenue">600 付费用户</strong>
                 </div>
                 <div class="funnel-stage referral">
-                    <span>👥 推薦 (Referral)</span><br>
-                    <strong id="funnel-referral">2,400 推薦者</strong>
+                    <span>👥 推荐 (Referral)</span><br>
+                    <strong id="funnel-referral">2,400 推荐者</strong>
                 </div>
             </div>
 
             <div class="stats">
                 <div class="stat-card">
                     <div class="value" id="lr-ratio">4.8%</div>
-                    <div class="label">留存轉化率</div>
+                    <div class="label">留存转化率</div>
                 </div>
                 <div class="stat-card">
                     <div class="value" id="roi">120%</div>
-                    <div class="label">估計ROI</div>
+                    <div class="label">估计ROI</div>
                 </div>
                 <div class="stat-card">
                     <div class="value" id="k-factor">0.20</div>
-                    <div class="label">病毒係數</div>
+                    <div class="label">病毒系数</div>
                 </div>
                 <div class="stat-card">
-                    <div class="value" id="breakeven">18個月</div>
-                    <div class="label">損益平衡點</div>
+                    <div class="value" id="breakeven">18个月</div>
+                    <div class="label">损益平衡点</div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 4: 使用者故事產生器 -->
+        <!-- Tab 4: 用户故事产生器 -->
         <div id="userstory" class="tab-content">
-            <h2 class="section-title">使用者故事產生器</h2>
+            <h2 class="section-title">用户故事产生器</h2>
 
             <div class="info-box">
-                <strong>說明：</strong>填入使用者、功能、目標，自動生成標準使用者故事格式，幫助團隊理解需求。
+                <strong>说明：</strong>填入用户、功能、目标，自动生成标准用户故事格式，帮助团队理解需求。
             </div>
 
             <div class="template-form">
                 <div class="form-group">
-                    <label>使用者角色 (User Role)</label>
-                    <input type="text" id="userRole" placeholder="例如：電商購物者、內容創作者、專案經理" value="電商購物者">
+                    <label>用户角色 (User Role)</label>
+                    <input type="text" id="userRole" placeholder="例如：电商购物者、内容创作者、项目经理" value="电商购物者">
                 </div>
                 <div class="form-group">
                     <label>想要/需要的功能 (Feature/Capability)</label>
-                    <input type="text" id="featureWant" placeholder="例如：快速結帳、推薦演算法、團隊協作" value="快速結帳流程">
+                    <input type="text" id="featureWant" placeholder="例如：快速结帐、推荐算法、团队协作" value="快速结帐流程">
                 </div>
                 <div class="form-group">
-                    <label>目的/目標 (Goal/Benefit)</label>
-                    <input type="text" id="featureBenefit" placeholder="例如：節省時間、提高效率、降低成本" value="節省購物時間">
+                    <label>目的/目标 (Goal/Benefit)</label>
+                    <input type="text" id="featureBenefit" placeholder="例如：节省时间、提高效率、降低成本" value="节省购物时间">
                 </div>
                 <div class="form-group">
-                    <label>驗收標準 (Acceptance Criteria)</label>
-                    <textarea id="acceptanceCriteria" placeholder="每行一個標準，例如：
-- 結帳流程不超過3步
+                    <label>验收标准 (Acceptance Criteria)</label>
+                    <textarea id="acceptanceCriteria" placeholder="每行一个标准，例如：
+- 结帐流程不超过3步
 - 支持快捷支付
-- 頁面加載時間少於2秒"></textarea>
+- 页面加载时间少于2秒"></textarea>
                 </div>
 
                 <div class="button-group">
-                    <button class="btn btn-primary" onclick="generateUserStory()">生成使用者故事</button>
+                    <button class="btn btn-primary" onclick="generateUserStory()">生成用户故事</button>
                     <button class="btn btn-secondary" onclick="resetUserStory()">重置</button>
                 </div>
             </div>
 
             <div id="storyOutput"></div>
 
-            <h3 style="margin-top: 30px;">常用使用者故事模板</h3>
+            <h3 style="margin-top: 30px;">常用用户故事模板</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
-                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; border-left: 4px solid #667eea;" onclick="applyTemplate('新使用者註冊', '新使用者', '快速註冊並完成首次設置', '完成初始化設置')">
-                    <strong>新使用者註冊</strong>
-                    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">適用於入門體驗</p>
+                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; border-left: 4px solid #667eea;" onclick="applyTemplate('新用户注册', '新用户', '快速注册并完成首次设置', '完成初始化设置')">
+                    <strong>新用户注册</strong>
+                    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">适用于入门体验</p>
                 </div>
-                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; border-left: 4px solid #667eea;" onclick="applyTemplate('付費轉化', '免費使用者', '升級到付費計劃', '解鎖進階功能')">
-                    <strong>付費轉化</strong>
-                    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">適用於商業化</p>
+                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; border-left: 4px solid #667eea;" onclick="applyTemplate('付费转化', '免费用户', '升级到付费计划', '解锁高级功能')">
+                    <strong>付费转化</strong>
+                    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">适用于商业化</p>
                 </div>
-                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; border-left: 4px solid #667eea;" onclick="applyTemplate('功能發現', '活躍使用者', '發現產品的高級功能', '更好地使用產品')">
-                    <strong>功能發現</strong>
-                    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">適用於提升使用深度</p>
+                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; border-left: 4px solid #667eea;" onclick="applyTemplate('功能发现', '活跃用户', '发现产品的高级功能', '更好地使用产品')">
+                    <strong>功能发现</strong>
+                    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">适用于提升使用深度</p>
                 </div>
-                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; border-left: 4px solid #667eea;" onclick="applyTemplate('流失預防', '即將流失使用者', '接收個性化激勵資訊', '重新參與產品')">
-                    <strong>流失預防</strong>
-                    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">適用於留存優化</p>
+                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; border-left: 4px solid #667eea;" onclick="applyTemplate('流失预防', '即将流失用户', '接收个性化激励信息', '重新参与产品')">
+                    <strong>流失预防</strong>
+                    <p style="font-size: 0.85em; color: #666; margin-top: 5px;">适用于留存优化</p>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 5: 敏捷看板模擬 -->
+        <!-- Tab 5: 敏捷看板模拟 -->
         <div id="kanban" class="tab-content">
-            <h2 class="section-title">敏捷看板模擬</h2>
+            <h2 class="section-title">敏捷看板模拟</h2>
 
             <div class="info-box">
-                <strong>說明：</strong>拖動卡片在不同列間移動，模擬真實的敏捷開發流程。設置WIP限制以防止瓶頸。
+                <strong>说明：</strong>拖动卡片在不同列间移动，模拟真实的敏捷开发流程。设置WIP限制以防止瓶颈。
             </div>
 
             <div class="controls">
                 <div class="control-item" style="flex: 1;">
-                    <label>待辦列 WIP 限制</label>
+                    <label>待办列 WIP 限制</label>
                     <input type="number" id="todo-wip" value="5" min="1" max="20">
                 </div>
                 <div class="control-item" style="flex: 1;">
-                    <label>進行中 WIP 限制</label>
+                    <label>进行中 WIP 限制</label>
                     <input type="number" id="doing-wip" value="3" min="1" max="20">
                 </div>
                 <div class="control-item" style="flex: 1;">
-                    <label>審查中 WIP 限制</label>
+                    <label>审查中 WIP 限制</label>
                     <input type="number" id="review-wip" value="3" min="1" max="20">
                 </div>
             </div>
 
             <button class="btn btn-primary" onclick="updateKanbanWIP()">更新WIP限制</button>
-            <button class="btn btn-secondary" onclick="addKanbanTask()">添加任務</button>
+            <button class="btn btn-secondary" onclick="addKanbanTask()">添加任务</button>
 
             <div class="kanban-board">
                 <div class="kanban-column">
-                    <h3>🔵 待辦 (ToDo)</h3>
+                    <h3>🔵 待办 (ToDo)</h3>
                     <div style="font-size: 0.85em; color: #666; margin-bottom: 10px;">WIP: <span id="todo-count">0</span>/<span id="todo-limit">5</span></div>
                     <div id="kanban-todo" style="min-height: 200px;"></div>
                 </div>
                 <div class="kanban-column">
-                    <h3>🟡 進行中 (Doing)</h3>
+                    <h3>🟡 进行中 (Doing)</h3>
                     <div style="font-size: 0.85em; color: #666; margin-bottom: 10px;">WIP: <span id="doing-count">0</span>/<span id="doing-limit">3</span></div>
                     <div id="kanban-doing" style="min-height: 200px;"></div>
                 </div>
                 <div class="kanban-column">
-                    <h3>🟠 審查中 (Review)</h3>
+                    <h3>🟠 审查中 (Review)</h3>
                     <div style="font-size: 0.85em; color: #666; margin-bottom: 10px;">WIP: <span id="review-count">0</span>/<span id="review-limit">3</span></div>
                     <div id="kanban-review" style="min-height: 200px;"></div>
                 </div>
@@ -750,19 +750,19 @@
             </div>
 
             <div class="info-box" style="margin-top: 30px;">
-                <strong>看板最佳實踐：</strong>
+                <strong>看板最佳实践：</strong>
                 <ul style="margin-left: 20px; margin-top: 10px;">
-                    <li>設置合理的WIP限制，防止同時進行太多任務</li>
-                    <li>當某列達到WIP限制時，幫助團隊優先完成該列的任務</li>
-                    <li>持續優化，找到最適合團隊的流程</li>
-                    <li>每日站會檢查是否有卡住的任務</li>
+                    <li>设置合理的WIP限制，防止同时进行太多任务</li>
+                    <li>当某列达到WIP限制时，帮助团队优先完成该列的任务</li>
+                    <li>持续优化，找到最适合团队的流程</li>
+                    <li>每日站会检查是否有卡住的任务</li>
                 </ul>
             </div>
         </div>
     </div>
 
     <script>
-        // 標籤切換
+        // 标签切换
         document.querySelectorAll('.tab-button').forEach(button => {
             button.addEventListener('click', () => {
                 const tabName = button.dataset.tab;
@@ -775,7 +775,7 @@
             });
         });
 
-        // ============= Tab 1: 產品生命週期 =============
+        // ============= Tab 1: 产品生命周期 =============
         let plcChart = null;
 
         function initPLCChart() {
@@ -785,7 +785,7 @@
             const data = {
                 labels: ['1月', '4月', '8月', '12月', '16月', '20月', '24月', '28月', '32月', '36月', '40月', '44月', '48月'],
                 datasets: [{
-                    label: '銷售額',
+                    label: '销售额',
                     data: [5, 10, 20, 50, 80, 100, 120, 120, 120, 100, 80, 70, 60],
                     borderColor: '#667eea',
                     backgroundColor: 'rgba(102, 126, 234, 0.1)',
@@ -847,7 +847,7 @@
             plcChart.data.datasets[0].data = data;
             plcChart.update();
 
-            // 更新統計
+            // 更新统计
             const peak = Math.max(...data);
             const total = data.reduce((a, b) => a + b, 0);
             const growthRate = ((growth - intro) / intro * 100).toFixed(0);
@@ -857,7 +857,7 @@
             document.getElementById('total-revenue').textContent = total.toFixed(0);
         }
 
-        // ============= Tab 2: MVP規劃工具 =============
+        // ============= Tab 2: MVP规划工具 =============
         const mvpFeatures = [];
 
         function addFeature() {
@@ -865,7 +865,7 @@
             const impact = parseInt(document.getElementById('featureImpact').value);
             const effort = parseInt(document.getElementById('featureEffort').value);
 
-            if (!name) { alert('請輸入功能名稱'); return; }
+            if (!name) { alert('请输入功能名称'); return; }
 
             mvpFeatures.push({ name, impact, effort });
             document.getElementById('featureName').value = '';
@@ -879,7 +879,7 @@
             list.innerHTML = mvpFeatures.map((f, i) => `
                 <div style="background: white; padding: 12px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ddd;">
                     <strong>${f.name}</strong><br>
-                    <small>影響: ${f.impact}/10 | 努力: ${f.effort}/10</small>
+                    <small>影响: ${f.impact}/10 | 努力: ${f.effort}/10</small>
                     <button onclick="removeFeature(${i})" style="float: right; background: #f44; color: white; border: none; padding: 4px 8px; border-radius: 3px; cursor: pointer;">移除</button>
                 </div>
             `).join('');
@@ -917,7 +917,7 @@
             }).join('');
         }
 
-        // ============= Tab 3: AARRR指標 =============
+        // ============= Tab 3: AARRR指针 =============
         function updateFunnel() {
             const initial = parseInt(document.getElementById('initial-users').value);
             const activation = parseInt(document.getElementById('activation-rate').value);
@@ -931,20 +931,20 @@
             const rev = Math.round(r2 * revenue / 100);
             const ref = Math.round(r2 * referral / 100);
 
-            document.getElementById('funnel-a').textContent = a.toLocaleString() + ' 使用者';
-            document.getElementById('funnel-r1').textContent = r1.toLocaleString() + ' 使用者';
-            document.getElementById('funnel-r2').textContent = r2.toLocaleString() + ' 使用者';
-            document.getElementById('funnel-revenue').textContent = rev.toLocaleString() + ' 付費使用者';
-            document.getElementById('funnel-referral').textContent = ref.toLocaleString() + ' 推薦者';
+            document.getElementById('funnel-a').textContent = a.toLocaleString() + ' 用户';
+            document.getElementById('funnel-r1').textContent = r1.toLocaleString() + ' 用户';
+            document.getElementById('funnel-r2').textContent = r2.toLocaleString() + ' 用户';
+            document.getElementById('funnel-revenue').textContent = rev.toLocaleString() + ' 付费用户';
+            document.getElementById('funnel-referral').textContent = ref.toLocaleString() + ' 推荐者';
 
             const lrRatio = (r2 / initial * 100).toFixed(2);
             document.getElementById('lr-ratio').textContent = lrRatio + '%';
             document.getElementById('roi').textContent = (revenue / activation * 100).toFixed(0) + '%';
             document.getElementById('k-factor').textContent = (ref / r2).toFixed(2);
-            document.getElementById('breakeven').textContent = rev > 0 ? Math.round(12 / (rev / r2)) + '個月' : '無法計算';
+            document.getElementById('breakeven').textContent = rev > 0 ? Math.round(12 / (rev / r2)) + '个月' : '无法计算';
         }
 
-        // ============= Tab 4: 使用者故事產生器 =============
+        // ============= Tab 4: 用户故事产生器 =============
         function generateUserStory() {
             const role = document.getElementById('userRole').value.trim();
             const feature = document.getElementById('featureWant').value.trim();
@@ -952,11 +952,11 @@
             const criteria = document.getElementById('acceptanceCriteria').value.trim();
 
             if (!role || !feature || !benefit) {
-                alert('請填入所有必填欄位');
+                alert('请填入所有必填字段');
                 return;
             }
 
-            let story = `作為一個 ${role}\n我想要 ${feature}\n以便 ${benefit}\n\n驗收標準：\n`;
+            let story = `作为一个 ${role}\n我想要 ${feature}\n以便 ${benefit}\n\n验收标准：\n`;
 
             if (criteria) {
                 story += criteria.split('\n').map(c => {
@@ -968,9 +968,9 @@
 
             const output = document.getElementById('storyOutput');
             output.innerHTML = `
-                <h3 style="margin-top: 30px;">生成的使用者故事</h3>
+                <h3 style="margin-top: 30px;">生成的用户故事</h3>
                 <div class="generated-story">${story}</div>
-                <button class="btn btn-secondary" onclick="copyToClipboard()" style="margin-top: 15px;">複製到剪貼板</button>
+                <button class="btn btn-secondary" onclick="copyToClipboard()" style="margin-top: 15px;">拷贝到剪贴板</button>
             `;
         }
 
@@ -981,9 +981,9 @@
         }
 
         function resetUserStory() {
-            document.getElementById('userRole').value = '電商購物者';
-            document.getElementById('featureWant').value = '快速結帳流程';
-            document.getElementById('featureBenefit').value = '節省購物時間';
+            document.getElementById('userRole').value = '电商购物者';
+            document.getElementById('featureWant').value = '快速结帐流程';
+            document.getElementById('featureBenefit').value = '节省购物时间';
             document.getElementById('acceptanceCriteria').value = '';
             document.getElementById('storyOutput').innerHTML = '';
         }
@@ -991,17 +991,17 @@
         function copyToClipboard() {
             const story = document.querySelector('.generated-story').textContent;
             navigator.clipboard.writeText(story).then(() => {
-                alert('已複製到剪貼板！');
+                alert('已拷贝到剪贴板！');
             });
         }
 
         // ============= Tab 5: 敏捷看板 =============
         const kanbanTasks = [
-            { id: 1, name: '設計首頁UI', status: 'todo' },
-            { id: 2, name: '實現使用者認證', status: 'doing' },
-            { id: 3, name: '優化搜尋功能', status: 'doing' },
-            { id: 4, name: '修復登入bug', status: 'review' },
-            { id: 5, name: '撰寫API文件', status: 'done' }
+            { id: 1, name: '设计首页UI', status: 'todo' },
+            { id: 2, name: '实现用户认证', status: 'doing' },
+            { id: 3, name: '优化搜索功能', status: 'doing' },
+            { id: 4, name: '修复登录bug', status: 'review' },
+            { id: 5, name: '撰写API文档', status: 'done' }
         ];
 
         function renderKanban() {
@@ -1051,7 +1051,7 @@
         }
 
         function addKanbanTask() {
-            const name = prompt('輸入新任務名稱：');
+            const name = prompt('输入新任务名称：');
             if (name) {
                 kanbanTasks.push({
                     id: Math.max(...kanbanTasks.map(t => t.id), 0) + 1,
@@ -1063,7 +1063,7 @@
         }
 
         function updateKanbanWIP() {
-            // 在實際應用中可以用此限制WIP
+            // 在实际应用中可以用此限制WIP
             alert('WIP 限制已更新');
         }
 

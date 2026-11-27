@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>銷售管理 - 互動圖表與工具</title>
+    <title>销售管理 - 交互图表与工具</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
     <style>
         * {
@@ -313,45 +313,45 @@
 <body>
     <div class="container">
         <header>
-            <h1>銷售管理 - 互動圖表與工具</h1>
-            <p>數據驅動的銷售管理，一目瞭然</p>
+            <h1>销售管理 - 交互图表与工具</h1>
+            <p>数据驱动的销售管理，一目了然</p>
         </header>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab(0)">銷售漏斗模擬器</button>
-            <button class="tab-button" onclick="switchTab(1)">B2B vs B2C 比較</button>
-            <button class="tab-button" onclick="switchTab(2)">LTV 計算器</button>
-            <button class="tab-button" onclick="switchTab(3)">績效儀表板</button>
-            <button class="tab-button" onclick="switchTab(4)">銷售預測工具</button>
+            <button class="tab-button active" onclick="switchTab(0)">销售漏斗模拟器</button>
+            <button class="tab-button" onclick="switchTab(1)">B2B vs B2C 比较</button>
+            <button class="tab-button" onclick="switchTab(2)">LTV 计算器</button>
+            <button class="tab-button" onclick="switchTab(3)">绩效仪表板</button>
+            <button class="tab-button" onclick="switchTab(4)">销售预测工具</button>
         </div>
 
-        <!-- Tab 1: 銷售漏斗模擬器 -->
+        <!-- Tab 1: 销售漏斗模拟器 -->
         <div class="tab-content active">
-            <h2 class="section-title">銷售漏斗模擬器 - 轉換率計算</h2>
+            <h2 class="section-title">销售漏斗模拟器 - 转换率计算</h2>
 
             <div class="tool-section">
-                <h3>設定初始潛客數和各階段轉換率</h3>
+                <h3>设置初始潜客数和各阶段转换率</h3>
 
                 <div class="input-group">
                     <div class="input-field">
-                        <label>初始潛客數 (Leads)</label>
+                        <label>初始潜客数 (Leads)</label>
                         <input type="number" id="initialLeads" value="1000" min="10">
                     </div>
                     <div class="input-field">
-                        <label>MQL 轉換率 (%)</label>
+                        <label>MQL 转换率 (%)</label>
                         <input type="number" id="mqlRate" value="20" min="0" max="100">
                     </div>
                     <div class="input-field">
-                        <label>SQL 轉換率 (%)</label>
+                        <label>SQL 转换率 (%)</label>
                         <input type="number" id="sqlRate" value="30" min="0" max="100">
                     </div>
                     <div class="input-field">
-                        <label>機會轉換率 (%)</label>
+                        <label>机会转换率 (%)</label>
                         <input type="number" id="opportunityRate" value="50" min="0" max="100">
                     </div>
                 </div>
 
-                <button onclick="calculateFunnel()">計算漏斗</button>
+                <button onclick="calculateFunnel()">计算漏斗</button>
             </div>
 
             <div class="chart-container">
@@ -359,21 +359,21 @@
             </div>
 
             <div class="result-box" id="funnelResult">
-                <h4>漏斗分析結果</h4>
+                <h4>漏斗分析结果</h4>
                 <div class="result-item">
-                    <span>初始潛客 (Leads):</span>
+                    <span>初始潜客 (Leads):</span>
                     <strong id="leads">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>符合行銷條件 (MQL):</span>
+                    <span>符合营销条件 (MQL):</span>
                     <strong id="mql">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>符合銷售條件 (SQL):</span>
+                    <span>符合销售条件 (SQL):</span>
                     <strong id="sql">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>機會 (Opportunities):</span>
+                    <span>机会 (Opportunities):</span>
                     <strong id="opportunities">-</strong>
                 </div>
                 <div class="result-item">
@@ -381,121 +381,121 @@
                     <strong id="won">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>總體成交率:</span>
+                    <span>总体成交率:</span>
                     <strong id="overallRate">-</strong>
                 </div>
             </div>
 
             <div class="note">
-                💡 <strong>提示：</strong> 改變各階段的轉換率，看看對最終成交數的影響。通常，小幅提升轉換率會帶來大幅提升最終營收。
+                💡 <strong>提示：</strong> 改变各阶段的转换率，看看对最终成交数的影响。通常，小幅提升转换率会带来大幅提升最终营业收入。
             </div>
         </div>
 
-        <!-- Tab 2: B2B vs B2C 比較 -->
+        <!-- Tab 2: B2B vs B2C 比较 -->
         <div class="tab-content">
-            <h2 class="section-title">B2B vs B2C 銷售模式比較</h2>
+            <h2 class="section-title">B2B vs B2C 销售模式比较</h2>
 
             <table class="comparison-table">
                 <thead>
                     <tr>
-                        <th>維度</th>
-                        <th>B2B (企業軟體)</th>
-                        <th>B2C (零售/電商)</th>
+                        <th>维度</th>
+                        <th>B2B (企业软件)</th>
+                        <th>B2C (零售/电商)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>決策周期</strong></td>
-                        <td>3-6 個月</td>
-                        <td>數分鐘至數週</td>
+                        <td><strong>决策周期</strong></td>
+                        <td>3-6 个月</td>
+                        <td>数分钟至数周</td>
                     </tr>
                     <tr>
-                        <td><strong>客戶數</strong></td>
-                        <td>少 (數百到數千)</td>
-                        <td>大 (數萬到數百萬)</td>
+                        <td><strong>客户数</strong></td>
+                        <td>少 (数百到数千)</td>
+                        <td>大 (数万到数百万)</td>
                     </tr>
                     <tr>
-                        <td><strong>交易金額</strong></td>
-                        <td>大 (數十萬至數百萬)</td>
-                        <td>小 (數百到數千)</td>
+                        <td><strong>交易金额</strong></td>
+                        <td>大 (数十万至数百万)</td>
+                        <td>小 (数百到数千)</td>
                     </tr>
                     <tr>
-                        <td><strong>購買者</strong></td>
-                        <td>委員會 (多人決策)</td>
-                        <td>個人決策</td>
+                        <td><strong>购买者</strong></td>
+                        <td>委员会 (多人决策)</td>
+                        <td>个人决策</td>
                     </tr>
                     <tr>
-                        <td><strong>銷售重點</strong></td>
-                        <td>ROI、信任、長期價值</td>
-                        <td>便利、價格、體驗</td>
+                        <td><strong>销售重点</strong></td>
+                        <td>ROI、信任、长期价值</td>
+                        <td>便利、价格、体验</td>
                     </tr>
                     <tr>
-                        <td><strong>銷售管道</strong></td>
-                        <td>直銷、帳戶管理</td>
-                        <td>零售、電商、社群</td>
+                        <td><strong>销售管道</strong></td>
+                        <td>直销、帐户管理</td>
+                        <td>零售、电商、社区</td>
                     </tr>
                     <tr>
-                        <td><strong>行銷配合</strong></td>
-                        <td>Lead 生成、思想領導</td>
-                        <td>品牌廣告、推薦</td>
+                        <td><strong>营销配合</strong></td>
+                        <td>Lead 生成、思想领导</td>
+                        <td>品牌广告、推荐</td>
                     </tr>
                     <tr>
-                        <td><strong>銷售週期關鍵</strong></td>
-                        <td>關係建立、信任</td>
-                        <td>便利性、衝動</td>
+                        <td><strong>销售周期关键</strong></td>
+                        <td>关系创建、信任</td>
+                        <td>便利性、冲动</td>
                     </tr>
                     <tr>
                         <td><strong>典型例子</strong></td>
-                        <td>企業 SaaS、諮詢服務</td>
+                        <td>企业 SaaS、咨询服务</td>
                         <td>零售店、Amazon、便利商店</td>
                     </tr>
                     <tr>
-                        <td><strong>客戶成功重要性</strong></td>
-                        <td>極其重要 (影響續約)</td>
-                        <td>重要 (影響重複購買)</td>
+                        <td><strong>客户成功重要性</strong></td>
+                        <td>极其重要 (影响续约)</td>
+                        <td>重要 (影响重复购买)</td>
                     </tr>
                 </tbody>
             </table>
 
             <div style="margin-top: 40px;">
-                <h3 style="color: #667eea; margin-bottom: 20px;">銷售週期對比圖</h3>
+                <h3 style="color: #667eea; margin-bottom: 20px;">销售周期对比图</h3>
                 <div class="chart-container">
                     <canvas id="b2bVsB2cChart"></canvas>
                 </div>
             </div>
 
             <div class="note">
-                💡 <strong>關鍵洞察：</strong> B2B 銷售需要耐心和建立關係，B2C 銷售需要快速和衝動引導。選擇正確的銷售策略取決於你的業務模式。
+                💡 <strong>关键洞察：</strong> B2B 销售需要耐心和创建关系，B2C 销售需要快速和冲动引导。选择正确的销售策略取决于你的业务模式。
             </div>
         </div>
 
-        <!-- Tab 3: LTV 計算器 -->
+        <!-- Tab 3: LTV 计算器 -->
         <div class="tab-content">
-            <h2 class="section-title">客戶生命週期價值 (LTV) 計算器</h2>
+            <h2 class="section-title">客户生命周期价值 (LTV) 计算器</h2>
 
             <div class="tool-section">
-                <h3>計算客戶終身價值和取得成本比率</h3>
+                <h3>计算客户终身价值和取得成本比率</h3>
 
                 <div class="input-group">
                     <div class="input-field">
-                        <label>平均年度利潤 (NT$)</label>
+                        <label>平均年度利润 (NT$)</label>
                         <input type="number" id="annualProfit" value="50000" min="1000">
                     </div>
                     <div class="input-field">
-                        <label>平均客戶年限 (年)</label>
+                        <label>平均客户年限 (年)</label>
                         <input type="number" id="customerYears" value="3" min="1" max="20">
                     </div>
                     <div class="input-field">
-                        <label>客戶取得成本 CAC (NT$)</label>
+                        <label>客户取得成本 CAC (NT$)</label>
                         <input type="number" id="cac" value="20000" min="1000">
                     </div>
                     <div class="input-field">
-                        <label>月客戶流失率 (%)</label>
+                        <label>月客户流失率 (%)</label>
                         <input type="number" id="churnRate" value="5" min="0" max="50" step="0.1">
                     </div>
                 </div>
 
-                <button onclick="calculateLTV()">計算 LTV</button>
+                <button onclick="calculateLTV()">计算 LTV</button>
             </div>
 
             <div class="chart-container" style="display:none" id="ltvChartContainer">
@@ -503,13 +503,13 @@
             </div>
 
             <div class="result-box" id="ltvResult">
-                <h4>計算結果</h4>
+                <h4>计算结果</h4>
                 <div class="result-item">
-                    <span>客戶生命週期價值 (LTV):</span>
+                    <span>客户生命周期价值 (LTV):</span>
                     <strong id="ltv">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>客戶取得成本 (CAC):</span>
+                    <span>客户取得成本 (CAC):</span>
                     <strong id="cacDisplay">-</strong>
                 </div>
                 <div class="result-item">
@@ -517,106 +517,106 @@
                     <strong id="ltvCacRatio">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>健康度評估:</span>
+                    <span>健康度评估:</span>
                     <strong id="healthScore">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>建議:</span>
+                    <span>建议:</span>
                     <strong id="recommendation">-</strong>
                 </div>
             </div>
 
             <div class="note">
-                💡 <strong>健康指標：</strong> LTV:CAC 比率應該 > 3:1。如果比率 < 1.5:1，代表生意不可持續。如果 > 5:1，代表你可以投入更多成本取得客戶。
+                💡 <strong>健康指针：</strong> LTV:CAC 比率应该 > 3:1。如果比率 < 1.5:1，代表生意不可持续。如果 > 5:1，代表你可以投入更多成本取得客户。
             </div>
         </div>
 
-        <!-- Tab 4: 績效儀表板 -->
+        <!-- Tab 4: 绩效仪表板 -->
         <div class="tab-content">
-            <h2 class="section-title">銷售團隊績效儀表板</h2>
+            <h2 class="section-title">销售团队绩效仪表板</h2>
 
             <div class="tool-section">
-                <h3>輸入銷售數據，查看團隊績效概覽</h3>
+                <h3>输入销售数据，查看团队绩效概览</h3>
 
                 <div class="input-group">
                     <div class="input-field">
-                        <label>月配額 (NT$)</label>
+                        <label>月配额 (NT$)</label>
                         <input type="number" id="monthlyQuota" value="1000000" min="10000">
                     </div>
                     <div class="input-field">
-                        <label>本月實績 (NT$)</label>
+                        <label>本月实绩 (NT$)</label>
                         <input type="number" id="monthlyActual" value="800000" min="0">
                     </div>
                     <div class="input-field">
-                        <label>銷售員數</label>
+                        <label>销售员数</label>
                         <input type="number" id="salesTeamSize" value="5" min="1" max="100">
                     </div>
                     <div class="input-field">
-                        <label>平均銷售週期 (天)</label>
+                        <label>平均销售周期 (天)</label>
                         <input type="number" id="avgSalesCycle" value="60" min="1" max="365">
                     </div>
                     <div class="input-field">
-                        <label>當月新客戶數</label>
+                        <label>当月新客户数</label>
                         <input type="number" id="newCustomers" value="15" min="0">
                     </div>
                     <div class="input-field">
-                        <label>客戶流失數</label>
+                        <label>客户流失数</label>
                         <input type="number" id="churnCustomers" value="2" min="0">
                     </div>
                 </div>
 
-                <button onclick="calculateDashboard()">生成儀表板</button>
+                <button onclick="calculateDashboard()">生成仪表板</button>
             </div>
 
             <div id="dashboardMetrics"></div>
 
             <div style="margin-top: 40px;">
-                <h3 style="color: #667eea; margin-bottom: 20px;">配額達成進度</h3>
+                <h3 style="color: #667eea; margin-bottom: 20px;">配额达成进度</h3>
                 <div class="chart-container">
                     <canvas id="quotaChart"></canvas>
                 </div>
             </div>
 
             <div class="note">
-                💡 <strong>關鍵指標：</strong> 配額達成率 (%) = 實績 ÷ 配額。>100% 代表超額達成，80-100% 是目標區間，<80% 需要改進。
+                💡 <strong>关键指针：</strong> 配额达成率 (%) = 实绩 ÷ 配额。>100% 代表超额达成，80-100% 是目标区间，<80% 需要改进。
             </div>
         </div>
 
-        <!-- Tab 5: 銷售預測工具 -->
+        <!-- Tab 5: 销售预测工具 -->
         <div class="tab-content">
-            <h2 class="section-title">銷售預測工具</h2>
+            <h2 class="section-title">销售预测工具</h2>
 
             <div class="tool-section">
-                <h3>基於管道機會，預測下月營收</h3>
+                <h3>基于管道机会，预测下月营业收入</h3>
 
                 <div class="input-group">
                     <div class="input-field">
-                        <label>進行中的機會 (NT$)</label>
+                        <label>进行中的机会 (NT$)</label>
                         <input type="number" id="earlyStage" value="2000000" min="0">
                     </div>
                     <div class="input-field">
-                        <label>早期階段轉換率 (%)</label>
+                        <label>早期阶段转换率 (%)</label>
                         <input type="number" id="earlyStageRate" value="10" min="0" max="100">
                     </div>
                     <div class="input-field">
-                        <label>談判中的機會 (NT$)</label>
+                        <label>谈判中的机会 (NT$)</label>
                         <input type="number" id="middleStage" value="3000000" min="0">
                     </div>
                     <div class="input-field">
-                        <label>中期階段轉換率 (%)</label>
+                        <label>中期阶段转换率 (%)</label>
                         <input type="number" id="middleStageRate" value="30" min="0" max="100">
                     </div>
                     <div class="input-field">
-                        <label>簽約前的機會 (NT$)</label>
+                        <label>签约前的机会 (NT$)</label>
                         <input type="number" id="lateStage" value="2000000" min="0">
                     </div>
                     <div class="input-field">
-                        <label>晚期階段轉換率 (%)</label>
+                        <label>晚期阶段转换率 (%)</label>
                         <input type="number" id="lateStageRate" value="70" min="0" max="100">
                     </div>
                 </div>
 
-                <button onclick="calculateForecast()">預測營收</button>
+                <button onclick="calculateForecast()">预测营业收入</button>
             </div>
 
             <div class="chart-container">
@@ -624,41 +624,41 @@
             </div>
 
             <div class="result-box" id="forecastResult">
-                <h4>銷售預測結果</h4>
+                <h4>销售预测结果</h4>
                 <div class="result-item">
-                    <span>早期機會貢獻:</span>
+                    <span>早期机会贡献:</span>
                     <strong id="earlyForecast">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>中期機會貢獻:</span>
+                    <span>中期机会贡献:</span>
                     <strong id="middleForecast">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>晚期機會貢獻:</span>
+                    <span>晚期机会贡献:</span>
                     <strong id="lateForecast">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>預期下月營收 (最保守):</span>
+                    <span>预期下月营业收入 (最保守):</span>
                     <strong id="conservativeForecast">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>預期下月營收 (最樂觀):</span>
+                    <span>预期下月营业收入 (最乐观):</span>
                     <strong id="optimisticForecast">-</strong>
                 </div>
                 <div class="result-item">
-                    <span>預期下月營收 (中等):</span>
+                    <span>预期下月营业收入 (中等):</span>
                     <strong id="moderateForecast" style="color: #667eea; font-size: 1.2em;">-</strong>
                 </div>
             </div>
 
             <div class="note">
-                💡 <strong>預測方法：</strong> 採用漏斗基礎預測，分別計算各階段機會乘以其轉換率。保守估計只計算中期和晚期，樂觀估計全計，中等估計加上調整系數。
+                💡 <strong>预测方法：</strong> 采用漏斗基础预测，分别计算各阶段机会乘以其转换率。保守估计只计算中期和晚期，乐观估计全计，中等估计加上调整系数。
             </div>
         </div>
 
         <footer>
-            <p>銷售管理互動工具 | 幫助您用數據驅動銷售決策</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">💡 所有計算基於輸入數據，實際結果需考慮市場因素調整</p>
+            <p>销售管理交互工具 | 帮助您用数据驱动销售决策</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">💡 所有计算基于输入数据，实际结果需考虑市场因素调整</p>
         </footer>
     </div>
 
@@ -710,9 +710,9 @@
             funnelChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['初始潛客', 'MQL', 'SQL', '機會', '成交'],
+                    labels: ['初始潜客', 'MQL', 'SQL', '机会', '成交'],
                     datasets: [{
-                        label: '客戶數',
+                        label: '客户数',
                         data: [initialLeads, mql, sql, opportunities, won],
                         backgroundColor: [
                             'rgba(102, 126, 234, 0.8)',
@@ -757,20 +757,20 @@
             const ratio = (ltv / cac).toFixed(2);
 
             let healthScore = '不健康';
-            let recommendation = '需要改進成本效益';
+            let recommendation = '需要改进成本效益';
 
             if (ratio >= 5) {
-                healthScore = '優秀';
-                recommendation = '可以增加獲客投入，利潤充分';
+                healthScore = '优秀';
+                recommendation = '可以增加获客投入，利润充分';
             } else if (ratio >= 3) {
                 healthScore = '健康';
-                recommendation = '生意可持續，成長的好基礎';
+                recommendation = '生意可持续，成长的好基础';
             } else if (ratio >= 1.5) {
-                healthScore = '有風險';
-                recommendation = '需要降低獲客成本或提升客戶利潤';
+                healthScore = '有风险';
+                recommendation = '需要降低获客成本或提升客户利润';
             } else {
-                healthScore = '不可持續';
-                recommendation = '必須立即改善，否則無法生存';
+                healthScore = '不可持续';
+                recommendation = '必须立即改善，否则无法生存';
             }
 
             document.getElementById('ltv').textContent = formatCurrency(ltv);
@@ -798,33 +798,33 @@
                 <div class="metric-card">
                     <div>
                         <div class="metric-value">${quotaAchievement}%</div>
-                        <div class="metric-label">配額達成率</div>
+                        <div class="metric-label">配额达成率</div>
                     </div>
                     <div>
                         <div class="metric-value">${formatCurrency(monthlyActual)}</div>
-                        <div class="metric-label">本月實績</div>
+                        <div class="metric-label">本月实绩</div>
                     </div>
                 </div>
 
                 <div class="metric-card alt">
                     <div>
                         <div class="metric-value">${formatCurrency(perCapitaQuota)}</div>
-                        <div class="metric-label">人均配額</div>
+                        <div class="metric-label">人均配额</div>
                     </div>
                     <div>
                         <div class="metric-value">${teamSize}</div>
-                        <div class="metric-label">銷售員數</div>
+                        <div class="metric-label">销售员数</div>
                     </div>
                 </div>
 
                 <div class="metric-card alt2">
                     <div>
                         <div class="metric-value">${netNewCustomers}</div>
-                        <div class="metric-label">淨新增客戶</div>
+                        <div class="metric-label">净添加客户</div>
                     </div>
                     <div>
                         <div class="metric-value">${salesCycle} 天</div>
-                        <div class="metric-label">平均銷售週期</div>
+                        <div class="metric-label">平均销售周期</div>
                     </div>
                 </div>
             `;
@@ -837,7 +837,7 @@
             quotaChart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ['達成', '未達成'],
+                    labels: ['达成', '未达成'],
                     datasets: [{
                         data: [monthlyActual, Math.max(0, monthlyQuota - monthlyActual)],
                         backgroundColor: ['rgba(79, 172, 254, 0.8)', 'rgba(211, 211, 211, 0.5)'],
@@ -885,9 +885,9 @@
             forecastChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['保守預測', '中等預測', '樂觀預測'],
+                    labels: ['保守预测', '中等预测', '乐观预测'],
                     datasets: [{
-                        label: '預期營收',
+                        label: '预期营业收入',
                         data: [conservativeForecast, moderateForecast, optimisticForecast],
                         backgroundColor: [
                             'rgba(245, 87, 108, 0.8)',
@@ -928,7 +928,7 @@
             b2bVsB2cChart = new Chart(ctxB2B, {
                 type: 'radar',
                 data: {
-                    labels: ['決策速度', '客戶保留', '單筆金額', '團隊規模', '長期關係'],
+                    labels: ['决策速度', '客户保留', '单笔金额', '团队规模', '长期关系'],
                     datasets: [
                         {
                             label: 'B2B',

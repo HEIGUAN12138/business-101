@@ -1,231 +1,231 @@
-# 商業倫理與ESG：進一步學習資源
+# 商业伦理与ESG：进一步学习资源
 
-在全球永續發展的浪潮中，商業倫理和ESG（環境、社會、治理）已成為企業長期競爭力的關鍵。越來越多投資人、消費者和人才將企業的道德和責任視為核心選擇標準。讓我們一起探索如何在追求利潤的同時，為社會和環境做出正面貢獻，建立更有意義的企業價值。
-
----
-
-## 經典書籍
-
-**[Justice: What's the Right Thing to Do?](https://www.amazon.com/Justice-Whats-Right-Thing-Do/dp/0374532508)（《公正：你的人生選擇指南》- Michael Sandel）**
-哈佛大學最受歡迎的道德哲學課程結集成書，用具體案例探討什麼是公正，深刻啟發商業倫理思考。
-難度：入門
-
-**[Capitalism and Freedom](https://www.amazon.com/Capitalism-Freedom-Anniversary-Milton-Friedman/dp/0226264211)（《資本主義與自由》- Milton Friedman）**
-經濟學大師的經典著作，探討市場經濟與個人自由的關係，提供審視商業倫理的獨特視角。
-難度：進階
-
-**The Stakeholder Strategy: Profiting from Sustainable Business（《利益相關者策略》- Ann Svendsen）**
-揭示如何透過考量員工、客戶、社區等多方利益相關者來建立長期盈利模式。
-難度：進階
-
-**[Let My People Go Surfing](https://www.amazon.com/Let-People-Surfing-Education-Businessman/dp/0143037838)（《讓員工去衝浪》- Yvon Chouinard）**
-巴塔哥尼亞公司創辦人分享的企業哲學，展示如何將環境責任與商業成功完美結合。
-難度：入門至進階
-
-**The Ethical Business: How to Design a Successful Company with Integrity（《倫理商業》）**
-實用指南，幫助企業領導者在日常經營中落實道德原則和責任承諾。
-難度：進階
+在全球永续发展的浪潮中，商业伦理和ESG（环境、社会、治理）已成为企业长期竞争力的关键。越来越多投资人、消费者和人才将企业的道德和责任视为内核选择标准。让我们一起探索如何在追求利润的同时，为社会和环境做出正面贡献，创建更有意义的企业价值。
 
 ---
 
-## 線上課程
+## 经典书籍
 
-**[Coursera - ESG and Sustainable Business](https://www.coursera.org/learn/esg-and-social-activism)（ESG與永續商業課程）**
-涵蓋環境、社會、治理三大面向的系統性學習，了解如何將ESG整合到商業策略中。
-難度：進階
+**[Justice: What's the Right Thing to Do?](https://www.amazon.com/Justice-Whats-Right-Thing-Do/dp/0374532508)（《公正：你的人生选择指南》- Michael Sandel）**
+哈佛大学最受欢迎的道德哲学课程结集成书，用具体案例探讨什么是公正，深刻启发商业伦理思考。
+难度：入门
 
-**edX - Business Ethics（商業倫理 - 多校聯合）**
-探討企業決策中的倫理困境和道德推理方法。
-難度：入門至進階
+**[Capitalism and Freedom](https://www.amazon.com/Capitalism-Freedom-Anniversary-Milton-Friedman/dp/0226264211)（《资本主义与自由》- Milton Friedman）**
+经济学大师的经典著作，探讨市场经济与个人自由的关系，提供审视商业伦理的独特视角。
+难度：高级
 
-**[Harvard Justice with Michael Sandel](https://www.edx.org/learn/justice/harvard-university-justice)（哈佛公正課程 - 線上版）**
-著名道德哲學家的完整課程，用案例分析引導倫理思考。
-難度：入門
+**The Stakeholder Strategy: Profiting from Sustainable Business（《利益相关者策略》- Ann Svendsen）**
+揭示如何通过考量员工、客户、社区等多方利益相关者来创建长期盈利模式。
+难度：高级
 
-**Coursera - Sustainable Development Goals Specialization（永續發展目標專題系列）**
-聯合國可持續發展目標的深入學習，理解全球永續發展框架。
-難度：進階
+**[Let My People Go Surfing](https://www.amazon.com/Let-People-Surfing-Education-Businessman/dp/0143037838)（《让员工去冲浪》- Yvon Chouinard）**
+巴塔哥尼亚公司创办人分享的企业哲学，展示如何将环境责任与商业成功完美结合。
+难度：入门至高级
 
-**MIT OpenCourseWare - Environmental Ethics（環境倫理 - 免費）**
-麻省理工學院的哲學課程，專注於環境責任和永續發展的倫理基礎。
-難度：進階
-
-**LinkedIn Learning - Corporate Social Responsibility（企業社會責任課程）**
-快速了解CSR策略和實施方法的實用課程。
-難度：入門
+**The Ethical Business: How to Design a Successful Company with Integrity（《伦理商业》）**
+实用指南，帮助企业领导者在日常经营中落实道德原则和责任承诺。
+难度：高级
 
 ---
 
-## Podcast 推薦
+## 在线课程
 
-**[ESG Insider](https://www.spglobal.com/esg/podcasts/esg-insider)（ESG內幕 - S&P Global）**
-由全球領先的ESG評級機構提供的深度分析和企業案例討論。
+**[Coursera - ESG and Sustainable Business](https://www.coursera.org/learn/esg-and-social-activism)（ESG与永续商业课程）**
+涵盖环境、社会、治理三大面向的系统性学习，了解如何将ESG集成到商业策略中。
+难度：高级
 
-**Climate Rising with Jim Cramer and Stephanie Link（氣候上升 - HBS）**
-哈佛商學院的永續和氣候變化專家探討商業與環境的交集。
+**edX - Business Ethics（商业伦理 - 多校联合）**
+探讨企业决策中的伦理困境和道德推理方法。
+难度：入门至高级
 
-**Conscious Capitalism Podcast（有意識資本主義播客）**
-探討如何透過利潤追求來創造社會價值的理念和實踐。
+**[Harvard Justice with Michael Sandel](https://www.edx.org/learn/justice/harvard-university-justice)（哈佛公正课程 - 在线版）**
+著名道德哲学家的完整课程，用案例分析引导伦理思考。
+难度：入门
 
-**天下永續會客室（Taiwan）**
-台灣主流財經媒體的ESG和永續發展訪談節目。
+**Coursera - Sustainable Development Goals Specialization（永续发展目标专题系列）**
+联合国可持续发展目标的深入学习，理解全球永续发展框架。
+难度：高级
 
-**Harvard Business Review IdeaCast（哈佛商業評論播客）**
-定期討論企業倫理、社會責任和永續商業的話題。
+**MIT OpenCourseWare - Environmental Ethics（环境伦理 - 免费）**
+麻省理工学院的哲学课程，专注于环境责任和永续发展的伦理基础。
+难度：高级
 
-**Sustainable Brands（永續品牌播客）**
-探討品牌如何整合永續發展和商業目標。
-
----
-
-## YouTube 頻道與影片系列
-
-**[Michael Sandel Lectures](https://www.youtube.com/@SandelHarvard)（桑德爾教授講座）**
-世界頂級倫理學家的精彩講座，包括著名的「電車難題」等道德困境分析。
-
-**TED Talks - Sustainability（永續發展系列）**
-全球頂尖思想家分享永續發展、社會責任和倫理商業的洞見。
-
-**MSCI ESG Research（MSCI ESG研究頻道）**
-全球領先的ESG數據提供商分享的研究和企業案例。
-
-**United Nations Sustainable Development Goals（聯合國永續發展目標）**
-官方頻道介紹17個全球永續發展目標及其實現進展。
-
-**The Economist - Sustainability（經濟學人頻道 - 永續部分）**
-深度分析全球永續發展趨勢和企業實踐。
-
-**B Lab Certifications & Impact（B Lab認證與影響力）**
-最具公信力的企業永續評級機構分享的最佳實踐和成功案例。
+**LinkedIn Learning - Corporate Social Responsibility（企业社会责任课程）**
+快速了解CSR策略和实施方法的实用课程。
+难度：入门
 
 ---
 
-## 學習建議
+## Podcast 推荐
 
-商業倫理和ESG的學習最好從哲學基礎開始。強烈建議先閱讀Michael Sandel的《公正》或觀看他的哈佛課程，這會建立你的倫理思維框架。接著，透過Coursera的ESG課程系統性地學習環境、社會和治理的具體內容，並了解ESG評級和報告標準。
+**[ESG Insider](https://www.spglobal.com/esg/podcasts/esg-insider)（ESG内幕 - S&P Global）**
+由全球领先的ESG评级机构提供的深度分析和企业案例讨论。
 
-實踐學習同樣重要。建議你選擇一家你欣賞或所在行業的企業，深入研究其ESG報告和責任聲明，用批判性眼光評估他們的承諾與實踐是否一致。同時，思考你自己的企業或職責範圍內，哪些倫理和永續議題最需要關注。定期收聽「ESG Insider」和「Climate Rising」這類播客，掌握最新的企業永續實踐動態。
+**Climate Rising with Jim Cramer and Stephanie Link（气候上升 - HBS）**
+哈佛商学院的永续和气候变化专家探讨商业与环境的交集。
 
-最後，記住商業倫理不是零和遊戲，而是長期價值創造的投資。許多案例證明，擁有強大倫理基礎和ESG表現的企業往往具有更高的員工滿意度、客戶忠誠度和投資者信心。將倫理思維和永續發展整合到企業策略中，不僅是正確的事，也是聰明的商業決策。
+**Conscious Capitalism Podcast（有意识资本主义播客）**
+探讨如何通过利润追求来创造社会价值的理念和实践。
+
+**天下永续会客室（Taiwan）**
+台湾主流财经媒体的ESG和永续发展访谈节目。
+
+**Harvard Business Review IdeaCast（哈佛商业评论播客）**
+定期讨论企业伦理、社会责任和永续商业的话题。
+
+**Sustainable Brands（永续品牌播客）**
+探讨品牌如何集成永续发展和商业目标。
 
 ---
 
-## 循環經濟與永續商業模式 - 延伸學習資源
+## YouTube 频道与视频系列
 
-### 經典著作
+**[Michael Sandel Lectures](https://www.youtube.com/@SandelHarvard)（桑德尔教授讲座）**
+世界顶级伦理学家的精彩讲座，包括著名的「电车难题」等道德困境分析。
 
-**[Cradle to Cradle: Remaking the Way We Make Things](https://www.amazon.com/Cradle-Remaking-Way-Make-Things/dp/0865475934)（《從搖籃到搖籃》- William McDonough & Michael Braungart）**
-循環經濟的奠基之作，介紹了Cradle to Cradle設計原則，深刻重新定義了製造業與可持續發展的關係。
-難度：進階
+**TED Talks - Sustainability（永续发展系列）**
+全球顶尖思想家分享永续发展、社会责任和伦理商业的洞见。
 
-**[Doughnut Economics: Seven Ways to Think Like a 21st-Century Economist](https://www.amazon.com/Doughnut-Economics-Seven-Twenty-First-Century-Economist/dp/0241402566)（《甜甜圈經濟學》- Kate Raworth）**
-批判傳統經濟增長模式，提出既追求人類福祉又尊重行星邊界的新經濟模式。與循環經濟概念高度互補。
-難度：入門至進階
+**MSCI ESG Research（MSCI ESG研究频道）**
+全球领先的ESG数据提供商分享的研究和企业案例。
 
-**[The Ellen MacArthur Foundation Circular Economy Reports](https://www.ellenmacarthurfoundation.org/reports)（Ellen MacArthur基金會報告 - 免費下載）**
-全球循環經濟最權威的報告與研究，涵蓋蝴蝶圖、各產業循環案例、商業機遇分析。定期更新，免費下載。
-難度：進階
+**United Nations Sustainable Development Goals（联合国永续发展目标）**
+官方频道介绍17个全球永续发展目标及其实现进展。
 
-**[Confessions of a Radical Industrialist](https://www.amazon.com/Confessions-Radical-Industrialist-Interface-Business/dp/1605098590)（《激進實業家的告白》- Ray Anderson）**
-Interface創始人的自傳，分享如何從製造業污染者轉變為循環經濟先鋒的故事。充滿啟發與個人信念的力量。
-難度：入門
+**The Economist - Sustainability（经济学人频道 - 永续部分）**
+深度分析全球永续发展趋势和企业实践。
 
-**[The New Plastics Economy: Rethinking the Future of Plastics](https://www.ellenmacarthurfoundation.org/resources/apply/the-new-plastics-economy)（《新塑膠經濟》- Ellen MacArthur基金會）**
-針對塑膠危機與循環解決方案的深度報告，包含企業、政府與消費者的行動建議。
-難度：進階
+**B Lab Certifications & Impact（B Lab认证与影响力）**
+最具公信力的企业永续评级机构分享的最佳实践和成功案例。
 
-### 線上課程
+---
 
-**[Coursera - The Circular Economy: Design and Systems Change](https://www.coursera.org/learn/circular-economy)（循環經濟設計與系統變革課程）**
-涵蓋循環經濟的理論與實踐，從蝴蝶圖到商業模式創新，大學級別深度。
-難度：進階
+## 学习建议
 
-**[edX - Systems Thinking and Circular Economy](https://www.edx.org/course/systems-thinking-and-circular-economy)（系統思維與循環經濟 - 免費）**
-從系統複雜性角度理解循環經濟如何改變生產與消費。
-難度：進階
+商业伦理和ESG的学习最好从哲学基础开始。强烈建议先阅读Michael Sandel的《公正》或观看他的哈佛课程，这会创建你的伦理思维框架。接着，通过Coursera的ESG课程系统性地学习环境、社会和治理的具体内容，并了解ESG评级和报告标准。
 
-**[MIT - Sustainable Product Design](https://ocw.mit.edu/)（可持續產品設計 - MIT OpenCourseWare免費課程）**
-麻省理工學院工程課程，涵蓋從原料選擇、設計到回收的產品生命週期思維。
-難度：進階
+实践学习同样重要。建议你选择一家你欣赏或所在行业的企业，深入研究其ESG报告和责任声明，用批判性眼光评估他们的承诺与实践是否一致。同时，思考你自己的企业或职责范围内，哪些伦理和永续议题最需要关注。定期收听「ESG Insider」和「Climate Rising」这类播客，掌握最新的企业永续实践动态。
 
-**[LinkedIn Learning - Circular Economy Fundamentals](https://www.linkedin.com/learning/circular-economy-fundamentals)（循環經濟基礎課程）**
-企業應用導向，快速掌握PaaS、共享、再製造等商業模式。
-難度：入門至進階
+最后，记住商业伦理不是零和游戏，而是长期价值创造的投资。许多案例证明，拥有强大伦理基础和ESG表现的企业往往具有更高的员工满意度、客户忠诚度和投资者信心。将伦理思维和永续发展集成到企业策略中，不仅是正确的事，也是聪明的商业决策。
 
-**[Google Cloud - Sustainable Operations](https://www.cloudskillsboost.google/course_templates/34)（谷歌永續運營課程 - 免費）**
-科技企業視角的循環經濟與碳減放實踐。
-難度：進階
+---
 
-### Podcast 推薦
+## 循环经济与永续商业模式 - 延伸学习资源
 
-**[Ellen MacArthur Foundation Podcast](https://www.ellenmacarthurfoundation.org/podcasts)（Ellen MacArthur基金會播客）**
-定期訪談全球循環經濟創新者、企業領袖、專家，深入討論商業轉型與系統變革。
+### 经典著作
 
-**[The Future of Capitalism](https://www.stitcher.com/podcast/the-future-of-capitalism)（資本主義的未來）**
-探討如何重新定義資本主義，納入循環經濟、利害關係人資本主義、永續發展。
+**[Cradle to Cradle: Remaking the Way We Make Things](https://www.amazon.com/Cradle-Remaking-Way-Make-Things/dp/0865475934)（《从摇篮到摇篮》- William McDonough & Michael Braungart）**
+循环经济的奠基之作，介绍了Cradle to Cradle设计原则，深刻重新定义了制造业与可持续发展的关系。
+难度：高级
 
-**[The Architect of Change](https://architectofchange.buzzsprout.com/)（變革建築師）**
-訪談推動企業永續轉型的領袖，包括Ray Anderson的遺志、循環創新案例。
+**[Doughnut Economics: Seven Ways to Think Like a 21st-Century Economist](https://www.amazon.com/Doughnut-Economics-Seven-Twenty-First-Century-Economist/dp/0241402566)（《甜甜圈经济学》- Kate Raworth）**
+批判传统经济增长模式，提出既追求人类福祉又尊重行星边界的新经济模式。与循环经济概念高度互补。
+难度：入门至高级
 
-**[How to Solve Global Problems](https://www.ted.com/podcasts/how-to-solve-global-problems)（如何解決全球問題）**
-TED講者探討循環經濟、碳定價、綠色金融等全球挑戰與解決方案。
+**[The Ellen MacArthur Foundation Circular Economy Reports](https://www.ellenmacarthurfoundation.org/reports)（Ellen MacArthur基金会报告 - 免费下载）**
+全球循环经济最权威的报告与研究，涵盖蝴蝶图、各产业循环案例、商业机遇分析。定期更新，免费下载。
+难度：高级
 
-### YouTube 頻道與影片
+**[Confessions of a Radical Industrialist](https://www.amazon.com/Confessions-Radical-Industrialist-Interface-Business/dp/1605098590)（《激进实业家的告白》- Ray Anderson）**
+Interface创始人的自传，分享如何从制造业污染者转变为循环经济先锋的故事。充满启发与个人信念的力量。
+难度：入门
 
-**[Ellen MacArthur Foundation Channel](https://www.youtube.com/@EllenMacArthurFoundation)（Ellen MacArthur基金會官方頻道）**
-蝴蝶圖、企業案例、動畫講解循環經濟原理，多數影片有字幕。
+**[The New Plastics Economy: Rethinking the Future of Plastics](https://www.ellenmacarthurfoundation.org/resources/apply/the-new-plastics-economy)（《新塑料经济》- Ellen MacArthur基金会）**
+针对塑料危机与循环解决方案的深度报告，包含企业、政府与消费者的行动建议。
+难度：高级
+
+### 在线课程
+
+**[Coursera - The Circular Economy: Design and Systems Change](https://www.coursera.org/learn/circular-economy)（循环经济设计与系统变革课程）**
+涵盖循环经济的理论与实践，从蝴蝶图到商业模式创新，大学级别深度。
+难度：高级
+
+**[edX - Systems Thinking and Circular Economy](https://www.edx.org/course/systems-thinking-and-circular-economy)（系统思维与循环经济 - 免费）**
+从系统复杂性角度理解循环经济如何改变生产与消费。
+难度：高级
+
+**[MIT - Sustainable Product Design](https://ocw.mit.edu/)（可持续产品设计 - MIT OpenCourseWare免费课程）**
+麻省理工学院工程课程，涵盖从原料选择、设计到回收的产品生命周期思维。
+难度：高级
+
+**[LinkedIn Learning - Circular Economy Fundamentals](https://www.linkedin.com/learning/circular-economy-fundamentals)（循环经济基础课程）**
+企业应用导向，快速掌握PaaS、共享、再制造等商业模式。
+难度：入门至高级
+
+**[Google Cloud - Sustainable Operations](https://www.cloudskillsboost.google/course_templates/34)（谷歌永续运营课程 - 免费）**
+科技企业视角的循环经济与碳减放实践。
+难度：高级
+
+### Podcast 推荐
+
+**[Ellen MacArthur Foundation Podcast](https://www.ellenmacarthurfoundation.org/podcasts)（Ellen MacArthur基金会播客）**
+定期访谈全球循环经济创新者、企业领袖、专家，深入讨论商业转型与系统变革。
+
+**[The Future of Capitalism](https://www.stitcher.com/podcast/the-future-of-capitalism)（资本主义的未来）**
+探讨如何重新定义资本主义，纳入循环经济、利害关系人资本主义、永续发展。
+
+**[The Architect of Change](https://architectofchange.buzzsprout.com/)（变革建筑师）**
+访谈推动企业永续转型的领袖，包括Ray Anderson的遗志、循环创新案例。
+
+**[How to Solve Global Problems](https://www.ted.com/podcasts/how-to-solve-global-problems)（如何解决全球问题）**
+TED讲者探讨循环经济、碳定价、绿色金融等全球挑战与解决方案。
+
+### YouTube 频道与视频
+
+**[Ellen MacArthur Foundation Channel](https://www.youtube.com/@EllenMacArthurFoundation)（Ellen MacArthur基金会官方频道）**
+蝴蝶图、企业案例、动画讲解循环经济原理，多数视频有字幕。
 
 **[Interface - Mission Zero Journey](https://www.interface.com/en/en-US/about/mission-zero)（Interface Mission Zero之旅）**
-紀錄Interface從製污者到循環先鋒的30年轉變，深感人心。
+纪录Interface从制污者到循环先锋的30年转变，深感人心。
 
-**[TED - The Case for Optimism on Climate](https://www.ted.com/talks)（氣候樂觀主義案例 - TED系列）**
-Bill Grosser、Jane Goodall等講者分享循環經濟與綠色創新如何應對氣候變遷。
+**[TED - The Case for Optimism on Climate](https://www.ted.com/talks)（气候乐观主义案例 - TED系列）**
+Bill Grosser、Jane Goodall等讲者分享循环经济与绿色创新如何应对气候变迁。
 
-**[World Economic Forum - Circular Economy](https://www.youtube.com/results?search_query=world+economic+forum+circular+economy)（世界經濟論壇 - 循環經濟）**
-達沃斯論壇分享的循環經濟趨勢、監管政策、企業創新實踐。
+**[World Economic Forum - Circular Economy](https://www.youtube.com/results?search_query=world+economic+forum+circular+economy)（世界经济论坛 - 循环经济）**
+达沃斯论坛分享的循环经济趋势、监管政策、企业创新实践。
 
-### 報告與數據資源
+### 报告与数据资源
 
-**[Cradle to Cradle Products Innovation Institute - Certification Database](https://www.c2ccertified.org/)（Cradle to Cradle認證資料庫）**
-查詢全球已認證的循環產品，了解不同產業的循環實踐標準。
+**[Cradle to Cradle Products Innovation Institute - Certification Database](https://www.c2ccertified.org/)（Cradle to Cradle认证数据库）**
+查找全球已认证的循环产品，了解不同产业的循环实践标准。
 
-**[Global Footprint Network - Ecological Footprint](https://www.footprintnetwork.org/)（全球足跡網路 - 生態足跡）**
-各國與企業的生態足跡數據，比較線性vs. 循環模式的環境影響。
+**[Global Footprint Network - Ecological Footprint](https://www.footprintnetwork.org/)（全球足迹网络 - 生态足迹）**
+各国与企业的生态足迹数据，比较线性vs. 循环模式的环境影响。
 
-**[International Energy Agency - Circular Economy Reports](https://www.iea.org/)（國際能源署 - 循環經濟與能源報告）**
-能源轉型、循環經濟在製造業的應用、碳定價與政策分析。
+**[International Energy Agency - Circular Economy Reports](https://www.iea.org/)（国际能源署 - 循环经济与能源报告）**
+能源转型、循环经济在制造业的应用、碳定价与政策分析。
 
-**[UN Environment Programme - Circular Economy Resources](https://www.unep.org/)（聯合國環境規劃署 - 循環經濟資源）**
-全球南方（發展中國家）的循環經濟案例、政策建議、SDG整合。
+**[UN Environment Programme - Circular Economy Resources](https://www.unep.org/)（联合国环境规划署 - 循环经济资源）**
+全球南方（发展中国家）的循环经济案例、政策建议、SDG集成。
 
-**[European Commission - Circular Economy Action Plan](https://ec.europa.eu/environment/circular-economy/index_en.htm)（歐盟委員會 - 循環經濟行動計畫）**
-全球最進階的循環經濟政策框架，涵蓋產品設計、回收標準、碳邊界調整機制等。
+**[European Commission - Circular Economy Action Plan](https://ec.europa.eu/environment/circular-economy/index_en.htm)（欧盟委员会 - 循环经济行动计划）**
+全球最高级的循环经济政策框架，涵盖产品设计、回收标准、碳边界调整机制等。
 
-**[Ellen MacArthur Foundation - Circular Economy Business Reports](https://www.ellenmacarthurfoundation.org/reports)（基金會行業報告）**
-塑膠經濟、食品系統、紡織、電子廢棄物等各產業的循環機遇與障礙分析。
+**[Ellen MacArthur Foundation - Circular Economy Business Reports](https://www.ellenmacarthurfoundation.org/reports)（基金会行业报告）**
+塑料经济、食品系统、纺织、电子废弃物等各产业的循环机遇与障碍分析。
 
 ---
 
-## 學習路徑建議：循環經濟專題
+## 学习路径建议：循环经济专题
 
-**初級（1-2周）**
-1. 閱讀《甜甜圈經濟學》前三章，理解為何線性經濟不可持續
-2. 觀看Ellen MacArthur基金會YouTube頻道「什麼是循環經濟」系列（10分鐘動畫）
-3. 訪問Interface官網，了解Mission Zero 30年轉變
+**初级（1-2周）**
+1. 阅读《甜甜圈经济学》前三章，理解为何线性经济不可持续
+2. 观看Ellen MacArthur基金会YouTube频道「什么是循环经济」系列（10分钟动画）
+3. 访问Interface官网，了解Mission Zero 30年转变
 
-**中級（2-4周）**
-1. 完成Coursera循環經濟課程（約4周，每周5小時）
-2. 閱讀《從搖籃到搖籃》的前半部分與Cradle to Cradle認證標準
-3. 選一個你熟悉的企業（如IKEA、Patagonia、Apple），研究其循環商業模式與回收計畫
+**中级（2-4周）**
+1. 完成Coursera循环经济课程（约4周，每周5小时）
+2. 阅读《从摇篮到摇篮》的前半部分与Cradle to Cradle认证标准
+3. 选一个你熟悉的企业（如IKEA、Patagonia、Apple），研究其循环商业模式与回收计划
 
-**高級（4-8周）**
-1. 閱讀《激進實業家的告白》與Ellen MacArthur基金會行業報告（選擇你感興趣的產業）
-2. 深入Coursera進階課程或MIT Open CourseWare系統設計課程
-3. 自行設計一個產品或服務的循環經濟轉型方案，考慮技術、商業、監管挑戰
+**高级（4-8周）**
+1. 阅读《激进实业家的告白》与Ellen MacArthur基金会行业报告（选择你感兴趣的产业）
+2. 深入Coursera高级课程或MIT Open CourseWare系统设计课程
+3. 自行设计一个产品或服务的循环经济转型方案，考虑技术、商业、监管挑战
 
-**實踐應用**
-1. 如果你在企業工作，評估你的組織是否有循環經濟機遇（產品設計、包裝回收、服務轉型）
-2. 如果你是學生或顧問，考慮以循環經濟為主題撰寫報告或案例分析
-3. 定期收聽Ellen MacArthur基金會Podcast掌握最新循環創新與企業實踐動態
+**实践应用**
+1. 如果你在企业工作，评估你的组织是否有循环经济机遇（产品设计、包装回收、服务转型）
+2. 如果你是学生或顾问，考虑以循环经济为主题撰写报告或案例分析
+3. 定期收听Ellen MacArthur基金会Podcast掌握最新循环创新与企业实践动态
 
-記住：循環經濟不是遙遠的未來願景，而是現在進行的商業實踐。全球越來越多企業正在轉型，監管政策也在加強。理解循環經濟的原理與商業模式，將成為21世紀商業領袖的核心競爭力。
+记住：循环经济不是遥远的未来愿景，而是现在进行的商业实践。全球越来越多企业正在转型，监管政策也在加强。理解循环经济的原理与商业模式，将成为21世纪商业领袖的核心竞争力。

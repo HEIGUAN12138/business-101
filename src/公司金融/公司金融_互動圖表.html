@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>公司金融互動工具 - 計算器與分析器</title>
+    <title>公司金融交互工具 - 计算器与分析器</title>
     <style>
         * {
             margin: 0;
@@ -326,244 +326,244 @@
 <body>
     <div class="container">
         <header>
-            <h1>公司金融互動計算工具</h1>
-            <p class="subtitle">透過互動模擬掌握企業金融決策的關鍵指標</p>
+            <h1>公司金融交互计算工具</h1>
+            <p class="subtitle">通过交互模拟掌握企业金融决策的关键指针</p>
         </header>
 
         <div class="tab-container">
-            <button class="tab-button active" onclick="switchTab('wacc')">WACC 計算器</button>
+            <button class="tab-button active" onclick="switchTab('wacc')">WACC 计算器</button>
             <button class="tab-button" onclick="switchTab('npv')">NPV/IRR 分析器</button>
-            <button class="tab-button" onclick="switchTab('capital')">資本結構模擬器</button>
-            <button class="tab-button" onclick="switchTab('dividend')">股利政策比較器</button>
-            <button class="tab-button" onclick="switchTab('merger')">併購綜效分析器</button>
-            <button class="tab-button" onclick="switchTab('maflow')">M&A 流程互動圖</button>
+            <button class="tab-button" onclick="switchTab('capital')">资本结构模拟器</button>
+            <button class="tab-button" onclick="switchTab('dividend')">股利政策比较器</button>
+            <button class="tab-button" onclick="switchTab('merger')">并购综效分析器</button>
+            <button class="tab-button" onclick="switchTab('maflow')">M&A 流程交互图</button>
         </div>
 
         <!-- Tab 1: WACC Calculator -->
         <div id="wacc" class="tab-content active">
-            <h2>WACC 加權平均資本成本計算器</h2>
+            <h2>WACC 加权平均资本成本计算器</h2>
             <p style="margin-bottom: 20px; color: #666;">
-                WACC 代表企業的加權平均融資成本，是評估投資專案的折現率基準。
+                WACC 代表企业的加权平均融资成本，是评估投资项目的折现率基准。
             </p>
 
             <div class="input-row">
                 <div class="form-group">
-                    <label>股權市值（E）- 百萬元</label>
+                    <label>股权市值（E）- 百万元</label>
                     <input type="number" id="wacc_equity" value="5000" min="0">
                 </div>
                 <div class="form-group">
-                    <label>債務市值（D）- 百萬元</label>
+                    <label>债务市值（D）- 百万元</label>
                     <input type="number" id="wacc_debt" value="2000" min="0">
                 </div>
             </div>
 
             <div class="input-row">
                 <div class="form-group">
-                    <label>無風險利率（r_f）- %</label>
+                    <label>无风险利率（r_f）- %</label>
                     <input type="number" id="wacc_rf" value="2.5" min="0" step="0.1">
                 </div>
                 <div class="form-group">
-                    <label>企業 Beta 係數</label>
+                    <label>企业 Beta 系数</label>
                     <input type="number" id="wacc_beta" value="1.2" min="0" step="0.1">
                 </div>
             </div>
 
             <div class="input-row">
                 <div class="form-group">
-                    <label>市場風險溢酬（MRP）- %</label>
+                    <label>市场风险溢酬（MRP）- %</label>
                     <input type="number" id="wacc_mrp" value="6" min="0" step="0.1">
                 </div>
                 <div class="form-group">
-                    <label>債務成本（r_D）- %</label>
+                    <label>债务成本（r_D）- %</label>
                     <input type="number" id="wacc_rd" value="4" min="0" step="0.1">
                 </div>
             </div>
 
             <div class="form-group">
-                <label>企業所得稅率（T_c）- %</label>
+                <label>企业所得税率（T_c）- %</label>
                 <input type="number" id="wacc_tc" value="21" min="0" max="100" step="0.1">
             </div>
 
-            <button class="calculate" onclick="calculateWACC()">計算 WACC</button>
+            <button class="calculate" onclick="calculateWACC()">计算 WACC</button>
 
             <div id="wacc_result" class="result-box">
                 <div class="result-row">
-                    <span class="result-label">權益成本 (r_E)</span>
+                    <span class="result-label">权益成本 (r_E)</span>
                     <span class="result-value" id="wacc_re">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">總資本價值 (V)</span>
+                    <span class="result-label">总资本价值 (V)</span>
                     <span class="result-value" id="wacc_v">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">股權權重 (E/V)</span>
+                    <span class="result-label">股权权重 (E/V)</span>
                     <span class="result-value" id="wacc_ev">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">債務權重 (D/V)</span>
+                    <span class="result-label">债务权重 (D/V)</span>
                     <span class="result-value" id="wacc_dv">-</span>
                 </div>
                 <div class="result-row" style="border-bottom: 2px solid #4facfe; padding-top: 15px; margin-top: 10px;">
-                    <span class="result-label" style="font-size: 1.2em;">加權平均資本成本 (WACC)</span>
+                    <span class="result-label" style="font-size: 1.2em;">加权平均资本成本 (WACC)</span>
                     <span class="result-value" id="wacc_final" style="font-size: 1.2em;">-</span>
                 </div>
             </div>
 
             <div class="info-box">
-                <strong>解讀提示：</strong> WACC 越低，企業進行投資的成本越低。通常 WACC 在 5%-12% 之間屬於合理範圍。
+                <strong>解读提示：</strong> WACC 越低，企业进行投资的成本越低。通常 WACC 在 5%-12% 之间属于合理范围。
             </div>
         </div>
 
         <!-- Tab 2: NPV/IRR Calculator -->
         <div id="npv" class="tab-content">
-            <h2>NPV/IRR 投資分析器</h2>
+            <h2>NPV/IRR 投资分析器</h2>
             <p style="margin-bottom: 20px; color: #666;">
-                評估投資專案的淨現值和內部收益率，判斷專案是否值得投資。
+                评估投资项目的净现值和内部收益率，判断项目是否值得投资。
             </p>
 
             <div class="form-group">
-                <label>初期投資 - 百萬元</label>
+                <label>初期投资 - 百万元</label>
                 <input type="number" id="npv_initial" value="1000" min="0">
             </div>
 
             <div class="form-group">
-                <label>WACC 折現率 - %</label>
+                <label>WACC 折现率 - %</label>
                 <input type="number" id="npv_wacc" value="10" min="0" step="0.1">
             </div>
 
             <div id="cash_flows_container"></div>
 
-            <button class="calculate" onclick="addCashFlowYear()">+ 新增年份</button>
-            <button class="calculate" style="background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%); margin-left: 10px;" onclick="clearCashFlows()">清除現金流</button>
+            <button class="calculate" onclick="addCashFlowYear()">+ 添加年份</button>
+            <button class="calculate" style="background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%); margin-left: 10px;" onclick="clearCashFlows()">清除现金流</button>
 
-            <button class="calculate" onclick="calculateNPV()" style="margin-top: 20px;">計算 NPV / IRR</button>
+            <button class="calculate" onclick="calculateNPV()" style="margin-top: 20px;">计算 NPV / IRR</button>
 
             <div id="npv_result" class="result-box">
                 <div class="result-row">
-                    <span class="result-label">淨現值 (NPV)</span>
+                    <span class="result-label">净现值 (NPV)</span>
                     <span class="result-value" id="npv_value">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">內部收益率 (IRR)</span>
+                    <span class="result-label">内部收益率 (IRR)</span>
                     <span class="result-value" id="irr_value">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">投資決策</span>
+                    <span class="result-label">投资决策</span>
                     <span class="result-value" id="investment_decision" style="color: #ff6b6b;">-</span>
                 </div>
             </div>
 
             <div class="info-box">
-                <strong>決策規則：</strong><br>
-                • NPV > 0 時，應接受投資<br>
-                • IRR > WACC 時，應接受投資
+                <strong>决策规则：</strong><br>
+                • NPV > 0 时，应接受投资<br>
+                • IRR > WACC 时，应接受投资
             </div>
         </div>
 
         <!-- Tab 3: Capital Structure Simulator -->
         <div id="capital" class="tab-content">
-            <h2>資本結構模擬器</h2>
+            <h2>资本结构模拟器</h2>
             <p style="margin-bottom: 20px; color: #666;">
-                調整負債與股權的比例，觀察對 WACC 和企業價值的影響。
+                调整负债与股权的比例，观察对 WACC 和企业价值的影响。
             </p>
 
             <div class="form-group">
-                <label>企業營業利潤 (EBIT) - 百萬元</label>
+                <label>企业营业利润 (EBIT) - 百万元</label>
                 <input type="number" id="cs_ebit" value="500" min="0">
             </div>
 
             <div class="input-row">
                 <div class="form-group">
-                    <label>企業稅率 - %</label>
+                    <label>企业税率 - %</label>
                     <input type="number" id="cs_tc" value="25" min="0" max="100" step="0.1">
                 </div>
                 <div class="form-group">
-                    <label>債務利率 - %</label>
+                    <label>债务利率 - %</label>
                     <input type="number" id="cs_rate" value="5" min="0" step="0.1">
                 </div>
             </div>
 
             <div class="slider-container">
                 <div class="slider-label">
-                    <label>負債比例 (D/V):</label>
+                    <label>负债比例 (D/V):</label>
                     <span id="debt_ratio">30%</span>
                 </div>
                 <input type="range" id="cs_leverage" min="0" max="80" value="30" oninput="updateCapitalStructure()">
             </div>
 
-            <button class="calculate" onclick="simulateCapitalStructure()">模擬資本結構</button>
+            <button class="calculate" onclick="simulateCapitalStructure()">模拟资本结构</button>
 
             <div id="cs_result" class="result-box">
                 <div class="result-row">
-                    <span class="result-label">稅盾每年節省</span>
+                    <span class="result-label">税盾每年节省</span>
                     <span class="result-value" id="cs_shield">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">企業稅後價值</span>
+                    <span class="result-label">企业税后价值</span>
                     <span class="result-value" id="cs_value">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">估計 WACC</span>
+                    <span class="result-label">估计 WACC</span>
                     <span class="result-value" id="cs_wacc">-</span>
                 </div>
             </div>
 
             <div class="info-box">
-                <strong>關鍵洞察：</strong><br>
-                在低槓桿階段，更高的負債比例會通過稅盾效應降低 WACC。但超過最優點後，財務困難成本會導致 WACC 上升。
+                <strong>关键洞察：</strong><br>
+                在低杠杆阶段，更高的负债比例会通过税盾效应降低 WACC。但超过最优点后，财务困难成本会导致 WACC 上升。
             </div>
         </div>
 
         <!-- Tab 4: Dividend Policy Comparison -->
         <div id="dividend" class="tab-content">
-            <h2>股利政策比較器</h2>
+            <h2>股利政策比较器</h2>
             <p style="margin-bottom: 20px; color: #666;">
-                比較不同的資本回報策略對股東的影響。
+                比较不同的资本回报策略对股东的影响。
             </p>
 
             <div class="input-row">
                 <div class="form-group">
-                    <label>企業年利潤 - 百萬元</label>
+                    <label>企业年利润 - 百万元</label>
                     <input type="number" id="div_profit" value="1000" min="0">
                 </div>
                 <div class="form-group">
-                    <label>流通股數 - 百萬股</label>
+                    <label>流通股数 - 百万股</label>
                     <input type="number" id="div_shares" value="100" min="0" step="1">
                 </div>
             </div>
 
             <div class="input-row">
                 <div class="form-group">
-                    <label>目前股價 - 元</label>
+                    <label>目前股价 - 元</label>
                     <input type="number" id="div_price" value="100" min="0" step="0.1">
                 </div>
                 <div class="form-group">
-                    <label>資本回報比例 - %</label>
+                    <label>资本回报比例 - %</label>
                     <input type="number" id="div_payout" value="50" min="0" max="100" step="1">
                 </div>
             </div>
 
-            <button class="calculate" onclick="compareDividendPolicies()">比較政策</button>
+            <button class="calculate" onclick="compareDividendPolicies()">比较政策</button>
 
             <div id="dividend_result" class="result-box">
-                <h3 style="margin-top: 0; color: #333; font-size: 1.2em;">三種策略對比</h3>
+                <h3 style="margin-top: 0; color: #333; font-size: 1.2em;">三种策略对比</h3>
                 <table class="comparison-table">
                     <tr>
                         <th>策略</th>
-                        <th>現金股利</th>
-                        <th>回購股數</th>
-                        <th>剩餘股數</th>
+                        <th>现金股利</th>
+                        <th>回购股数</th>
+                        <th>剩余股数</th>
                         <th>每股盈利</th>
                     </tr>
                     <tr>
-                        <td><strong>策略 A：全額分紅</strong></td>
+                        <td><strong>策略 A：全额分红</strong></td>
                         <td id="policy_a_div">-</td>
                         <td>0 股</td>
                         <td id="policy_a_shares">-</td>
                         <td id="policy_a_eps">-</td>
                     </tr>
                     <tr>
-                        <td><strong>策略 B：股票回購</strong></td>
+                        <td><strong>策略 B：股票回购</strong></td>
                         <td>0 元</td>
                         <td id="policy_b_buyback">-</td>
                         <td id="policy_b_shares">-</td>
@@ -580,259 +580,259 @@
             </div>
 
             <div class="info-box">
-                <strong>稅務對比：</strong><br>
-                • 現金股利：立即課稅，稅率通常 20%-37%<br>
-                • 股票回購：推遲課稅，稅率通常 15%-20%
+                <strong>税务对比：</strong><br>
+                • 现金股利：立即课税，税率通常 20%-37%<br>
+                • 股票回购：推迟课税，税率通常 15%-20%
             </div>
         </div>
 
         <!-- Tab 5: Merger Synergy Analyzer -->
         <div id="merger" class="tab-content">
-            <h2>併購綜效分析器</h2>
+            <h2>并购综效分析器</h2>
             <p style="margin-bottom: 20px; color: #666;">
-                評估併購交易中的協同效應和價值創造潛力。
+                评估并购交易中的协同效应和价值创造潜力。
             </p>
 
-            <h3 style="color: #555; margin-top: 20px; margin-bottom: 15px;">被併購企業</h3>
+            <h3 style="color: #555; margin-top: 20px; margin-bottom: 15px;">被并购企业</h3>
             <div class="input-row">
                 <div class="form-group">
-                    <label>年 EBITDA - 百萬元</label>
+                    <label>年 EBITDA - 百万元</label>
                     <input type="number" id="merger_ebitda" value="100" min="0">
                 </div>
                 <div class="form-group">
-                    <label>行業平均 EV/EBITDA 倍數</label>
+                    <label>行业平均 EV/EBITDA 倍数</label>
                     <input type="number" id="merger_multiple" value="10" min="0" step="0.5">
                 </div>
             </div>
 
-            <h3 style="color: #555; margin-top: 20px; margin-bottom: 15px;">協同效應估計</h3>
+            <h3 style="color: #555; margin-top: 20px; margin-bottom: 15px;">协同效应估计</h3>
             <div class="input-row">
                 <div class="form-group">
-                    <label>運營協同（年度成本削減）- 百萬元</label>
+                    <label>运营协同（年度成本削减）- 百万元</label>
                     <input type="number" id="merger_cost_saving" value="15" min="0">
                 </div>
                 <div class="form-group">
-                    <label>收入協同（年度增量營收利潤）- 百萬元</label>
+                    <label>收入协同（年度增量营业收入利润）- 百万元</label>
                     <input type="number" id="merger_revenue_synergy" value="10" min="0">
                 </div>
             </div>
 
             <div class="form-group">
-                <label>折現率（WACC）- %</label>
+                <label>折现率（WACC）- %</label>
                 <input type="number" id="merger_wacc" value="8" min="0" step="0.1">
             </div>
 
             <div class="form-group">
-                <label>整合費用 - 百萬元</label>
+                <label>集成费用 - 百万元</label>
                 <input type="number" id="merger_costs" value="20" min="0">
             </div>
 
-            <button class="calculate" onclick="analyzeMergerSynergies()">分析併購綜效</button>
+            <button class="calculate" onclick="analyzeMergerSynergies()">分析并购综效</button>
 
             <div id="merger_result" class="result-box">
                 <div class="result-row">
-                    <span class="result-label">目標企業基礎價值</span>
+                    <span class="result-label">目标企业基础价值</span>
                     <span class="result-value" id="merger_base_value">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">年度協同效應合計</span>
+                    <span class="result-label">年度协同效应合计</span>
                     <span class="result-value" id="merger_total_synergy">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">協同價值折現</span>
+                    <span class="result-label">协同价值折现</span>
                     <span class="result-value" id="merger_synergy_pv">-</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">整合費用</span>
+                    <span class="result-label">集成费用</span>
                     <span class="result-value" id="merger_integration_cost">-</span>
                 </div>
                 <div class="result-row" style="border-top: 2px solid #4facfe; padding-top: 15px; margin-top: 10px;">
-                    <span class="result-label" style="font-size: 1.1em;"><strong>合理收購價格範圍</strong></span>
+                    <span class="result-label" style="font-size: 1.1em;"><strong>合理收购价格范围</strong></span>
                     <span class="result-value" id="merger_fair_value" style="font-size: 1.1em;">-</span>
                 </div>
             </div>
 
             <div class="info-box">
-                <strong>價值評估邏輯：</strong><br>
-                合理收購價 = 基礎價值 + 協同價值淨值<br>
-                過高的溢價應以具體協同效應來支持。
+                <strong>价值评估逻辑：</strong><br>
+                合理收购价 = 基础价值 + 协同价值净值<br>
+                过高的溢价应以具体协同效应来支持。
             </div>
         </div>
 
         <!-- Tab 6: M&A Process Flow -->
         <div id="maflow" class="tab-content">
-            <h2>併購流程互動圖表</h2>
+            <h2>并购流程交互图表</h2>
             <p style="margin-bottom: 20px; color: #666;">
-                完整的併購交易分為四個階段，每個階段包含關鍵決策點和風險評估。
+                完整的并购交易分为四个阶段，每个阶段包含关键决策点和风险评估。
             </p>
 
             <div style="margin-bottom: 30px;">
-                <h3 style="color: #555; margin-bottom: 15px;">第一階段：戰略與初期評估</h3>
+                <h3 style="color: #555; margin-bottom: 15px;">第一阶段：战略与初期评估</h3>
                 <div class="ma-stage">
                     <div class="ma-phase">
-                        <strong>1.1 戰略規劃</strong>
+                        <strong>1.1 战略规划</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 確定併購目的（成長、協同、多元化）<br>
-                            • 識別潛在目標企業<br>
-                            • 初步價值評估<br>
-                            <span style="color: #ff6b6b;">✗ 風險：戰略不清晰導致併購失敗</span>
+                            • 确定并购目的（成长、协同、多元化）<br>
+                            • 识别潜在目标企业<br>
+                            • 初步价值评估<br>
+                            <span style="color: #ff6b6b;">✗ 风险：战略不清晰导致并购失败</span>
                         </p>
                     </div>
                     <div class="ma-phase">
-                        <strong>1.2 接洽與談判</strong>
+                        <strong>1.2 接洽与谈判</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 聯繫目標企業管理層<br>
-                            • 簽署保密協議（NDA）<br>
-                            • 初步估值討論<br>
-                            <span style="color: #ff6b6b;">✗ 風險：敵意收購觸發防禦</span>
+                            • 联系目标企业管理层<br>
+                            • 签署保密协议（NDA）<br>
+                            • 初步估值讨论<br>
+                            <span style="color: #ff6b6b;">✗ 风险：敌意收购触发防御</span>
                         </p>
                     </div>
                     <div class="ma-phase">
                         <strong>1.3 交割框架</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 主要交易條款討論<br>
-                            • 價格範圍協商<br>
-                            • 付款方式（現金/股票）<br>
-                            <span style="color: #388e3c;">✓ 里程碑：MOU（意向書）簽署</span>
+                            • 主要交易条款讨论<br>
+                            • 价格范围协商<br>
+                            • 付款方式（现金/股票）<br>
+                            <span style="color: #388e3c;">✓ 里程碑：MOU（意向书）签署</span>
                         </p>
                     </div>
                 </div>
             </div>
 
             <div style="margin-bottom: 30px;">
-                <h3 style="color: #555; margin-bottom: 15px;">第二階段：盡職調查與估值</h3>
+                <h3 style="color: #555; margin-bottom: 15px;">第二阶段：尽职调查与估值</h3>
                 <div class="ma-stage">
                     <div class="ma-phase">
-                        <strong>2.1 財務盡職調查</strong>
+                        <strong>2.1 财务尽职调查</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 審計歷史財務報表<br>
-                            • 驗證應收/應付帳款<br>
-                            • 評估或有負債<br>
-                            <strong>耗時：2-3 個月</strong><br>
-                            <span style="color: #ff6b6b;">✗ 風險：發現隱藏負債</span>
+                            • 审计历史财务报表<br>
+                            • 验证应收/应付帐款<br>
+                            • 评估或有负债<br>
+                            <strong>耗时：2-3 个月</strong><br>
+                            <span style="color: #ff6b6b;">✗ 风险：发现隐藏负债</span>
                         </p>
                     </div>
                     <div class="ma-phase">
-                        <strong>2.2 法律盡職調查</strong>
+                        <strong>2.2 法律尽职调查</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 審查主要合同<br>
-                            • 識別訴訟風險<br>
-                            • 驗證智慧財產權<br>
-                            <strong>耗時：2-3 個月</strong><br>
-                            <span style="color: #ff6b6b;">✗ 風險：發現合規問題</span>
+                            • 审查主要合同<br>
+                            • 识别诉讼风险<br>
+                            • 验证知识产权权<br>
+                            <strong>耗时：2-3 个月</strong><br>
+                            <span style="color: #ff6b6b;">✗ 风险：发现合规问题</span>
                         </p>
                     </div>
                     <div class="ma-phase">
-                        <strong>2.3 商業與估值</strong>
+                        <strong>2.3 商业与估值</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
                             • DCF 估值分析<br>
-                            • 協同效應量化<br>
+                            • 协同效应量化<br>
                             • 敏感性分析<br>
-                            <strong>耗時：1-2 個月</strong><br>
-                            <span style="color: #388e3c;">✓ 里程碑：最終價格範圍確定</span>
+                            <strong>耗时：1-2 个月</strong><br>
+                            <span style="color: #388e3c;">✓ 里程碑：最终价格范围确定</span>
                         </p>
                     </div>
                 </div>
             </div>
 
             <div style="margin-bottom: 30px;">
-                <h3 style="color: #555; margin-bottom: 15px;">第三階段：融資與審批</h3>
+                <h3 style="color: #555; margin-bottom: 15px;">第三阶段：融资与审批</h3>
                 <div class="ma-stage">
                     <div class="ma-phase">
-                        <strong>3.1 融資結構</strong>
+                        <strong>3.1 融资结构</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 確定融資來源比例<br>
-                            • 現金 vs 股票 vs 債務<br>
-                            • 評估融資可行性<br>
-                            <span style="color: #ff6b6b;">✗ 風險：融資無法完成</span>
+                            • 确定融资来源比例<br>
+                            • 现金 vs 股票 vs 债务<br>
+                            • 评估融资可行性<br>
+                            <span style="color: #ff6b6b;">✗ 风险：融资无法完成</span>
                         </p>
                     </div>
                     <div class="ma-phase">
-                        <strong>3.2 監管審批</strong>
+                        <strong>3.2 监管审批</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 反壟斷審查<br>
-                            • 產業監管許可<br>
-                            • 外資管制許可<br>
-                            <strong>耗時：3-12 個月</strong><br>
-                            <span style="color: #ff6b6b;">✗ 風險：被監管機構否決</span>
+                            • 反垄断审查<br>
+                            • 产业监管许可<br>
+                            • 外资管制许可<br>
+                            <strong>耗时：3-12 个月</strong><br>
+                            <span style="color: #ff6b6b;">✗ 风险：被监管机构否决</span>
                         </p>
                     </div>
                     <div class="ma-phase">
-                        <strong>3.3 股東大會</strong>
+                        <strong>3.3 股东大会</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 雙方股東投票<br>
-                            • 最後一次定價確認<br>
-                            • 簽署最終協議<br>
-                            <span style="color: #388e3c;">✓ 里程碑：交割條件滿足</span>
+                            • 双方股东投票<br>
+                            • 最后一次定价确认<br>
+                            • 签署最终协议<br>
+                            <span style="color: #388e3c;">✓ 里程碑：交割条件满足</span>
                         </p>
                     </div>
                 </div>
             </div>
 
             <div style="margin-bottom: 30px;">
-                <h3 style="color: #555; margin-bottom: 15px;">第四階段：交割與整合</h3>
+                <h3 style="color: #555; margin-bottom: 15px;">第四阶段：交割与集成</h3>
                 <div class="ma-stage">
                     <div class="ma-phase">
-                        <strong>4.1 交割與支付</strong>
+                        <strong>4.1 交割与支付</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 最終交割成交<br>
-                            • 現金/股票支付<br>
-                            • 所有權轉移<br>
+                            • 最终交割成交<br>
+                            • 现金/股票支付<br>
+                            • 所有权转移<br>
                             <span style="color: #388e3c;">✓ 里程碑：交易完成</span>
                         </p>
                     </div>
                     <div class="ma-phase">
-                        <strong>4.2 PMI 第一階段</strong>
+                        <strong>4.2 PMI 第一阶段</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 0-3 個月：關鍵決策期<br>
-                            • 整合團隊建立<br>
-                            • 快速行動消除冗餘<br>
+                            • 0-3 个月：关键决策期<br>
+                            • 集成团队创建<br>
+                            • 快速行动消除冗余<br>
                             <strong style="color: #ff6b6b;">重要：人才保留期</strong><br>
-                            <span style="color: #ff6b6b;">✗ 風險：人才流失</span>
+                            <span style="color: #ff6b6b;">✗ 风险：人才流失</span>
                         </p>
                     </div>
                     <div class="ma-phase">
-                        <strong>4.3 PMI 持續改進</strong>
+                        <strong>4.3 PMI 持续改进</strong>
                         <p style="font-size: 0.9em; margin-top: 8px;">
-                            • 3-24 個月：系統整合<br>
-                            • 實現預期協同效應<br>
+                            • 3-24 个月：系统集成<br>
+                            • 实现预期协同效应<br>
                             • 文化融合<br>
-                            <span style="color: #388e3c;">✓ 里程碑：協同目標達成</span>
+                            <span style="color: #388e3c;">✓ 里程碑：协同目标达成</span>
                         </p>
                     </div>
                 </div>
             </div>
 
             <div style="background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%); border-left: 4px solid #ff9800; padding: 15px; margin-top: 30px; border-radius: 3px;">
-                <strong style="color: #333;">時間與成本總結：</strong><br>
-                • 小型併購（<$5B）：9-15 個月，成本 0.5-2% 交易價值<br>
-                • 中型併購（$5-50B）：15-24 個月<br>
-                • 大型併購（>$50B）：24-36 個月，涉及複雜監管審查<br>
-                <strong style="color: #d32f2f;">常見失敗點：盡職調查不足、監管反對、整合無力</strong>
+                <strong style="color: #333;">时间与成本总结：</strong><br>
+                • 小型并购（<$5B）：9-15 个月，成本 0.5-2% 交易价值<br>
+                • 中型并购（$5-50B）：15-24 个月<br>
+                • 大型并购（>$50B）：24-36 个月，涉及复杂监管审查<br>
+                <strong style="color: #d32f2f;">常见失败点：尽职调查不足、监管反对、集成无力</strong>
             </div>
 
             <div style="margin-top: 30px; padding: 15px; background: #f0f4f8; border-radius: 3px;">
-                <h4 style="color: #333; margin-bottom: 10px;">M&A 成功的關鍵因素</h4>
+                <h4 style="color: #333; margin-bottom: 10px;">M&A 成功的关键因素</h4>
                 <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
                     <tr style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); color: white;">
-                        <th style="padding: 10px; text-align: left;">階段</th>
+                        <th style="padding: 10px; text-align: left;">阶段</th>
                         <th style="padding: 10px; text-align: left;">成功因素</th>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px;">戰略與評估</td>
-                        <td style="padding: 10px;">清晰的併購動機與合理估值</td>
+                        <td style="padding: 10px;">战略与评估</td>
+                        <td style="padding: 10px;">清晰的并购动机与合理估值</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px;">盡職調查</td>
-                        <td style="padding: 10px;">深入全面、及時發現隱藏風險</td>
+                        <td style="padding: 10px;">尽职调查</td>
+                        <td style="padding: 10px;">深入全面、及时发现隐藏风险</td>
                     </tr>
                     <tr style="border-bottom: 1px solid #ddd;">
-                        <td style="padding: 10px;">融資與審批</td>
-                        <td style="padding: 10px;">融資確定、監管順利、條款清晰</td>
+                        <td style="padding: 10px;">融资与审批</td>
+                        <td style="padding: 10px;">融资确定、监管顺利、条款清晰</td>
                     </tr>
                     <tr>
-                        <td style="padding: 10px;">PMI 整合</td>
-                        <td style="padding: 10px;">快速決策、人才保留、協同兌現</td>
+                        <td style="padding: 10px;">PMI 集成</td>
+                        <td style="padding: 10px;">快速决策、人才保留、协同兑现</td>
                     </tr>
                 </table>
             </div>
@@ -877,7 +877,7 @@
             const wacc = (eRatio * rE) + (dRatio * rd * (1 - tc));
 
             document.getElementById('wacc_re').textContent = (rE * 100).toFixed(2) + '%';
-            document.getElementById('wacc_v').textContent = V.toFixed(0) + ' 百萬元';
+            document.getElementById('wacc_v').textContent = V.toFixed(0) + ' 百万元';
             document.getElementById('wacc_ev').textContent = (eRatio * 100).toFixed(1) + '%';
             document.getElementById('wacc_dv').textContent = (dRatio * 100).toFixed(1) + '%';
             document.getElementById('wacc_final').textContent = (wacc * 100).toFixed(2) + '%';
@@ -905,7 +905,7 @@
                 const div = document.createElement('div');
                 div.className = 'form-group';
                 div.innerHTML = `
-                    <label>第 ${i + 1} 年現金流 - 百萬元</label>
+                    <label>第 ${i + 1} 年现金流 - 百万元</label>
                     <input type="number" id="cf_${i}" value="${cashFlows[i]}" min="0" onchange="updateCashFlow(${i}, this.value)">
                 `;
                 container.appendChild(div);
@@ -921,7 +921,7 @@
             const wacc = parseFloat(document.getElementById('npv_wacc').value) / 100;
 
             if (cashFlows.length === 0) {
-                alert('請先新增現金流年份');
+                alert('请先添加现金流年份');
                 return;
             }
 
@@ -945,9 +945,9 @@
                 irr = irr - f / fp;
             }
 
-            const decision = npv > 0 ? '<span class="success">應接受</span>' : '<span style="color: #d32f2f;">應拒絕</span>';
+            const decision = npv > 0 ? '<span class="success">应接受</span>' : '<span style="color: #d32f2f;">应拒绝</span>';
 
-            document.getElementById('npv_value').textContent = npv.toFixed(2) + ' 百萬元';
+            document.getElementById('npv_value').textContent = npv.toFixed(2) + ' 百万元';
             document.getElementById('irr_value').textContent = (irr * 100).toFixed(2) + '%';
             document.getElementById('investment_decision').innerHTML = decision;
 
@@ -977,8 +977,8 @@
             // WACC approximation
             const wacc = (equity / totalValue) * 0.10 + (debt / totalValue) * rate * (1 - tc);
 
-            document.getElementById('cs_shield').textContent = taxShield.toFixed(2) + ' 百萬元';
-            document.getElementById('cs_value').textContent = netValue.toFixed(2) + ' 百萬元';
+            document.getElementById('cs_shield').textContent = taxShield.toFixed(2) + ' 百万元';
+            document.getElementById('cs_value').textContent = netValue.toFixed(2) + ' 百万元';
             document.getElementById('cs_wacc').textContent = (wacc * 100).toFixed(2) + '%';
 
             document.getElementById('cs_result').classList.add('show');
@@ -997,14 +997,14 @@
             const eps = profit / shares;
 
             // Policy A: All dividend
-            document.getElementById('policy_a_div').textContent = dividend.toFixed(2) + ' 百萬元';
+            document.getElementById('policy_a_div').textContent = dividend.toFixed(2) + ' 百万元';
             document.getElementById('policy_a_shares').textContent = shares.toFixed(0) + ' 股';
             document.getElementById('policy_a_eps').textContent = '$ ' + eps.toFixed(2);
 
             // Policy B: Buyback
             const remainingShares = shares - buybackShares;
             const epsAfterBuyback = profit / remainingShares;
-            document.getElementById('policy_b_buyback').textContent = buybackShares.toFixed(2) + ' 萬股';
+            document.getElementById('policy_b_buyback').textContent = buybackShares.toFixed(2) + ' 万股';
             document.getElementById('policy_b_shares').textContent = remainingShares.toFixed(0) + ' 股';
             document.getElementById('policy_b_eps').textContent = '$ ' + epsAfterBuyback.toFixed(2);
 
@@ -1035,11 +1035,11 @@
             const netSynergy = synergyPV - costs;
             const fairValue = baseValue + netSynergy;
 
-            document.getElementById('merger_base_value').textContent = baseValue.toFixed(2) + ' 百萬元';
-            document.getElementById('merger_total_synergy').textContent = totalSynergy.toFixed(2) + ' 百萬元/年';
-            document.getElementById('merger_synergy_pv').textContent = synergyPV.toFixed(2) + ' 百萬元';
-            document.getElementById('merger_integration_cost').textContent = costs.toFixed(2) + ' 百萬元';
-            document.getElementById('merger_fair_value').textContent = (baseValue).toFixed(0) + ' - ' + fairValue.toFixed(0) + ' 百萬元';
+            document.getElementById('merger_base_value').textContent = baseValue.toFixed(2) + ' 百万元';
+            document.getElementById('merger_total_synergy').textContent = totalSynergy.toFixed(2) + ' 百万元/年';
+            document.getElementById('merger_synergy_pv').textContent = synergyPV.toFixed(2) + ' 百万元';
+            document.getElementById('merger_integration_cost').textContent = costs.toFixed(2) + ' 百万元';
+            document.getElementById('merger_fair_value').textContent = (baseValue).toFixed(0) + ' - ' + fairValue.toFixed(0) + ' 百万元';
 
             document.getElementById('merger_result').classList.add('show');
         }

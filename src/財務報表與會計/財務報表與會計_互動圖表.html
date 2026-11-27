@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>財務報表與會計 - 互動圖表</title>
+    <title>财务报表与会计 - 交互图表</title>
     <style>
         * {
             margin: 0;
@@ -511,121 +511,121 @@
 <body>
     <div class="container">
         <header>
-            <h1>財務報表與會計</h1>
-            <p class="subtitle">互動式學習工具</p>
+            <h1>财务报表与会计</h1>
+            <p class="subtitle">交互式学习工具</p>
         </header>
 
         <div class="tab-navigation">
-            <button class="tab-btn active" data-tab="tab1">三大報表關聯圖</button>
-            <button class="tab-btn" data-tab="tab2">財務比率計算機</button>
-            <button class="tab-btn" data-tab="tab3">損益兩平分析</button>
+            <button class="tab-btn active" data-tab="tab1">三大报表关联图</button>
+            <button class="tab-btn" data-tab="tab2">财务比率计算机</button>
+            <button class="tab-btn" data-tab="tab3">损益两平分析</button>
         </div>
 
         <!-- Tab 1: Financial Statements Diagram -->
         <div id="tab1" class="tab-content active">
             <div class="statements-container">
                 <div class="statement-card income" data-statement="income">
-                    <h3>損益表</h3>
+                    <h3>利润表</h3>
                     <p class="subtitle-card">Income Statement</p>
                     <div class="statement-details">
-                        <h4>經營流程</h4>
+                        <h4>经营流程</h4>
                         <div class="flow-item">
-                            <span>營收</span>
+                            <span>营业收入</span>
                             <span class="flow-arrow">→</span>
-                            <span>營業成本</span>
+                            <span>营业成本</span>
                         </div>
                         <div class="flow-item">
-                            <span>毛利 (營收 - 營業成本)</span>
+                            <span>毛利 (营业收入 - 营业成本)</span>
                             <span class="flow-arrow">→</span>
-                            <span>營業費用</span>
+                            <span>营业费用</span>
                         </div>
                         <div class="flow-item">
-                            <span>營業利益 (毛利 - 營業費用)</span>
+                            <span>营业利益 (毛利 - 营业费用)</span>
                             <span class="flow-arrow">→</span>
                             <span>其他收入/支出</span>
                         </div>
                         <div class="flow-item">
-                            <span>稅前淨利</span>
+                            <span>税前净利</span>
                             <span class="flow-arrow">→</span>
-                            <span>所得稅</span>
+                            <span>所得税</span>
                         </div>
                         <div class="flow-item">
-                            <strong>淨利 (稅後淨利)</strong>
+                            <strong>净利 (税后净利)</strong>
                         </div>
                         <div class="connection-info">
-                            <strong>關鍵連結：</strong><br>
-                            淨利流入資產負債表的保留盈餘，也影響現金流量表的營業活動。
+                            <strong>关键链接：</strong><br>
+                            净利流入资产负债表的保留盈余，也影响现金流量表的营业活动。
                         </div>
                     </div>
                 </div>
 
                 <div class="statement-card balance" data-statement="balance">
-                    <h3>資產負債表</h3>
+                    <h3>资产负债表</h3>
                     <p class="subtitle-card">Balance Sheet</p>
                     <div class="statement-details">
-                        <h4>資產端</h4>
+                        <h4>资产端</h4>
                         <div class="balance-item">
-                            <strong>流動資產</strong><br>
-                            現金、應收帳款、存貨等(1年內轉換)
+                            <strong>流动资产</strong><br>
+                            现金、应收帐款、存货等(1年内转换)
                         </div>
                         <div class="balance-item">
-                            <strong>非流動資產</strong><br>
-                            機器設備、房地產、無形資產等
+                            <strong>非流动资产</strong><br>
+                            机器设备、房地产、无形资产等
                         </div>
 
-                        <h4 style="margin-top: 20px;">負債及股東權益端</h4>
+                        <h4 style="margin-top: 20px;">负债及股东权益端</h4>
                         <div class="balance-item">
-                            <strong>流動負債</strong><br>
-                            應付帳款、短期借款等(1年內償還)
+                            <strong>流动负债</strong><br>
+                            应付帐款、短期借款等(1年内偿还)
                         </div>
                         <div class="balance-item">
-                            <strong>非流動負債</strong><br>
-                            長期借款、退休金負債等
+                            <strong>非流动负债</strong><br>
+                            长期借款、退休金负债等
                         </div>
                         <div class="balance-item">
-                            <strong>股東權益</strong><br>
-                            股本、保留盈餘(含本期淨利)
+                            <strong>股东权益</strong><br>
+                            股本、保留盈余(含本期净利)
                         </div>
 
                         <div class="connection-info">
                             <strong>基本等式：</strong><br>
-                            資產 = 負債 + 股東權益
+                            资产 = 负债 + 股东权益
                         </div>
                     </div>
                 </div>
 
                 <div class="statement-card cash" data-statement="cash">
-                    <h3>現金流量表</h3>
+                    <h3>现金流量表</h3>
                     <p class="subtitle-card">Cash Flow Statement</p>
                     <div class="statement-details">
-                        <h4>營業活動</h4>
+                        <h4>营业活动</h4>
                         <div class="balance-item">
-                            淨利 + 折舊 - 應收帳款增加 - 存貨增加
+                            净利 + 折旧 - 应收帐款增加 - 存货增加
                         </div>
 
-                        <h4>投資活動</h4>
+                        <h4>投资活动</h4>
                         <div class="balance-item">
-                            購買固定資產、出售投資等
+                            购买固定资产、出售投资等
                         </div>
 
-                        <h4>籌資活動</h4>
+                        <h4>筹资活动</h4>
                         <div class="balance-item">
-                            舉借貸款、發行股票、支付股利等
+                            举借贷款、发行股票、支付股利等
                         </div>
 
                         <div class="connection-info">
-                            <strong>現金變化：</strong><br>
-                            期初現金 + 營業活動 + 投資活動 + 籌資活動 = 期末現金
+                            <strong>现金变化：</strong><br>
+                            期初现金 + 营业活动 + 投资活动 + 筹资活动 = 期末现金
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="card">
-                <h3 style="color: #1a5490; margin-bottom: 16px;">三大報表的整合關係</h3>
-                <p style="margin-bottom: 12px;"><strong>損益表 → 資產負債表：</strong> 損益表的淨利會累積到資產負債表的保留盈餘科目。</p>
-                <p style="margin-bottom: 12px;"><strong>損益表/資產負債表 → 現金流量表：</strong> 現金流量表以間接法編製時，從損益表的淨利開始，並調整資產負債表專案的變化。</p>
-                <p><strong>現金流量表：</strong> 反映企業實際的現金進出，比淨利更能反映企業的財務健全度。</p>
+                <h3 style="color: #1a5490; margin-bottom: 16px;">三大报表的集成关系</h3>
+                <p style="margin-bottom: 12px;"><strong>利润表 → 资产负债表：</strong> 利润表的净利会累积到资产负债表的保留盈余科目。</p>
+                <p style="margin-bottom: 12px;"><strong>利润表/资产负债表 → 现金流量表：</strong> 现金流量表以间接法编制时，从利润表的净利开始，并调整资产负债表项目的变化。</p>
+                <p><strong>现金流量表：</strong> 反映企业实际的现金进出，比净利更能反映企业的财务健全度。</p>
             </div>
         </div>
 
@@ -633,108 +633,108 @@
         <div id="tab2" class="tab-content">
             <div class="ratio-container">
                 <div class="input-section">
-                    <h3>輸入財務數據</h3>
+                    <h3>输入财务数据</h3>
 
                     <div class="input-group">
-                        <label for="revenue">營收 (元)</label>
+                        <label for="revenue">营业收入 (元)</label>
                         <input type="number" id="revenue" placeholder="例: 1000000" value="1000000">
                     </div>
 
                     <div class="input-group">
-                        <label for="cogs">營業成本 (元)</label>
+                        <label for="cogs">营业成本 (元)</label>
                         <input type="number" id="cogs" placeholder="例: 600000" value="600000">
                     </div>
 
                     <div class="input-group">
-                        <label for="operating_expense">營業費用 (元)</label>
+                        <label for="operating_expense">营业费用 (元)</label>
                         <input type="number" id="operating_expense" placeholder="例: 200000" value="200000">
                     </div>
 
                     <div class="input-group">
-                        <label for="net_income">淨利 (元)</label>
+                        <label for="net_income">净利 (元)</label>
                         <input type="number" id="net_income" placeholder="例: 100000" value="100000">
                     </div>
 
                     <div class="input-group">
-                        <label for="total_assets">總資產 (元)</label>
+                        <label for="total_assets">总资产 (元)</label>
                         <input type="number" id="total_assets" placeholder="例: 2000000" value="2000000">
                     </div>
 
                     <div class="input-group">
-                        <label for="total_liabilities">總負債 (元)</label>
+                        <label for="total_liabilities">总负债 (元)</label>
                         <input type="number" id="total_liabilities" placeholder="例: 1000000" value="1000000">
                     </div>
 
                     <div class="input-group">
-                        <label for="equity">股東權益 (元)</label>
+                        <label for="equity">股东权益 (元)</label>
                         <input type="number" id="equity" placeholder="例: 1000000" value="1000000">
                     </div>
 
                     <div class="input-group">
-                        <label for="current_assets">流動資產 (元)</label>
+                        <label for="current_assets">流动资产 (元)</label>
                         <input type="number" id="current_assets" placeholder="例: 800000" value="800000">
                     </div>
 
                     <div class="input-group">
-                        <label for="current_liabilities">流動負債 (元)</label>
+                        <label for="current_liabilities">流动负债 (元)</label>
                         <input type="number" id="current_liabilities" placeholder="例: 500000" value="500000">
                     </div>
 
                     <div class="input-group">
-                        <label for="inventory">存貨 (元)</label>
+                        <label for="inventory">存货 (元)</label>
                         <input type="number" id="inventory" placeholder="例: 300000" value="300000">
                     </div>
                 </div>
 
                 <div>
-                    <h3 style="color: #1a5490; margin-bottom: 20px;">計算結果</h3>
+                    <h3 style="color: #1a5490; margin-bottom: 20px;">计算结果</h3>
                     <div class="results-section">
                         <div class="ratio-card">
                             <div class="ratio-name"><span class="health-indicator good"></span>毛利率</div>
                             <div class="ratio-value" id="gross_margin">40.0%</div>
-                            <div class="ratio-description">毛利 ÷ 營收。越高越好，反映產品競爭力。</div>
+                            <div class="ratio-description">毛利 ÷ 营业收入。越高越好，反映产品竞争力。</div>
                         </div>
 
                         <div class="ratio-card">
-                            <div class="ratio-name"><span class="health-indicator good"></span>營業利益率</div>
+                            <div class="ratio-name"><span class="health-indicator good"></span>营业利益率</div>
                             <div class="ratio-value" id="operating_margin">20.0%</div>
-                            <div class="ratio-description">營業利益 ÷ 營收。衡量經營效率。</div>
+                            <div class="ratio-description">营业利益 ÷ 营业收入。衡量经营效率。</div>
                         </div>
 
                         <div class="ratio-card">
-                            <div class="ratio-name"><span class="health-indicator good"></span>淨利率</div>
+                            <div class="ratio-name"><span class="health-indicator good"></span>净利率</div>
                             <div class="ratio-value" id="net_margin">10.0%</div>
-                            <div class="ratio-description">淨利 ÷ 營收。反映整體獲利能力。</div>
+                            <div class="ratio-description">净利 ÷ 营业收入。反映整体利润能力。</div>
                         </div>
 
                         <div class="ratio-card">
                             <div class="ratio-name"><span class="health-indicator good"></span>ROE</div>
                             <div class="ratio-value" id="roe">10.0%</div>
-                            <div class="ratio-description">淨利 ÷ 股東權益。股東投資報酬率。目標 > 15%。</div>
+                            <div class="ratio-description">净利 ÷ 股东权益。股东投资报酬率。目标 > 15%。</div>
                         </div>
 
                         <div class="ratio-card">
                             <div class="ratio-name"><span class="health-indicator good"></span>ROA</div>
                             <div class="ratio-value" id="roa">5.0%</div>
-                            <div class="ratio-description">淨利 ÷ 總資產。資產利用效率。越高越好。</div>
+                            <div class="ratio-description">净利 ÷ 总资产。资产利用效率。越高越好。</div>
                         </div>
 
                         <div class="ratio-card">
-                            <div class="ratio-name"><span class="health-indicator good"></span>流動比率</div>
+                            <div class="ratio-name"><span class="health-indicator good"></span>流动比率</div>
                             <div class="ratio-value" id="current_ratio">1.60</div>
-                            <div class="ratio-description">流動資產 ÷ 流動負債。短期償債能力。目標 1-2。</div>
+                            <div class="ratio-description">流动资产 ÷ 流动负债。短期偿债能力。目标 1-2。</div>
                         </div>
 
                         <div class="ratio-card">
-                            <div class="ratio-name"><span class="health-indicator good"></span>速動比率</div>
+                            <div class="ratio-name"><span class="health-indicator good"></span>速动比率</div>
                             <div class="ratio-value" id="quick_ratio">1.00</div>
-                            <div class="ratio-description">(流動資產-存貨) ÷ 流動負債。更嚴格的短期償債能力。</div>
+                            <div class="ratio-description">(流动资产-存货) ÷ 流动负债。更严格的短期偿债能力。</div>
                         </div>
 
                         <div class="ratio-card">
-                            <div class="ratio-name"><span class="health-indicator warning"></span>負債比率</div>
+                            <div class="ratio-name"><span class="health-indicator warning"></span>负债比率</div>
                             <div class="ratio-value" id="debt_ratio">50.0%</div>
-                            <div class="ratio-description">總負債 ÷ 總資產。財務槓桿程度。越低越安全。</div>
+                            <div class="ratio-description">总负债 ÷ 总资产。财务杠杆程度。越低越安全。</div>
                         </div>
                     </div>
                 </div>
@@ -745,7 +745,7 @@
         <div id="tab3" class="tab-content">
             <div class="breakeven-container">
                 <div class="slider-section">
-                    <h3>調整參數</h3>
+                    <h3>调整参数</h3>
 
                     <div class="slider-group">
                         <div class="slider-label">
@@ -757,7 +757,7 @@
 
                     <div class="slider-group">
                         <div class="slider-label">
-                            <span>單位售價</span>
+                            <span>单位售价</span>
                             <span class="slider-value" id="price_display">100 元</span>
                         </div>
                         <input type="range" id="unit_price" min="10" max="500" step="10" value="100">
@@ -765,7 +765,7 @@
 
                     <div class="slider-group">
                         <div class="slider-label">
-                            <span>單位變動成本</span>
+                            <span>单位变动成本</span>
                             <span class="slider-value" id="vc_display">60 元</span>
                         </div>
                         <input type="range" id="unit_variable_cost" min="5" max="400" step="5" value="60">
@@ -773,48 +773,48 @@
 
                     <div class="breakeven-results">
                         <div class="result-row">
-                            <span class="result-label">單位邊際貢獻</span>
-                            <span class="result-value" id="contribution">40 元/單位</span>
+                            <span class="result-label">单位边际贡献</span>
+                            <span class="result-value" id="contribution">40 元/单位</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-label">邊際貢獻率</span>
+                            <span class="result-label">边际贡献率</span>
                             <span class="result-value" id="contribution_ratio">40.0%</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-label">損益兩平銷售量</span>
-                            <span class="result-value" id="breakeven_units">2,500 單位</span>
+                            <span class="result-label">损益两平销售量</span>
+                            <span class="result-value" id="breakeven_units">2,500 单位</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-label">損益兩平營收</span>
+                            <span class="result-label">损益两平营业收入</span>
                             <span class="result-value" id="breakeven_revenue">250,000 元</span>
                         </div>
                     </div>
 
                     <div class="formula-section">
                         <strong>公式：</strong><br>
-                        邊際貢獻 = 單位售價 - 單位變動成本<br>
-                        損益兩平點(量) = 固定成本 ÷ 邊際貢獻<br>
-                        損益兩平點(額) = 固定成本 ÷ 邊際貢獻率
+                        边际贡献 = 单位售价 - 单位变动成本<br>
+                        损益两平点(量) = 固定成本 ÷ 边际贡献<br>
+                        损益两平点(额) = 固定成本 ÷ 边际贡献率
                     </div>
                 </div>
 
                 <div class="chart-section">
-                    <h3>損益兩平點圖表</h3>
+                    <h3>损益两平点图表</h3>
                     <svg id="breakeven_chart" width="100%" height="300" viewBox="0 0 500 300" style="background: white; border-radius: 8px; border: 1px solid #e8eef7;">
                         <!-- Chart will be drawn here by JavaScript -->
                     </svg>
                     <div class="chart-legend">
                         <div class="legend-item">
                             <div class="legend-color" style="background: #3498db;"></div>
-                            <span>總收入</span>
+                            <span>总收入</span>
                         </div>
                         <div class="legend-item">
                             <div class="legend-color" style="background: #e74c3c;"></div>
-                            <span>總成本</span>
+                            <span>总成本</span>
                         </div>
                         <div class="legend-item">
                             <div class="legend-color" style="background: #27ae60;"></div>
-                            <span>損益兩平點</span>
+                            <span>损益两平点</span>
                         </div>
                     </div>
                 </div>
@@ -961,9 +961,9 @@
             const breakeven_revenue = breakeven_units * unit_price;
 
             // Update results
-            document.getElementById('contribution').textContent = contribution.toFixed(0) + ' 元/單位';
+            document.getElementById('contribution').textContent = contribution.toFixed(0) + ' 元/单位';
             document.getElementById('contribution_ratio').textContent = contribution_ratio.toFixed(1) + '%';
-            document.getElementById('breakeven_units').textContent = breakeven_units.toLocaleString('zh-TW') + ' 單位';
+            document.getElementById('breakeven_units').textContent = breakeven_units.toLocaleString('zh-TW') + ' 单位';
             document.getElementById('breakeven_revenue').textContent = breakeven_revenue.toLocaleString('zh-TW') + ' 元';
 
             // Draw chart
@@ -1083,7 +1083,7 @@
                 text.setAttribute('font-weight', 'bold');
                 text.setAttribute('fill', '#27ae60');
                 text.setAttribute('font-family', 'Noto Sans TC, Microsoft JhengHei, sans-serif');
-                text.textContent = `損益兩平點`;
+                text.textContent = `损益两平点`;
                 svg.appendChild(text);
 
                 const coordText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
@@ -1092,7 +1092,7 @@
                 coordText.setAttribute('font-size', '11');
                 coordText.setAttribute('fill', '#27ae60');
                 coordText.setAttribute('font-family', 'Noto Sans TC, Microsoft JhengHei, sans-serif');
-                coordText.textContent = `${breakeven_units} 單位`;
+                coordText.textContent = `${breakeven_units} 单位`;
                 svg.appendChild(coordText);
             }
 
@@ -1104,7 +1104,7 @@
             xLabel.setAttribute('font-size', '12');
             xLabel.setAttribute('fill', '#2c3e50');
             xLabel.setAttribute('font-family', 'Noto Sans TC, Microsoft JhengHei, sans-serif');
-            xLabel.textContent = '銷售量 (單位)';
+            xLabel.textContent = '销售量 (单位)';
             svg.appendChild(xLabel);
 
             const yLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
@@ -1113,7 +1113,7 @@
             yLabel.setAttribute('font-size', '12');
             yLabel.setAttribute('fill', '#2c3e50');
             yLabel.setAttribute('font-family', 'Noto Sans TC, Microsoft JhengHei, sans-serif');
-            yLabel.textContent = '金額 (元)';
+            yLabel.textContent = '金额 (元)';
             svg.appendChild(yLabel);
         }
 

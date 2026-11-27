@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>營運管理：互動圖表與計算工具</title>
+    <title>营运管理：交互图表与计算工具</title>
     <style>
         * {
             margin: 0;
@@ -290,28 +290,28 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📊 營運管理：互動圖表與計算工具</h1>
-            <p>探索營運管理的核心概念 · 實踐計算與優化</p>
+            <h1>📊 营运管理：交互图表与计算工具</h1>
+            <p>探索营运管理的核心概念 · 实践计算与优化</p>
         </div>
 
         <div class="tab-container">
             <div class="tabs">
-                <button class="tab-btn active" onclick="switchTab(0)">📦 EOQ計算器</button>
-                <button class="tab-btn" onclick="switchTab(1)">🔄 六標準差DMAIC</button>
-                <button class="tab-btn" onclick="switchTab(2)">⚙️ 精實生產工具箱</button>
-                <button class="tab-btn" onclick="switchTab(3)">📈 產能利用率分析</button>
-                <button class="tab-btn" onclick="switchTab(4)">🎯 瓶頸分析模擬器</button>
+                <button class="tab-btn active" onclick="switchTab(0)">📦 EOQ计算器</button>
+                <button class="tab-btn" onclick="switchTab(1)">🔄 六标准差DMAIC</button>
+                <button class="tab-btn" onclick="switchTab(2)">⚙️ 精实生产工具箱</button>
+                <button class="tab-btn" onclick="switchTab(3)">📈 产能利用率分析</button>
+                <button class="tab-btn" onclick="switchTab(4)">🎯 瓶颈分析模拟器</button>
             </div>
         </div>
 
-        <!-- Tab 1: EOQ計算器 -->
+        <!-- Tab 1: EOQ计算器 -->
         <div class="tab-content active">
             <div class="section">
-                <h2>經濟訂購量計算器（EOQ - Economic Order Quantity）</h2>
+                <h2>经济订购量计算器（EOQ - Economic Order Quantity）</h2>
 
                 <div class="info-box">
-                    <h4>💡 什麼是EOQ？</h4>
-                    <p>經濟訂購量是使訂購成本與持有成本總和最小的訂購批量。公式：EOQ = √(2DS/H)</p>
+                    <h4>💡 什么是EOQ？</h4>
+                    <p>经济订购量是使订购成本与持有成本总和最小的订购批量。公式：EOQ = √(2DS/H)</p>
                 </div>
 
                 <div class="input-row">
@@ -322,7 +322,7 @@
                     </div>
 
                     <div class="input-group">
-                        <label>每次訂購成本（S）</label>
+                        <label>每次订购成本（S）</label>
                         <input type="number" id="eoqOrderCost" value="50" min="1" step="0.01">
                         <small>例如：$50</small>
                     </div>
@@ -330,29 +330,29 @@
 
                 <div class="input-row">
                     <div class="input-group">
-                        <label>年度單位持有成本（H）</label>
+                        <label>年度单位持有成本（H）</label>
                         <input type="number" id="eoqHoldingCost" value="2" min="0.01" step="0.01">
                         <small>例如：$2/件/年</small>
                     </div>
 
                     <div class="input-group">
-                        <label>採購單價（P）</label>
+                        <label>采购单价（P）</label>
                         <input type="number" id="eoqUnitPrice" value="10" min="0.01" step="0.01">
-                        <small>可選，用於計算總成本</small>
+                        <small>可选，用于计算总成本</small>
                     </div>
                 </div>
 
-                <button onclick="calculateEOQ()">計算最優訂購量</button>
+                <button onclick="calculateEOQ()">计算最优订购量</button>
 
                 <div id="eoqResult" class="result" style="display:none;">
-                    <h3>📊 計算結果</h3>
-                    <div class="result-item">最經濟訂購量（EOQ）：<span class="result-value" id="eoqValue">-</span> 件</div>
-                    <div class="result-item">年度訂購次數：<span class="result-value" id="eoqOrdersPerYear">-</span> 次</div>
-                    <div class="result-item">平均庫存量：<span class="result-value" id="eoqAvgInventory">-</span> 件</div>
-                    <div class="result-item">年度訂購成本：<span class="result-value" id="eoqTotalOrderCost">-</span></div>
+                    <h3>📊 计算结果</h3>
+                    <div class="result-item">最经济订购量（EOQ）：<span class="result-value" id="eoqValue">-</span> 件</div>
+                    <div class="result-item">年度订购次数：<span class="result-value" id="eoqOrdersPerYear">-</span> 次</div>
+                    <div class="result-item">平均库存量：<span class="result-value" id="eoqAvgInventory">-</span> 件</div>
+                    <div class="result-item">年度订购成本：<span class="result-value" id="eoqTotalOrderCost">-</span></div>
                     <div class="result-item">年度持有成本：<span class="result-value" id="eoqTotalHoldingCost">-</span></div>
-                    <div class="result-item">年度相關總成本：<span class="result-value" id="eoqTotalRelevantCost">-</span></div>
-                    <div class="result-item">年度採購成本：<span class="result-value" id="eoqProductCost">-</span></div>
+                    <div class="result-item">年度相关总成本：<span class="result-value" id="eoqTotalRelevantCost">-</span></div>
+                    <div class="result-item">年度采购成本：<span class="result-value" id="eoqProductCost">-</span></div>
                 </div>
 
                 <div class="chart-container">
@@ -361,20 +361,20 @@
             </div>
         </div>
 
-        <!-- Tab 2: 六標準差DMAIC -->
+        <!-- Tab 2: 六标准差DMAIC -->
         <div class="tab-content">
             <div class="section">
-                <h2>六標準差DMAIC改善循環</h2>
+                <h2>六标准差DMAIC改善循环</h2>
 
                 <div class="info-box">
-                    <h4>🎯 DMAIC是什麼？</h4>
-                    <p>DMAIC是六標準差方法的核心框架，由5個階段組成，用於系統性地改善製程品質和效率。</p>
+                    <h4>🎯 DMAIC是什么？</h4>
+                    <p>DMAIC是六标准差方法的核心框架，由5个阶段组成，用于系统性地改善制程质量和效率。</p>
                 </div>
 
                 <div class="flow-diagram">
-                    <div class="flow-box">定義<br><small>Define</small></div>
+                    <div class="flow-box">定义<br><small>Define</small></div>
                     <div class="flow-arrow">→</div>
-                    <div class="flow-box">測量<br><small>Measure</small></div>
+                    <div class="flow-box">测量<br><small>Measure</small></div>
                     <div class="flow-arrow">→</div>
                     <div class="flow-box">分析<br><small>Analyze</small></div>
                     <div class="flow-arrow">→</div>
@@ -384,201 +384,201 @@
                 </div>
 
                 <div style="margin: 30px 0;">
-                    <h3 style="color: #f5576c; margin-bottom: 20px;">DMAIC各階段詳解</h3>
+                    <h3 style="color: #f5576c; margin-bottom: 20px;">DMAIC各阶段详解</h3>
 
                     <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f5576c;">
-                        <h4 style="color: #f5576c;">D - 定義（Define）</h4>
-                        <p>確定改善專案、客戶需求、現狀績效指標</p>
-                        <p><strong>工具：</strong>專案章程、利益相關者分析、顧客聲音（VOC）</p>
+                        <h4 style="color: #f5576c;">D - 定义（Define）</h4>
+                        <p>确定改善项目、客户需求、现状绩效指针</p>
+                        <p><strong>工具：</strong>项目章程、利益相关者分析、顾客声音（VOC）</p>
                     </div>
 
                     <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f5576c;">
-                        <h4 style="color: #f5576c;">M - 測量（Measure）</h4>
-                        <p>選擇KPI、進行製程能力分析、評估測量系統有效性</p>
-                        <p><strong>工具：</strong>過程能力分析、Gage R&R、數據收集</p>
+                        <h4 style="color: #f5576c;">M - 测量（Measure）</h4>
+                        <p>选择KPI、进行制程能力分析、评估测量系统有效性</p>
+                        <p><strong>工具：</strong>过程能力分析、Gage R&R、数据收集</p>
                     </div>
 
                     <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f5576c;">
                         <h4 style="color: #f5576c;">A - 分析（Analyze）</h4>
-                        <p>識別根本原因、建立因果關係、確定關鍵X因素</p>
-                        <p><strong>工具：</strong>假設檢定、相關分析、魚骨圖、5個為什麼</p>
+                        <p>识别根本原因、创建因果关系、确定关键X因素</p>
+                        <p><strong>工具：</strong>假设检定、相关分析、鱼骨图、5个为什么</p>
                     </div>
 
                     <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f5576c;">
                         <h4 style="color: #f5576c;">I - 改善（Improve）</h4>
-                        <p>設計改善方案、驗證效果、試驗與優化</p>
-                        <p><strong>工具：</strong>設計實驗法（DOE）、快速試驗、對照測試</p>
+                        <p>设计改善方案、验证效果、试验与优化</p>
+                        <p><strong>工具：</strong>设计实验法（DOE）、快速试验、对照测试</p>
                     </div>
 
                     <div style="margin-bottom: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #f5576c;">
                         <h4 style="color: #f5576c;">C - 控制（Control）</h4>
-                        <p>標準化新流程、培訓員工、持續監控防止反彈</p>
-                        <p><strong>工具：</strong>控制圖、標準作業程序（SOP）、監控計畫</p>
+                        <p>标准化新流程、培训员工、持续监控防止反弹</p>
+                        <p><strong>工具：</strong>控制图、标准作业进程（SOP）、监控计划</p>
                     </div>
                 </div>
 
-                <h3 style="color: #f5576c; margin: 20px 0;">互動式六標準差計算</h3>
+                <h3 style="color: #f5576c; margin: 20px 0;">交互式六标准差计算</h3>
 
                 <div class="input-row">
                     <div class="input-group">
-                        <label>規格上限（USL）</label>
+                        <label>规格上限（USL）</label>
                         <input type="number" id="sigmaUSL" value="10.5" step="0.1">
                     </div>
                     <div class="input-group">
-                        <label>規格下限（LSL）</label>
+                        <label>规格下限（LSL）</label>
                         <input type="number" id="sigmaLSL" value="9.5" step="0.1">
                     </div>
                 </div>
 
                 <div class="input-row">
                     <div class="input-group">
-                        <label>製程平均值（μ）</label>
+                        <label>制程平均值（μ）</label>
                         <input type="number" id="sigmaMean" value="10" step="0.01">
                     </div>
                     <div class="input-group">
-                        <label>製程標準差（σ）</label>
+                        <label>制程标准差（σ）</label>
                         <input type="number" id="sigmaStdDev" value="0.1" step="0.01" min="0.01">
                     </div>
                 </div>
 
-                <button onclick="calculateSigma()">計算製程能力指數（Cpk）</button>
+                <button onclick="calculateSigma()">计算制程能力指数（Cpk）</button>
 
                 <div id="sigmaResult" class="result" style="display:none;">
-                    <h3>📊 製程能力分析</h3>
-                    <div class="result-item">製程能力指數（Cpk）：<span class="result-value" id="cpkValue">-</span></div>
+                    <h3>📊 制程能力分析</h3>
+                    <div class="result-item">制程能力指数（Cpk）：<span class="result-value" id="cpkValue">-</span></div>
                     <div class="result-item">不良率（DPMO）：<span class="result-value" id="dpmoValue">-</span></div>
-                    <div class="result-item">品質水準：<span class="result-value" id="qualityLevel">-</span></div>
-                    <div class="result-item">改善空間：<span class="result-value" id="improvementSpace">-</span></div>
+                    <div class="result-item">质量水准：<span class="result-value" id="qualityLevel">-</span></div>
+                    <div class="result-item">改善空间：<span class="result-value" id="improvementSpace">-</span></div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 3: 精實生產工具箱 -->
+        <!-- Tab 3: 精实生产工具箱 -->
         <div class="tab-content">
             <div class="section">
-                <h2>精實生產工具箱</h2>
+                <h2>精实生产工具箱</h2>
 
                 <div class="info-box">
-                    <h4>🏭 精實生產是什麼？</h4>
-                    <p>精實生產是通過系統地識別和消除七大浪費，最大化客戶價值、同時最小化資源消耗的管理哲學。</p>
+                    <h4>🏭 精实生产是什么？</h4>
+                    <p>精实生产是通过系统地识别和消除七大浪费，最大化客户价值、同时最小化资源消耗的管理哲学。</p>
                 </div>
 
-                <h3 style="color: #f5576c; margin: 20px 0;">七大浪費詳解</h3>
+                <h3 style="color: #f5576c; margin: 20px 0;">七大浪费详解</h3>
 
                 <div class="tool-grid">
                     <div class="tool-card">
-                        <h3>過度生產</h3>
-                        <p>生產超過當前需求的產品</p>
-                        <small style="color: #888;">導致庫存堆積與資金占用</small>
+                        <h3>过度生产</h3>
+                        <p>生产超过当前需求的产品</p>
+                        <small style="color: #888;">导致库存堆积与资金占用</small>
                     </div>
 
                     <div class="tool-card">
                         <h3>等待</h3>
-                        <p>人員或物料的閒置時間</p>
+                        <p>人员或物料的闲置时间</p>
                         <small style="color: #888;">降低流程效率</small>
                     </div>
 
                     <div class="tool-card">
-                        <h3>非必要搬運</h3>
-                        <p>物料無必要的移動</p>
-                        <small style="color: #888;">增加時間與成本</small>
+                        <h3>非必要搬运</h3>
+                        <p>物料无必要的移动</p>
+                        <small style="color: #888;">增加时间与成本</small>
                     </div>
 
                     <div class="tool-card">
-                        <h3>加工浪費</h3>
-                        <p>不必要的製程步驟</p>
-                        <small style="color: #888;">消耗資源但不增加價值</small>
+                        <h3>加工浪费</h3>
+                        <p>不必要的制程步骤</p>
+                        <small style="color: #888;">消耗资源但不增加价值</small>
                     </div>
 
                     <div class="tool-card">
-                        <h3>過量庫存</h3>
-                        <p>超過必要的庫存水準</p>
-                        <small style="color: #888;">占用資金與空間</small>
+                        <h3>过量库存</h3>
+                        <p>超过必要的库存水准</p>
+                        <small style="color: #888;">占用资金与空间</small>
                     </div>
 
                     <div class="tool-card">
-                        <h3>動作浪費</h3>
-                        <p>不必要的人工動作</p>
-                        <small style="color: #888;">降低生產力</small>
+                        <h3>动作浪费</h3>
+                        <p>不必要的人工动作</p>
+                        <small style="color: #888;">降低生产力</small>
                     </div>
 
                     <div class="tool-card">
-                        <h3>缺陷與返工</h3>
-                        <p>品質問題導致的返工</p>
-                        <small style="color: #888;">雙倍消耗資源</small>
+                        <h3>缺陷与返工</h3>
+                        <p>质量问题导致的返工</p>
+                        <small style="color: #888;">双倍消耗资源</small>
                     </div>
                 </div>
 
-                <h3 style="color: #f5576c; margin: 20px 0;">精實改善計算工具</h3>
+                <h3 style="color: #f5576c; margin: 20px 0;">精实改善计算工具</h3>
 
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
-                    <h4 style="color: #f5576c; margin-bottom: 15px;">價值流中的浪費評估</h4>
+                    <h4 style="color: #f5576c; margin-bottom: 15px;">价值流中的浪费评估</h4>
 
                     <div class="input-group">
-                        <label>流程中增值活動時間（分鐘）</label>
+                        <label>流程中增值活动时间（分钟）</label>
                         <input type="number" id="leanVATime" value="30" min="1">
                     </div>
 
                     <div class="input-group">
-                        <label>流程中非增值活動時間（分鐘）</label>
+                        <label>流程中非增值活动时间（分钟）</label>
                         <input type="number" id="leanNVATime" value="170" min="0">
                     </div>
 
-                    <button onclick="calculateLean()">分析價值流</button>
+                    <button onclick="calculateLean()">分析价值流</button>
 
                     <div id="leanResult" class="result" style="display:none; margin-top: 20px;">
-                        <h3>📊 價值流分析結果</h3>
-                        <div class="result-item">總流程時間：<span class="result-value" id="leanTotalTime">-</span> 分鐘</div>
-                        <div class="result-item">增值時間比例：<span class="result-value" id="leanVAPercent">-</span></div>
-                        <div class="result-item">浪費比例：<span class="result-value" id="leanWastePercent">-</span></div>
-                        <div class="result-item">改善潛力：<span class="result-value" id="leanImprovementPotential">-</span> 分鐘</div>
+                        <h3>📊 价值流分析结果</h3>
+                        <div class="result-item">总流程时间：<span class="result-value" id="leanTotalTime">-</span> 分钟</div>
+                        <div class="result-item">增值时间比例：<span class="result-value" id="leanVAPercent">-</span></div>
+                        <div class="result-item">浪费比例：<span class="result-value" id="leanWastePercent">-</span></div>
+                        <div class="result-item">改善潜力：<span class="result-value" id="leanImprovementPotential">-</span> 分钟</div>
                         <div class="info-box" style="margin-top: 15px;">
-                            <p><strong>解釋：</strong>典型製造流程只有10-30%的時間用於增值活動。改善目標是提升增值活動比例至50-70%。</p>
+                            <p><strong>解释：</strong>典型制造流程只有10-30%的时间用于增值活动。改善目标是提升增值活动比例至50-70%。</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 4: 產能利用率分析 -->
+        <!-- Tab 4: 产能利用率分析 -->
         <div class="tab-content">
             <div class="section">
-                <h2>產能利用率分析器</h2>
+                <h2>产能利用率分析器</h2>
 
                 <div class="info-box">
-                    <h4>🎯 產能管理的重要性</h4>
-                    <p>產能規劃是營運管理的核心。理想的利用率通常在75-85%之間——既能充分利用資源，又能保持靈活性應對需求波動。</p>
+                    <h4>🎯 产能管理的重要性</h4>
+                    <p>产能规划是营运管理的核心。理想的利用率通常在75-85%之间——既能充分利用资源，又能保持灵活性应对需求波动。</p>
                 </div>
 
                 <div class="input-row">
                     <div class="input-group">
-                        <label>理論產能（Design Capacity）</label>
+                        <label>理论产能（Design Capacity）</label>
                         <input type="number" id="capDesign" value="1000" min="1">
-                        <small>設備在最優條件下的最大產出</small>
+                        <small>设备在最优条件下的最大产出</small>
                     </div>
 
                     <div class="input-group">
-                        <label>有效產能（Effective Capacity）</label>
+                        <label>有效产能（Effective Capacity）</label>
                         <input type="number" id="capEffective" value="850" min="1">
-                        <small>考慮計畫停機、保養後</small>
+                        <small>考虑计划停机、保养后</small>
                     </div>
                 </div>
 
                 <div class="input-group">
-                    <label>實際產能（Actual Output）</label>
+                    <label>实际产能（Actual Output）</label>
                     <input type="number" id="capActual" value="800" min="0">
-                    <small>實際達成的產出</small>
+                    <small>实际达成的产出</small>
                 </div>
 
-                <button onclick="calculateCapacity()">分析產能績效</button>
+                <button onclick="calculateCapacity()">分析产能绩效</button>
 
                 <div id="capResult" class="result" style="display:none;">
-                    <h3>📊 產能分析結果</h3>
+                    <h3>📊 产能分析结果</h3>
                     <div class="result-item">利用率（Utilization）：<span class="result-value" id="capUtilization">-</span></div>
                     <div class="result-item">效率（Efficiency）：<span class="result-value" id="capEfficiency">-</span></div>
-                    <div class="result-item">生產力（Productivity）：<span class="result-value" id="capProductivity">-</span></div>
-                    <div class="result-item">未被利用的產能：<span class="result-value" id="capUnused">-</span> 單位/時期</div>
-                    <div class="result-item">改善建議：<span class="result-value" id="capRecommendation">-</span></div>
+                    <div class="result-item">生产力（Productivity）：<span class="result-value" id="capProductivity">-</span></div>
+                    <div class="result-item">未被利用的产能：<span class="result-value" id="capUnused">-</span> 单位/时期</div>
+                    <div class="result-item">改善建议：<span class="result-value" id="capRecommendation">-</span></div>
                 </div>
 
                 <div class="chart-container">
@@ -587,52 +587,52 @@
             </div>
         </div>
 
-        <!-- Tab 5: 瓶頸分析 -->
+        <!-- Tab 5: 瓶颈分析 -->
         <div class="tab-content">
             <div class="section">
-                <h2>瓶頸分析模擬器</h2>
+                <h2>瓶颈分析模拟器</h2>
 
                 <div class="info-box">
-                    <h4>🔗 制約理論的核心</h4>
-                    <p>每個系統都有瓶頸。系統的整體產出受限於瓶頸的產能。有效的營運管理就是識別瓶頸並針對性改善。</p>
+                    <h4>🔗 制约理论的核心</h4>
+                    <p>每个系统都有瓶颈。系统的整体产出受限于瓶颈的产能。有效的营运管理就是识别瓶颈并针对性改善。</p>
                 </div>
 
-                <h3 style="color: #f5576c; margin: 20px 0;">工序產能配置</h3>
+                <h3 style="color: #f5576c; margin: 20px 0;">工序产能配置</h3>
 
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
                     <p style="margin-bottom: 15px; color: #666;">
-                        假設有三個連續工序，每件產品必須經過三個工序。請輸入各工序的產能：
+                        假设有三个连续工序，每件产品必须经过三个工序。请输入各工序的产能：
                     </p>
 
                     <div class="input-group">
-                        <label>工序1產能（件/時）</label>
+                        <label>工序1产能（件/时）</label>
                         <input type="number" id="btlneckStep1" value="60" min="1">
                     </div>
 
                     <div class="input-group">
-                        <label>工序2產能（件/時）</label>
+                        <label>工序2产能（件/时）</label>
                         <input type="number" id="btlneckStep2" value="50" min="1">
                     </div>
 
                     <div class="input-group">
-                        <label>工序3產能（件/時）</label>
+                        <label>工序3产能（件/时）</label>
                         <input type="number" id="btlneckStep3" value="55" min="1">
                     </div>
 
                     <div class="input-group">
-                        <label>市場需求（件/時）</label>
+                        <label>市场需求（件/时）</label>
                         <input type="number" id="btlneckDemand" value="100" min="1">
                     </div>
 
-                    <button onclick="analyzeBottleneck()">分析瓶頸</button>
+                    <button onclick="analyzeBottleneck()">分析瓶颈</button>
                 </div>
 
                 <div id="btlResult" class="result" style="display:none; margin-top: 20px;">
-                    <h3>📊 瓶頸分析結果</h3>
-                    <div class="result-item">瓶頸工序：<span class="result-value" id="btlBottleneck">-</span></div>
-                    <div class="result-item">瓶頸產能：<span class="result-value" id="btlCapacity">-</span> 件/時</div>
-                    <div class="result-item">實際產出：<span class="result-value" id="btlActualOutput">-</span> 件/時</div>
-                    <div class="result-item">未滿足的需求：<span class="result-value" id="btlUnmet">-</span> 件/時</div>
+                    <h3>📊 瓶颈分析结果</h3>
+                    <div class="result-item">瓶颈工序：<span class="result-value" id="btlBottleneck">-</span></div>
+                    <div class="result-item">瓶颈产能：<span class="result-value" id="btlCapacity">-</span> 件/时</div>
+                    <div class="result-item">实际产出：<span class="result-value" id="btlActualOutput">-</span> 件/时</div>
+                    <div class="result-item">未满足的需求：<span class="result-value" id="btlUnmet">-</span> 件/时</div>
 
                     <div style="margin-top: 20px;">
                         <h4 style="color: #f5576c; margin-bottom: 10px;">工序利用率分析：</h4>
@@ -644,7 +644,7 @@
                     </div>
 
                     <div class="info-box" style="margin-top: 20px;">
-                        <h4>💡 改善建議</h4>
+                        <h4>💡 改善建议</h4>
                         <p id="btlRecommendation">-</p>
                     </div>
                 </div>
@@ -696,7 +696,7 @@
 
             document.getElementById('eoqResult').style.display = 'block';
 
-            // 畫圖
+            // 画图
             drawEOQChart(D, S, H, EOQ);
         }
 
@@ -706,10 +706,10 @@
             canvas.width = canvas.offsetWidth;
             canvas.height = 350;
 
-            // 清空畫布
+            // 清空画布
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-            // 繪製軸線
+            // 绘制轴线
             ctx.strokeStyle = '#999';
             ctx.lineWidth = 2;
             ctx.beginPath();
@@ -719,11 +719,11 @@
             ctx.lineTo(50, canvas.height - 50);
             ctx.stroke();
 
-            // 標籤
+            // 标签
             ctx.fillStyle = '#333';
             ctx.font = '12px Arial';
             ctx.textAlign = 'center';
-            ctx.fillText('訂購量（單位）', canvas.width / 2, canvas.height - 10);
+            ctx.fillText('订购量（单位）', canvas.width / 2, canvas.height - 10);
 
             ctx.save();
             ctx.translate(15, canvas.height / 2);
@@ -731,7 +731,7 @@
             ctx.fillText('成本（$）', 0, 0);
             ctx.restore();
 
-            // 繪製成本曲線
+            // 绘制成本曲线
             const maxQ = EOQ * 3;
             const points = [];
             const orderCostPoints = [];
@@ -750,7 +750,7 @@
                 holdingCostPoints.push({x, y: canvas.height - 50 - (holdingCost / (maxQ * 2)) * 200});
             }
 
-            // 繪製訂購成本曲線（紅色虛線）
+            // 绘制订购成本曲线（红色虚线）
             ctx.strokeStyle = '#ff6b6b';
             ctx.lineWidth = 1.5;
             ctx.setLineDash([5, 5]);
@@ -761,7 +761,7 @@
             });
             ctx.stroke();
 
-            // 繪製持有成本曲線（藍色虛線）
+            // 绘制持有成本曲线（蓝色虚线）
             ctx.strokeStyle = '#4dabf7';
             ctx.setLineDash([5, 5]);
             ctx.beginPath();
@@ -771,7 +771,7 @@
             });
             ctx.stroke();
 
-            // 繪製總成本曲線（實線）
+            // 绘制总成本曲线（实线）
             ctx.strokeStyle = '#f5576c';
             ctx.lineWidth = 3;
             ctx.setLineDash([]);
@@ -782,7 +782,7 @@
             });
             ctx.stroke();
 
-            // 標記EOQ點
+            // 标记EOQ点
             const eOQX = 50 + (EOQ / maxQ) * (canvas.width - 70);
             const eOQY = canvas.height - 50 - ((((D / EOQ) * S) + ((EOQ / 2) * H)) / (maxQ * 2)) * 200;
 
@@ -803,7 +803,7 @@
             ctx.textAlign = 'center';
             ctx.fillText(`EOQ: ${EOQ.toFixed(0)}`, eOQX, canvas.height - 30);
 
-            // 圖例
+            // 图例
             ctx.font = '11px Arial';
             ctx.textAlign = 'left';
 
@@ -815,7 +815,7 @@
             ctx.lineTo(canvas.width - 120, 30);
             ctx.stroke();
             ctx.fillStyle = '#333';
-            ctx.fillText('訂購成本', canvas.width - 110, 35);
+            ctx.fillText('订购成本', canvas.width - 110, 35);
 
             ctx.strokeStyle = '#4dabf7';
             ctx.beginPath();
@@ -831,7 +831,7 @@
             ctx.moveTo(canvas.width - 150, 70);
             ctx.lineTo(canvas.width - 120, 70);
             ctx.stroke();
-            ctx.fillText('總成本（最小點）', canvas.width - 110, 75);
+            ctx.fillText('总成本（最小点）', canvas.width - 110, 75);
         }
 
         function calculateSigma() {
@@ -844,8 +844,8 @@
 
             const Cpk = Math.min((USL - mean) / (3 * stdDev), (mean - LSL) / (3 * stdDev));
 
-            // 計算DPMO
-            let dpmo = 500000; // 預設值
+            // 计算DPMO
+            let dpmo = 500000; // 默认值
             if (Cpk >= 1.67) dpmo = 3.4;
             else if (Cpk >= 1.33) dpmo = 63;
             else if (Cpk >= 1.0) dpmo = 2700;
@@ -853,13 +853,13 @@
             else dpmo = 500000;
 
             let qualityLevel = '需要改善';
-            if (Cpk >= 1.67) qualityLevel = '六標準差水準';
-            else if (Cpk >= 1.33) qualityLevel = '優秀';
+            if (Cpk >= 1.67) qualityLevel = '六标准差水准';
+            else if (Cpk >= 1.33) qualityLevel = '优秀';
             else if (Cpk >= 1.0) qualityLevel = '可接受';
             else qualityLevel = '需要立即改善';
 
-            let improvement = '制約理論：需重點改善';
-            if (Cpk < 1.0) improvement = '高優先：立即進行改善專案';
+            let improvement = '制约理论：需重点改善';
+            if (Cpk < 1.0) improvement = '高优先：立即进行改善项目';
 
             document.getElementById('cpkValue').textContent = Cpk.toFixed(3);
             document.getElementById('dpmoValue').textContent = dpmo.toLocaleString();
@@ -877,12 +877,12 @@
             const total = va + nva;
             const vaPercent = (va / total * 100).toFixed(1);
             const wastePercent = (nva / total * 100).toFixed(1);
-            const improvement = nva * 0.5; // 假設可改善50%的浪費
+            const improvement = nva * 0.5; // 假设可改善50%的浪费
 
-            document.getElementById('leanTotalTime').textContent = total.toFixed(0) + '分鐘';
+            document.getElementById('leanTotalTime').textContent = total.toFixed(0) + '分钟';
             document.getElementById('leanVAPercent').textContent = vaPercent + '%';
             document.getElementById('leanWastePercent').textContent = wastePercent + '%';
-            document.getElementById('leanImprovementPotential').textContent = improvement.toFixed(0) + '分鐘';
+            document.getElementById('leanImprovementPotential').textContent = improvement.toFixed(0) + '分钟';
             document.getElementById('leanResult').style.display = 'block';
         }
 
@@ -898,10 +898,10 @@
             const productivity = (actual / design * 100).toFixed(1);
             const unused = effective - actual;
 
-            let recommendation = '產能利用率良好';
-            if (utilization < 60) recommendation = '利用率偏低，應調整生產計畫或市場策略';
-            else if (utilization < 75) recommendation = '利用率可進一步提升';
-            else if (utilization > 95) recommendation = '利用率過高，缺乏應對需求波動的靈活性';
+            let recommendation = '产能利用率良好';
+            if (utilization < 60) recommendation = '利用率偏低，应调整生产计划或市场策略';
+            else if (utilization < 75) recommendation = '利用率可进一步提升';
+            else if (utilization > 95) recommendation = '利用率过高，缺乏应对需求波动的灵活性';
 
             document.getElementById('capUtilization').textContent = utilization + '%';
             document.getElementById('capEfficiency').textContent = efficiency + '%';
@@ -927,11 +927,11 @@
             const startY = 280;
             const startX = 50;
 
-            // 繪製柱狀圖
+            // 绘制柱状图
             const bars = [
-                {label: '理論產能', value: design, color: '#f093fb', x: startX},
-                {label: '有效產能', value: effective, color: '#f5576c', x: startX + barSpacing},
-                {label: '實際產能', value: actual, color: '#fca311', x: startX + barSpacing * 2}
+                {label: '理论产能', value: design, color: '#f093fb', x: startX},
+                {label: '有效产能', value: effective, color: '#f5576c', x: startX + barSpacing},
+                {label: '实际产能', value: actual, color: '#fca311', x: startX + barSpacing * 2}
             ];
 
             const maxValue = design;
@@ -939,16 +939,16 @@
             bars.forEach(bar => {
                 const height = (bar.value / maxValue) * maxHeight;
 
-                // 繪製柱子
+                // 绘制柱子
                 ctx.fillStyle = bar.color;
                 ctx.fillRect(bar.x, startY - height, barWidth, height);
 
-                // 邊框
+                // 边框
                 ctx.strokeStyle = '#333';
                 ctx.lineWidth = 2;
                 ctx.strokeRect(bar.x, startY - height, barWidth, height);
 
-                // 標籤和數值
+                // 标签和数值
                 ctx.fillStyle = '#333';
                 ctx.font = 'bold 12px Arial';
                 ctx.textAlign = 'center';
@@ -959,7 +959,7 @@
                 ctx.fillText(bar.value.toFixed(0), bar.x + barWidth / 2, startY - height - 10);
             });
 
-            // 繪製Y軸
+            // 绘制Y轴
             ctx.strokeStyle = '#999';
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -967,7 +967,7 @@
             ctx.lineTo(40, startY);
             ctx.stroke();
 
-            // Y軸標籤
+            // Y轴标签
             ctx.fillStyle = '#666';
             ctx.font = '10px Arial';
             ctx.textAlign = 'right';
@@ -998,9 +998,9 @@
             const util2 = (actualOutput / step2 * 100).toFixed(1);
             const util3 = (actualOutput / step3 * 100).toFixed(1);
 
-            let recommendation = `當前瓶頸在${btlneckStep}（產能${bottleneckCapacity}件/時）。`;
-            recommendation += `根據TOC五聚焦步驟：`;
-            recommendation += `1) 確認瓶頸✓ 2) 最大化${btlneckStep}效率 3) 其他工序應生產${actualOutput}件/時以配合 4) 投資增加${btlneckStep}產能至${demand}件/時`;
+            let recommendation = `当前瓶颈在${btlneckStep}（产能${bottleneckCapacity}件/时）。`;
+            recommendation += `根据TOC五聚焦步骤：`;
+            recommendation += `1) 确认瓶颈✓ 2) 最大化${btlneckStep}效率 3) 其他工序应生产${actualOutput}件/时以配合 4) 投资增加${btlneckStep}产能至${demand}件/时`;
 
             document.getElementById('btlBottleneck').textContent = btlneckStep;
             document.getElementById('btlCapacity').textContent = bottleneckCapacity.toFixed(0);
@@ -1039,22 +1039,22 @@
             bars.forEach(bar => {
                 const height = (bar.value / maxValue) * maxHeight;
 
-                // 背景（虛線表示未利用）
+                // 背景（虚线表示未利用）
                 ctx.fillStyle = bar.color;
                 ctx.globalAlpha = 0.2;
                 ctx.fillRect(bar.x, startY - maxHeight, barWidth, maxHeight);
 
-                // 利用部分（實色）
+                // 利用部分（实色）
                 ctx.fillStyle = bar.color;
                 ctx.globalAlpha = 1;
                 ctx.fillRect(bar.x, startY - height, barWidth, height);
 
-                // 邊框
+                // 边框
                 ctx.strokeStyle = '#333';
                 ctx.lineWidth = 2;
                 ctx.strokeRect(bar.x, startY - height, barWidth, height);
 
-                // 標籤
+                // 标签
                 ctx.fillStyle = '#333';
                 ctx.font = 'bold 12px Arial';
                 ctx.textAlign = 'center';
@@ -1065,7 +1065,7 @@
                 ctx.fillText(bar.value.toFixed(0), bar.x + barWidth / 2, startY - height - 10);
             });
 
-            // 繪製實際產出線
+            // 绘制实际产出线
             const actualHeight = (actual / maxValue) * maxHeight;
             ctx.strokeStyle = '#ff6b6b';
             ctx.lineWidth = 3;
@@ -1075,11 +1075,11 @@
             ctx.lineTo(startX + barSpacing * 3, startY - actualHeight);
             ctx.stroke();
 
-            // 標籤
+            // 标签
             ctx.setLineDash([]);
             ctx.fillStyle = '#ff6b6b';
             ctx.font = 'bold 11px Arial';
-            ctx.fillText(`實際產出: ${actual.toFixed(0)}`, startX + barSpacing * 2.5, startY - actualHeight - 15);
+            ctx.fillText(`实际产出: ${actual.toFixed(0)}`, startX + barSpacing * 2.5, startY - actualHeight - 15);
         }
     </script>
 </body>

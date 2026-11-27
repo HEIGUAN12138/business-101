@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>國際貿易與跨境商業 - 互動圖表</title>
+<title>国际贸易与跨境商业 - 交互图表</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.0/dist/chart.min.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -77,277 +77,277 @@
 <body>
 
 <div class="header">
-  <h1>國際貿易與跨境商業</h1>
-  <p>互動工具與視覺化 | 選擇下方分頁探索</p>
+  <h1>国际贸易与跨境商业</h1>
+  <p>交互工具与可视化 | 选择下方分页探索</p>
 </div>
 
 <div class="container">
   <div class="tabs">
-    <div class="tab active" onclick="switchTab('flow')">貿易流程圖</div>
-    <div class="tab" onclick="switchTab('incoterms')">Incoterms 比較</div>
-    <div class="tab" onclick="switchTab('strategy')">市場進入策略</div>
-    <div class="tab" onclick="switchTab('calculator')">計算工具</div>
-    <div class="tab" onclick="switchTab('statistics')">全球貿易數據</div>
+    <div class="tab active" onclick="switchTab('flow')">贸易流程图</div>
+    <div class="tab" onclick="switchTab('incoterms')">Incoterms 比较</div>
+    <div class="tab" onclick="switchTab('strategy')">市场进入策略</div>
+    <div class="tab" onclick="switchTab('calculator')">计算工具</div>
+    <div class="tab" onclick="switchTab('statistics')">全球贸易数据</div>
   </div>
 
-  <!-- ========== 貿易流程圖 ========== -->
+  <!-- ========== 贸易流程图 ========== -->
   <div class="scene active" id="scene-flow">
     <div class="card">
-      <h2>出口商的跨國貿易流程</h2>
-      <p>從簽約到收款的完整路徑</p>
+      <h2>出口商的跨国贸易流程</h2>
+      <p>从签约到收款的完整路径</p>
 
       <div class="flow-diagram">
         <div class="flow-item">
-          <strong>1. 市場開發與洽談</strong>
-          <span>出口商透過 B2B 平台（阿里巴巴、Global Sources）或直銷，與海外買家建立聯繫，報價並磋商</span>
+          <strong>1. 市场开发与洽谈</strong>
+          <span>出口商通过 B2B 平台（阿里巴巴、Global Sources）或直销，与海外买家创建联系，报价并磋商</span>
         </div>
         <div class="flow-item">
-          <strong>2. 簽署合約與確認付款方式</strong>
-          <span>雙方確認：Incoterms（FOB / CIF / DDP）、支付方式（信用狀、電匯、託收）、交付日期、品質標準</span>
+          <strong>2. 签署合约与确认付款方式</strong>
+          <span>双方确认：Incoterms（FOB / CIF / DDP）、支付方式（信用状、电汇、托收）、交付日期、质量标准</span>
         </div>
         <div class="flow-item">
-          <strong>3. 簽發信用狀（如適用）</strong>
-          <span>買方銀行開立信用狀，承諾在收到符合條件的單據後付款。出口商的銀行確認信用狀條款</span>
+          <strong>3. 签发信用状（如适用）</strong>
+          <span>买方银行开立信用状，承诺在收到符合条件的单据后付款。出口商的银行确认信用状条款</span>
         </div>
         <div class="flow-item payment">
-          <strong>4. 預付款或開始生產</strong>
-          <span>如採信用狀，出口商可無須預付款直接開始生產；如採電匯，通常要求預付 30-50%</span>
+          <strong>4. 预付款或开始生产</strong>
+          <span>如采信用状，出口商可无须预付款直接开始生产；如采电汇，通常要求预付 30-50%</span>
         </div>
         <div class="flow-item">
-          <strong>5. 生產與檢驗</strong>
-          <span>按訂單要求生產，買方可派駐檢驗員或要求第三方檢驗（如 SGS）確保品質</span>
+          <strong>5. 生产与检验</strong>
+          <span>按订单要求生产，买方可派驻检验员或要求第三方检验（如 SGS）确保质量</span>
         </div>
         <div class="flow-item">
-          <strong>6. 出口報關與通關</strong>
-          <span>出口商委託報關行向海關申報，繳納出口稅（如有），取得出口許可證與提單</span>
+          <strong>6. 出口报关与通关</strong>
+          <span>出口商委托报关行向海关申报，缴纳出口税（如有），取得出口许可证与提单</span>
         </div>
         <div class="flow-item">
-          <strong>7. 貨運與在途保險</strong>
-          <span>委託貨運代理安排海運或空運，購買海上保險（若 CIF 條款由賣方購買）</span>
+          <strong>7. 货运与在途保险</strong>
+          <span>委托货运代理安排海运或空运，购买海上保险（若 CIF 条款由卖方购买）</span>
         </div>
         <div class="flow-item">
-          <strong>8. 提交單據與押匯</strong>
-          <span>出口商向銀行提交提單、發票、原產地證等單據，請銀行向進口商銀行提交以換取貨款</span>
+          <strong>8. 提交单据与押汇</strong>
+          <span>出口商向银行提交提单、发票、原产地证等单据，请银行向进口商银行提交以换取货款</span>
         </div>
         <div class="flow-item payment">
-          <strong>9. 收到貨款</strong>
-          <span>進口商銀行核實單據無誤，支付貨款。出口商銀行收款後轉帳予出口商</span>
+          <strong>9. 收到货款</strong>
+          <span>进口商银行核实单据无误，支付货款。出口商银行收款后转帐予出口商</span>
         </div>
         <div class="flow-item">
-          <strong>10. 進口商海外清關與提貨</strong>
-          <span>進口商憑提單在目的港清關提貨，支付進口稅與港雜費。全流程完成</span>
+          <strong>10. 进口商海外清关与提货</strong>
+          <span>进口商凭提单在目的港清关提货，支付进口税与港杂费。全流程完成</span>
         </div>
       </div>
     </div>
 
     <div class="card">
-      <h2>跨境電商的交易流程（B2C）</h2>
-      <p>消費者下單到收貨的路徑（以亞馬遜 FBA 為例）</p>
+      <h2>跨境电商的交易流程（B2C）</h2>
+      <p>消费者下单到收货的路径（以亚马逊 FBA 为例）</p>
 
       <div class="flow-diagram">
         <div class="flow-item payment">
-          <strong>1. 消費者線上下單付款</strong>
-          <span>消費者在亞馬遜選擇商品，用信用卡或 PayPal 付款</span>
+          <strong>1. 消费者在线下单付款</strong>
+          <span>消费者在亚马逊选择商品，用信用卡或 PayPal 付款</span>
         </div>
         <div class="flow-item">
-          <strong>2. 亞馬遜確認訂單與庫存</strong>
-          <span>平台檢查倉庫庫存（中國賣家已預先存貨在亞馬遜美國倉庫），確保可發貨</span>
+          <strong>2. 亚马逊确认订单与库存</strong>
+          <span>平台检查仓库库存（中国卖家已预先存货在亚马逊美国仓库），确保可发货</span>
         </div>
         <div class="flow-item">
-          <strong>3. 分揀與打包</strong>
-          <span>亞馬遜物流中心員工揀取商品，打包並貼上快遞單號</span>
+          <strong>3. 分拣与打包</strong>
+          <span>亚马逊物流中心员工拣取商品，打包并粘贴快递单号</span>
         </div>
         <div class="flow-item">
           <strong>4. 配送</strong>
-          <span>透過 USPS / UPS / FedEx 運送至消費者，通常 1-2 天送達（Prime 會員）</span>
+          <span>通过 USPS / UPS / FedEx 运送至消费者，通常 1-2 天送达（Prime 会员）</span>
         </div>
         <div class="flow-item">
-          <strong>5. 消費者簽收</strong>
-          <span>消費者線上確認收貨，或拒收與退貨</span>
+          <strong>5. 消费者签收</strong>
+          <span>消费者在线确认收货，或拒收与退货</span>
         </div>
         <div class="flow-item payment">
-          <strong>6. 亞馬遜撥款給賣家</strong>
-          <span>亞馬遜扣除佣金（通常 15-45%）、退貨風險後，約 2-4 週內撥款至賣家帳戶</span>
+          <strong>6. 亚马逊拨款给卖家</strong>
+          <span>亚马逊扣除佣金（通常 15-45%）、退货风险后，约 2-4 周内拨款至卖家帐户</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ========== Incoterms 比較 ========== -->
+  <!-- ========== Incoterms 比较 ========== -->
   <div class="scene" id="scene-incoterms">
     <div class="card">
-      <h2>Incoterms 2020 主要條款對比</h2>
-      <p>選擇合適的交易條款是國際貿易的關鍵決策</p>
+      <h2>Incoterms 2020 主要条款对比</h2>
+      <p>选择合适的交易条款是国际贸易的关键决策</p>
 
       <table class="incoterms-table">
         <tr>
-          <th>條款</th>
-          <th>全稱</th>
-          <th>風險轉移點</th>
-          <th>賣方責任</th>
-          <th>買方責任</th>
-          <th>適用場景</th>
+          <th>条款</th>
+          <th>全称</th>
+          <th>风险转移点</th>
+          <th>卖方责任</th>
+          <th>买方责任</th>
+          <th>适用场景</th>
         </tr>
         <tr>
           <td><strong>EXW</strong></td>
-          <td>離廠價</td>
-          <td>工廠門口</td>
-          <td>準備商品在自家工廠等待</td>
-          <td>所有運輸、保險、清關費用</td>
-          <td>買方有強大物流能力；賣方信用弱</td>
+          <td>离厂价</td>
+          <td>工厂门口</td>
+          <td>准备商品在自家工厂等待</td>
+          <td>所有运输、保险、清关费用</td>
+          <td>买方有强大物流能力；卖方信用弱</td>
         </tr>
         <tr>
           <td><strong>FCA</strong></td>
-          <td>貨交承運人</td>
-          <td>交給第一承運人時</td>
-          <td>將商品交給買方指定承運人</td>
-          <td>國際運輸、保險、進口清關</td>
-          <td>多式聯運（海運、空運、陸運混合）</td>
+          <td>货交承运人</td>
+          <td>交给第一承运人时</td>
+          <td>将商品交给买方指定承运人</td>
+          <td>国际运输、保险、进口清关</td>
+          <td>多式联运（海运、空运、陆运混合）</td>
         </tr>
         <tr>
           <td><strong>FOB</strong></td>
-          <td>船上交貨</td>
-          <td>貨物在裝船時（船舷）</td>
-          <td>安排國內運輸、報關、將貨裝上船</td>
-          <td>海運、保險、進口清關、進口稅</td>
-          <td>傳統海運貿易的標準條款</td>
+          <td>船上交货</td>
+          <td>货物在装船时（船舷）</td>
+          <td>安排国内运输、报关、将货装上船</td>
+          <td>海运、保险、进口清关、进口税</td>
+          <td>传统海运贸易的标准条款</td>
         </tr>
         <tr>
           <td><strong>CFR</strong></td>
-          <td>成本和運費</td>
-          <td>貨物船舷</td>
-          <td>支付海運費用至目的港，但不買保險</td>
-          <td>購買海運保險、進口清關、進口稅</td>
-          <td>買方願承擔海運保險風險（少用）</td>
+          <td>成本和运费</td>
+          <td>货物船舷</td>
+          <td>支付海运费用至目的港，但不买保险</td>
+          <td>购买海运保险、进口清关、进口税</td>
+          <td>买方愿承担海运保险风险（少用）</td>
         </tr>
         <tr>
           <td><strong>CIF</strong></td>
-          <td>成本、保險及運費</td>
-          <td>貨物船舷</td>
-          <td>支付海運費與保險至目的港</td>
-          <td>進口清關、進口稅、港雜費</td>
-          <td>進口商對海運不熟悉；風險較低</td>
+          <td>成本、保险及运费</td>
+          <td>货物船舷</td>
+          <td>支付海运费与保险至目的港</td>
+          <td>进口清关、进口税、港杂费</td>
+          <td>进口商对海运不熟悉；风险较低</td>
         </tr>
         <tr>
           <td><strong>CPT</strong></td>
-          <td>運費已付至</td>
-          <td>交給承運人時</td>
-          <td>支付至目的港的運費（但無保險）</td>
-          <td>保險、進口清關、進口稅</td>
-          <td>多式聯運且無需保險</td>
+          <td>运费已付至</td>
+          <td>交给承运人时</td>
+          <td>支付至目的港的运费（但无保险）</td>
+          <td>保险、进口清关、进口税</td>
+          <td>多式联运且无需保险</td>
         </tr>
         <tr>
           <td><strong>CIP</strong></td>
-          <td>運費保險已付至</td>
-          <td>交給承運人時</td>
-          <td>支付至目的港的運費與保險</td>
-          <td>進口清關、進口稅</td>
-          <td>多式聯運且買方要求最低風險</td>
+          <td>运费保险已付至</td>
+          <td>交给承运人时</td>
+          <td>支付至目的港的运费与保险</td>
+          <td>进口清关、进口税</td>
+          <td>多式联运且买方要求最低风险</td>
         </tr>
         <tr>
           <td><strong>DAP</strong></td>
-          <td>未清關送達</td>
-          <td>到達目的地時</td>
-          <td>支付國際運輸至目的地</td>
-          <td>進口清關、進口稅</td>
-          <td>買方對進口清關不熟悉</td>
+          <td>未清关送达</td>
+          <td>到达目的地时</td>
+          <td>支付国际运输至目的地</td>
+          <td>进口清关、进口税</td>
+          <td>买方对进口清关不熟悉</td>
         </tr>
         <tr>
           <td><strong>DPU</strong></td>
-          <td>已卸貨送達（新增條款）</td>
-          <td>目的地卸貨後</td>
-          <td>支付運輸至目的地並卸貨</td>
-          <td>進口清關、進口稅</td>
-          <td>多式聯運、需要卸貨服務</td>
+          <td>已卸货送达（添加条款）</td>
+          <td>目的地卸货后</td>
+          <td>支付运输至目的地并卸货</td>
+          <td>进口清关、进口税</td>
+          <td>多式联运、需要卸货服务</td>
         </tr>
         <tr>
           <td><strong>DDP</strong></td>
-          <td>完稅後交付</td>
-          <td>買方地點</td>
-          <td>所有費用與風險，包括進口稅</td>
-          <td>只需簽收</td>
-          <td>買方絕對省事；賣方風險最高</td>
+          <td>完税后交付</td>
+          <td>买方地点</td>
+          <td>所有费用与风险，包括进口税</td>
+          <td>只需签收</td>
+          <td>买方绝对省事；卖方风险最高</td>
         </tr>
       </table>
 
       <div class="card" style="margin-top: 30px;">
-        <h2>選擇邏輯</h2>
+        <h2>选择逻辑</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
           <div style="padding: 15px; background: rgba(96, 165, 250, 0.1); border-radius: 8px;">
-            <strong style="color: #60a5fa;">我是賣家 & 經驗豐富</strong>
-            <p style="color: #94a3b8; margin-top: 10px; font-size: 13px;">選 EXW 或 FOB，將運輸風險轉給買方</p>
+            <strong style="color: #60a5fa;">我是卖家 & 经验丰富</strong>
+            <p style="color: #94a3b8; margin-top: 10px; font-size: 13px;">选 EXW 或 FOB，将运输风险转给买方</p>
           </div>
           <div style="padding: 15px; background: rgba(96, 165, 250, 0.1); border-radius: 8px;">
-            <strong style="color: #60a5fa;">我是賣家 & 新手</strong>
-            <p style="color: #94a3b8; margin-top: 10px; font-size: 13px;">選 CIF 或 CIP，但費用較高</p>
+            <strong style="color: #60a5fa;">我是卖家 & 新手</strong>
+            <p style="color: #94a3b8; margin-top: 10px; font-size: 13px;">选 CIF 或 CIP，但费用较高</p>
           </div>
           <div style="padding: 15px; background: rgba(10, 185, 129, 0.1); border-radius: 8px;">
-            <strong style="color: #10b981;">我是買家 & 經驗豐富</strong>
-            <p style="color: #94a3b8; margin-top: 10px; font-size: 13px;">選 FOB 或 FCA，自己控制運輸可省成本</p>
+            <strong style="color: #10b981;">我是买家 & 经验丰富</strong>
+            <p style="color: #94a3b8; margin-top: 10px; font-size: 13px;">选 FOB 或 FCA，自己控制运输可省成本</p>
           </div>
           <div style="padding: 15px; background: rgba(10, 185, 129, 0.1); border-radius: 8px;">
-            <strong style="color: #10b981;">我是買家 & 新手</strong>
-            <p style="color: #94a3b8; margin-top: 10px; font-size: 13px;">選 DDP，賣家全包，簡單安心</p>
+            <strong style="color: #10b981;">我是买家 & 新手</strong>
+            <p style="color: #94a3b8; margin-top: 10px; font-size: 13px;">选 DDP，卖家全包，简单安心</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ========== 市場進入策略 ========== -->
+  <!-- ========== 市场进入策略 ========== -->
   <div class="scene" id="scene-strategy">
     <div class="card">
-      <h2>國際市場進入策略決策樹</h2>
-      <p>根據資金、時間、風險偏好選擇合適策略</p>
+      <h2>国际市场进入策略决策树</h2>
+      <p>根据资金、时间、风险偏好选择合适策略</p>
 
       <div class="decision-tree">
         <div class="tree-node" onclick="toggleDecision(this)">
-          <strong>你有多少資金預算？</strong>
-          <span>▼ 點擊展開選項</span>
+          <strong>你有多少资金预算？</strong>
+          <span>▼ 点击展开选项</span>
         </div>
         <div style="display: none; margin-left: 20px;">
           <div class="tree-node" onclick="toggleDecision(this)">
-            <strong>預算少於 100 萬美元</strong>
-            <span>▼ 適合選擇</span>
+            <strong>预算少于 100 万美元</strong>
+            <span>▼ 适合选择</span>
           </div>
           <div style="display: none; margin-left: 20px;">
             <div style="padding: 15px; background: rgba(34, 197, 94, 0.1); border-radius: 8px; margin: 10px 0; border-left: 4px solid #22c55e;">
               <strong style="color: #22c55e;">✓ 出口</strong>
-              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">直接或透過代理商出口。風險最低，投資最少。適合製造商。</p>
+              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">直接或通过代理商出口。风险最低，投资最少。适合制造商。</p>
             </div>
             <div style="padding: 15px; background: rgba(34, 197, 94, 0.1); border-radius: 8px; margin: 10px 0; border-left: 4px solid #22c55e;">
-              <strong style="color: #22c55e;">✓ 授權</strong>
-              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">授權當地廠商使用技術 / 品牌。收取權利金。無需大投資。</p>
+              <strong style="color: #22c55e;">✓ 授权</strong>
+              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">授权当地厂商使用技术 / 品牌。收取权利金。无需大投资。</p>
             </div>
           </div>
 
           <div class="tree-node" onclick="toggleDecision(this)">
-            <strong>預算 100-500 萬美元</strong>
-            <span>▼ 適合選擇</span>
+            <strong>预算 100-500 万美元</strong>
+            <span>▼ 适合选择</span>
           </div>
           <div style="display: none; margin-left: 20px;">
             <div style="padding: 15px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; margin: 10px 0; border-left: 4px solid #3b82f6;">
-              <strong style="color: #3b82f6;">✓ 合資</strong>
-              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">與當地夥伴合資建廠。分擔風險與資金。需要選好合作夥伴。</p>
+              <strong style="color: #3b82f6;">✓ 合资</strong>
+              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">与当地伙伴合资建厂。分担风险与资金。需要选好合作伙伴。</p>
             </div>
             <div style="padding: 15px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; margin: 10px 0; border-left: 4px solid #3b82f6;">
-              <strong style="color: #3b82f6;">✓ 區域總代理</strong>
-              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">在某區域建立銷售與售後服務中心。專注市場拓展。</p>
+              <strong style="color: #3b82f6;">✓ 区域总代理</strong>
+              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">在某区域创建销售与售后服务中心。专注市场拓展。</p>
             </div>
           </div>
 
           <div class="tree-node" onclick="toggleDecision(this)">
-            <strong>預算 500 萬美元以上</strong>
-            <span>▼ 適合選擇</span>
+            <strong>预算 500 万美元以上</strong>
+            <span>▼ 适合选择</span>
           </div>
           <div style="display: none; margin-left: 20px;">
             <div style="padding: 15px; background: rgba(168, 85, 247, 0.1); border-radius: 8px; margin: 10px 0; border-left: 4px solid #a855f7;">
-              <strong style="color: #a855f7;">✓ 獨資子公司</strong>
-              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">完全自主控股當地公司。最大控制力，也是最高風險。適合龍頭企業。</p>
+              <strong style="color: #a855f7;">✓ 独资子公司</strong>
+              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">完全自主控股当地公司。最大控制力，也是最高风险。适合龙头企业。</p>
             </div>
             <div style="padding: 15px; background: rgba(168, 85, 247, 0.1); border-radius: 8px; margin: 10px 0; border-left: 4px solid #a855f7;">
-              <strong style="color: #a855f7;">✓ 併購當地企業</strong>
-              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">直接買下當地廠商。快速進入，但整合風險高。</p>
+              <strong style="color: #a855f7;">✓ 并购当地企业</strong>
+              <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">直接买下当地厂商。快速进入，但集成风险高。</p>
             </div>
           </div>
         </div>
@@ -356,27 +356,27 @@
       <div style="margin-top: 30px;">
         <div class="legend">
           <div style="flex: 1; padding: 15px; background: rgba(16, 185, 129, 0.1); border-radius: 8px; border-left: 4px solid #10b981;">
-            <strong style="color: #10b981;">低投入、快速進入</strong>
-            <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">出口、授權、代理</p>
+            <strong style="color: #10b981;">低投入、快速进入</strong>
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">出口、授权、代理</p>
           </div>
           <div style="flex: 1; padding: 15px; background: rgba(59, 130, 246, 0.1); border-radius: 8px; border-left: 4px solid #3b82f6;">
-            <strong style="color: #3b82f6;">中等投入、風險分擔</strong>
-            <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">合資、區域據點</p>
+            <strong style="color: #3b82f6;">中等投入、风险分担</strong>
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">合资、区域据点</p>
           </div>
           <div style="flex: 1; padding: 15px; background: rgba(168, 85, 247, 0.1); border-radius: 8px; border-left: 4px solid #a855f7;">
             <strong style="color: #a855f7;">高投入、完全控制</strong>
-            <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">獨資、併購</p>
+            <p style="color: #94a3b8; font-size: 13px; margin-top: 8px;">独资、并购</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ========== 計算工具 ========== -->
+  <!-- ========== 计算工具 ========== -->
   <div class="scene" id="scene-calculator">
     <div class="calculator">
-      <h2>匯率與關稅影響計算器</h2>
-      <p style="color: #94a3b8; margin-bottom: 20px;">計算匯率變動與關稅對進出口成本的影響</p>
+      <h2>汇率与关税影响计算器</h2>
+      <p style="color: #94a3b8; margin-bottom: 20px;">计算汇率变动与关税对进出口成本的影响</p>
 
       <div class="calc-row">
         <div class="calc-input">
@@ -384,22 +384,22 @@
           <input type="number" id="baseCost" placeholder="100" value="100" onchange="calculateCost()">
         </div>
         <div class="calc-input">
-          <label>數量（件）</label>
+          <label>数量（件）</label>
           <input type="number" id="quantity" placeholder="1000" value="1000" onchange="calculateCost()">
         </div>
         <div class="calc-input">
-          <label>目標市場匯率</label>
+          <label>目标市场汇率</label>
           <input type="number" id="exchangeRate" placeholder="6.5" value="6.5" step="0.01" onchange="calculateCost()">
         </div>
       </div>
 
       <div class="calc-row">
         <div class="calc-input">
-          <label>進口關稅率（%）</label>
+          <label>进口关税率（%）</label>
           <input type="number" id="tariffRate" placeholder="10" value="10" onchange="calculateCost()">
         </div>
         <div class="calc-input">
-          <label>海運成本（每件 USD）</label>
+          <label>海运成本（每件 USD）</label>
           <input type="number" id="shippingCost" placeholder="5" value="5" onchange="calculateCost()">
         </div>
         <div class="calc-input">
@@ -411,19 +411,19 @@
       <div id="costResults" style="display: none;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
           <div class="calc-result">
-            <div class="calc-result-label">總成本（人民幣）</div>
+            <div class="calc-result-label">总成本（人民币）</div>
             <div class="calc-result-value" id="totalCostCNY">-</div>
           </div>
           <div class="calc-result">
-            <div class="calc-result-label">單件成本（人民幣）</div>
+            <div class="calc-result-label">单件成本（人民币）</div>
             <div class="calc-result-value" id="unitCostCNY">-</div>
           </div>
           <div class="calc-result">
-            <div class="calc-result-label">建議售價（人民幣，50% 毛利）</div>
+            <div class="calc-result-label">建议售价（人民币，50% 毛利）</div>
             <div class="calc-result-value" id="suggestedPrice">-</div>
           </div>
           <div class="calc-result">
-            <div class="calc-result-label">匯率變動影響</div>
+            <div class="calc-result-label">汇率变动影响</div>
             <div class="calc-result-value" id="fxImpact">-</div>
           </div>
         </div>
@@ -431,20 +431,20 @@
     </div>
 
     <div class="calculator">
-      <h2>信用狀成本計算</h2>
-      <p style="color: #94a3b8; margin-bottom: 20px;">信用狀是安全但成本較高的支付方式</p>
+      <h2>信用状成本计算</h2>
+      <p style="color: #94a3b8; margin-bottom: 20px;">信用状是安全但成本较高的支付方式</p>
 
       <div class="calc-row">
         <div class="calc-input">
-          <label>交易額（USD）</label>
+          <label>交易额（USD）</label>
           <input type="number" id="lcAmount" placeholder="100000" value="100000" onchange="calculateLC()">
         </div>
         <div class="calc-input">
-          <label>信用狀手續費（%）</label>
+          <label>信用状手续费（%）</label>
           <input type="number" id="lcFee" placeholder="0.5" value="0.5" step="0.1" onchange="calculateLC()">
         </div>
         <div class="calc-input">
-          <label>押匯費（%）</label>
+          <label>押汇费（%）</label>
           <input type="number" id="discountFee" placeholder="0.2" value="0.2" step="0.1" onchange="calculateLC()">
         </div>
       </div>
@@ -452,19 +452,19 @@
       <div id="lcResults" style="display: none;">
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 20px;">
           <div class="calc-result">
-            <div class="calc-result-label">開狀銀行手續費</div>
+            <div class="calc-result-label">开状银行手续费</div>
             <div class="calc-result-value" id="lcFeeAmount">-</div>
           </div>
           <div class="calc-result">
-            <div class="calc-result-label">押匯費用</div>
+            <div class="calc-result-label">押汇费用</div>
             <div class="calc-result-value" id="discountFeeAmount">-</div>
           </div>
           <div class="calc-result">
-            <div class="calc-result-label">總成本</div>
+            <div class="calc-result-label">总成本</div>
             <div class="calc-result-value" id="lcTotalCost">-</div>
           </div>
           <div class="calc-result">
-            <div class="calc-result-label">占交易額比例</div>
+            <div class="calc-result-label">占交易额比例</div>
             <div class="calc-result-value" id="lcCostRatio">-</div>
           </div>
         </div>
@@ -472,31 +472,31 @@
     </div>
   </div>
 
-  <!-- ========== 全球貿易數據 ========== -->
+  <!-- ========== 全球贸易数据 ========== -->
   <div class="scene" id="scene-statistics">
     <div class="card">
-      <h2>全球貿易規模與增長趨勢</h2>
+      <h2>全球贸易规模与增长趋势</h2>
       <div class="chart-container">
         <canvas id="tradeChart"></canvas>
       </div>
     </div>
 
     <div class="card">
-      <h2>主要經濟體出口佔比（2023）</h2>
+      <h2>主要经济体出口占比（2023）</h2>
       <div class="chart-container">
         <canvas id="exportsChart"></canvas>
       </div>
     </div>
 
     <div class="card">
-      <h2>跨境電商增長趨勢</h2>
+      <h2>跨境电商增长趋势</h2>
       <div class="chart-container">
         <canvas id="ecommerceChart"></canvas>
       </div>
     </div>
 
     <div class="card">
-      <h2>全球 FDI（外資直接投資）流入</h2>
+      <h2>全球 FDI（外资直接投资）流入</h2>
       <div class="chart-container">
         <canvas id="fdiChart"></canvas>
       </div>
@@ -556,7 +556,7 @@ function calculateCost() {
   document.getElementById('totalCostCNY').textContent = Math.round(totalCostCNY).toLocaleString() + ' ￥';
   document.getElementById('unitCostCNY').textContent = Math.round(unitCostCNY) + ' ￥';
   document.getElementById('suggestedPrice').textContent = Math.round(suggestedPrice) + ' ￥';
-  document.getElementById('fxImpact').textContent = '若匯率升至 7.0：增加 ' + Math.round(fxImpact).toLocaleString() + ' ￥';
+  document.getElementById('fxImpact').textContent = '若汇率升至 7.0：增加 ' + Math.round(fxImpact).toLocaleString() + ' ￥';
 }
 
 function calculateLC() {
@@ -585,7 +585,7 @@ function initCharts() {
       data: {
         labels: ['2018', '2019', '2020', '2021', '2022', '2023'],
         datasets: [{
-          label: '全球出口額（兆美元）',
+          label: '全球出口额（兆美元）',
           data: [18.8, 18.3, 17.7, 19.4, 20.1, 19.8],
           borderColor: '#60a5fa',
           backgroundColor: 'rgba(96, 165, 250, 0.1)',
@@ -608,7 +608,7 @@ function initCharts() {
     exportsCtx.chart = new Chart(exportsCtx, {
       type: 'doughnut',
       data: {
-        labels: ['中國', '歐盟', '美國', '日本', '印度', '其他'],
+        labels: ['中国', '欧盟', '美国', '日本', '印度', '其他'],
         datasets: [{
           data: [13, 15, 11, 4, 2.5, 54.5],
           backgroundColor: ['#ef4444', '#60a5fa', '#3b82f6', '#10b981', '#f59e0b', '#64748b']
@@ -630,7 +630,7 @@ function initCharts() {
       data: {
         labels: ['2019', '2020', '2021', '2022', '2023'],
         datasets: [{
-          label: '跨境電商交易額（兆美元）',
+          label: '跨境电商交易额（兆美元）',
           data: [0.65, 1.1, 1.5, 1.8, 2.1],
           backgroundColor: '#a855f7'
         }]
@@ -650,9 +650,9 @@ function initCharts() {
     fdiCtx.chart = new Chart(fdiCtx, {
       type: 'bar',
       data: {
-        labels: ['美國', '中國', '香港', '新加坡', '英國', '印度'],
+        labels: ['美国', '中国', '香港', '新加坡', '英国', '印度'],
         datasets: [{
-          label: 'FDI 流入（十億美元）',
+          label: 'FDI 流入（十亿美元）',
           data: [250, 120, 140, 110, 80, 65],
           backgroundColor: '#10b981'
         }]

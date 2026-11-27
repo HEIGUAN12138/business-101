@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>領導力與組織行為：互動圖表</title>
+    <title>领导力与组织行为：交互图表</title>
     <style>
         * {
             margin: 0;
@@ -365,27 +365,27 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>領導力與組織行為</h1>
-            <p>互動診斷與學習工具</p>
+            <h1>领导力与组织行为</h1>
+            <p>交互诊断与学习工具</p>
         </div>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="switchTab('tab1')">領導風格診斷</button>
-            <button class="tab-button" onclick="switchTab('tab2')">動機理論比較</button>
-            <button class="tab-button" onclick="switchTab('tab3')">組織文化評估</button>
-            <button class="tab-button" onclick="switchTab('tab4')">變革管理路線圖</button>
-            <button class="tab-button" onclick="switchTab('tab5')">團隊發展階段</button>
+            <button class="tab-button active" onclick="switchTab('tab1')">领导风格诊断</button>
+            <button class="tab-button" onclick="switchTab('tab2')">动机理论比较</button>
+            <button class="tab-button" onclick="switchTab('tab3')">组织文化评估</button>
+            <button class="tab-button" onclick="switchTab('tab4')">变革管理路线图</button>
+            <button class="tab-button" onclick="switchTab('tab5')">团队发展阶段</button>
         </div>
 
-        <!-- Tab 1: 領導風格診斷 -->
+        <!-- Tab 1: 领导风格诊断 -->
         <div id="tab1" class="tab-content active">
-            <h2>領導風格診斷</h2>
-            <p style="color: #666; margin-bottom: 30px;">回答以下問題，了解你的領導風格傾向。請根據你在工作中的真實習慣回答（1=完全不符合，5=完全符合）</p>
+            <h2>领导风格诊断</h2>
+            <p style="color: #666; margin-bottom: 30px;">回答以下问题，了解你的领导风格倾向。请根据你在工作中的真实习惯回答（1=完全不符合，5=完全符合）</p>
 
             <div class="quiz-container">
                 <div class="assessment-scale">
                     <div class="scale-item">
-                        <label>1. 我傾向於為團隊設定清晰的目標和期望</label>
+                        <label>1. 我倾向于为团队设置清晰的目标和期望</label>
                         <input type="range" class="scale-slider" id="q1" min="1" max="5" value="3">
                         <div style="text-align: center; color: #999; font-size: 0.9em; margin-top: 5px;">
                             <span id="q1-display">3</span>
@@ -393,7 +393,7 @@
                     </div>
 
                     <div class="scale-item">
-                        <label>2. 我關心我的團隊成員的個人發展和福祉</label>
+                        <label>2. 我关心我的团队成员的个人发展和福祉</label>
                         <input type="range" class="scale-slider" id="q2" min="1" max="5" value="3">
                         <div style="text-align: center; color: #999; font-size: 0.9em; margin-top: 5px;">
                             <span id="q2-display">3</span>
@@ -401,7 +401,7 @@
                     </div>
 
                     <div class="scale-item">
-                        <label>3. 我鼓勵員工提出新想法和創新方案</label>
+                        <label>3. 我鼓励员工提出新想法和创新方案</label>
                         <input type="range" class="scale-slider" id="q3" min="1" max="5" value="3">
                         <div style="text-align: center; color: #999; font-size: 0.9em; margin-top: 5px;">
                             <span id="q3-display">3</span>
@@ -409,7 +409,7 @@
                     </div>
 
                     <div class="scale-item">
-                        <label>4. 我為團隊傳達清晰的願景和使命</label>
+                        <label>4. 我为团队传达清晰的愿景和使命</label>
                         <input type="range" class="scale-slider" id="q4" min="1" max="5" value="3">
                         <div style="text-align: center; color: #999; font-size: 0.9em; margin-top: 5px;">
                             <span id="q4-display">3</span>
@@ -417,7 +417,7 @@
                     </div>
 
                     <div class="scale-item">
-                        <label>5. 我相信授權員工而不是微觀管理</label>
+                        <label>5. 我相信授权员工而不是微观管理</label>
                         <input type="range" class="scale-slider" id="q5" min="1" max="5" value="3">
                         <div style="text-align: center; color: #999; font-size: 0.9em; margin-top: 5px;">
                             <span id="q5-display">3</span>
@@ -425,7 +425,7 @@
                     </div>
 
                     <div class="scale-item">
-                        <label>6. 我願意承認自己的錯誤和局限</label>
+                        <label>6. 我愿意承认自己的错误和局限</label>
                         <input type="range" class="scale-slider" id="q6" min="1" max="5" value="3">
                         <div style="text-align: center; color: #999; font-size: 0.9em; margin-top: 5px;">
                             <span id="q6-display">3</span>
@@ -434,255 +434,255 @@
                 </div>
 
                 <div class="button-group">
-                    <button class="submit-btn" onclick="analyzeLeadershipStyle()">分析我的領導風格</button>
+                    <button class="submit-btn" onclick="analyzeLeadershipStyle()">分析我的领导风格</button>
                 </div>
 
                 <div id="leadership-result" class="quiz-result">
-                    <h4>你的領導風格分析</h4>
+                    <h4>你的领导风格分析</h4>
                     <div id="result-content"></div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 2: 動機理論比較 -->
+        <!-- Tab 2: 动机理论比较 -->
         <div id="tab2" class="tab-content">
-            <h2>動機理論比較器</h2>
-            <p style="color: #666; margin-bottom: 30px;">互動式比較四大動機理論，了解它們的異同和應用場景。</p>
+            <h2>动机理论比较器</h2>
+            <p style="color: #666; margin-bottom: 30px;">交互式比较四大动机理论，了解它们的异同和应用场景。</p>
 
             <div style="margin-bottom: 20px;">
-                <label for="theory-select" style="font-weight: 600;">選擇理論:</label>
+                <label for="theory-select" style="font-weight: 600;">选择理论:</label>
                 <select id="theory-select" onchange="updateTheoryComparison()" style="padding: 8px; border-radius: 5px; border: 1px solid #ddd; font-size: 1em; margin-left: 10px;">
-                    <option value="all">全部比較</option>
-                    <option value="maslow">馬斯洛需求層次論</option>
-                    <option value="herzberg">赫茨伯格雙因素論</option>
-                    <option value="sdt">自我決定理論</option>
-                    <option value="expectancy">期望理論</option>
+                    <option value="all">全部比较</option>
+                    <option value="maslow">马斯洛需求层次论</option>
+                    <option value="herzberg">赫茨伯格双因素论</option>
+                    <option value="sdt">自我决定理论</option>
+                    <option value="expectancy">期望理论</option>
                 </select>
             </div>
 
             <div class="comparison-grid" id="theory-grid">
-                <!-- 內容由JS動態生成 -->
+                <!-- 内容由JS动态生成 -->
             </div>
 
             <div style="margin-top: 30px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
-                <h4 style="color: #667eea; margin-bottom: 10px;">實踐建議</h4>
+                <h4 style="color: #667eea; margin-bottom: 10px;">实践建议</h4>
                 <div id="practice-tips" style="color: #666;"></div>
             </div>
         </div>
 
-        <!-- Tab 3: 組織文化評估 -->
+        <!-- Tab 3: 组织文化评估 -->
         <div id="tab3" class="tab-content">
-            <h2>組織文化評估（Competing Values Framework）</h2>
-            <p style="color: #666; margin-bottom: 30px;">評估你所在組織的文化類型。請根據你的感受在兩個維度上評分：</p>
+            <h2>组织文化评估（Competing Values Framework）</h2>
+            <p style="color: #666; margin-bottom: 30px;">评估你所在组织的文化类型。请根据你的感受在两个维度上评分：</p>
 
             <div style="margin: 30px 0;">
-                <h4 style="color: #667eea; margin-bottom: 20px;">維度一：靈活性 ← → 穩定性</h4>
-                <p style="color: #666; margin-bottom: 10px;">左邊（靈活性）：組織強調適應性和創新</p>
-                <p style="color: #666; margin-bottom: 15px;">右邊（穩定性）：組織強調效率和控制</p>
+                <h4 style="color: #667eea; margin-bottom: 20px;">维度一：灵活性 ← → 稳定性</h4>
+                <p style="color: #666; margin-bottom: 10px;">左边（灵活性）：组织强调适应性和创新</p>
+                <p style="color: #666; margin-bottom: 15px;">右边（稳定性）：组织强调效率和控制</p>
                 <input type="range" class="scale-slider" id="dimension1" min="1" max="10" value="5" onchange="updateCultureMatrix()">
                 <div style="display: flex; justify-content: space-between; color: #999; font-size: 0.9em; margin-top: 5px;">
-                    <span>靈活性</span>
+                    <span>灵活性</span>
                     <span id="d1-value">5</span>
-                    <span>穩定性</span>
+                    <span>稳定性</span>
                 </div>
             </div>
 
             <div style="margin: 30px 0;">
-                <h4 style="color: #667eea; margin-bottom: 20px;">維度二：內部焦點 ← → 外部焦點</h4>
-                <p style="color: #666; margin-bottom: 10px;">上方（內部焦點）：關注內部效率和員工福祉</p>
-                <p style="color: #666; margin-bottom: 15px;">下方（外部焦點）：關注市場和競爭力</p>
+                <h4 style="color: #667eea; margin-bottom: 20px;">维度二：内部焦点 ← → 外部焦点</h4>
+                <p style="color: #666; margin-bottom: 10px;">上方（内部焦点）：关注内部效率和员工福祉</p>
+                <p style="color: #666; margin-bottom: 15px;">下方（外部焦点）：关注市场和竞争力</p>
                 <input type="range" class="scale-slider" id="dimension2" min="1" max="10" value="5" onchange="updateCultureMatrix()">
                 <div style="display: flex; justify-content: space-between; color: #999; font-size: 0.9em; margin-top: 5px;">
-                    <span>內部焦點</span>
+                    <span>内部焦点</span>
                     <span id="d2-value">5</span>
-                    <span>外部焦點</span>
+                    <span>外部焦点</span>
                 </div>
             </div>
 
             <div class="matrix" id="culture-matrix">
                 <div class="matrix-cell" id="clan">
                     <h4>氏族文化</h4>
-                    <p>家族式、溫暖、關係導向</p>
+                    <p>家族式、温暖、关系导向</p>
                 </div>
                 <div class="matrix-cell" id="hierarchy">
-                    <h4>層級文化</h4>
-                    <p>規則導向、流程嚴謹、命令結構</p>
+                    <h4>层级文化</h4>
+                    <p>规则导向、流程严谨、命令结构</p>
                 </div>
                 <div class="matrix-cell" id="adhocracy">
-                    <h4>創新文化</h4>
-                    <p>創新驅動、冒險、適應性強</p>
+                    <h4>创新文化</h4>
+                    <p>创新驱动、冒险、适应性强</p>
                 </div>
                 <div class="matrix-cell" id="market">
-                    <h4>市場文化</h4>
-                    <p>結果導向、競爭、追求績效</p>
+                    <h4>市场文化</h4>
+                    <p>结果导向、竞争、追求绩效</p>
                 </div>
             </div>
 
             <div style="margin-top: 20px; padding: 20px; background: #e8f5e9; border-radius: 8px; border-left: 4px solid #4caf50;">
-                <h4 style="color: #2e7d32; margin-bottom: 10px;">你的組織文化特徵</h4>
+                <h4 style="color: #2e7d32; margin-bottom: 10px;">你的组织文化特征</h4>
                 <div id="culture-description" style="color: #555;"></div>
             </div>
         </div>
 
-        <!-- Tab 4: 變革管理路線圖 -->
+        <!-- Tab 4: 变革管理路线图 -->
         <div id="tab4" class="tab-content">
-            <h2>變革管理路線圖（Kotter's 8 Steps）</h2>
-            <p style="color: #666; margin-bottom: 30px;">查看Kotter的八步變革流程。點擊每一步了解詳細內容。</p>
+            <h2>变革管理路线图（Kotter's 8 Steps）</h2>
+            <p style="color: #666; margin-bottom: 30px;">查看Kotter的八步变革流程。点击每一步了解详细内容。</p>
 
             <div class="timeline">
                 <div class="timeline-item" onclick="toggleStep(1)">
-                    <h4>第一步：建立緊迫感</h4>
-                    <p>分析市場與競爭環境，識別潛在危機與機會，清晰傳達為何現況必須改變。</p>
+                    <h4>第一步：创建紧迫感</h4>
+                    <p>分析市场与竞争环境，识别潜在危机与机会，清晰传达为何现况必须改变。</p>
                     <div id="step1-detail" style="display: none; margin-top: 10px; padding: 10px; background: #f0f4ff; border-radius: 5px; color: #555;">
-                        <strong>關鍵活動：</strong>
+                        <strong>关键活动：</strong>
                         <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>收集市場數據和競爭分析</li>
-                            <li>召開高管會議討論發現</li>
-                            <li>與員工溝通現狀和威脅</li>
+                            <li>收集市场数据和竞争分析</li>
+                            <li>召开高管会议讨论发现</li>
+                            <li>与员工沟通现状和威胁</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item" onclick="toggleStep(2)">
-                    <h4>第二步：建立領導聯盟</h4>
-                    <p>組集足夠的權力、信譽和領導力，建立可信任的跨部門團隊。</p>
+                    <h4>第二步：创建领导联盟</h4>
+                    <p>组集足够的权力、信誉和领导力，创建可信任的跨部门团队。</p>
                     <div id="step2-detail" style="display: none; margin-top: 10px; padding: 10px; background: #f0f4ff; border-radius: 5px; color: #555;">
-                        <strong>關鍵活動：</strong>
+                        <strong>关键活动：</strong>
                         <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>確定關鍵影響者和變革倡導者</li>
-                            <li>建立變革委員會或工作組</li>
-                            <li>發展共同的願景與承諾</li>
+                            <li>确定关键影响者和变革倡导者</li>
+                            <li>创建变革委员会或工作组</li>
+                            <li>发展共同的愿景与承诺</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item" onclick="toggleStep(3)">
-                    <h4>第三步：建立變革願景</h4>
-                    <p>構想未來圖景，制定達成願景的戰略，以清晰、鼓舞人心的方式表達。</p>
+                    <h4>第三步：创建变革愿景</h4>
+                    <p>构想未来图景，制定达成愿景的战略，以清晰、鼓舞人心的方式表达。</p>
                     <div id="step3-detail" style="display: none; margin-top: 10px; padding: 10px; background: #f0f4ff; border-radius: 5px; color: #555;">
-                        <strong>關鍵活動：</strong>
+                        <strong>关键活动：</strong>
                         <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>舉行願景工作坊</li>
-                            <li>開發願景聲明和故事</li>
-                            <li>識別實現願景的關鍵舉措</li>
+                            <li>举行愿景工作坊</li>
+                            <li>开发愿景声明和故事</li>
+                            <li>识别实现愿景的关键举措</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item" onclick="toggleStep(4)">
-                    <h4>第四步：溝通願景</h4>
-                    <p>多通路、重複傳播願景，領導層示範承諾，尋求回饋並調整。</p>
+                    <h4>第四步：沟通愿景</h4>
+                    <p>多渠道、重复传播愿景，领导层示范承诺，寻求回馈并调整。</p>
                     <div id="step4-detail" style="display: none; margin-top: 10px; padding: 10px; background: #f0f4ff; border-radius: 5px; color: #555;">
-                        <strong>關鍵活動：</strong>
+                        <strong>关键活动：</strong>
                         <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>定期全員大會和部門會議</li>
-                            <li>內部通訊和影片分享</li>
-                            <li>領導者的言行一致示範</li>
+                            <li>定期全员大会和部门会议</li>
+                            <li>内部通信和视频分享</li>
+                            <li>领导者的言行一致示范</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item" onclick="toggleStep(5)">
-                    <h4>第五步：授權與行動</h4>
-                    <p>消除障礙，鼓勵創新與實驗，支持風險承擔。</p>
+                    <h4>第五步：授权与行动</h4>
+                    <p>消除障碍，鼓励创新与实验，支持风险承担。</p>
                     <div id="step5-detail" style="display: none; margin-top: 10px; padding: 10px; background: #f0f4ff; border-radius: 5px; color: #555;">
-                        <strong>關鍵活動：</strong>
+                        <strong>关键活动：</strong>
                         <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>移除組織和系統障礙</li>
-                            <li>提供必要的培訓和資源</li>
-                            <li>容許和學習失敗</li>
+                            <li>移除组织和系统障碍</li>
+                            <li>提供必要的培训和资源</li>
+                            <li>容许和学习失败</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item" onclick="toggleStep(6)">
-                    <h4>第六步：創造短期贏</h4>
-                    <p>識別明確的改進目標，獎勵與表彰成就，建立動力。</p>
+                    <h4>第六步：创造短期赢</h4>
+                    <p>识别明确的改进目标，奖励与表彰成就，创建动力。</p>
                     <div id="step6-detail" style="display: none; margin-top: 10px; padding: 10px; background: #f0f4ff; border-radius: 5px; color: #555;">
-                        <strong>關鍵活動：</strong>
+                        <strong>关键活动：</strong>
                         <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>設定並公開30-60-90天目標</li>
-                            <li>跟蹤進度並分享成果</li>
-                            <li>慶祝和獎勵成就者</li>
+                            <li>设置并公开30-60-90天目标</li>
+                            <li>跟踪进度并分享成果</li>
+                            <li>庆祝和奖励成就者</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item" onclick="toggleStep(7)">
-                    <h4>第七步：鞏固成果</h4>
-                    <p>利用短期勝利推進更大變革，招聘相信新理念的人，維持緊迫感。</p>
+                    <h4>第七步：巩固成果</h4>
+                    <p>利用短期胜利推进更大变革，招聘相信新理念的人，维持紧迫感。</p>
                     <div id="step7-detail" style="display: none; margin-top: 10px; padding: 10px; background: #f0f4ff; border-radius: 5px; color: #555;">
-                        <strong>關鍵活動：</strong>
+                        <strong>关键活动：</strong>
                         <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>啟動更多變革專案</li>
-                            <li>升遷和招聘變革倡導者</li>
-                            <li>持續培訓和發展</li>
+                            <li>启动更多变革项目</li>
+                            <li>升迁和招聘变革倡导者</li>
+                            <li>持续培训和发展</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="timeline-item" onclick="toggleStep(8)">
                     <h4>第八步：根植新文化</h4>
-                    <p>讓新的做事方式變成「我們就是這樣做的」，而非臨時嘗試。</p>
+                    <p>让新的做事方式变成「我们就是这样做的」，而非临时尝试。</p>
                     <div id="step8-detail" style="display: none; margin-top: 10px; padding: 10px; background: #f0f4ff; border-radius: 5px; color: #555;">
-                        <strong>關鍵活動：</strong>
+                        <strong>关键活动：</strong>
                         <ul style="margin-left: 20px; margin-top: 5px;">
-                            <li>將新行為納入招聘標準</li>
-                            <li>在故事和儀式中強化</li>
-                            <li>確保領導層繼任者遵循新文化</li>
+                            <li>将新行为纳入招聘标准</li>
+                            <li>在故事和仪式中强化</li>
+                            <li>确保领导层继任者遵循新文化</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 5: 團隊發展階段 -->
+        <!-- Tab 5: 团队发展阶段 -->
         <div id="tab5" class="tab-content">
-            <h2>團隊發展階段（Tuckman's Model）</h2>
-            <p style="color: #666; margin-bottom: 30px;">了解團隊的發展過程和每個階段的特徵。</p>
+            <h2>团队发展阶段（Tuckman's Model）</h2>
+            <p style="color: #666; margin-bottom: 30px;">了解团队的发展过程和每个阶段的特征。</p>
 
             <div class="stage-visualization">
                 <div class="stage-box" onclick="selectStage('forming')">
                     <h4>成立期</h4>
-                    <p>Forming<br>大家初識，試圖了解</p>
+                    <p>Forming<br>大家初识，试图了解</p>
                 </div>
                 <div class="stage-box" onclick="selectStage('storming')">
-                    <h4>激蕩期</h4>
-                    <p>Storming<br>衝突和分歧</p>
+                    <h4>激荡期</h4>
+                    <p>Storming<br>冲突和分歧</p>
                 </div>
                 <div class="stage-box" onclick="selectStage('norming')">
-                    <h4>規範期</h4>
-                    <p>Norming<br>達成共識</p>
+                    <h4>规范期</h4>
+                    <p>Norming<br>达成共识</p>
                 </div>
                 <div class="stage-box" onclick="selectStage('performing')">
-                    <h4>績效期</h4>
-                    <p>Performing<br>高效協作</p>
+                    <h4>绩效期</h4>
+                    <p>Performing<br>高效协作</p>
                 </div>
                 <div class="stage-box" onclick="selectStage('adjourning')">
                     <h4>解散期</h4>
-                    <p>Adjourning<br>專案結束</p>
+                    <p>Adjourning<br>项目结束</p>
                 </div>
             </div>
 
             <div id="stage-detail" style="margin-top: 30px; padding: 25px; background: #f0f4ff; border-radius: 8px; border-left: 4px solid #667eea;">
-                <!-- 內容由JS動態生成 -->
+                <!-- 内容由JS动态生成 -->
             </div>
 
             <div style="margin-top: 30px; padding: 20px; background: #fff9c4; border-radius: 8px; border-left: 4px solid #fbc02d;">
-                <h4 style="color: #f57f17; margin-bottom: 10px;">💡 關鍵洞察</h4>
-                <p style="color: #666;">不同團隊可能花費不同時間在各階段。新任經理常犯的錯誤是：在激蕩期試圖回到成立期的「和諧」，或在規範期施加過多控制而不允許自主。理解這些階段幫助領導者適應和支持團隊的自然演進。</p>
+                <h4 style="color: #f57f17; margin-bottom: 10px;">💡 关键洞察</h4>
+                <p style="color: #666;">不同团队可能花费不同时间在各阶段。新任经理常犯的错误是：在激荡期试图回到成立期的「和谐」，或在规范期施加过多控制而不允许自主。理解这些阶段帮助领导者适应和支持团队的自然演进。</p>
             </div>
         </div>
 
         <div class="footer">
-            <p>領導力與組織行為：互動學習工具</p>
-            <p>這些工具基於經典的領導力和組織行為理論，僅供教育和自我認識之用。</p>
+            <p>领导力与组织行为：交互学习工具</p>
+            <p>这些工具基于经典的领导力和组织行为理论，仅供教育和自我认识之用。</p>
         </div>
     </div>
 
     <script>
         function switchTab(tabName) {
-            // 隱藏所有tab content
+            // 隐藏所有tab content
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
 
@@ -690,13 +690,13 @@
             const buttons = document.querySelectorAll('.tab-button');
             buttons.forEach(button => button.classList.remove('active'));
 
-            // 顯示選中的tab
+            // 显示选中的tab
             document.getElementById(tabName).classList.add('active');
 
-            // 設置對應的button為active
+            // 设置对应的button为active
             event.target.classList.add('active');
 
-            // 初始化特定tab的內容
+            // 初始化特定tab的内容
             if (tabName === 'tab2') {
                 initTheoryComparison();
             } else if (tabName === 'tab3') {
@@ -706,7 +706,7 @@
             }
         }
 
-        // Tab 1: 領導風格診斷
+        // Tab 1: 领导风格诊断
         function updateSliderDisplay() {
             for (let i = 1; i <= 6; i++) {
                 const slider = document.getElementById('q' + i);
@@ -741,61 +741,61 @@
             let description = '';
 
             if (scores.task > 3.5 && scores.relationship > 3.5) {
-                style = '轉型領導者';
-                description = '你善於為團隊傳達清晰的願景，同時也關心員工的發展。你鼓勵創新和授權，這使得你的團隊更有動力和投入。建議：繼續發揮你的優勢，但也要注意不要對完美的期望太高而造成團隊壓力。';
+                style = '转型领导者';
+                description = '你善于为团队传达清晰的愿景，同时也关心员工的发展。你鼓励创新和授权，这使得你的团队更有动力和投入。建议：继续发挥你的优势，但也要注意不要对完美的期望太高而造成团队压力。';
             } else if (scores.task > 3.5 && scores.relationship < 2.5) {
-                style = '任務導向領導者';
-                description = '你強調清晰的目標和績效，這很有效。但要注意增加對團隊關係和個人福祉的關注，以提升員工的長期滿意度和保留率。建議：投資於與團隊成員的一對一對話。';
+                style = '任务导向领导者';
+                description = '你强调清晰的目标和绩效，这很有效。但要注意增加对团队关系和个人福祉的关注，以提升员工的长期满意度和保留率。建议：投资于与团队成员的一对一对话。';
             } else if (scores.relationship > 3.5 && scores.task < 2.5) {
-                style = '關係導向領導者';
-                description = '你關心團隊成員，創造了一個溫暖、支持的環境。這很好！但要確保你也清楚地傳達目標和期望，以保持團隊的焦點和績效。建議：在設定目標和績效評估上更加主動。';
+                style = '关系导向领导者';
+                description = '你关心团队成员，创造了一个温暖、支持的环境。这很好！但要确保你也清楚地传达目标和期望，以保持团队的焦点和绩效。建议：在设置目标和绩效评估上更加主动。';
             } else if (scores.empower > 3.5) {
-                style = '授權型領導者';
-                description = '你相信授權員工，這很棒。確保你提供足夠的支持結構和清晰的邊界，以便員工知道他們可以在哪些範圍內決策。建議：定期檢查進度，但保持信任的基調。';
+                style = '授权型领导者';
+                description = '你相信授权员工，这很棒。确保你提供足够的支持结构和清晰的边界，以便员工知道他们可以在哪些范围内决策。建议：定期检查进度，但保持信任的基调。';
             } else {
-                style = '平衡型領導者';
-                description = '你在各個方面都表現均衡，這是一個很好的起點。根據情境調整你的方式：在危機時可能需要更多任務導向，在穩定時可以更多關係導向。建議：學習情境領導，根據團隊成員的準備度調整。';
+                style = '平衡型领导者';
+                description = '你在各个方面都表现均衡，这是一个很好的起点。根据情境调整你的方式：在危机时可能需要更多任务导向，在稳定时可以更多关系导向。建议：学习情境领导，根据团队成员的准备度调整。';
             }
 
             content.innerHTML = `
-                <p style="font-size: 1.1em; margin-bottom: 15px;"><strong>你的主要領導風格：${style}</strong></p>
+                <p style="font-size: 1.1em; margin-bottom: 15px;"><strong>你的主要领导风格：${style}</strong></p>
                 <p style="color: #555;">${description}</p>
-                <h5 style="margin-top: 20px; color: #667eea;">你的分數：</h5>
+                <h5 style="margin-top: 20px; color: #667eea;">你的分数：</h5>
                 <ul style="margin-left: 20px; color: #666;">
-                    <li>任務焦點: ${scores.task.toFixed(1)}/5</li>
-                    <li>關係焦點: ${scores.relationship.toFixed(1)}/5</li>
-                    <li>願景傳達: ${scores.vision}/5</li>
-                    <li>授權: ${scores.empower}/5</li>
+                    <li>任务焦点: ${scores.task.toFixed(1)}/5</li>
+                    <li>关系焦点: ${scores.relationship.toFixed(1)}/5</li>
+                    <li>愿景传达: ${scores.vision}/5</li>
+                    <li>授权: ${scores.empower}/5</li>
                 </ul>
             `;
             result.classList.add('show');
         }
 
-        // Tab 2: 動機理論比較
+        // Tab 2: 动机理论比较
         const theories = {
             maslow: {
-                name: '馬斯洛需求層次論',
-                layers: ['生理需求', '安全需求', '歸屬需求', '尊重需求', '自我實現'],
-                shortDescription: '人的動力來自五層遞進的需求',
-                application: '在組織中確保基本薪資和安全，然後創造歸屬感、認可和自我實現的機會'
+                name: '马斯洛需求层次论',
+                layers: ['生理需求', '安全需求', '归属需求', '尊重需求', '自我实现'],
+                shortDescription: '人的动力来自五层递进的需求',
+                application: '在组织中确保基本薪资和安全，然后创造归属感、认可和自我实现的机会'
             },
             herzberg: {
-                name: '赫茨伯格雙因素論',
-                factors: ['衛生因素（防止不滿意）', '激勵因素（創造滿意）'],
-                shortDescription: '區分衛生因素和激勵因素',
-                application: '改善工作環境（衛生因素）不足以激勵，還需提供成就、認可、有意義的工作'
+                name: '赫茨伯格双因素论',
+                factors: ['卫生因素（防止不满意）', '激励因素（创造满意）'],
+                shortDescription: '区分卫生因素和激励因素',
+                application: '改善工作环境（卫生因素）不足以激励，还需提供成就、认可、有意义的工作'
             },
             sdt: {
-                name: '自我決定理論',
-                needs: ['自主性', '勝任感', '歸屬感'],
-                shortDescription: '三個基本心理需求驅動內在動力',
-                application: '給予員工自主決策空間，提供成長機會，建立溫暖的團隊文化'
+                name: '自我决定理论',
+                needs: ['自主性', '胜任感', '归属感'],
+                shortDescription: '三个基本心理需求驱动内在动力',
+                application: '给予员工自主决策空间，提供成长机会，创建温暖的团队文化'
             },
             expectancy: {
-                name: '期望理論',
-                formula: '動機 = 期望 × 工具性 × 效價',
-                shortDescription: '員工的動力取決於三個因素的乘積',
-                application: '確保員工理解努力與績效的關聯，建立績效與獎勵的聯繫，提供員工重視的報酬'
+                name: '期望理论',
+                formula: '动机 = 期望 × 工具性 × 效价',
+                shortDescription: '员工的动力取决于三个因素的乘积',
+                application: '确保员工理解努力与绩效的关联，创建绩效与奖励的联系，提供员工重视的报酬'
             }
         };
 
@@ -814,10 +814,10 @@
                 grid.innerHTML += `
                     <div class="theory-card">
                         <h4>${theories.maslow.name}</h4>
-                        <p><strong>核心概念：</strong> ${theories.maslow.shortDescription}</p>
-                        <p><strong>五層需求：</strong><br>
+                        <p><strong>内核概念：</strong> ${theories.maslow.shortDescription}</p>
+                        <p><strong>五层需求：</strong><br>
                         ${theories.maslow.layers.map((l, i) => `${i+1}. ${l}`).join('<br>')}</p>
-                        <p><strong>應用：</strong> ${theories.maslow.application}</p>
+                        <p><strong>应用：</strong> ${theories.maslow.application}</p>
                     </div>
                 `;
             }
@@ -826,11 +826,11 @@
                 grid.innerHTML += `
                     <div class="theory-card">
                         <h4>${theories.herzberg.name}</h4>
-                        <p><strong>核心概念：</strong> ${theories.herzberg.shortDescription}</p>
-                        <p><strong>兩類因素：</strong><br>
+                        <p><strong>内核概念：</strong> ${theories.herzberg.shortDescription}</p>
+                        <p><strong>两类因素：</strong><br>
                         • ${theories.herzberg.factors[0]}<br>
                         • ${theories.herzberg.factors[1]}</p>
-                        <p><strong>應用：</strong> ${theories.herzberg.application}</p>
+                        <p><strong>应用：</strong> ${theories.herzberg.application}</p>
                     </div>
                 `;
             }
@@ -839,12 +839,12 @@
                 grid.innerHTML += `
                     <div class="theory-card">
                         <h4>${theories.sdt.name}</h4>
-                        <p><strong>核心概念：</strong> ${theories.sdt.shortDescription}</p>
-                        <p><strong>三個需求：</strong><br>
+                        <p><strong>内核概念：</strong> ${theories.sdt.shortDescription}</p>
+                        <p><strong>三个需求：</strong><br>
                         • ${theories.sdt.needs[0]}<br>
                         • ${theories.sdt.needs[1]}<br>
                         • ${theories.sdt.needs[2]}</p>
-                        <p><strong>應用：</strong> ${theories.sdt.application}</p>
+                        <p><strong>应用：</strong> ${theories.sdt.application}</p>
                     </div>
                 `;
             }
@@ -853,31 +853,31 @@
                 grid.innerHTML += `
                     <div class="theory-card">
                         <h4>${theories.expectancy.name}</h4>
-                        <p><strong>核心公式：</strong> ${theories.expectancy.formula}</p>
-                        <p><strong>三個變量：</strong><br>
-                        • 期望（E→P）：努力帶來績效<br>
-                        • 工具性（P→O）：績效帶來獎勵<br>
-                        • 效價（V）：獎勵的吸引力</p>
-                        <p><strong>應用：</strong> ${theories.expectancy.application}</p>
+                        <p><strong>内核公式：</strong> ${theories.expectancy.formula}</p>
+                        <p><strong>三个变量：</strong><br>
+                        • 期望（E→P）：努力带来绩效<br>
+                        • 工具性（P→O）：绩效带来奖励<br>
+                        • 效价（V）：奖励的吸引力</p>
+                        <p><strong>应用：</strong> ${theories.expectancy.application}</p>
                     </div>
                 `;
             }
 
-            // 更新實踐建議
+            // 更新实践建议
             if (value === 'all') {
-                tips.innerHTML = '四個理論相互補充。實踐建議：(1)確保基本需求滿足（馬斯洛、赫茨伯格的衛生因素）；(2)提供有意義的工作和認可（激勵因素、自決理論）；(3)清晰地連接努力、績效和獎勵（期望理論）。';
+                tips.innerHTML = '四个理论相互补充。实践建议：(1)确保基本需求满足（马斯洛、赫茨伯格的卫生因素）；(2)提供有意义的工作和认可（激励因素、自决理论）；(3)清晰地连接努力、绩效和奖励（期望理论）。';
             } else if (value === 'maslow') {
-                tips.innerHTML = '從下往上：先解決薪資和安全問題，再創造歸屬和認可，最後提供自我實現的機會。記住：不同文化和個人的優先級可能不同。';
+                tips.innerHTML = '从下往上：先解决薪资和安全问题，再创造归属和认可，最后提供自我实现的机会。记住：不同文化和个人的优先级可能不同。';
             } else if (value === 'herzberg') {
-                tips.innerHTML = '光改善衛生因素（薪資、辦公環境）不足以激勵員工。關鍵是提供激勵因素：成就感、被認可、有責任感、工作本身有趣、有成長機會。';
+                tips.innerHTML = '光改善卫生因素（薪资、办公环境）不足以激励员工。关键是提供激励因素：成就感、被认可、有责任感、工作本身有趣、有成长机会。';
             } else if (value === 'sdt') {
-                tips.innerHTML = '建立高度自動性的工作方式會大幅提升內在動力。例如：讓員工決定怎麼完成工作（自主性）、提供學習機會（勝任感）、建立團隊文化（歸屬感）。';
+                tips.innerHTML = '创建高度自动性的工作方式会大幅提升内在动力。例如：让员工决定怎么完成工作（自主性）、提供学习机会（胜任感）、创建团队文化（归属感）。';
             } else if (value === 'expectancy') {
-                tips.innerHTML = '如果員工認為「再努力也沒用」（期望低），或「達成績效也得不到獎勵」（工具性低），或「獎勵我不想要」（效價低），動力會很低。領導者要確保這三個要素都存在。';
+                tips.innerHTML = '如果员工认为「再努力也没用」（期望低），或「达成绩效也得不到奖励」（工具性低），或「奖励我不想要」（效价低），动力会很低。领导者要确保这三个要素都存在。';
             }
         }
 
-        // Tab 3: 組織文化評估
+        // Tab 3: 组织文化评估
         function updateCultureMatrix() {
             const d1 = parseInt(document.getElementById('dimension1').value);
             const d2 = parseInt(document.getElementById('dimension2').value);
@@ -891,12 +891,12 @@
             document.getElementById('adhocracy').style.background = '#f9f9f9';
             document.getElementById('market').style.background = '#f9f9f9';
 
-            // 計算最接近的文化類型
+            // 计算最接近的文化类型
             const cultures = {
                 clan: { x: 3, y: 3, label: '氏族文化' },
-                hierarchy: { x: 8, y: 3, label: '層級文化' },
-                adhocracy: { x: 3, y: 8, label: '創新文化' },
-                market: { x: 8, y: 8, label: '市場文化' }
+                hierarchy: { x: 8, y: 3, label: '层级文化' },
+                adhocracy: { x: 3, y: 8, label: '创新文化' },
+                market: { x: 8, y: 8, label: '市场文化' }
             };
 
             let closestCulture = null;
@@ -918,16 +918,16 @@
 
             // 更新描述
             const descriptions = {
-                clan: '你的組織有強烈的家族式文化。優勢：員工忠誠度高、溝通好。風險：可能過度內向，容易形成派系。',
-                hierarchy: '你的組織重視規則和結構。優勢：可預測、責任明確。風險：可能僵化，創新能力不足。',
-                adhocracy: '你的組織強調創新和適應。優勢：創意豐富、靈活應變。風險：戰略方向不清，執行困難。',
-                market: '你的組織結果導向、競爭激烈。優勢：專注目標、高效。風險：可能忽視關係，流失率高。'
+                clan: '你的组织有强烈的家族式文化。优势：员工忠诚度高、沟通好。风险：可能过度内向，容易形成派系。',
+                hierarchy: '你的组织重视规则和结构。优势：可预测、责任明确。风险：可能僵化，创新能力不足。',
+                adhocracy: '你的组织强调创新和适应。优势：创意丰富、灵活应变。风险：战略方向不清，运行困难。',
+                market: '你的组织结果导向、竞争激烈。优势：专注目标、高效。风险：可能忽视关系，流失率高。'
             };
 
             document.getElementById('culture-description').textContent = descriptions[closestCulture];
         }
 
-        // Tab 4: 變革管理路線圖
+        // Tab 4: 变革管理路线图
         function toggleStep(step) {
             const element = document.getElementById('step' + step + '-detail');
             if (element) {
@@ -935,85 +935,85 @@
             }
         }
 
-        // Tab 5: 團隊發展階段
+        // Tab 5: 团队发展阶段
         const stages = {
             forming: {
                 name: '成立期（Forming）',
                 characteristics: [
-                    '成員初識，試圖了解群體目標與角色',
-                    '行為禮貌、謹慎，依賴領導',
-                    '缺乏一致的願景，可能感到混亂'
+                    '成员初识，试图了解群体目标与角色',
+                    '行为礼貌、谨慎，依赖领导',
+                    '缺乏一致的愿景，可能感到混乱'
                 ],
                 leadershipNeeds: [
-                    '提供清晰的方向和結構',
-                    '歡迎的氛圍和介紹',
-                    '建立安全感和信任'
+                    '提供清晰的方向和结构',
+                    '欢迎的氛围和介绍',
+                    '创建安全感和信任'
                 ],
                 duration: '通常1-3周'
             },
             storming: {
-                name: '激蕩期（Storming）',
+                name: '激荡期（Storming）',
                 characteristics: [
-                    '成員開始表達差異和衝突',
-                    '對目標和角色提出挑戰',
-                    '可能出現聯盟和小團體',
-                    '有人感到沮喪，可能想離開'
+                    '成员开始表达差异和冲突',
+                    '对目标和角色提出挑战',
+                    '可能出现联盟和小团体',
+                    '有人感到沮丧，可能想离开'
                 ],
                 leadershipNeeds: [
-                    '調解衝突，不要迴避',
-                    '堅持團隊目標',
-                    '包容差異，建立心理安全',
-                    '提供明確的指導'
+                    '调解冲突，不要回避',
+                    '坚持团队目标',
+                    '包容差异，创建心理安全',
+                    '提供明确的指导'
                 ],
-                duration: '通常2-8周，這是關鍵期'
+                duration: '通常2-8周，这是关键期'
             },
             norming: {
-                name: '規範期（Norming）',
+                name: '规范期（Norming）',
                 characteristics: [
-                    '團隊建立共享規範和價值觀',
-                    '相互支持和認可增加',
-                    '溝通更開放、直接',
-                    '集體認同感強化'
+                    '团队创建共享规范和价值观',
+                    '相互支持和认可增加',
+                    '沟通更开放、直接',
+                    '集体认同感强化'
                 ],
                 leadershipNeeds: [
-                    '促進結構的發展',
-                    '認可進展和成就',
-                    '鼓勵自主和協作',
-                    '退到背景，支持而非指導'
+                    '促进结构的发展',
+                    '认可进展和成就',
+                    '鼓励自主和协作',
+                    '退到背景，支持而非指导'
                 ],
-                duration: '通常1-3個月'
+                duration: '通常1-3个月'
             },
             performing: {
-                name: '績效期（Performing）',
+                name: '绩效期（Performing）',
                 characteristics: [
-                    '團隊高度自主和成熟',
-                    '清楚彼此的優勢和角色',
-                    '專注於目標達成',
-                    '創意思維和快速問題解決'
+                    '团队高度自主和成熟',
+                    '清楚彼此的优势和角色',
+                    '专注于目标达成',
+                    '创意思维和快速问题解决'
                 ],
                 leadershipNeeds: [
-                    '授權和信任',
-                    '提供資源和移除障礙',
-                    '作為外部代表和倡導者',
-                    '提供願景和戰略方向'
+                    '授权和信任',
+                    '提供资源和移除障碍',
+                    '作为外部代表和倡导者',
+                    '提供愿景和战略方向'
                 ],
-                duration: '持續，只要團隊保持凝聚力'
+                duration: '持续，只要团队保持凝聚力'
             },
             adjourning: {
                 name: '解散期（Adjourning）',
                 characteristics: [
-                    '專案或任務完成',
-                    '團隊即將離散',
-                    '成員可能感到失落或欣慰',
-                    '需要過渡和再安置'
+                    '项目或任务完成',
+                    '团队即将离散',
+                    '成员可能感到失落或欣慰',
+                    '需要过渡和再安置'
                 ],
                 leadershipNeeds: [
-                    '慶祝成就和反思學習',
-                    '承認過程中的貢獻',
-                    '協助知識轉移',
-                    '平穩的過渡安排'
+                    '庆祝成就和反思学习',
+                    '承认过程中的贡献',
+                    '协助知识转移',
+                    '平稳的过渡安排'
                 ],
-                duration: '2-4周的過渡期'
+                duration: '2-4周的过渡期'
             }
         };
 
@@ -1024,17 +1024,17 @@
             detail.innerHTML = `
                 <h3 style="color: #667eea; margin-bottom: 15px;">${stage.name}</h3>
 
-                <h4 style="color: #333; margin-top: 15px; margin-bottom: 10px;">特徵：</h4>
+                <h4 style="color: #333; margin-top: 15px; margin-bottom: 10px;">特征：</h4>
                 <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
                     ${stage.characteristics.map(c => `<li>${c}</li>`).join('')}
                 </ul>
 
-                <h4 style="color: #333; margin-top: 15px; margin-bottom: 10px;">領導者應該：</h4>
+                <h4 style="color: #333; margin-top: 15px; margin-bottom: 10px;">领导者应该：</h4>
                 <ul style="margin-left: 20px; color: #666; line-height: 1.8;">
                     ${stage.leadershipNeeds.map(n => `<li>${n}</li>`).join('')}
                 </ul>
 
-                <p style="color: #999; margin-top: 15px; font-size: 0.9em;"><strong>預期時間：</strong> ${stage.duration}</p>
+                <p style="color: #999; margin-top: 15px; font-size: 0.9em;"><strong>预期时间：</strong> ${stage.duration}</p>
             `;
         }
     </script>

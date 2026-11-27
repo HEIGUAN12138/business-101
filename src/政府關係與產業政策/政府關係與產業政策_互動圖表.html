@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>政府關係與產業政策 - 互動圖表</title>
+    <title>政府关系与产业政策 - 交互图表</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -74,7 +74,7 @@
             display: block;
         }
 
-        /* Tab 1: 產業政策工具比較器 */
+        /* Tab 1: 产业政策工具比较器 */
         .tool-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -187,7 +187,7 @@
             font-weight: 500;
         }
 
-        /* Tab 2: 地緣政治風險評估矩陣 */
+        /* Tab 2: 地缘政治风险评估矩阵 */
         .risk-matrix {
             background-color: #f9f9f9;
             padding: 20px;
@@ -264,7 +264,7 @@
             color: #666;
         }
 
-        /* Tab 3: 台灣產業政策時間軸 */
+        /* Tab 3: 台湾产业政策时间轴 */
         .timeline {
             position: relative;
             padding: 20px 0;
@@ -340,7 +340,7 @@
             line-height: 1.6;
         }
 
-        /* 響應式設計 */
+        /* 响应式设计 */
         @media (max-width: 768px) {
             .tabs {
                 flex-direction: column;
@@ -409,124 +409,124 @@
 </head>
 <body>
     <div class="container">
-        <h1>政府關係與產業政策 - 互動圖表</h1>
+        <h1>政府关系与产业政策 - 交互图表</h1>
 
         <div class="tabs">
-            <button class="tab-button active" onclick="showTab('tab1')">產業政策工具比較器</button>
-            <button class="tab-button" onclick="showTab('tab2')">地緣政治風險評估矩陣</button>
-            <button class="tab-button" onclick="showTab('tab3')">台灣產業政策時間軸</button>
+            <button class="tab-button active" onclick="showTab('tab1')">产业政策工具比较器</button>
+            <button class="tab-button" onclick="showTab('tab2')">地缘政治风险评估矩阵</button>
+            <button class="tab-button" onclick="showTab('tab3')">台湾产业政策时间轴</button>
         </div>
 
-        <!-- Tab 1: 產業政策工具比較器 -->
+        <!-- Tab 1: 产业政策工具比较器 -->
         <div id="tab1" class="tab-content active">
             <div class="info-box">
-                選擇下方的產業政策工具，查看其優缺點、實施案例與效果評估。
+                选择下方的产业政策工具，查看其优缺点、实施案例与效果评估。
             </div>
 
             <div class="tool-grid">
-                <div class="tool-card" onclick="selectTool('補貼')">
-                    <h3>補貼</h3>
-                    <p>政府直接向企業或產業提供財政資助</p>
+                <div class="tool-card" onclick="selectTool('补贴')">
+                    <h3>补贴</h3>
+                    <p>政府直接向企业或产业提供财政资助</p>
                 </div>
-                <div class="tool-card" onclick="selectTool('稅收')">
-                    <h3>稅收優惠</h3>
-                    <p>企業所得稅減免、研發稅收抵免等</p>
+                <div class="tool-card" onclick="selectTool('税收')">
+                    <h3>税收优惠</h3>
+                    <p>企业所得税减免、研发税收抵免等</p>
                 </div>
-                <div class="tool-card" onclick="selectTool('關稅')">
-                    <h3>關稅與貿易政策</h3>
-                    <p>進口關稅、出口優惠、保護措施</p>
+                <div class="tool-card" onclick="selectTool('关税')">
+                    <h3>关税与贸易政策</h3>
+                    <p>进口关税、出口优惠、保护措施</p>
                 </div>
-                <div class="tool-card" onclick="selectTool('法規')">
-                    <h3>法規標準</h3>
-                    <p>技術標準、環保規範、安全要求</p>
+                <div class="tool-card" onclick="selectTool('法规')">
+                    <h3>法规标准</h3>
+                    <p>技术标准、环保规范、安全要求</p>
                 </div>
-                <div class="tool-card" onclick="selectTool('採購')">
-                    <h3>政府採購</h3>
-                    <p>優先採購本地企業產品與服務</p>
+                <div class="tool-card" onclick="selectTool('采购')">
+                    <h3>政府采购</h3>
+                    <p>优先采购本地企业产品与服务</p>
                 </div>
-                <div class="tool-card" onclick="selectTool('研發')">
-                    <h3>研發投資</h3>
-                    <p>政府直接資助企業或機構研發</p>
+                <div class="tool-card" onclick="selectTool('研发')">
+                    <h3>研发投资</h3>
+                    <p>政府直接资助企业或机构研发</p>
                 </div>
             </div>
 
-            <!-- 詳細資訊 -->
+            <!-- 详细信息 -->
             <div id="toolDetails" class="tool-details"></div>
         </div>
 
-        <!-- Tab 2: 地緣政治風險評估矩陣 -->
+        <!-- Tab 2: 地缘政治风险评估矩阵 -->
         <div id="tab2" class="tab-content">
             <div class="info-box">
-                此矩陣評估不同供應源的地緣政治風險與經濟效益。行表示供應源，列表示風險維度。
+                此矩阵评估不同供应源的地缘政治风险与经济效益。行表示供应源，列表示风险维度。
             </div>
 
             <div class="risk-matrix">
                 <table class="matrix-table">
                     <thead>
                         <tr>
-                            <th>供應源</th>
-                            <th>地緣政治風險</th>
-                            <th>供應穩定性</th>
-                            <th>成本優勢</th>
-                            <th>技術水準</th>
-                            <th>綜合評分</th>
+                            <th>供应源</th>
+                            <th>地缘政治风险</th>
+                            <th>供应稳定性</th>
+                            <th>成本优势</th>
+                            <th>技术水准</th>
+                            <th>综合评分</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="text-align: left; font-weight: 600;">台灣</td>
-                            <td class="risk-high">高風險</td>
+                            <td style="text-align: left; font-weight: 600;">台湾</td>
+                            <td class="risk-high">高风险</td>
                             <td class="risk-medium">中等</td>
                             <td class="risk-medium">中等成本</td>
-                            <td class="risk-low">先進</td>
+                            <td class="risk-low">先进</td>
                             <td class="risk-medium">8/10</td>
                         </tr>
                         <tr>
-                            <td style="text-align: left; font-weight: 600;">中國</td>
-                            <td class="risk-high">極高風險</td>
+                            <td style="text-align: left; font-weight: 600;">中国</td>
+                            <td class="risk-high">极高风险</td>
                             <td class="risk-low">高</td>
-                            <td class="risk-low">極低成本</td>
+                            <td class="risk-low">极低成本</td>
                             <td class="risk-medium">中等</td>
                             <td class="risk-high">4/10</td>
                         </tr>
                         <tr>
                             <td style="text-align: left; font-weight: 600;">日本</td>
-                            <td class="risk-low">低風險</td>
+                            <td class="risk-low">低风险</td>
                             <td class="risk-low">高</td>
                             <td class="risk-medium">高成本</td>
-                            <td class="risk-low">先進</td>
+                            <td class="risk-low">先进</td>
                             <td class="risk-low">8.5/10</td>
                         </tr>
                         <tr>
-                            <td style="text-align: left; font-weight: 600;">南韓</td>
-                            <td class="risk-low">低風險</td>
+                            <td style="text-align: left; font-weight: 600;">南韩</td>
+                            <td class="risk-low">低风险</td>
                             <td class="risk-low">高</td>
                             <td class="risk-medium">中高成本</td>
-                            <td class="risk-low">先進</td>
+                            <td class="risk-low">先进</td>
                             <td class="risk-low">8/10</td>
                         </tr>
                         <tr>
                             <td style="text-align: left; font-weight: 600;">越南</td>
-                            <td class="risk-low">低風險</td>
+                            <td class="risk-low">低风险</td>
                             <td class="risk-medium">中等</td>
                             <td class="risk-low">低成本</td>
-                            <td class="risk-medium">發展中</td>
+                            <td class="risk-medium">发展中</td>
                             <td class="risk-medium">7/10</td>
                         </tr>
                         <tr>
                             <td style="text-align: left; font-weight: 600;">印度</td>
-                            <td class="risk-low">低風險</td>
+                            <td class="risk-low">低风险</td>
                             <td class="risk-medium">中等</td>
                             <td class="risk-low">低成本</td>
-                            <td class="risk-medium">發展中</td>
+                            <td class="risk-medium">发展中</td>
                             <td class="risk-medium">7/10</td>
                         </tr>
                         <tr>
-                            <td style="text-align: left; font-weight: 600;">美國</td>
-                            <td class="risk-low">低風險</td>
+                            <td style="text-align: left; font-weight: 600;">美国</td>
+                            <td class="risk-low">低风险</td>
                             <td class="risk-low">高</td>
                             <td class="risk-high">高成本</td>
-                            <td class="risk-low">先進</td>
+                            <td class="risk-low">先进</td>
                             <td class="risk-medium">7.5/10</td>
                         </tr>
                     </tbody>
@@ -536,27 +536,27 @@
             <div class="matrix-legend">
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: #d4edda;"></div>
-                    <div class="legend-text">低風險/優勢明顯</div>
+                    <div class="legend-text">低风险/优势明显</div>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: #fff3cd;"></div>
-                    <div class="legend-text">中等風險/平衡</div>
+                    <div class="legend-text">中等风险/平衡</div>
                 </div>
                 <div class="legend-item">
                     <div class="legend-color" style="background-color: #f8d7da;"></div>
-                    <div class="legend-text">高風險/劣勢明顯</div>
+                    <div class="legend-text">高风险/劣势明显</div>
                 </div>
             </div>
 
             <div class="comparison-note">
-                注：此評估基於2026年資料，考慮了地緣政治環境、美中關係、疫情後供應鏈重組等因素。企業應根據自身產業特點調整權重。
+                注：此评估基于2026年数据，考虑了地缘政治环境、美中关系、疫情后供应链重组等因素。企业应根据自身产业特点调整权重。
             </div>
         </div>
 
-        <!-- Tab 3: 台灣產業政策時間軸 -->
+        <!-- Tab 3: 台湾产业政策时间轴 -->
         <div id="tab3" class="tab-content">
             <div class="info-box">
-                台灣產業政策演進的主要里程碑，體現了從代工到設計、從出口導向到創新驅動的轉變。
+                台湾产业政策演进的主要里程碑，体现了从代工到设计、从出口导向到创新驱动的转变。
             </div>
 
             <div class="timeline">
@@ -564,9 +564,9 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">1965-1975</div>
-                        <div class="timeline-title">加工出口區時代</div>
+                        <div class="timeline-title">加工出口区时代</div>
                         <div class="timeline-description">
-                            政府建立加工出口區，提供稅收優惠與基礎設施。吸引外資進行勞密集製造，包括紡織、電子組裝。此階段奠定了台灣「世界工廠」的基礎。
+                            政府创建加工出口区，提供税收优惠与基础设施。吸引外资进行劳密集制造，包括纺织、电子组装。此阶段奠定了台湾「世界工厂」的基础。
                         </div>
                     </div>
                 </div>
@@ -575,9 +575,9 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">1980-1990</div>
-                        <div class="timeline-title">科學園區與高科技產業化</div>
+                        <div class="timeline-title">科学园区与高科技产业化</div>
                         <div class="timeline-description">
-                            竹科成立（1980年）。政府投資建設園區，提供企業所得稅免稅5-7年、研發補貼、人力培訓。重點扶持半導體、電腦、軟體產業。台積電、聯電等企業在此時期成長。
+                            竹科成立（1980年）。政府投资建设园区，提供企业所得税免税5-7年、研发补贴、人力培训。重点扶持半导体、电脑、软件产业。台积电、联电等企业在此时期成长。
                         </div>
                     </div>
                 </div>
@@ -586,9 +586,9 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">1995-2005</div>
-                        <div class="timeline-title">中科、南科擴展 與產業升級</div>
+                        <div class="timeline-title">中科、南科扩展 与产业升级</div>
                         <div class="timeline-description">
-                            中部科學園區（1995）、南部科學園區（2002）相繼成立。台灣產業從組裝向設計升級，液晶顯示、微機電等產業發展。此時期台灣IC設計業務興起。
+                            中部科学园区（1995）、南部科学园区（2002）相继成立。台湾产业从组装向设计升级，液晶显示、微机电等产业发展。此时期台湾IC设计业务兴起。
                         </div>
                     </div>
                 </div>
@@ -597,9 +597,9 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">2008-2015</div>
-                        <div class="timeline-title">綠能與文創產業拓展</div>
+                        <div class="timeline-title">绿能与文创产业拓展</div>
                         <div class="timeline-description">
-                            政府推動「六大新興產業」計畫，包括綠能、醫療器材、文創等。LED照明、太陽能等產業獲得補貼與政策支持。此時期受全球金融危機衝擊，政府加強產業救濟政策。
+                            政府推动「六大新兴产业」计划，包括绿能、医疗器材、文创等。LED照明、太阳能等产业获得补贴与政策支持。此时期受全球金融危机冲击，政府加强产业救济政策。
                         </div>
                     </div>
                 </div>
@@ -608,9 +608,9 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">2016-2020</div>
-                        <div class="timeline-title">「5+2產業創新計畫」與AI時代</div>
+                        <div class="timeline-title">「5+2产业创新计划」与AI时代</div>
                         <div class="timeline-description">
-                            政府推出「亞洲矽谷」、「智慧機械」、「綠色能源」等重點計畫。人工智慧、IC設計、晶片製造成為新焦點。英特爾、微軟等國際企業在台灣設置研發中心。
+                            政府推出「亚洲硅谷」、「智能机械」、「绿色能源」等重点计划。人工智能、IC设计、芯片制造成为新焦点。英特尔、微软等国际企业在台湾设置研发中心。
                         </div>
                     </div>
                 </div>
@@ -619,9 +619,9 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-year">2021-2026</div>
-                        <div class="timeline-title">台灣矽盾 與地緣政治時代</div>
+                        <div class="timeline-title">台湾硅盾 与地缘政治时代</div>
                         <div class="timeline-description">
-                            美中科技戰升溫，TSMC成為地緣政治焦點。台灣政府支持TSMC赴美設廠，同時推動國內半導體自主。「南向政策」升級至「新南向政策」，分散對中國依賴。政府推動淨零排放與綠能轉型目標。
+                            美中科技战升温，TSMC成为地缘政治焦点。台湾政府支持TSMC赴美设厂，同时推动国内半导体自主。「南向政策」升级至「新南向政策」，分散对中国依赖。政府推动净零排放与绿能转型目标。
                         </div>
                     </div>
                 </div>
@@ -630,192 +630,192 @@
     </div>
 
     <script>
-        // Tab 切換功能
+        // Tab 切换功能
         function showTab(tabName) {
-            // 隱藏所有內容
+            // 隐藏所有内容
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => content.classList.remove('active'));
 
-            // 移除所有按鈕的active class
+            // 移除所有按钮的active class
             const buttons = document.querySelectorAll('.tab-button');
             buttons.forEach(button => button.classList.remove('active'));
 
-            // 顯示選定的標籤
+            // 显示选定的标签
             document.getElementById(tabName).classList.add('active');
 
-            // 標記按鈕為active
+            // 标记按钮为active
             event.target.classList.add('active');
         }
 
-        // 產業政策工具詳細資訊
+        // 产业政策工具详细信息
         const toolData = {
-            '補貼': {
-                description: '政府直接向企業或產業提供財政資助',
-                優勢: [
+            '补贴': {
+                description: '政府直接向企业或产业提供财政资助',
+                优势: [
                     '政策效果直接且快速',
-                    '目標明確，易於調整',
-                    '適合新興產業起步階段'
+                    '目标明确，易于调整',
+                    '适合新兴产业起步阶段'
                 ],
-                缺點: [
-                    '長期成本高，財政負擔重',
-                    '易引發尋租行為與腐敗',
-                    '容易導致市場扭曲'
+                缺点: [
+                    '长期成本高，财政负担重',
+                    '易引发寻租行为与腐败',
+                    '容易导致市场扭曲'
                 ],
                 案例: [
-                    '台灣: 口罩產業補貼（COVID-19疫情）',
-                    '美國: CHIPS法案補貼（520億美元）',
-                    '歐盟: 綠能產業補貼'
+                    '台湾: 口罩产业补贴（COVID-19疫情）',
+                    '美国: CHIPS法案补贴（520亿美元）',
+                    '欧盟: 绿能产业补贴'
                 ],
                 效率: 75,
                 公平性: 50,
-                可持續性: 55
+                可持续性: 55
             },
-            '稅收': {
-                description: '企業所得稅減免、研發稅收抵免、出口退稅等',
-                優勢: [
+            '税收': {
+                description: '企业所得税减免、研发税收抵免、出口退税等',
+                优势: [
                     '行政成本低',
-                    '相對隱蔽，易獲得企業支持',
-                    '鼓勵投資與創新'
+                    '相对隐蔽，易获得企业支持',
+                    '鼓励投资与创新'
                 ],
-                缺點: [
-                    '長期財政影響難以評估',
-                    '可能被大企業濫用',
-                    '易引發稅收競爭'
+                缺点: [
+                    '长期财政影响难以评估',
+                    '可能被大企业滥用',
+                    '易引发税收竞争'
                 ],
                 案例: [
-                    '台灣: 科技園區免稅優惠（5-7年)',
-                    '美國: 研發稅收抵免（25%)',
-                    '中國: 西部地區減稅優惠'
+                    '台湾: 科技园区免税优惠（5-7年)',
+                    '美国: 研发税收抵免（25%)',
+                    '中国: 西部地区减税优惠'
                 ],
                 效率: 70,
                 公平性: 55,
-                可持續性: 65
+                可持续性: 65
             },
-            '關稅': {
-                description: '進口關稅、反傾銷稅、出口優惠等貿易工具',
-                優勢: [
-                    '保護本地產業與就業',
+            '关税': {
+                description: '进口关税、反倾销税、出口优惠等贸易工具',
+                优势: [
+                    '保护本地产业与就业',
                     '政府收入增加',
-                    '易於實施與監控'
+                    '易于实施与监控'
                 ],
-                缺點: [
-                    '易引發國際貿易爭端',
-                    '提高消費品價格',
-                    '損害下游產業競爭力'
+                缺点: [
+                    '易引发国际贸易争端',
+                    '提高消费品价格',
+                    '损害下游产业竞争力'
                 ],
                 案例: [
-                    '美國: 對華加徵關稅（2018-)',
-                    '歐盟: CBAM碳邊境稅',
-                    '台灣: 農產品進口保護'
+                    '美国: 对华加征关税（2018-)',
+                    '欧盟: CBAM碳边境税',
+                    '台湾: 农产品进口保护'
                 ],
                 效率: 60,
                 公平性: 45,
-                可持續性: 40
+                可持续性: 40
             },
-            '法規': {
-                description: '技術標準、環保規範、安全要求等監管工具',
-                優勢: [
-                    '正當化（保護公眾利益名義）',
-                    '可同時實現多個政策目標',
-                    '相對隱蔽的保護措施'
+            '法规': {
+                description: '技术标准、环保规范、安全要求等监管工具',
+                优势: [
+                    '正当化（保护公众利益名义）',
+                    '可同时实现多个政策目标',
+                    '相对隐蔽的保护措施'
                 ],
-                缺點: [
-                    '易被濫用為貿易保護主義',
-                    '合規成本可能很高',
-                    '國際爭議風險'
+                缺点: [
+                    '易被滥用为贸易保护主义',
+                    '合规成本可能很高',
+                    '国际争议风险'
                 ],
                 案例: [
-                    '歐盟: GDPR數據保護規範',
-                    '歐盟: AI法案監管',
-                    '歐盟: 碳排放標準'
+                    '欧盟: GDPR数据保护规范',
+                    '欧盟: AI法案监管',
+                    '欧盟: 碳排放标准'
                 ],
                 效率: 65,
                 公平性: 70,
-                可持續性: 75
+                可持续性: 75
             },
-            '採購': {
-                description: '優先採購本地企業產品，設置本地內容要求',
-                優勢: [
-                    '直接刺激本地產業需求',
-                    '有助於建立供應鏈',
-                    '易於測量與評估'
+            '采购': {
+                description: '优先采购本地企业产品，设置本地内容要求',
+                优势: [
+                    '直接刺激本地产业需求',
+                    '有助于创建供应链',
+                    '易于测量与评估'
                 ],
-                缺點: [
+                缺点: [
                     '易提高政府成本',
-                    '可能降低採購效率',
-                    '有違反自由貿易協議的風險'
+                    '可能降低采购效率',
+                    '有违反自由贸易协议的风险'
                 ],
                 案例: [
-                    '台灣: 高鐵採購優先本地廠商',
-                    '美國: 國防採購本地優先',
-                    '印度: 電子製造本地化政策'
+                    '台湾: 高铁采购优先本地厂商',
+                    '美国: 国防采购本地优先',
+                    '印度: 电子制造本地化政策'
                 ],
                 效率: 72,
                 公平性: 60,
-                可持續性: 70
+                可持续性: 70
             },
-            '研發': {
-                description: '政府直接投資企業或機構研發專案',
-                優勢: [
-                    '降低企業研發風險',
-                    '補充市場資金不足',
-                    '適合高風險產業（航太、生科）'
+            '研发': {
+                description: '政府直接投资企业或机构研发项目',
+                优势: [
+                    '降低企业研发风险',
+                    '补充市场资金不足',
+                    '适合高风险产业（航太、生科）'
                 ],
-                缺點: [
-                    '易引發道德風險（過度依賴政府)',
-                    '成果商業化困難',
-                    '長期回報不確定'
+                缺点: [
+                    '易引发道德风险（过度依赖政府)',
+                    '成果商业化困难',
+                    '长期回报不确定'
                 ],
                 案例: [
-                    '台灣: 台積電早期研發補貼',
-                    '美國: SBIR小企業研發計畫',
-                    '以色列: 高科技研發基金'
+                    '台湾: 台积电早期研发补贴',
+                    '美国: SBIR小企业研发计划',
+                    '以色列: 高科技研发基金'
                 ],
                 效率: 68,
                 公平性: 65,
-                可持續性: 68
+                可持续性: 68
             }
         };
 
         function selectTool(toolName) {
-            // 更新選中狀態
+            // 更新选中状态
             const cards = document.querySelectorAll('.tool-card');
             cards.forEach(card => card.classList.remove('selected'));
             event.target.closest('.tool-card').classList.add('selected');
 
-            // 更新詳細資訊
+            // 更新详细信息
             const data = toolData[toolName];
             const detailsDiv = document.getElementById('toolDetails');
 
             let html = `
                 <div class="detail-section">
-                    <h4>定義</h4>
+                    <h4>定义</h4>
                     <p>${data.description}</p>
                 </div>
 
                 <div class="detail-section">
-                    <h4>主要優勢</h4>
+                    <h4>主要优势</h4>
                     <ul>
-                        ${data.優勢.map(item => `<li>${item}</li>`).join('')}
+                        ${data.优势.map(item => `<li>${item}</li>`).join('')}
                     </ul>
                 </div>
 
                 <div class="detail-section">
-                    <h4>主要缺點</h4>
+                    <h4>主要缺点</h4>
                     <ul>
-                        ${data.缺點.map(item => `<li>${item}</li>`).join('')}
+                        ${data.缺点.map(item => `<li>${item}</li>`).join('')}
                     </ul>
                 </div>
 
                 <div class="detail-section">
-                    <h4>實例應用</h4>
+                    <h4>实例应用</h4>
                     <ul>
                         ${data.案例.map(item => `<li>${item}</li>`).join('')}
                     </ul>
                 </div>
 
                 <div class="detail-section">
-                    <h4>效能評估</h4>
+                    <h4>性能评估</h4>
                     <div class="rating">
                         <span class="rating-label">政策效率</span>
                         <div class="rating-bar">
@@ -829,9 +829,9 @@
                         </div>
                     </div>
                     <div class="rating">
-                        <span class="rating-label">可持續性</span>
+                        <span class="rating-label">可持续性</span>
                         <div class="rating-bar">
-                            <div class="rating-fill" style="width: ${data.可持續性}%">${data.可持續性}%</div>
+                            <div class="rating-fill" style="width: ${data.可持续性}%">${data.可持续性}%</div>
                         </div>
                     </div>
                 </div>
@@ -840,7 +840,7 @@
             detailsDiv.innerHTML = html;
             detailsDiv.classList.add('active');
 
-            // 捲動到詳細資訊
+            // 卷动到详细信息
             setTimeout(() => {
                 detailsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 100);
@@ -848,8 +848,8 @@
 
         // 初始化
         document.addEventListener('DOMContentLoaded', function() {
-            // 預設選擇第一個工具
-            selectTool('補貼');
+            // 默认选择第一个工具
+            selectTool('补贴');
         });
     </script>
 </body>

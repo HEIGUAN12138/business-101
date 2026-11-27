@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>人力資源與組織管理 - 互動圖表</title>
+    <title>人力资源与组织管理 - 交互图表</title>
     <style>
         * {
             margin: 0;
@@ -103,7 +103,7 @@
             }
         }
 
-        /* 組織架構 */
+        /* 组织架构 */
         .org-chart {
             display: flex;
             flex-direction: column;
@@ -174,7 +174,7 @@
             font-weight: 700;
         }
 
-        /* 績效管理框架 */
+        /* 绩效管理框架 */
         .performance-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -212,7 +212,7 @@
             border-left: 4px solid #764ba2;
         }
 
-        /* 薪酬結構 */
+        /* 薪酬结构 */
         .salary-structure {
             margin: 20px 0;
         }
@@ -279,7 +279,7 @@
             opacity: 0.8;
         }
 
-        /* 企業文化光譜 */
+        /* 企业文化光谱 */
         .culture-spectrum {
             margin: 20px 0;
         }
@@ -387,7 +387,7 @@
             border-left-color: #06b6d4;
         }
 
-        /* 人才發展 */
+        /* 人才发展 */
         .career-paths {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -469,7 +469,7 @@
             background-color: #f9fafb;
         }
 
-        /* 響應式 */
+        /* 响应式 */
         @media (max-width: 768px) {
             .performance-grid,
             .salary-legend,
@@ -508,289 +508,289 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>人力資源與組織管理</h1>
-            <p>組織架構、績效管理、薪酬設計、企業文化的互動圖表</p>
+            <h1>人力资源与组织管理</h1>
+            <p>组织架构、绩效管理、薪酬设计、企业文化的交互图表</p>
         </div>
 
         <div class="tab-container">
-            <button class="tab-button active" onclick="switchTab('org')">組織架構</button>
-            <button class="tab-button" onclick="switchTab('performance')">績效管理</button>
-            <button class="tab-button" onclick="switchTab('salary')">薪酬結構</button>
-            <button class="tab-button" onclick="switchTab('culture')">企業文化</button>
-            <button class="tab-button" onclick="switchTab('development')">人才發展</button>
+            <button class="tab-button active" onclick="switchTab('org')">组织架构</button>
+            <button class="tab-button" onclick="switchTab('performance')">绩效管理</button>
+            <button class="tab-button" onclick="switchTab('salary')">薪酬结构</button>
+            <button class="tab-button" onclick="switchTab('culture')">企业文化</button>
+            <button class="tab-button" onclick="switchTab('development')">人才发展</button>
         </div>
 
         <div class="content">
-            <!-- 組織架構 -->
+            <!-- 组织架构 -->
             <div id="org" class="tab-content active">
-                <h2>組織架構設計對比</h2>
-                <p style="margin-bottom: 20px; color: #666;">不同的組織架構適合不同的企業規模、行業和發展階段。選擇合適的架構能提高決策效率、降低成本、激發創新。</p>
+                <h2>组织架构设计对比</h2>
+                <p style="margin-bottom: 20px; color: #666;">不同的组织架构适合不同的企业规模、行业和发展阶段。选择合适的架构能提高决策效率、降低成本、激发创新。</p>
 
                 <div class="org-chart">
                     <!-- 功能型 -->
                     <div class="org-type">
-                        <h3>功能型組織</h3>
+                        <h3>功能型组织</h3>
                         <div class="org-diagram">
                             <div class="org-box">CEO</div>
                         </div>
                         <div class="org-diagram">
-                            <div class="org-box">研發</div>
-                            <div class="org-box">生產</div>
-                            <div class="org-box">行銷</div>
-                            <div class="org-box">銷售</div>
-                            <div class="org-box">財務</div>
+                            <div class="org-box">研发</div>
+                            <div class="org-box">生产</div>
+                            <div class="org-box">营销</div>
+                            <div class="org-box">销售</div>
+                            <div class="org-box">财务</div>
                         </div>
                         <div class="org-pros-cons">
                             <div class="pros">
-                                <strong>✓ 優點</strong>
-                                專業化程度高、知識積累深、成本效率好、清晰的職能邊界
+                                <strong>✓ 优点</strong>
+                                专业化程度高、知识积累深、成本效率好、清晰的职能边界
                             </div>
                             <div class="cons">
-                                <strong>✗ 缺點</strong>
-                                跨部門協調困難、響應速度慢、新產品上市慢、部門壁壘導致責任推諉
+                                <strong>✗ 缺点</strong>
+                                跨部门协调困难、响应速度慢、新产品上市慢、部门壁垒导致责任推诿
                             </div>
                         </div>
-                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>適用場景：</strong> 產品線單一、業務穩定的企業（如傳統製造業）</p>
+                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>适用场景：</strong> 产品线单一、业务稳定的企业（如传统制造业）</p>
                     </div>
 
-                    <!-- 事業部型 -->
+                    <!-- 事业部型 -->
                     <div class="org-type">
-                        <h3>事業部型組織</h3>
+                        <h3>事业部型组织</h3>
                         <div class="org-diagram">
                             <div class="org-box">CEO</div>
                         </div>
                         <div class="org-diagram">
-                            <div class="org-box">事業部 A<br/>(產品線)</div>
-                            <div class="org-box">事業部 B<br/>(產品線)</div>
-                            <div class="org-box">事業部 C<br/>(地域)</div>
+                            <div class="org-box">事业部 A<br/>(产品线)</div>
+                            <div class="org-box">事业部 B<br/>(产品线)</div>
+                            <div class="org-box">事业部 C<br/>(地域)</div>
                         </div>
-                        <div style="text-align: center; margin: 10px 0; font-size: 12px;">每個事業部內部有完整的研發、生產、銷售、財務</div>
+                        <div style="text-align: center; margin: 10px 0; font-size: 12px;">每个事业部内部有完整的研发、生产、销售、财务</div>
                         <div class="org-pros-cons">
                             <div class="pros">
-                                <strong>✓ 優點</strong>
-                                決策權下沉、響應速度快、績效清晰、便於激勵
+                                <strong>✓ 优点</strong>
+                                决策权下沉、响应速度快、绩效清晰、便于激励
                             </div>
                             <div class="cons">
-                                <strong>✗ 缺點</strong>
-                                重複建設、成本高、資源浪費、協同機制複雜
+                                <strong>✗ 缺点</strong>
+                                重复建设、成本高、资源浪费、协同机制复杂
                             </div>
                         </div>
-                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>適用場景：</strong> 大型多元化企業（如豐田、GE）</p>
+                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>适用场景：</strong> 大型多元化企业（如丰田、GE）</p>
                     </div>
 
-                    <!-- 矩陣型 -->
+                    <!-- 矩阵型 -->
                     <div class="org-type">
-                        <h3>矩陣型組織</h3>
+                        <h3>矩阵型组织</h3>
                         <div class="org-diagram">
                             <div style="text-align: center;">
                                 <div class="org-box" style="margin-bottom: 10px;">CEO</div>
                                 <div style="display: flex; justify-content: center; gap: 20px;">
                                     <div>
-                                        <div class="org-box" style="margin-bottom: 5px;">技術副總</div>
-                                        <div class="org-box" style="margin: 5px 0; font-size: 10px;">工程師 1</div>
-                                        <div class="org-box" style="font-size: 10px;">工程師 2</div>
+                                        <div class="org-box" style="margin-bottom: 5px;">技术副总</div>
+                                        <div class="org-box" style="margin: 5px 0; font-size: 10px;">工程师 1</div>
+                                        <div class="org-box" style="font-size: 10px;">工程师 2</div>
                                     </div>
                                     <div>
-                                        <div class="org-box" style="margin-bottom: 5px;">產品副總</div>
-                                        <div class="org-box" style="margin: 5px 0; font-size: 10px;">工程師 1</div>
-                                        <div class="org-box" style="font-size: 10px;">工程師 2</div>
+                                        <div class="org-box" style="margin-bottom: 5px;">产品副总</div>
+                                        <div class="org-box" style="margin: 5px 0; font-size: 10px;">工程师 1</div>
+                                        <div class="org-box" style="font-size: 10px;">工程师 2</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <p style="text-align: center; margin: 10px 0; font-size: 12px;">員工同時向職能主管和專案經理報告</p>
+                        <p style="text-align: center; margin: 10px 0; font-size: 12px;">员工同时向职能主管和项目经理报告</p>
                         <div class="org-pros-cons">
                             <div class="pros">
-                                <strong>✓ 優點</strong>
-                                兼具專業化和靈活性、資源利用率高、適應複雜專案
+                                <strong>✓ 优点</strong>
+                                兼具专业化和灵活性、资源利用率高、适应复杂项目
                             </div>
                             <div class="cons">
-                                <strong>✗ 缺點</strong>
-                                報告關係複雜、責任模糊、容易產生衝突
+                                <strong>✗ 缺点</strong>
+                                报告关系复杂、责任模糊、容易产生冲突
                             </div>
                         </div>
-                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>適用場景：</strong> 科技企業、需要跨部門合作的專案（如 Microsoft、Google）</p>
+                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>适用场景：</strong> 科技企业、需要跨部门合作的项目（如 Microsoft、Google）</p>
                     </div>
 
                     <!-- 扁平化 -->
                     <div class="org-type">
-                        <h3>扁平化組織</h3>
+                        <h3>扁平化组织</h3>
                         <div class="org-diagram">
                             <div class="org-box">CEO</div>
                         </div>
                         <div class="org-diagram" style="justify-content: space-around;">
-                            <div class="org-box">員工 1</div>
-                            <div class="org-box">員工 2</div>
-                            <div class="org-box">員工 3</div>
-                            <div class="org-box">員工 4</div>
+                            <div class="org-box">员工 1</div>
+                            <div class="org-box">员工 2</div>
+                            <div class="org-box">员工 3</div>
+                            <div class="org-box">员工 4</div>
                         </div>
-                        <p style="text-align: center; margin: 10px 0; font-size: 12px;">最少層級，員工直接向老闆報告</p>
+                        <p style="text-align: center; margin: 10px 0; font-size: 12px;">最少层级，员工直接向老板报告</p>
                         <div class="org-pros-cons">
                             <div class="pros">
-                                <strong>✓ 優點</strong>
-                                決策快速、溝通成本低、員工賦權、創新易激發
+                                <strong>✓ 优点</strong>
+                                决策快速、沟通成本低、员工赋权、创新易激发
                             </div>
                             <div class="cons">
-                                <strong>✗ 缺點</strong>
-                                難以管理、職責模糊、擴展困難、易陷入混亂
+                                <strong>✗ 缺点</strong>
+                                难以管理、职责模糊、扩展困难、易陷入混乱
                             </div>
                         </div>
-                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>適用場景：</strong> 初創企業、小規模團隊（20-50 人以內）</p>
+                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>适用场景：</strong> 初创企业、小规模团队（20-50 人以内）</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 績效管理 -->
+            <!-- 绩效管理 -->
             <div id="performance" class="tab-content">
-                <h2>績效管理框架對比</h2>
-                <p style="margin-bottom: 20px; color: #666;">不同的績效管理方法各有優缺點。科學的績效管理應結合 OKR 的戰略對齊、KPI 的執行監測和 360 度回饋的全面評估。</p>
+                <h2>绩效管理框架对比</h2>
+                <p style="margin-bottom: 20px; color: #666;">不同的绩效管理方法各有优缺点。科学的绩效管理应结合 OKR 的战略对齐、KPI 的运行监测和 360 度回馈的全面评估。</p>
 
                 <div class="performance-grid">
                     <div class="performance-card">
-                        <h3>OKR（目標與關鍵成果）</h3>
-                        <p><strong>周期：</strong> 通常 3 個月</p>
-                        <p><strong>特點：</strong> 定性目標 + 定量成果</p>
+                        <h3>OKR（目标与关键成果）</h3>
+                        <p><strong>周期：</strong> 通常 3 个月</p>
+                        <p><strong>特点：</strong> 定性目标 + 定量成果</p>
                         <div class="metric">
-                            <strong>目標（O）：</strong> 成為市場領導者
+                            <strong>目标（O）：</strong> 成为市场领导者
                         </div>
                         <div class="metric">
-                            <strong>關鍵成果（KR）：</strong>
-                            <br/>• 市場佔有率升到 40%
-                            <br/>• 客戶滿意度 ≥ 4.5/5
-                            <br/>• 日活使用者升到 100 萬
+                            <strong>关键成果（KR）：</strong>
+                            <br/>• 市场占有率升到 40%
+                            <br/>• 客户满意度 ≥ 4.5/5
+                            <br/>• 日活用户升到 100 万
                         </div>
-                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>優點：</strong> 聚焦、透明、敏捷<br/><strong>風險：</strong> 容易流於形式</p>
+                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>优点：</strong> 聚焦、透明、敏捷<br/><strong>风险：</strong> 容易流于形式</p>
                     </div>
 
                     <div class="performance-card">
-                        <h3>KPI（關鍵績效指標）</h3>
-                        <p><strong>周期：</strong> 持續追蹤，月/季度評估</p>
-                        <p><strong>特點：</strong> 定量、直接與薪資掛鉤</p>
+                        <h3>KPI（关键绩效指针）</h3>
+                        <p><strong>周期：</strong> 持续追踪，月/季度评估</p>
+                        <p><strong>特点：</strong> 定量、直接与薪资挂钩</p>
                         <div class="metric">
-                            <strong>銷售部 KPI：</strong>
-                            <br/>• 新客戶數 ≥ 50
-                            <br/>• 平均合同額 ≥ $10K
-                            <br/>• 客戶留存率 ≥ 80%
+                            <strong>销售部 KPI：</strong>
+                            <br/>• 新客户数 ≥ 50
+                            <br/>• 平均合同额 ≥ $10K
+                            <br/>• 客户留存率 ≥ 80%
                         </div>
                         <div class="metric">
                             <strong>客服部 KPI：</strong>
-                            <br/>• 響應時間 &lt; 2 小時
-                            <br/>• 客戶滿意度 ≥ 4.2/5
-                            <br/>• 首次解決率 ≥ 85%
+                            <br/>• 响应时间 &lt; 2 小时
+                            <br/>• 客户满意度 ≥ 4.2/5
+                            <br/>• 首次解决率 ≥ 85%
                         </div>
-                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>優點：</strong> 聚焦、易測量<br/><strong>風險：</strong> 導致短期行為</p>
+                        <p style="margin-top: 12px; font-size: 12px; color: #666;"><strong>优点：</strong> 聚焦、易测量<br/><strong>风险：</strong> 导致短期行为</p>
                     </div>
                 </div>
 
                 <div class="performance-card" style="margin-bottom: 20px;">
-                    <h3>360 度評估</h3>
-                    <p style="margin-bottom: 15px;">收集來自多方面的回饋，全面評估員工績效和發展領域。</p>
+                    <h3>360 度评估</h3>
+                    <p style="margin-bottom: 15px;">收集来自多方面的回馈，全面评估员工绩效和发展领域。</p>
                     <table>
                         <tr>
-                            <th>評估來源</th>
-                            <th>反映的內容</th>
-                            <th>權重</th>
+                            <th>评估来源</th>
+                            <th>反映的内容</th>
+                            <th>权重</th>
                         </tr>
                         <tr>
-                            <td>上司評估</td>
-                            <td>工作績效、責任心、目標達成</td>
+                            <td>上司评估</td>
+                            <td>工作绩效、责任心、目标达成</td>
                             <td>40%</td>
                         </tr>
                         <tr>
-                            <td>同事評估</td>
-                            <td>協作能力、溝通、團隊貢獻</td>
+                            <td>同事评估</td>
+                            <td>协作能力、沟通、团队贡献</td>
                             <td>25%</td>
                         </tr>
                         <tr>
-                            <td>下屬評估</td>
-                            <td>領導力、指導、公平性</td>
+                            <td>下属评估</td>
+                            <td>领导力、指导、公平性</td>
                             <td>20%</td>
                         </tr>
                         <tr>
-                            <td>自我評估</td>
-                            <td>自我認知、成長意識</td>
+                            <td>自我评估</td>
+                            <td>自我认知、成长意识</td>
                             <td>15%</td>
                         </tr>
                     </table>
                     <div class="note">
-                        <strong>注意：</strong> 360 度評估的價值在於促進自我認知和發展，而非單純評分。需要鼓勵匿名、坦誠的回饋，並提供回饋說明會幫助被評估者理解。
+                        <strong>注意：</strong> 360 度评估的价值在于促进自我认知和发展，而非单纯评分。需要鼓励匿名、坦诚的回馈，并提供回馈说明会帮助被评估者理解。
                     </div>
                 </div>
 
                 <div class="performance-card">
-                    <h3>最佳實踐：平衡三層評估</h3>
-                    <p style="margin-bottom: 12px;">聯動 OKR、KPI 和 360 度評估，形成全面的績效管理體系：</p>
+                    <h3>最佳实践：平衡三层评估</h3>
+                    <p style="margin-bottom: 12px;">联动 OKR、KPI 和 360 度评估，形成全面的绩效管理体系：</p>
                     <div style="background-color: white; padding: 15px; border-radius: 6px; margin-top: 10px;">
-                        <p><strong style="color: #667eea;">OKR：</strong> 確保所有人朝同一個戰略目標努力</p>
-                        <p style="margin-top: 8px;"><strong style="color: #667eea;">KPI：</strong> 監測日常執行，確保目標實現</p>
-                        <p style="margin-top: 8px;"><strong style="color: #667eea;">360 度回饋：</strong> 識別發展領域，支持員工成長</p>
+                        <p><strong style="color: #667eea;">OKR：</strong> 确保所有人朝同一个战略目标努力</p>
+                        <p style="margin-top: 8px;"><strong style="color: #667eea;">KPI：</strong> 监测日常运行，确保目标实现</p>
+                        <p style="margin-top: 8px;"><strong style="color: #667eea;">360 度回馈：</strong> 识别发展领域，支持员工成长</p>
                     </div>
                 </div>
             </div>
 
-            <!-- 薪酬結構 -->
+            <!-- 薪酬结构 -->
             <div id="salary" class="tab-content">
-                <h2>薪酬結構設計</h2>
-                <p style="margin-bottom: 20px; color: #666;">科學的薪酬結構需要平衡固定薪資（安全感）、變動獎勵（激勵）和福利（長期保障）。</p>
+                <h2>薪酬结构设计</h2>
+                <p style="margin-bottom: 20px; color: #666;">科学的薪酬结构需要平衡固定薪资（安全感）、变动奖励（激励）和福利（长期保障）。</p>
 
                 <div class="salary-structure">
-                    <h3 style="margin-bottom: 15px;">典型薪酬構成（技術企業）</h3>
+                    <h3 style="margin-bottom: 15px;">典型薪酬构成（技术企业）</h3>
                     <div class="salary-bar">
-                        <div class="salary-segment base-salary">基本工資 65%</div>
-                        <div class="salary-segment bonus">績效獎金 25%</div>
-                        <div class="salary-segment benefits">福利&股權 10%</div>
+                        <div class="salary-segment base-salary">基本工资 65%</div>
+                        <div class="salary-segment bonus">绩效奖金 25%</div>
+                        <div class="salary-segment benefits">福利&股权 10%</div>
                     </div>
-                    <p style="font-size: 12px; color: #666; margin-top: 10px;">年薪 $100K 時，基本工資 $65K、年度獎金 $25K、福利&股權激勵 $10K</p>
+                    <p style="font-size: 12px; color: #666; margin-top: 10px;">年薪 $100K 时，基本工资 $65K、年度奖金 $25K、福利&股权激励 $10K</p>
                 </div>
 
                 <div class="salary-legend">
                     <div class="legend-item" style="background-color: #f0f4ff; border-left: 4px solid #667eea;">
-                        <h4>基本工資</h4>
-                        <p>提供安全感和生活保障，占薪資主要部分。根據職位級別和市場行情確定。</p>
+                        <h4>基本工资</h4>
+                        <p>提供安全感和生活保障，占薪资主要部分。根据职位级别和市场行情确定。</p>
                     </div>
                     <div class="legend-item" style="background-color: #ecfdf5; border-left: 4px solid #10b981;">
-                        <h4>績效獎金</h4>
-                        <p>根據個人績效、部門業績、公司業績浮動。激勵指向強，但需防止短期行為。</p>
+                        <h4>绩效奖金</h4>
+                        <p>根据个人绩效、部门业绩、公司业绩浮动。激励指向强，但需防止短期行为。</p>
                     </div>
                     <div class="legend-item" style="background-color: #fffbeb; border-left: 4px solid #f59e0b;">
-                        <h4>福利&股權</h4>
-                        <p>保險、公積金、股權激勵等長期保障。展現企業對員工的長期投資承諾。</p>
+                        <h4>福利&股权</h4>
+                        <p>保险、公积金、股权激励等长期保障。展现企业对员工的长期投资承诺。</p>
                     </div>
                 </div>
 
                 <div class="salary-structure" style="margin-top: 30px;">
-                    <h3 style="margin-bottom: 15px;">薪級表範例（科技企業工程師）</h3>
+                    <h3 style="margin-bottom: 15px;">薪级表范例（科技企业工程师）</h3>
                     <table>
                         <tr>
-                            <th>級別</th>
+                            <th>级别</th>
                             <th>工作年限</th>
-                            <th>月基本工資</th>
-                            <th>年度獎金範圍</th>
-                            <th>股權/期權</th>
+                            <th>月基本工资</th>
+                            <th>年度奖金范围</th>
+                            <th>股权/期权</th>
                         </tr>
                         <tr>
-                            <td>初級工程師 (L1)</td>
+                            <td>初级工程师 (L1)</td>
                             <td>0-2 年</td>
                             <td>$4,000 - $6,000</td>
                             <td>0.5 - 1.5 月薪</td>
                             <td>$20K - $40K</td>
                         </tr>
                         <tr>
-                            <td>中級工程師 (L2)</td>
+                            <td>中级工程师 (L2)</td>
                             <td>2-5 年</td>
                             <td>$7,000 - $10,000</td>
                             <td>1.5 - 3 月薪</td>
                             <td>$50K - $100K</td>
                         </tr>
                         <tr>
-                            <td>高級工程師 (L3)</td>
+                            <td>高级工程师 (L3)</td>
                             <td>5-8 年</td>
                             <td>$12,000 - $16,000</td>
                             <td>3 - 5 月薪</td>
                             <td>$100K - $200K</td>
                         </tr>
                         <tr>
-                            <td>資深工程師 (L4)</td>
+                            <td>资深工程师 (L4)</td>
                             <td>8+ 年</td>
                             <td>$18,000 - $25,000</td>
                             <td>5 - 8 月薪</td>
@@ -800,57 +800,57 @@
                 </div>
 
                 <div class="note" style="margin-top: 30px;">
-                    <strong>薪酬透明度的重要性：</strong> 公開薪級表能減少員工間的疑慮、降低薪酬談判成本、增加組織公信力。同工同酬是法律要求也是道德標準。
+                    <strong>薪酬透明度的重要性：</strong> 公开薪级表能减少员工间的疑虑、降低薪酬谈判成本、增加组织公信力。同工同酬是法律要求也是道德标准。
                 </div>
 
                 <div class="salary-structure" style="margin-top: 30px;">
-                    <h3 style="margin-bottom: 15px;">股權激勵 vs 現金獎勵的權衡</h3>
+                    <h3 style="margin-bottom: 15px;">股权激励 vs 现金奖励的权衡</h3>
                     <table>
                         <tr>
-                            <th>激勵方式</th>
-                            <th>適用場景</th>
-                            <th>優點</th>
-                            <th>風險</th>
+                            <th>激励方式</th>
+                            <th>适用场景</th>
+                            <th>优点</th>
+                            <th>风险</th>
                         </tr>
                         <tr>
-                            <td><strong>現金獎金</strong></td>
-                            <td>成熟企業、短期激勵</td>
-                            <td>立即生效、員工容易理解</td>
-                            <td>難以激勵長期貢獻、成本高</td>
+                            <td><strong>现金奖金</strong></td>
+                            <td>成熟企业、短期激励</td>
+                            <td>立即生效、员工容易理解</td>
+                            <td>难以激励长期贡献、成本高</td>
                         </tr>
                         <tr>
-                            <td><strong>股票期權</strong></td>
-                            <td>上市公司、長期激勵</td>
-                            <td>激勵長期創造價值、節省現金流</td>
-                            <td>股價下跌時失效、不利於初期人才</td>
+                            <td><strong>股票期权</strong></td>
+                            <td>上市公司、长期激励</td>
+                            <td>激励长期创造价值、节省现金流</td>
+                            <td>股价下跌时失效、不利于初期人才</td>
                         </tr>
                         <tr>
                             <td><strong>限制性股票(RSU)</strong></td>
-                            <td>科技初創、人才保留</td>
-                            <td>分年度授予、激勵留任</td>
-                            <td>公司不上市則價值不確定</td>
+                            <td>科技初创、人才保留</td>
+                            <td>分年度授予、激励留任</td>
+                            <td>公司不上市则价值不确定</td>
                         </tr>
                         <tr>
-                            <td><strong>員工持股計畫(ESOP)</strong></td>
-                            <td>上市公司、員工參與</td>
-                            <td>強化主人翁意識、穩定股價</td>
-                            <td>員工集中風險、資金要求高</td>
+                            <td><strong>员工持股计划(ESOP)</strong></td>
+                            <td>上市公司、员工参与</td>
+                            <td>强化主人翁意识、稳定股价</td>
+                            <td>员工集中风险、资金要求高</td>
                         </tr>
                     </table>
                 </div>
             </div>
 
-            <!-- 企業文化 -->
+            <!-- 企业文化 -->
             <div id="culture" class="tab-content">
-                <h2>企業文化光譜</h2>
-                <p style="margin-bottom: 20px; color: #666;">企業文化沿著「控制-信任」的光譜分佈。沒有絕對優劣，應與企業戰略和發展階段匹配。</p>
+                <h2>企业文化光谱</h2>
+                <p style="margin-bottom: 20px; color: #666;">企业文化沿着「控制-信任」的光谱分布。没有绝对优劣，应与企业战略和发展阶段匹配。</p>
 
                 <div class="culture-spectrum">
                     <div class="spectrum-slider">
-                        <div class="spectrum-segment control-culture">控制型文化<br/>規則&監督</div>
-                        <div class="spectrum-segment process-culture">流程型文化<br/>制度&規範</div>
-                        <div class="spectrum-segment trust-culture">信任型文化<br/>自主&賦權</div>
-                        <div class="spectrum-segment innovation-culture">創新型文化<br/>冒險&實驗</div>
+                        <div class="spectrum-segment control-culture">控制型文化<br/>规则&监督</div>
+                        <div class="spectrum-segment process-culture">流程型文化<br/>制度&规范</div>
+                        <div class="spectrum-segment trust-culture">信任型文化<br/>自主&赋权</div>
+                        <div class="spectrum-segment innovation-culture">创新型文化<br/>冒险&实验</div>
                     </div>
                     <div class="spectrum-labels">
                         <div class="spectrum-label"><strong>高控制<br/>低信任</strong></div>
@@ -863,174 +863,174 @@
                 <div class="culture-examples">
                     <div class="culture-box culture-control">
                         <h4>控制型文化</h4>
-                        <p><strong>特徵：</strong> 嚴格監管、規則明確、等級分明、決策集中</p>
-                        <p style="margin-top: 8px;"><strong>代表企業：</strong> 傳統製造業、軍事組織、政府機構</p>
-                        <p style="margin-top: 8px;"><strong>優點：</strong> 穩定、可控、低成本</p>
-                        <p style="margin-top: 8px;"><strong>缺點：</strong> 創新能力弱、員工缺乏動力</p>
+                        <p><strong>特征：</strong> 严格监管、规则明确、等级分明、决策集中</p>
+                        <p style="margin-top: 8px;"><strong>代表企业：</strong> 传统制造业、军事组织、政府机构</p>
+                        <p style="margin-top: 8px;"><strong>优点：</strong> 稳定、可控、低成本</p>
+                        <p style="margin-top: 8px;"><strong>缺点：</strong> 创新能力弱、员工缺乏动力</p>
                     </div>
 
                     <div class="culture-box culture-process">
                         <h4>流程型文化</h4>
-                        <p><strong>特徵：</strong> 強調制度和流程、文件完善、決策規範、風險管理嚴格</p>
-                        <p style="margin-top: 8px;"><strong>代表企業：</strong> 大型銀行、保險公司、國企</p>
-                        <p style="margin-top: 8px;"><strong>優點：</strong> 規範、可預測、降低風險</p>
-                        <p style="margin-top: 8px;"><strong>缺點：</strong> 反應慢、官僚化、阻礙創新</p>
+                        <p><strong>特征：</strong> 强调制度和流程、文档完善、决策规范、风险管理严格</p>
+                        <p style="margin-top: 8px;"><strong>代表企业：</strong> 大型银行、保险公司、国企</p>
+                        <p style="margin-top: 8px;"><strong>优点：</strong> 规范、可预测、降低风险</p>
+                        <p style="margin-top: 8px;"><strong>缺点：</strong> 反应慢、官僚化、阻碍创新</p>
                     </div>
 
                     <div class="culture-box culture-trust">
                         <h4>信任型文化</h4>
-                        <p><strong>特徵：</strong> 相信員工、賦予自主權、鼓勵主動、開放溝通</p>
-                        <p style="margin-top: 8px;"><strong>代表企業：</strong> Netflix、谷歌、緩衝（Buffer）</p>
-                        <p style="margin-top: 8px;"><strong>優點：</strong> 靈活、員工滿意度高、適應力強</p>
-                        <p style="margin-top: 8px;"><strong>缺點：</strong> 難以管理、邊界不清、可能混亂</p>
+                        <p><strong>特征：</strong> 相信员工、赋予自主权、鼓励主动、开放沟通</p>
+                        <p style="margin-top: 8px;"><strong>代表企业：</strong> Netflix、谷歌、缓冲（Buffer）</p>
+                        <p style="margin-top: 8px;"><strong>优点：</strong> 灵活、员工满意度高、适应力强</p>
+                        <p style="margin-top: 8px;"><strong>缺点：</strong> 难以管理、边界不清、可能混乱</p>
                     </div>
 
                     <div class="culture-box culture-innovation">
-                        <h4>創新型文化</h4>
-                        <p><strong>特徵：</strong> 鼓勵冒險、容許失敗、快速迭代、打破常規</p>
-                        <p style="margin-top: 8px;"><strong>代表企業：</strong> 初創企業、斯坦福研究中心、3M</p>
-                        <p style="margin-top: 8px;"><strong>優點：</strong> 驅動創新、吸引人才、領先市場</p>
-                        <p style="margin-top: 8px;"><strong>缺點：</strong> 高風險、不穩定、易陷入混亂</p>
+                        <h4>创新型文化</h4>
+                        <p><strong>特征：</strong> 鼓励冒险、容许失败、快速迭代、打破常规</p>
+                        <p style="margin-top: 8px;"><strong>代表企业：</strong> 初创企业、斯坦福研究中心、3M</p>
+                        <p style="margin-top: 8px;"><strong>优点：</strong> 驱动创新、吸引人才、领先市场</p>
+                        <p style="margin-top: 8px;"><strong>缺点：</strong> 高风险、不稳定、易陷入混乱</p>
                     </div>
                 </div>
 
                 <div class="note" style="margin-top: 30px;">
-                    <strong>文化匹配的重要性：</strong> 初創企業採用控制型文化會窒息創新；傳統銀行採用純創新型文化會引發風險。成功的企業通常採用混合型文化，核心價值觀穩定，執行方式靈活。
+                    <strong>文化匹配的重要性：</strong> 初创企业采用控制型文化会窒息创新；传统银行采用纯创新型文化会引发风险。成功的企业通常采用混合型文化，内核价值观稳定，运行方式灵活。
                 </div>
 
                 <div style="background-color: #f0f4ff; padding: 20px; border-radius: 8px; margin-top: 20px;">
-                    <h4 style="color: #667eea; margin-bottom: 12px;">文化與績效的連結</h4>
+                    <h4 style="color: #667eea; margin-bottom: 12px;">文化与绩效的链接</h4>
                     <table>
                         <tr>
-                            <th>文化類型</th>
-                            <th>激勵方式</th>
-                            <th>決策速度</th>
-                            <th>創新能力</th>
-                            <th>員工滿意度</th>
+                            <th>文化类型</th>
+                            <th>激励方式</th>
+                            <th>决策速度</th>
+                            <th>创新能力</th>
+                            <th>员工满意度</th>
                         </tr>
                         <tr>
                             <td>控制型</td>
-                            <td>懲罰&獎勵</td>
+                            <td>惩罚&奖励</td>
                             <td>慢</td>
                             <td>低</td>
                             <td>低</td>
                         </tr>
                         <tr>
                             <td>流程型</td>
-                            <td>目標&報酬</td>
+                            <td>目标&报酬</td>
                             <td>中等</td>
                             <td>中等</td>
                             <td>中等</td>
                         </tr>
                         <tr>
                             <td>信任型</td>
-                            <td>自主&成長</td>
+                            <td>自主&成长</td>
                             <td>快</td>
                             <td>高</td>
                             <td>高</td>
                         </tr>
                         <tr>
-                            <td>創新型</td>
-                            <td>激情&願景</td>
+                            <td>创新型</td>
+                            <td>激情&愿景</td>
                             <td>很快</td>
                             <td>很高</td>
                             <td>很高*</td>
                         </tr>
                     </table>
-                    <p style="font-size: 12px; margin-top: 12px; color: #666;">* 創新型文化的員工滿意度高，但高壓力也可能導致高流失。</p>
+                    <p style="font-size: 12px; margin-top: 12px; color: #666;">* 创新型文化的员工满意度高，但高压力也可能导致高流失。</p>
                 </div>
             </div>
 
-            <!-- 人才發展 -->
+            <!-- 人才发展 -->
             <div id="development" class="tab-content">
-                <h2>人才發展與職涯規劃</h2>
-                <p style="margin-bottom: 20px; color: #666;">現代企業應提供多元的職涯路徑，允許員工選擇適合自己的發展方向，而不是所有人都必須升任經理。</p>
+                <h2>人才发展与职涯规划</h2>
+                <p style="margin-bottom: 20px; color: #666;">现代企业应提供多元的职涯路径，允许员工选择适合自己的发展方向，而不是所有人都必须升任经理。</p>
 
                 <div class="career-paths">
                     <div class="path-card path-manager">
-                        <h4>管理晉升路徑</h4>
-                        <p style="margin-bottom: 12px; font-size: 12px; color: #666;">適合有領導天賦、願意管理他人的人才</p>
-                        <div class="path-stage"><span class="stage">L1</span> 初級員工</div>
-                        <div class="path-stage"><span class="stage">L2</span> 中級員工</div>
-                        <div class="path-stage"><span class="stage">L3</span> 高級員工 / 小組領導</div>
-                        <div class="path-stage"><span class="stage">L4</span> 經理（管理 5-10 人）</div>
-                        <div class="path-stage"><span class="stage">L5</span> 總監（管理多個團隊）</div>
-                        <div class="path-stage"><span class="stage">L6</span> 副總經理 / 執行管理</div>
+                        <h4>管理晋升路径</h4>
+                        <p style="margin-bottom: 12px; font-size: 12px; color: #666;">适合有领导天赋、愿意管理他人的人才</p>
+                        <div class="path-stage"><span class="stage">L1</span> 初级员工</div>
+                        <div class="path-stage"><span class="stage">L2</span> 中级员工</div>
+                        <div class="path-stage"><span class="stage">L3</span> 高级员工 / 小组领导</div>
+                        <div class="path-stage"><span class="stage">L4</span> 经理（管理 5-10 人）</div>
+                        <div class="path-stage"><span class="stage">L5</span> 总监（管理多个团队）</div>
+                        <div class="path-stage"><span class="stage">L6</span> 副总经理 / 运行管理</div>
                     </div>
 
                     <div class="path-card path-specialist">
-                        <h4>專家晉升路徑</h4>
-                        <p style="margin-bottom: 12px; font-size: 12px; color: #666;">適合深耕技術、成為領域專家的人才</p>
-                        <div class="path-stage"><span class="stage">L1</span> 初級技術員</div>
-                        <div class="path-stage"><span class="stage">L2</span> 工程師</div>
-                        <div class="path-stage"><span class="stage">L3</span> 高級工程師</div>
-                        <div class="path-stage"><span class="stage">L4</span> 資深工程師</div>
-                        <div class="path-stage"><span class="stage">L5</span> 首席技術官(CTO) / 技術顧問</div>
-                        <div class="path-stage"><span class="stage">L6</span> 技術院士 / 傑出貢獻者</div>
+                        <h4>专家晋升路径</h4>
+                        <p style="margin-bottom: 12px; font-size: 12px; color: #666;">适合深耕技术、成为领域专家的人才</p>
+                        <div class="path-stage"><span class="stage">L1</span> 初级技术员</div>
+                        <div class="path-stage"><span class="stage">L2</span> 工程师</div>
+                        <div class="path-stage"><span class="stage">L3</span> 高级工程师</div>
+                        <div class="path-stage"><span class="stage">L4</span> 资深工程师</div>
+                        <div class="path-stage"><span class="stage">L5</span> 首席技术官(CTO) / 技术顾问</div>
+                        <div class="path-stage"><span class="stage">L6</span> 技术院士 / 杰出贡献者</div>
                     </div>
 
                     <div class="path-card path-entrepreneur">
-                        <h4>創業/專案領導路徑</h4>
-                        <p style="margin-bottom: 12px; font-size: 12px; color: #666;">適合有創業精神、能獨立驅動專案的人才</p>
-                        <div class="path-stage"><span class="stage">L1</span> 專案貢獻者</div>
-                        <div class="path-stage"><span class="stage">L2</span> 專案主要成員</div>
-                        <div class="path-stage"><span class="stage">L3</span> 專案領導者</div>
-                        <div class="path-stage"><span class="stage">L4</span> 業務拓展經理</div>
-                        <div class="path-stage"><span class="stage">L5</span> 產品線負責人</div>
-                        <div class="path-stage"><span class="stage">L6</span> 事業部總經理</div>
+                        <h4>创业/项目领导路径</h4>
+                        <p style="margin-bottom: 12px; font-size: 12px; color: #666;">适合有创业精神、能独立驱动项目的人才</p>
+                        <div class="path-stage"><span class="stage">L1</span> 项目贡献者</div>
+                        <div class="path-stage"><span class="stage">L2</span> 项目主要成员</div>
+                        <div class="path-stage"><span class="stage">L3</span> 项目领导者</div>
+                        <div class="path-stage"><span class="stage">L4</span> 业务拓展经理</div>
+                        <div class="path-stage"><span class="stage">L5</span> 产品线负责人</div>
+                        <div class="path-stage"><span class="stage">L6</span> 事业部总经理</div>
                     </div>
                 </div>
 
                 <div style="background-color: #f0f4ff; padding: 20px; border-radius: 8px; margin-top: 30px;">
-                    <h4 style="color: #667eea; margin-bottom: 15px;">人才發展的關鍵要素</h4>
+                    <h4 style="color: #667eea; margin-bottom: 15px;">人才发展的关键要素</h4>
                     <table>
                         <tr>
-                            <th>發展要素</th>
-                            <th>實踐方式</th>
-                            <th>投資成本</th>
-                            <th>預期效果</th>
+                            <th>发展要素</th>
+                            <th>实践方式</th>
+                            <th>投资成本</th>
+                            <th>预期效果</th>
                         </tr>
                         <tr>
-                            <td><strong>培訓與課程</strong></td>
-                            <td>內部課程、外部研修、線上學習</td>
+                            <td><strong>培训与课程</strong></td>
+                            <td>内部课程、外部研修、在线学习</td>
                             <td>中</td>
-                            <td>提升專業能力、跟上行業發展</td>
+                            <td>提升专业能力、跟上行业发展</td>
                         </tr>
                         <tr>
-                            <td><strong>導師制</strong></td>
-                            <td>配對資深員工與新人，分享經驗</td>
+                            <td><strong>导师制</strong></td>
+                            <td>配对资深员工与新人，分享经验</td>
                             <td>低</td>
-                            <td>加快新人成熟、傳承知識</td>
+                            <td>加快新人成熟、传承知识</td>
                         </tr>
                         <tr>
-                            <td><strong>輪崗</strong></td>
-                            <td>員工在不同部門或地區工作</td>
+                            <td><strong>轮岗</strong></td>
+                            <td>员工在不同部门或地区工作</td>
                             <td>高</td>
-                            <td>拓寬視野、積累綜合經驗</td>
+                            <td>拓宽视野、积累综合经验</td>
                         </tr>
                         <tr>
-                            <td><strong>專案委派</strong></td>
-                            <td>分配有挑戰的專案，推動成長</td>
+                            <td><strong>项目委派</strong></td>
+                            <td>分配有挑战的项目，推动成长</td>
                             <td>中</td>
-                            <td>激發潛能、發現新才能</td>
+                            <td>激发潜能、发现新才能</td>
                         </tr>
                         <tr>
-                            <td><strong>高管教練</strong></td>
-                            <td>聘請外部教練輔導領導力發展</td>
+                            <td><strong>高管教练</strong></td>
+                            <td>聘请外部教练辅导领导力发展</td>
                             <td>高</td>
-                            <td>改善領導風格、加速晉升</td>
+                            <td>改善领导风格、加速晋升</td>
                         </tr>
                         <tr>
-                            <td><strong>知識管理</strong></td>
-                            <td>記錄最佳實踐、建立知識庫</td>
+                            <td><strong>知识管理</strong></td>
+                            <td>记录最佳实践、创建知识库</td>
                             <td>中</td>
-                            <td>共享經驗、降低知識流失</td>
+                            <td>共享经验、降低知识流失</td>
                         </tr>
                     </table>
                 </div>
 
                 <div class="note" style="margin-top: 30px;">
-                    <strong>最優實踐：70-20-10 法則</strong> — 員工學習的 70% 來自工作實踐（專案、挑戰），20% 來自與他人的互動（導師、同事），10% 來自正式培訓（課程、書籍）。企業應優先投資於工作實踐和導師制，而非只依賴培訓課程。
+                    <strong>最优实践：70-20-10 法则</strong> — 员工学习的 70% 来自工作实践（项目、挑战），20% 来自与他人的交互（导师、同事），10% 来自正式培训（课程、书籍）。企业应优先投资于工作实践和导师制，而非只依赖培训课程。
                 </div>
             </div>
         </div>
@@ -1038,22 +1038,22 @@
 
     <script>
         function switchTab(tabName) {
-            // 隱藏所有內容
+            // 隐藏所有内容
             const contents = document.querySelectorAll('.tab-content');
             contents.forEach(content => {
                 content.classList.remove('active');
             });
 
-            // 移除所有按鈕的 active 類
+            // 移除所有按钮的 active 类
             const buttons = document.querySelectorAll('.tab-button');
             buttons.forEach(button => {
                 button.classList.remove('active');
             });
 
-            // 顯示選中的內容
+            // 显示选中的内容
             document.getElementById(tabName).classList.add('active');
 
-            // 為點擊的按鈕添加 active 類
+            // 为点击的按钮添加 active 类
             event.target.classList.add('active');
         }
     </script>

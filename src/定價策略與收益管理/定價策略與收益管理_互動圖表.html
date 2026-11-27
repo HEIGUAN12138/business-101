@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>定價策略與收益管理 - 互動工具</title>
+    <title>定价策略与收益管理 - 交互工具</title>
     <style>
         * {
             margin: 0;
@@ -327,53 +327,53 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>定價策略與收益管理</h1>
-            <p>互動式計算與決策工具</p>
+            <h1>定价策略与收益管理</h1>
+            <p>交互式计算与决策工具</p>
         </div>
 
         <div class="tabs-wrapper">
-            <button class="tab-button active" onclick="switchTab(0)">Tab 1：價格彈性計算器</button>
-            <button class="tab-button" onclick="switchTab(1)">Tab 2：定價策略選擇器</button>
-            <button class="tab-button" onclick="switchTab(2)">Tab 3：收益管理模擬器</button>
+            <button class="tab-button active" onclick="switchTab(0)">Tab 1：价格弹性计算器</button>
+            <button class="tab-button" onclick="switchTab(1)">Tab 2：定价策略选择器</button>
+            <button class="tab-button" onclick="switchTab(2)">Tab 3：收益管理模拟器</button>
         </div>
 
-        <!-- Tab 1: 價格彈性計算器 -->
+        <!-- Tab 1: 价格弹性计算器 -->
         <div class="tab-content active">
-            <h2 style="color: #667eea; margin-bottom: 20px;">Tab 1：價格彈性計算器</h2>
+            <h2 style="color: #667eea; margin-bottom: 20px;">Tab 1：价格弹性计算器</h2>
 
-            <p class="info-text">計算需求價格彈性（PED），幫助您判斷價格變化對銷量的影響。</p>
+            <p class="info-text">计算需求价格弹性（PED），帮助您判断价格变化对销量的影响。</p>
 
             <div class="input-row">
                 <div class="input-group">
-                    <label>原價格（元）</label>
+                    <label>原价格（元）</label>
                     <input type="number" id="priceOriginal" value="100" step="0.1">
                 </div>
                 <div class="input-group">
-                    <label>新價格（元）</label>
+                    <label>新价格（元）</label>
                     <input type="number" id="priceNew" value="110" step="0.1">
                 </div>
             </div>
 
             <div class="input-row">
                 <div class="input-group">
-                    <label>原銷量（單位）</label>
+                    <label>原销量（单位）</label>
                     <input type="number" id="quantityOriginal" value="1000" step="1">
                 </div>
                 <div class="input-group">
-                    <label>新銷量（單位）</label>
+                    <label>新销量（单位）</label>
                     <input type="number" id="quantityNew" value="950" step="1">
                 </div>
             </div>
 
-            <button class="button" onclick="calculateElasticity()">計算彈性</button>
+            <button class="button" onclick="calculateElasticity()">计算弹性</button>
 
             <div id="elasticityResult" class="result-box" style="display: none; margin-top: 30px;">
                 <div class="result-item">
-                    <div class="result-label">需求價格彈性（PED）</div>
+                    <div class="result-label">需求价格弹性（PED）</div>
                     <div class="result-value" id="pedValue">--</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-label">彈性解釋</div>
+                    <div class="result-label">弹性解释</div>
                     <div style="color: #666; font-size: 13px; margin-top: 8px;" id="pedExplain">--</div>
                 </div>
                 <div class="result-item">
@@ -385,146 +385,146 @@
                     <div style="color: #333; font-weight: 600;" id="revenueNew">--</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-label">收益變化</div>
+                    <div class="result-label">收益变化</div>
                     <div style="color: #333; font-weight: 600;" id="revenueChange">--</div>
                 </div>
                 <div class="recommendation-box">
-                    <h3>建議</h3>
+                    <h3>建议</h3>
                     <p id="recommendation">--</p>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 2: 定價策略選擇器 -->
+        <!-- Tab 2: 定价策略选择器 -->
         <div class="tab-content">
-            <h2 style="color: #667eea; margin-bottom: 20px;">Tab 2：定價策略選擇器</h2>
+            <h2 style="color: #667eea; margin-bottom: 20px;">Tab 2：定价策略选择器</h2>
 
-            <p class="info-text">根據您的產品特性，我們推薦最適合的定價策略。</p>
+            <p class="info-text">根据您的产品特性，我们推荐最适合的定价策略。</p>
 
             <div class="select-group">
-                <label>產品類型</label>
+                <label>产品类型</label>
                 <select id="productType" onchange="updateStrategyOptions()">
-                    <option value="">請選擇...</option>
-                    <option value="software">軟體/應用</option>
+                    <option value="">请选择...</option>
+                    <option value="software">软件/应用</option>
                     <option value="luxury">奢侈品</option>
                     <option value="commodity">日用商品</option>
-                    <option value="service">服務（航空/飯店）</option>
-                    <option value="subscription">訂閱制</option>
+                    <option value="service">服务（航空/饭店）</option>
+                    <option value="subscription">订阅制</option>
                 </select>
             </div>
 
             <div class="select-group">
-                <label>市場競爭程度</label>
+                <label>市场竞争程度</label>
                 <select id="competition">
-                    <option value="">請選擇...</option>
-                    <option value="high">非常激烈（多個競爭對手）</option>
-                    <option value="medium">中等（3-5個主要競爭對手）</option>
-                    <option value="low">有限（領先品牌少）</option>
+                    <option value="">请选择...</option>
+                    <option value="high">非常激烈（多个竞争对手）</option>
+                    <option value="medium">中等（3-5个主要竞争对手）</option>
+                    <option value="low">有限（领先品牌少）</option>
                 </select>
             </div>
 
             <div class="select-group">
-                <label>目標客群對價格的敏感度</label>
+                <label>目标客群对价格的敏感度</label>
                 <select id="priceSensitivity">
-                    <option value="">請選擇...</option>
-                    <option value="high">高度敏感（價格是主要購買因素）</option>
-                    <option value="medium">中等敏感（價格重要但非唯一因素）</option>
-                    <option value="low">低度敏感（品質/品牌更重要）</option>
+                    <option value="">请选择...</option>
+                    <option value="high">高度敏感（价格是主要购买因素）</option>
+                    <option value="medium">中等敏感（价格重要但非唯一因素）</option>
+                    <option value="low">低度敏感（质量/品牌更重要）</option>
                 </select>
             </div>
 
             <div class="select-group">
-                <label>產品/服務生命週期</label>
+                <label>产品/服务生命周期</label>
                 <select id="lifecycle">
-                    <option value="">請選擇...</option>
-                    <option value="launch">推出期（新產品）</option>
-                    <option value="growth">成長期</option>
+                    <option value="">请选择...</option>
+                    <option value="launch">推出期（新产品）</option>
+                    <option value="growth">成长期</option>
                     <option value="mature">成熟期</option>
                     <option value="decline">衰退期</option>
                 </select>
             </div>
 
-            <button class="button" onclick="recommendStrategy()">推薦策略</button>
+            <button class="button" onclick="recommendStrategy()">推荐策略</button>
 
             <div id="strategyResult" style="margin-top: 30px; display: none;">
                 <div class="result-box">
                     <div class="result-item" style="border: none; padding: 0;">
-                        <div class="result-label" style="margin-bottom: 15px;">推薦的定價策略</div>
+                        <div class="result-label" style="margin-bottom: 15px;">推荐的定价策略</div>
                         <div id="strategyCards"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Tab 3: 收益管理模擬器 -->
+        <!-- Tab 3: 收益管理模拟器 -->
         <div class="tab-content">
-            <h2 style="color: #667eea; margin-bottom: 20px;">Tab 3：收益管理模擬器</h2>
+            <h2 style="color: #667eea; margin-bottom: 20px;">Tab 3：收益管理模拟器</h2>
 
-            <p class="info-text">模擬不同定價對航班/飯店總收入的影響（假設固定產能）。</p>
+            <p class="info-text">模拟不同定价对航班/饭店总收入的影响（假设固定产能）。</p>
 
             <div class="input-group">
-                <label>產能（座位/房間數）</label>
+                <label>产能（座位/房间数）</label>
                 <input type="number" id="capacity" value="150" step="1">
             </div>
 
             <div class="input-group">
-                <label>商務客比例（%）</label>
+                <label>商务客比例（%）</label>
                 <input type="number" id="businessPercentage" value="20" min="0" max="100" step="1">
             </div>
 
             <div class="input-group">
-                <label>商務客願付價（元）</label>
+                <label>商务客愿付价（元）</label>
                 <input type="number" id="businessWTP" value="400" step="10">
             </div>
 
             <div class="input-group">
-                <label>休閒客願付價（元）</label>
+                <label>休闲客愿付价（元）</label>
                 <input type="number" id="leisureWTP" value="200" step="10">
             </div>
 
             <div class="input-group">
-                <label>定價策略</label>
+                <label>定价策略</label>
                 <select id="pricingModel" onchange="updatePricingInputs()">
-                    <option value="uniform">統一定價</option>
-                    <option value="tiered">分級定價</option>
+                    <option value="uniform">统一定价</option>
+                    <option value="tiered">分级定价</option>
                 </select>
             </div>
 
             <div id="uniformPricingInputs" style="display: none;">
                 <div class="input-group">
-                    <label>統一價格（元）</label>
+                    <label>统一价格（元）</label>
                     <input type="number" id="uniformPrice" value="300" step="10">
                 </div>
             </div>
 
             <div id="tieredPricingInputs" style="display: none;">
                 <div class="input-group">
-                    <label>商務艙座位數</label>
+                    <label>商务舱座位数</label>
                     <input type="number" id="businessSeats" value="30" step="1">
                 </div>
                 <div class="input-group">
-                    <label>商務艙定價（元）</label>
+                    <label>商务舱定价（元）</label>
                     <input type="number" id="businessPrice" value="350" step="10">
                 </div>
                 <div class="input-group">
-                    <label>經濟艙定價（元）</label>
+                    <label>经济舱定价（元）</label>
                     <input type="number" id="economyPrice" value="180" step="10">
                 </div>
             </div>
 
-            <button class="button" onclick="simulateRevenue()">運行模擬</button>
+            <button class="button" onclick="simulateRevenue()">运行模拟</button>
 
             <div id="simulationResult" class="result-box" style="display: none; margin-top: 30px;">
                 <div class="result-item">
-                    <div class="result-label">每班次總收入</div>
+                    <div class="result-label">每班次总收入</div>
                     <div class="result-value" id="totalRevenue">--</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-label">月度總收入（30班）</div>
+                    <div class="result-label">月度总收入（30班）</div>
                     <div class="result-value" id="monthlyRevenue">--</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-label">平均票價</div>
+                    <div class="result-label">平均票价</div>
                     <div style="color: #333; font-weight: 600;" id="avgPrice">--</div>
                 </div>
                 <div class="result-item">
@@ -532,7 +532,7 @@
                     <div style="color: #333; font-weight: 600;" id="occupancyRate">--</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-label">模擬詳情</div>
+                    <div class="result-label">模拟详情</div>
                     <div style="color: #666; font-size: 13px; margin-top: 8px;" id="simulationDetails">--</div>
                 </div>
             </div>
@@ -540,7 +540,7 @@
     </div>
 
     <script>
-        // Tab 切換功能
+        // Tab 切换功能
         function switchTab(index) {
             const contents = document.querySelectorAll('.tab-content');
             const buttons = document.querySelectorAll('.tab-button');
@@ -552,7 +552,7 @@
             buttons[index].classList.add('active');
         }
 
-        // Tab 1: 計算彈性
+        // Tab 1: 计算弹性
         function calculateElasticity() {
             const pOrig = parseFloat(document.getElementById('priceOriginal').value);
             const pNew = parseFloat(document.getElementById('priceNew').value);
@@ -560,7 +560,7 @@
             const qNew = parseFloat(document.getElementById('quantityNew').value);
 
             if (!pOrig || !pNew || !qOrig || !qNew) {
-                alert('請輸入所有數值');
+                alert('请输入所有数值');
                 return;
             }
 
@@ -577,14 +577,14 @@
             let recommendation = '';
 
             if (Math.abs(ped) < 1) {
-                explanation = `缺乏彈性（|PED| = ${Math.abs(ped).toFixed(2)} < 1）：需求對價格變化不敏感。`;
-                recommendation = `消費者對價格變化反應遲鈍。您可以進一步提價以增加收益，因為銷量下降幅度小於價格提升幅度。`;
+                explanation = `缺乏弹性（|PED| = ${Math.abs(ped).toFixed(2)} < 1）：需求对价格变化不敏感。`;
+                recommendation = `消费者对价格变化反应迟钝。您可以进一步提价以增加收益，因为销量下降幅度小于价格提升幅度。`;
             } else if (Math.abs(ped) === 1) {
-                explanation = `單位彈性（|PED| = 1）：需求與價格成比例變化。`;
-                recommendation = `價格變化對收益影響有限。考慮提升產品差異化與品牌價值，降低價格敏感度。`;
+                explanation = `单位弹性（|PED| = 1）：需求与价格成比例变化。`;
+                recommendation = `价格变化对收益影响有限。考虑提升产品差异化与品牌价值，降低价格敏感度。`;
             } else {
-                explanation = `富有彈性（|PED| = ${Math.abs(ped).toFixed(2)} > 1）：需求對價格變化敏感。`;
-                recommendation = `消費者對價格變化反應敏銳。降價能顯著刺激銷量增長。若要提價，需謹慎評估市場反應，或通過差異化產品抵消價格上升。`;
+                explanation = `富有弹性（|PED| = ${Math.abs(ped).toFixed(2)} > 1）：需求对价格变化敏感。`;
+                recommendation = `消费者对价格变化反应敏锐。降价能显著刺激销量增长。若要提价，需谨慎评估市场反应，或通过差异化产品抵消价格上升。`;
             }
 
             document.getElementById('pedValue').textContent = ped.toFixed(2);
@@ -597,9 +597,9 @@
             document.getElementById('elasticityResult').style.display = 'block';
         }
 
-        // Tab 2: 推薦策略
+        // Tab 2: 推荐策略
         function updateStrategyOptions() {
-            // 可擴展的策略推薦邏輯
+            // 可扩展的策略推荐逻辑
         }
 
         function recommendStrategy() {
@@ -609,7 +609,7 @@
             const lifecycle = document.getElementById('lifecycle').value;
 
             if (!productType || !competition || !sensitivity || !lifecycle) {
-                alert('請填寫所有選項');
+                alert('请填写所有选项');
                 return;
             }
 
@@ -632,36 +632,36 @@
         function getRecommendedStrategies(type, comp, sens, life) {
             const strategies = {
                 software: [
-                    { name: '分級訂閱制', description: '提供基礎版、專業版、企業版，針對不同使用者群體實施差別定價。適合軟體產品的持續營收模式。' },
-                    { name: 'Freemium模式', description: '免費基礎版 + 付費高級版。吸引大量使用者，通過高級功能轉換部分付費客戶。' },
-                    { name: '用量制定價', description: '根據使用量（API調用、存儲容量）計費，靈活滿足不同規模客戶。' }
+                    { name: '分级订阅制', description: '提供基础版、专业版、企业版，针对不同用户群体实施差别定价。适合软件产品的持续营业收入模式。' },
+                    { name: 'Freemium模式', description: '免费基础版 + 付费高级版。吸引大量用户，通过高级功能转换部分付费客户。' },
+                    { name: '用量制定价', description: '根据使用量（API调用、存储容量）计费，灵活满足不同规模客户。' }
                 ],
                 luxury: [
-                    { name: '價值基礎定價', description: '根據品牌價值、設計、材質等因素定價，而非成本加成。追求利潤最大化而非銷量。' },
-                    { name: '價格錨定', description: '通過展示高階產品線，提升整體品牌形象，為高價產品創造合理化。' },
-                    { name: '限量策略', description: '限制產量與銷售通路，維持產品稀缺性與高價地位。' }
+                    { name: '价值基础定价', description: '根据品牌价值、设计、材质等因素定价，而非成本加成。追求利润最大化而非销量。' },
+                    { name: '价格锚定', description: '通过展示高级产品线，提升整体品牌形象，为高价产品创造合理化。' },
+                    { name: '限量策略', description: '限制产量与销售渠道，维持产品稀缺性与高价地位。' }
                 ],
                 commodity: [
-                    { name: '成本領導 + 低價策略', description: '優化供應鏈與營運成本，通過天天低價（EDLP）贏得市場份額。' },
-                    { name: '競爭導向定價', description: '密切追蹤競爭對手價格，實施微幅價格調整以維持競爭力。' },
-                    { name: '尾數定價', description: '將價格設為 .99 結尾，利用消費者心理偏差提升銷量。' }
+                    { name: '成本领导 + 低价策略', description: '优化供应链与营运成本，通过天天低价（EDLP）赢得市场份额。' },
+                    { name: '竞争导向定价', description: '密切追踪竞争对手价格，实施微幅价格调整以维持竞争力。' },
+                    { name: '尾数定价', description: '将价格设为 .99 结尾，利用消费者心理偏差提升销量。' }
                 ],
                 service: [
-                    { name: '收益管理 + 動態定價', description: '根據需求與庫存實時調整價格。航空與飯店的標準做法。' },
-                    { name: '分級與差別定價', description: '區分商務客 vs 休閒客，提供不同艙位/房型與價格。' },
-                    { name: '提前預訂折扣', description: '早訂低價、臨時高價，激勵提前規劃，優化座位/房間配置。' }
+                    { name: '收益管理 + 动态定价', description: '根据需求与库存实时调整价格。航空与饭店的标准做法。' },
+                    { name: '分级与差别定价', description: '区分商务客 vs 休闲客，提供不同舱位/房型与价格。' },
+                    { name: '提前预订折扣', description: '早订低价、临时高价，激励提前规划，优化座位/房间配置。' }
                 ],
                 subscription: [
-                    { name: '分級訂閱', description: '多個價格點（基礎、標準、高級），滿足不同使用者需求。Netflix模式。' },
-                    { name: '年度優惠', description: '年度支付享受折扣，提升客戶粘性與預測性收入。' },
-                    { name: '免費試用 + 升級促進', description: '免費試用期激勵使用者體驗，通過功能限制促進付費升級。' }
+                    { name: '分级订阅', description: '多个价格点（基础、标准、高级），满足不同用户需求。Netflix模式。' },
+                    { name: '年度优惠', description: '年度支付享受折扣，提升客户粘性与预测性收入。' },
+                    { name: '免费试用 + 升级促进', description: '免费试用期激励用户体验，通过功能限制促进付费升级。' }
                 ]
             };
 
             return strategies[type] || [];
         }
 
-        // Tab 3: 收益管理模擬
+        // Tab 3: 收益管理模拟
         function updatePricingInputs() {
             const model = document.getElementById('pricingModel').value;
             document.getElementById('uniformPricingInputs').style.display = model === 'uniform' ? 'block' : 'none';
@@ -676,7 +676,7 @@
             const model = document.getElementById('pricingModel').value;
 
             if (!capacity || businessPct === undefined || !businessWTP || !leisureWTP) {
-                alert('請輸入所有數值');
+                alert('请输入所有数值');
                 return;
             }
 
@@ -692,7 +692,7 @@
                 totalRevenue = capacity * price;
                 occupancy = 100;
 
-                details = `統一價格 ${price} 元。商務客 ${Math.round(businessCustomers)} 人 × ${price} 元 = ${(businessCustomers * price).toLocaleString('zh-TW')} 元；休閒客 ${Math.round(leisureCustomers)} 人 × ${price} 元 = ${(leisureCustomers * price).toLocaleString('zh-TW')} 元。`;
+                details = `统一价格 ${price} 元。商务客 ${Math.round(businessCustomers)} 人 × ${price} 元 = ${(businessCustomers * price).toLocaleString('zh-TW')} 元；休闲客 ${Math.round(leisureCustomers)} 人 × ${price} 元 = ${(leisureCustomers * price).toLocaleString('zh-TW')} 元。`;
             } else {
                 const businessSeats = parseFloat(document.getElementById('businessSeats').value);
                 const economySeats = capacity - businessSeats;
@@ -705,7 +705,7 @@
                 totalRevenue = (businessCustomers * businessPrice) + (leisureCustomers * economyPrice);
                 occupancy = ((businessCustomers + leisureCustomers) / capacity * 100);
 
-                details = `商務艙 ${businessSeats} 座 @ ${businessPrice} 元，實際售出 ${Math.round(businessCustomers)} 張 = ${(businessCustomers * businessPrice).toLocaleString('zh-TW')} 元；經濟艙 ${economySeats} 座 @ ${economyPrice} 元，實際售出 ${Math.round(leisureCustomers)} 張 = ${(leisureCustomers * economyPrice).toLocaleString('zh-TW')} 元。`;
+                details = `商务舱 ${businessSeats} 座 @ ${businessPrice} 元，实际售出 ${Math.round(businessCustomers)} 张 = ${(businessCustomers * businessPrice).toLocaleString('zh-TW')} 元；经济舱 ${economySeats} 座 @ ${economyPrice} 元，实际售出 ${Math.round(leisureCustomers)} 张 = ${(leisureCustomers * economyPrice).toLocaleString('zh-TW')} 元。`;
             }
 
             const monthlyRevenue = totalRevenue * 30;

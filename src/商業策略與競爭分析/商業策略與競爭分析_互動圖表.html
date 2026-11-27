@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>商業策略與競爭分析 - 互動圖表</title>
+    <title>商业策略与竞争分析 - 交互图表</title>
     <style>
         * {
             margin: 0;
@@ -446,7 +446,7 @@
             font-weight: bold;
         }
 
-        /* 策略比較 */
+        /* 策略比较 */
         .strategy-types {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -704,92 +704,92 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>商業策略與競爭分析</h1>
-            <p>互動式學習工具</p>
+            <h1>商业策略与竞争分析</h1>
+            <p>交互式学习工具</p>
         </div>
 
         <div class="tabs-container">
             <button class="tab-button active" onclick="switchTab(0)">SWOT 分析工具</button>
             <button class="tab-button" onclick="switchTab(1)">波特五力模型</button>
-            <button class="tab-button" onclick="switchTab(2)">商業模式畫布</button>
-            <button class="tab-button" onclick="switchTab(3)">策略比較</button>
-            <button class="tab-button" onclick="switchTab(4)">商業模式比較器</button>
+            <button class="tab-button" onclick="switchTab(2)">商业模式画布</button>
+            <button class="tab-button" onclick="switchTab(3)">策略比较</button>
+            <button class="tab-button" onclick="switchTab(4)">商业模式比较器</button>
         </div>
 
         <div class="content">
             <!-- Tab 1: SWOT 分析 -->
             <div class="tab-content active" id="tab0">
                 <h2 style="margin-bottom: 30px; color: #667eea;">SWOT 分析工具</h2>
-                <p style="margin-bottom: 20px; color: #4a5568;">點擊每個象限了解更多詳細資訊。例：珍珠奶茶連鎖店</p>
+                <p style="margin-bottom: 20px; color: #4a5568;">点击每个象限了解更多详细信息。例：珍珠奶茶连锁店</p>
 
                 <div class="swot-grid">
                     <div class="swot-quadrant strength" onclick="showSwotDetail('strength')">
-                        <div class="swot-header">優勢 (Strengths)</div>
+                        <div class="swot-header">优势 (Strengths)</div>
                         <div class="swot-content">
                             <ul>
-                                <li>獨特的配方</li>
-                                <li>強大的品牌識別</li>
-                                <li>快速的服務流程</li>
-                                <li>年輕客群忠誠度高</li>
+                                <li>独特的配方</li>
+                                <li>强大的品牌识别</li>
+                                <li>快速的服务流程</li>
+                                <li>年轻客群忠诚度高</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="swot-quadrant weakness" onclick="showSwotDetail('weakness')">
-                        <div class="swot-header">劣勢 (Weaknesses)</div>
+                        <div class="swot-header">劣势 (Weaknesses)</div>
                         <div class="swot-content">
                             <ul>
-                                <li>初期投資成本高</li>
-                                <li>人員流動率高</li>
-                                <li>品質控制困難</li>
-                                <li>供應鏈管理複雜</li>
+                                <li>初期投资成本高</li>
+                                <li>人员流动率高</li>
+                                <li>质量控制困难</li>
+                                <li>供应链管理复杂</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="swot-quadrant opportunity" onclick="showSwotDetail('opportunity')">
-                        <div class="swot-header">機會 (Opportunities)</div>
+                        <div class="swot-header">机会 (Opportunities)</div>
                         <div class="swot-content">
                             <ul>
-                                <li>國際市場擴展</li>
-                                <li>新產品開發</li>
-                                <li>線上配送服務</li>
-                                <li>新興市場增長</li>
+                                <li>国际市场扩展</li>
+                                <li>新产品开发</li>
+                                <li>在线配送服务</li>
+                                <li>新兴市场增长</li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="swot-quadrant threat" onclick="showSwotDetail('threat')">
-                        <div class="swot-header">威脅 (Threats)</div>
+                        <div class="swot-header">威胁 (Threats)</div>
                         <div class="swot-content">
                             <ul>
-                                <li>競爭對手增加</li>
+                                <li>竞争对手增加</li>
                                 <li>原料成本上升</li>
-                                <li>食品安全風險</li>
-                                <li>消費偏好轉變</li>
+                                <li>食品安全风险</li>
+                                <li>消费偏好转变</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
                 <div class="swot-strategies">
-                    <h3>交叉策略矩陣</h3>
+                    <h3>交叉策略矩阵</h3>
                     <div class="strategies-grid">
                         <div class="strategy-card">
                             <h4>SO 策略</h4>
-                            <p>利用優勢抓住機會：利用獨特配方在國際市場推出新產品</p>
+                            <p>利用优势抓住机会：利用独特配方在国际市场推出新产品</p>
                         </div>
                         <div class="strategy-card">
                             <h4>WO 策略</h4>
-                            <p>克服劣勢把握機會：改進供應鏈管理以支持線上配送</p>
+                            <p>克服劣势把握机会：改进供应链管理以支持在线配送</p>
                         </div>
                         <div class="strategy-card">
                             <h4>ST 策略</h4>
-                            <p>利用優勢應對威脅：強化品牌優勢對抗新競爭對手</p>
+                            <p>利用优势应对威胁：强化品牌优势对抗新竞争对手</p>
                         </div>
                         <div class="strategy-card">
                             <h4>WT 策略</h4>
-                            <p>縮小劣勢減輕威脅：提高品質控制標準應對食品安全風險</p>
+                            <p>缩小劣势减轻威胁：提高质量控制标准应对食品安全风险</p>
                         </div>
                     </div>
                 </div>
@@ -798,28 +798,28 @@
             <!-- Tab 2: Porter's 五力模型 -->
             <div class="tab-content" id="tab1">
                 <h2 style="margin-bottom: 30px; color: #667eea;">波特五力模型</h2>
-                <p style="margin-bottom: 30px; color: #4a5568;">點擊每個力量了解詳細分析</p>
+                <p style="margin-bottom: 30px; color: #4a5568;">点击每个力量了解详细分析</p>
 
                 <div class="porter-container">
                     <div class="porter-diagram">
-                        <div class="force-card threat-new-entrants" onclick="showPorterDetail('新進入者威脅')">
-                            新進入者威脅<br><small style="font-size: 0.8em;">Threat of New Entrants</small>
+                        <div class="force-card threat-new-entrants" onclick="showPorterDetail('新进入者威胁')">
+                            新进入者威胁<br><small style="font-size: 0.8em;">Threat of New Entrants</small>
                         </div>
 
-                        <div class="force-card bargaining-suppliers" onclick="showPorterDetail('供應商議價力')">
-                            供應商<br>議價力<br><small style="font-size: 0.8em;">Supplier Power</small>
+                        <div class="force-card bargaining-suppliers" onclick="showPorterDetail('供应商议价力')">
+                            供应商<br>议价力<br><small style="font-size: 0.8em;">Supplier Power</small>
                         </div>
 
-                        <div class="force-card competitive-rivalry" onclick="showPorterDetail('現有競爭者')">
-                            現有競爭者威脅
+                        <div class="force-card competitive-rivalry" onclick="showPorterDetail('现有竞争者')">
+                            现有竞争者威胁
                         </div>
 
-                        <div class="force-card bargaining-buyers" onclick="showPorterDetail('買方議價力')">
-                            買方<br>議價力<br><small style="font-size: 0.8em;">Buyer Power</small>
+                        <div class="force-card bargaining-buyers" onclick="showPorterDetail('买方议价力')">
+                            买方<br>议价力<br><small style="font-size: 0.8em;">Buyer Power</small>
                         </div>
 
-                        <div class="force-card threat-substitutes" onclick="showPorterDetail('替代品威脅')">
-                            替代品威脅<br><small style="font-size: 0.8em;">Threat of Substitutes</small>
+                        <div class="force-card threat-substitutes" onclick="showPorterDetail('替代品威胁')">
+                            替代品威胁<br><small style="font-size: 0.8em;">Threat of Substitutes</small>
                         </div>
                     </div>
 
@@ -827,11 +827,11 @@
                         <button class="close-btn" onclick="closePorterDetail()">×</button>
                         <h3 id="porterTitle"></h3>
                         <div class="detail-section">
-                            <h4>定義</h4>
+                            <h4>定义</h4>
                             <p id="porterDefinition"></p>
                         </div>
                         <div class="detail-section">
-                            <h4>強度因素</h4>
+                            <h4>强度因素</h4>
                             <p id="porterStrong"></p>
                         </div>
                         <div class="detail-section">
@@ -839,111 +839,111 @@
                             <p id="porterWeak"></p>
                         </div>
                         <div class="detail-section">
-                            <h4>現實例子</h4>
+                            <h4>现实例子</h4>
                             <p id="porterExample"></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 3: 商業模式畫布 -->
+            <!-- Tab 3: 商业模式画布 -->
             <div class="tab-content" id="tab2">
-                <h2 style="margin-bottom: 30px; color: #667eea;">商業模式畫布 (Business Model Canvas)</h2>
-                <p style="margin-bottom: 20px; color: #4a5568;">點擊每個模塊了解詳細內容。例：串流影片平台 (Netflix型)</p>
+                <h2 style="margin-bottom: 30px; color: #667eea;">商业模式画布 (Business Model Canvas)</h2>
+                <p style="margin-bottom: 20px; color: #4a5568;">点击每个模块了解详细内容。例：串流视频平台 (Netflix型)</p>
 
                 <div class="bmc-grid">
-                    <div class="bmc-block partners" onclick="showBmcDetail('關鍵夥伴')">
-                        <div class="bmc-title">關鍵夥伴</div>
+                    <div class="bmc-block partners" onclick="showBmcDetail('关键伙伴')">
+                        <div class="bmc-title">关键伙伴</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>內容製作商</li>
-                                <li>影視公司</li>
-                                <li>電信運營商</li>
-                                <li>廣告商</li>
+                                <li>内容制作商</li>
+                                <li>影视公司</li>
+                                <li>电信运营商</li>
+                                <li>广告商</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bmc-block activities" onclick="showBmcDetail('關鍵活動')">
-                        <div class="bmc-title">關鍵活動</div>
+                    <div class="bmc-block activities" onclick="showBmcDetail('关键活动')">
+                        <div class="bmc-title">关键活动</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>內容取得</li>
-                                <li>技術開發</li>
-                                <li>使用者維護</li>
-                                <li>內容推薦</li>
+                                <li>内容取得</li>
+                                <li>技术开发</li>
+                                <li>用户维护</li>
+                                <li>内容推荐</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bmc-block resources" onclick="showBmcDetail('關鍵資源')">
-                        <div class="bmc-title">關鍵資源</div>
+                    <div class="bmc-block resources" onclick="showBmcDetail('关键资源')">
+                        <div class="bmc-title">关键资源</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>內容庫</li>
-                                <li>技術平台</li>
-                                <li>人才團隊</li>
-                                <li>資金</li>
+                                <li>内容库</li>
+                                <li>技术平台</li>
+                                <li>人才团队</li>
+                                <li>资金</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bmc-block proposition" onclick="showBmcDetail('價值主張')">
-                        <div class="bmc-title">價值主張</div>
+                    <div class="bmc-block proposition" onclick="showBmcDetail('价值主张')">
+                        <div class="bmc-title">价值主张</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>豐富的內容選擇</li>
-                                <li>隨時隨地觀看</li>
-                                <li>個性化推薦</li>
-                                <li>無廣告體驗</li>
+                                <li>丰富的内容选择</li>
+                                <li>随时随地观看</li>
+                                <li>个性化推荐</li>
+                                <li>无广告体验</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bmc-block relationships" onclick="showBmcDetail('顧客關係')">
-                        <div class="bmc-title">顧客關係</div>
+                    <div class="bmc-block relationships" onclick="showBmcDetail('顾客关系')">
+                        <div class="bmc-title">顾客关系</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>訂閱制</li>
-                                <li>個性化推薦</li>
+                                <li>订阅制</li>
+                                <li>个性化推荐</li>
                                 <li>24/7客服</li>
-                                <li>社區互動</li>
+                                <li>社区交互</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bmc-block channels" onclick="showBmcDetail('通路')">
-                        <div class="bmc-title">通路</div>
+                    <div class="bmc-block channels" onclick="showBmcDetail('渠道')">
+                        <div class="bmc-title">渠道</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>Web應用</li>
-                                <li>行動應用</li>
-                                <li>智慧電視</li>
-                                <li>遊戲機</li>
+                                <li>Web应用</li>
+                                <li>行动应用</li>
+                                <li>智能电视</li>
+                                <li>游戏机</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bmc-block segment" onclick="showBmcDetail('目標客層')">
-                        <div class="bmc-title">目標客層</div>
+                    <div class="bmc-block segment" onclick="showBmcDetail('目标客层')">
+                        <div class="bmc-title">目标客层</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>16-45歲使用者</li>
-                                <li>高收入群體</li>
-                                <li>追劇愛好者</li>
-                                <li>全球使用者</li>
+                                <li>16-45岁用户</li>
+                                <li>高收入群体</li>
+                                <li>追剧爱好者</li>
+                                <li>全球用户</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bmc-block costs" onclick="showBmcDetail('成本結構')">
-                        <div class="bmc-title">成本結構</div>
+                    <div class="bmc-block costs" onclick="showBmcDetail('成本结构')">
+                        <div class="bmc-title">成本结构</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>內容採購費用</li>
-                                <li>技術基礎設施</li>
-                                <li>人員薪資</li>
-                                <li>市場推廣</li>
+                                <li>内容采购费用</li>
+                                <li>技术基础设施</li>
+                                <li>人员薪资</li>
+                                <li>市场推广</li>
                             </ul>
                         </div>
                     </div>
@@ -952,92 +952,92 @@
                         <div class="bmc-title">收益流</div>
                         <div class="bmc-content">
                             <ul>
-                                <li>訂閱費用</li>
-                                <li>廣告收入</li>
-                                <li>內容授權</li>
-                                <li>衍生產品</li>
+                                <li>订阅费用</li>
+                                <li>广告收入</li>
+                                <li>内容授权</li>
+                                <li>衍生产品</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 4: 策略比較 -->
+            <!-- Tab 4: 策略比较 -->
             <div class="tab-content" id="tab3">
-                <h2 style="margin-bottom: 30px; color: #667eea;">通用策略與藍海紅海</h2>
+                <h2 style="margin-bottom: 30px; color: #667eea;">通用策略与蓝海红海</h2>
 
                 <div style="margin-bottom: 40px;">
-                    <h3 style="margin-bottom: 20px; color: #4a5568; font-size: 1.3em;">通用競爭策略</h3>
+                    <h3 style="margin-bottom: 20px; color: #4a5568; font-size: 1.3em;">通用竞争策略</h3>
                     <div class="strategy-types">
                         <div class="strategy-type-card cost-leadership" onclick="highlightStrategy('cost')">
-                            <h3>成本領導</h3>
-                            <div class="strategy-feature">降低成本，提供低價</div>
-                            <div class="strategy-feature">規模經濟優勢</div>
-                            <div class="strategy-feature">高效運營流程</div>
-                            <div class="strategy-feature">例：沃爾瑪、IKEA</div>
+                            <h3>成本领导</h3>
+                            <div class="strategy-feature">降低成本，提供低价</div>
+                            <div class="strategy-feature">规模经济优势</div>
+                            <div class="strategy-feature">高效运营流程</div>
+                            <div class="strategy-feature">例：沃尔玛、IKEA</div>
                         </div>
 
                         <div class="strategy-type-card differentiation" onclick="highlightStrategy('diff')">
-                            <h3>差異化</h3>
-                            <div class="strategy-feature">獨特產品特性</div>
-                            <div class="strategy-feature">品牌溢價</div>
-                            <div class="strategy-feature">創新技術或設計</div>
-                            <div class="strategy-feature">例：蘋果、勞斯萊斯</div>
+                            <h3>差异化</h3>
+                            <div class="strategy-feature">独特产品特性</div>
+                            <div class="strategy-feature">品牌溢价</div>
+                            <div class="strategy-feature">创新技术或设计</div>
+                            <div class="strategy-feature">例：苹果、劳斯莱斯</div>
                         </div>
 
                         <div class="strategy-type-card focus" onclick="highlightStrategy('focus')">
-                            <h3>專注化</h3>
-                            <div class="strategy-feature">針對特定細分市場</div>
-                            <div class="strategy-feature">深度服務特定客群</div>
-                            <div class="strategy-feature">高度客製化</div>
+                            <h3>专注化</h3>
+                            <div class="strategy-feature">针对特定细分市场</div>
+                            <div class="strategy-feature">深度服务特定客群</div>
+                            <div class="strategy-feature">高度客制化</div>
                             <div class="strategy-feature">例：路易威登、特斯拉</div>
                         </div>
                     </div>
                 </div>
 
                 <div style="border-top: 2px solid #e2e8f0; padding-top: 40px;">
-                    <h3 style="margin-bottom: 30px; color: #4a5568; font-size: 1.3em;">藍海策略 vs 紅海策略</h3>
+                    <h3 style="margin-bottom: 30px; color: #4a5568; font-size: 1.3em;">蓝海策略 vs 红海策略</h3>
                     <div class="ocean-comparison">
                         <div class="ocean-section blue">
-                            <h3>藍海策略</h3>
-                            <div class="ocean-feature">創造全新市場空間</div>
-                            <div class="ocean-feature">無競爭或很少競爭</div>
-                            <div class="ocean-feature">價值創新</div>
-                            <div class="ocean-feature">長期利潤增長</div>
+                            <h3>蓝海策略</h3>
+                            <div class="ocean-feature">创造全新市场空间</div>
+                            <div class="ocean-feature">无竞争或很少竞争</div>
+                            <div class="ocean-feature">价值创新</div>
+                            <div class="ocean-feature">长期利润增长</div>
                             <div class="ocean-example">
                                 <strong>案例：</strong><br>
-                                任天堂 Wii - 創造體感遊戲新類別<br>
-                                Netflix - 創造線上串流新模式<br>
-                                Uber - 重新定義計程車服務
+                                任天堂 Wii - 创造体感游戏新类别<br>
+                                Netflix - 创造在线串流新模式<br>
+                                Uber - 重新定义出租车服务
                             </div>
                         </div>
 
                         <div class="ocean-section red">
-                            <h3>紅海策略</h3>
-                            <div class="ocean-feature">現有市場內競爭激烈</div>
-                            <div class="ocean-feature">競爭者眾多</div>
-                            <div class="ocean-feature">價格戰、成本競爭</div>
-                            <div class="ocean-feature">利潤空間被壓縮</div>
+                            <h3>红海策略</h3>
+                            <div class="ocean-feature">现有市场内竞争激烈</div>
+                            <div class="ocean-feature">竞争者众多</div>
+                            <div class="ocean-feature">价格战、成本竞争</div>
+                            <div class="ocean-feature">利润空间被压缩</div>
                             <div class="ocean-example">
                                 <strong>案例：</strong><br>
-                                傳統計程車行業<br>
-                                傳統零售商場<br>
-                                傳統家電製造商
+                                传统出租车行业<br>
+                                传统零售商场<br>
+                                传统家电制造商
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 5: 商業模式比較器 -->
+            <!-- Tab 5: 商业模式比较器 -->
             <div class="tab-content" id="tab4">
-                <h2 style="margin-bottom: 30px; color: #667eea;">商業模式比較器</h2>
-                <p style="margin-bottom: 30px; color: #4a5568;">選擇一個或多個商業模式進行對比分析。</p>
+                <h2 style="margin-bottom: 30px; color: #667eea;">商业模式比较器</h2>
+                <p style="margin-bottom: 30px; color: #4a5568;">选择一个或多个商业模式进行对比分析。</p>
 
                 <div style="margin-bottom: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px;">
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.95em; cursor: pointer;">
                         <input type="checkbox" onchange="updateComparison()" data-model="subscription" style="cursor: pointer; width: 18px; height: 18px;">
-                        <span>訂閱制 (Subscription)</span>
+                        <span>订阅制 (Subscription)</span>
                     </label>
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.95em; cursor: pointer;">
                         <input type="checkbox" onchange="updateComparison()" data-model="platform" style="cursor: pointer; width: 18px; height: 18px;">
@@ -1049,20 +1049,20 @@
                     </label>
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.95em; cursor: pointer;">
                         <input type="checkbox" onchange="updateComparison()" data-model="freemium" style="cursor: pointer; width: 18px; height: 18px;">
-                        <span>免費增值 (Freemium)</span>
+                        <span>免费增值 (Freemium)</span>
                     </label>
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.95em; cursor: pointer;">
                         <input type="checkbox" onchange="updateComparison()" data-model="dtc" style="cursor: pointer; width: 18px; height: 18px;">
-                        <span>直銷模式 (DTC)</span>
+                        <span>直销模式 (DTC)</span>
                     </label>
                     <label style="display: flex; align-items: center; gap: 8px; font-size: 0.95em; cursor: pointer;">
                         <input type="checkbox" onchange="updateComparison()" data-model="razor" style="cursor: pointer; width: 18px; height: 18px;">
-                        <span>刮鬍刀模式 (Razor)</span>
+                        <span>刮胡刀模式 (Razor)</span>
                     </label>
                 </div>
 
                 <div id="comparisonResults" style="margin-top: 30px;">
-                    <p style="color: #718096; font-style: italic;">請選擇至少一個商業模式進行比較...</p>
+                    <p style="color: #718096; font-style: italic;">请选择至少一个商业模式进行比较...</p>
                 </div>
             </div>
         </div>
@@ -1104,71 +1104,71 @@
         // SWOT Details
         const swotDetails = {
             strength: {
-                title: '優勢 (Strengths)',
+                title: '优势 (Strengths)',
                 content: `
-                    <h4>定義</h4>
-                    <p>優勢是指公司相對於競爭對手的內部優勢。</p>
-                    <h4>關鍵特性</h4>
+                    <h4>定义</h4>
+                    <p>优势是指公司相对于竞争对手的内部优势。</p>
+                    <h4>关键特性</h4>
                     <ul>
-                        <li>獨特的產品配方或技術</li>
-                        <li>強大的品牌認知度</li>
-                        <li>優秀的人才團隊</li>
+                        <li>独特的产品配方或技术</li>
+                        <li>强大的品牌认知度</li>
+                        <li>优秀的人才团队</li>
                         <li>有效的成本控制</li>
-                        <li>優越的供應鏈管理</li>
+                        <li>优越的供应链管理</li>
                     </ul>
-                    <h4>戰略應用</h4>
-                    <p>應當透過投資與擴展來充分利用優勢，進入新市場，推出新產品。</p>
+                    <h4>战略应用</h4>
+                    <p>应当通过投资与扩展来充分利用优势，进入新市场，推出新产品。</p>
                 `
             },
             weakness: {
-                title: '劣勢 (Weaknesses)',
+                title: '劣势 (Weaknesses)',
                 content: `
-                    <h4>定義</h4>
-                    <p>劣勢是指相對於競爭對手的內部不足之處。</p>
-                    <h4>常見領域</h4>
+                    <h4>定义</h4>
+                    <p>劣势是指相对于竞争对手的内部不足之处。</p>
+                    <h4>常见领域</h4>
                     <ul>
-                        <li>高成本結構</li>
-                        <li>人員流動率高</li>
+                        <li>高成本结构</li>
+                        <li>人员流动率高</li>
                         <li>品牌知名度低</li>
-                        <li>技術落後</li>
-                        <li>資金短缺</li>
+                        <li>技术落后</li>
+                        <li>资金短缺</li>
                     </ul>
-                    <h4>改進策略</h4>
-                    <p>應識別關鍵劣勢，制定改進計劃，通過投資、招聘或戰略聯盟來消除這些劣勢。</p>
+                    <h4>改进策略</h4>
+                    <p>应识别关键劣势，制定改进计划，通过投资、招聘或战略联盟来消除这些劣势。</p>
                 `
             },
             opportunity: {
-                title: '機會 (Opportunities)',
+                title: '机会 (Opportunities)',
                 content: `
-                    <h4>定義</h4>
-                    <p>機會是指外部環境中可被利用的有利因素。</p>
-                    <h4>常見機會</h4>
+                    <h4>定义</h4>
+                    <p>机会是指外部环境中可被利用的有利因素。</p>
+                    <h4>常见机会</h4>
                     <ul>
-                        <li>市場增長趨勢</li>
-                        <li>新興技術應用</li>
-                        <li>地理擴展可能性</li>
-                        <li>客戶需求變化</li>
-                        <li>行業整合機會</li>
+                        <li>市场增长趋势</li>
+                        <li>新兴技术应用</li>
+                        <li>地理扩展可能性</li>
+                        <li>客户需求变化</li>
+                        <li>行业集成机会</li>
                     </ul>
                     <h4>把握方式</h4>
-                    <p>主動分析市場趨勢，準備充分資源，及時進入新市場或開發新產品。</p>
+                    <p>主动分析市场趋势，准备充分资源，及时进入新市场或开发新产品。</p>
                 `
             },
             threat: {
-                title: '威脅 (Threats)',
+                title: '威胁 (Threats)',
                 content: `
-                    <h4>定義</h4>
-                    <p>威脅是指可能對公司造成負面影響的外部因素。</p>
-                    <h4>常見威脅</h4>
+                    <h4>定义</h4>
+                    <p>威胁是指可能对公司造成负面影响的外部因素。</p>
+                    <h4>常见威胁</h4>
                     <ul>
-                        <li>競爭加劇</li>
+                        <li>竞争加剧</li>
                         <li>成本上升</li>
-                        <li>監管變化</li>
-                        <li>技術替代</li>
-                        <li>客戶偏好轉變</li>
+                        <li>监管变化</li>
+                        <li>技术替代</li>
+                        <li>客户偏好转变</li>
                     </ul>
-                    <h4>應對措施</h4>
-                    <p>建立預警機制，制定應急預案，加強競爭力，降低依賴度。</p>
+                    <h4>应对措施</h4>
+                    <p>创建预警机制，制定应急预案，加强竞争力，降低依赖度。</p>
                 `
             }
         };
@@ -1187,43 +1187,43 @@
 
         // Porter's Five Forces Details
         const porterDetails = {
-            '新進入者威脅': {
-                定義: '新進入者對現有企業造成的競爭壓力。',
-                強度因素: '低進入壁壘、資本需求少、沒有專利保護、易於複製商業模式、缺乏品牌忠誠度。',
-                弱度因素: '高進入成本、強品牌效應、規模經濟、建立分銷通路困難、政府政策保護。',
-                例子: '餐飲業容易進入，但高階品牌餐廳難以被複製；科技行業專利壁壘高，新進入困難。'
+            '新进入者威胁': {
+                定义: '新进入者对现有企业造成的竞争压力。',
+                强度因素: '低进入壁垒、资本需求少、没有专利保护、易于拷贝商业模式、缺乏品牌忠诚度。',
+                弱度因素: '高进入成本、强品牌效应、规模经济、创建分销渠道困难、政府政策保护。',
+                例子: '餐饮业容易进入，但高级品牌餐厅难以被拷贝；科技行业专利壁垒高，新进入困难。'
             },
-            '供應商議價力': {
-                定義: '供應商對購買方價格和條件的影響力。',
-                強度因素: '供應商數量少、產品專業化程度高、客戶替代成本高、供應商向下整合威脅。',
-                弱度因素: '供應商數量眾多、標準化產品、客戶可輕易轉換、客戶向上整合威脅。',
-                例子: 'Intel在晶片市場的供應商地位強；農業原料供應商地位弱，競爭者眾多。'
+            '供应商议价力': {
+                定义: '供应商对购买方价格和条件的影响力。',
+                强度因素: '供应商数量少、产品专业化程度高、客户替代成本高、供应商向下集成威胁。',
+                弱度因素: '供应商数量众多、标准化产品、客户可轻易转换、客户向上集成威胁。',
+                例子: 'Intel在芯片市场的供应商地位强；农业原料供应商地位弱，竞争者众多。'
             },
-            '現有競爭者': {
-                定義: '同行業中存在的競爭對手帶來的競爭壓力。',
-                強度因素: '競爭者眾多、產業增長緩慢、固定成本高、產品同質化、競爭成本高。',
-                弱度因素: '競爭者少、行業增長快、產品差異化、低固定成本、轉換成本高。',
-                例子: '智慧型手機市場競爭激烈；飛機製造業競爭者少，競爭溫和。'
+            '现有竞争者': {
+                定义: '同行业中存在的竞争对手带来的竞争压力。',
+                强度因素: '竞争者众多、产业增长缓慢、固定成本高、产品同质化、竞争成本高。',
+                弱度因素: '竞争者少、行业增长快、产品差异化、低固定成本、转换成本高。',
+                例子: '智能手机市场竞争激烈；飞机制造业竞争者少，竞争温和。'
             },
-            '買方議價力': {
-                定義: '購買方對供應商價格和條件的影響力。',
-                強度因素: '買方集中度高、購買量大、產品標準化、易於轉換供應商、客戶可向上整合。',
-                弱度因素: '買方分散、購買量小、專業化產品、轉換成本高、賣方可向下整合。',
-                例子: '大型零售商對供應商議價力強；高階奢侈品買方議價力弱。'
+            '买方议价力': {
+                定义: '购买方对供应商价格和条件的影响力。',
+                强度因素: '买方集中度高、购买量大、产品标准化、易于转换供应商、客户可向上集成。',
+                弱度因素: '买方分散、购买量小、专业化产品、转换成本高、卖方可向下集成。',
+                例子: '大型零售商对供应商议价力强；高级奢侈品买方议价力弱。'
             },
-            '替代品威脅': {
-                定義: '替代產品或服務對原有產品市場的威脅。',
-                強度因素: '替代品性能提高、成本更低、消費者轉換成本低、替代品供應充足。',
-                弱度因素: '替代品性能差、成本高、轉換成本高、替代品供應有限。',
-                例子: '電子郵件對傳真機的威脅；新能源車對燃油車的威脅；串流影片對DVD的威脅。'
+            '替代品威胁': {
+                定义: '替代产品或服务对原有产品市场的威胁。',
+                强度因素: '替代品性能提高、成本更低、消费者转换成本低、替代品供应充足。',
+                弱度因素: '替代品性能差、成本高、转换成本高、替代品供应有限。',
+                例子: '电子邮件对传真机的威胁；新能源车对燃油车的威胁；串流视频对DVD的威胁。'
             }
         };
 
         function showPorterDetail(force) {
             const detail = porterDetails[force];
             document.getElementById('porterTitle').textContent = force;
-            document.getElementById('porterDefinition').textContent = detail.定義;
-            document.getElementById('porterStrong').textContent = detail.強度因素;
+            document.getElementById('porterDefinition').textContent = detail.定义;
+            document.getElementById('porterStrong').textContent = detail.强度因素;
             document.getElementById('porterWeak').textContent = detail.弱度因素;
             document.getElementById('porterExample').textContent = detail.例子;
             document.getElementById('porterDetail').classList.add('show');
@@ -1233,73 +1233,73 @@
             document.getElementById('porterDetail').classList.remove('show');
         }
 
-        // 商業模式比較器數據
+        // 商业模式比较器数据
         const businessModels = {
             subscription: {
-                name: '訂閱制模式',
+                name: '订阅制模式',
                 icon: '🔄',
-                特點: ['經常性收入', '可預測現金流', '高客戶終身價值', '需持續創新'],
-                收入結構: ['月費/年費', '分級定價', '增值服務費'],
-                優勢: ['穩定營收', '客戶粘性強', '好估值'],
-                劣勢: ['客戶流失率敏感', '初期獲客成本高', '需要持續服務投入'],
-                適用條件: ['可重複使用/消費', '持續提供價值', '高留存率'],
+                特点: ['经常性收入', '可预测现金流', '高客户终身价值', '需持续创新'],
+                收入结构: ['月费/年费', '分级定价', '增值服务费'],
+                优势: ['稳定营业收入', '客户粘性强', '好估值'],
+                劣势: ['客户流失率敏感', '初期获客成本高', '需要持续服务投入'],
+                适用条件: ['可重复使用/消费', '持续提供价值', '高留存率'],
                 典型公司: ['Netflix', 'Adobe', 'Spotify', 'Salesforce'],
-                風險: ['高競爭', 'Churn風險', '市場飽和']
+                风险: ['高竞争', 'Churn风险', '市场饱和']
             },
             platform: {
                 name: '平台模式',
                 icon: '🌐',
-                特點: ['雙邊市場', '網路效應強', '規模效應顯著', '生態化運營'],
-                收入結構: ['佣金費', '廣告費', '增值服務'],
-                優勢: ['網路效應護城河', '邊際成本低', '極高利潤'],
-                劣勢: ['冷啟動困難', '監管風險高', '生態治理複雜'],
-                適用條件: ['多邊參與者', '網路效應強', '交易需撮合'],
+                特点: ['双边市场', '网络效应强', '规模效应显著', '生态化运营'],
+                收入结构: ['佣金费', '广告费', '增值服务'],
+                优势: ['网络效应护城河', '边际成本低', '极高利润'],
+                劣势: ['冷启动困难', '监管风险高', '生态治理复杂'],
+                适用条件: ['多边参与者', '网络效应强', '交易需撮合'],
                 典型公司: ['Uber', 'Facebook', 'Amazon Marketplace', '微信'],
-                風險: ['反壟斷審查', '監管限制', '內容責任']
+                风险: ['反垄断审查', '监管限制', '内容责任']
             },
             franchise: {
                 name: '加盟模式',
                 icon: '🏪',
-                特點: ['快速擴張', '低資本投入', '品牌複製', '營運標準化'],
-                收入結構: ['加盟金', '權利金', '廣告基金', '房地產費用'],
-                優勢: ['快速擴張', '資本輕量', '加盟主承擔投資'],
-                劣勢: ['品質控制難', '加盟主依賴', '品牌風險'],
-                適用條件: ['商業模式可複製', '品牌強', '營運流程標準化'],
-                典型公司: ['McDonald\'s', '7-Eleven', 'Starbucks', '全聯'],
-                風險: ['加盟主不滿', '標準差異', '品牌侵害']
+                特点: ['快速扩张', '低资本投入', '品牌拷贝', '营运标准化'],
+                收入结构: ['加盟金', '权利金', '广告基金', '房地产费用'],
+                优势: ['快速扩张', '资本轻量', '加盟主承担投资'],
+                劣势: ['质量控制难', '加盟主依赖', '品牌风险'],
+                适用条件: ['商业模式可拷贝', '品牌强', '营运流程标准化'],
+                典型公司: ['McDonald\'s', '7-Eleven', 'Starbucks', '全联'],
+                风险: ['加盟主不满', '标准差异', '品牌侵害']
             },
             freemium: {
-                name: '免費增值模式',
+                name: '免费增值模式',
                 icon: '🎁',
-                特點: ['免費基礎版', '付費進階版', '快速使用者增長', '低轉化率'],
-                收入結構: ['高級版費用', '廣告費', '增值功能費'],
-                優勢: ['快速使用者增長', '低獲客成本', '網路效應'],
-                劣勢: ['轉化率低', '基礎設施成本高', '使用者期待免費'],
-                適用條件: ['網路效應強', '免費版邊際成本低', '明確付費功能'],
-                典型公司: ['Spotify', 'Dropbox', 'LinkedIn', '手機遊戲'],
-                風險: ['轉化率不足', '伺服器成本高', '使用者期望管理']
+                特点: ['免费基础版', '付费高级版', '快速用户增长', '低转化率'],
+                收入结构: ['高级版费用', '广告费', '增值功能费'],
+                优势: ['快速用户增长', '低获客成本', '网络效应'],
+                劣势: ['转化率低', '基础设施成本高', '用户期待免费'],
+                适用条件: ['网络效应强', '免费版边际成本低', '明确付费功能'],
+                典型公司: ['Spotify', 'Dropbox', 'LinkedIn', '手机游戏'],
+                风险: ['转化率不足', '服务器成本高', '用户期望管理']
             },
             dtc: {
-                name: '直銷模式',
+                name: '直销模式',
                 icon: '🚚',
-                特點: ['繞過中間商', '直接消費者', '高邊際利潤', '品牌完全控制'],
-                收入結構: ['產品銷售', '會員費', '內容/數據服務'],
-                優勢: ['高邊際利潤', '品牌完全控制', '消費者數據'],
-                劣勢: ['CAC高', '物流成本高', '退貨率高'],
-                適用條件: ['消費者可直購', '品牌差異強', '物流便利'],
+                特点: ['绕过中间商', '直接消费者', '高边际利润', '品牌完全控制'],
+                收入结构: ['产品销售', '会员费', '内容/数据服务'],
+                优势: ['高边际利润', '品牌完全控制', '消费者数据'],
+                劣势: ['CAC高', '物流成本高', '退货率高'],
+                适用条件: ['消费者可直购', '品牌差异强', '物流便利'],
                 典型公司: ['Warby Parker', 'Dollar Shave Club', 'Allbirds'],
-                風險: ['行銷成本高', '物流壓力', '資本需求大']
+                风险: ['营销成本高', '物流压力', '资本需求大']
             },
             razor: {
-                name: '刮鬍刀模式',
+                name: '刮胡刀模式',
                 icon: '⚔️',
-                特點: ['主產品低價', '耗材高利潤', '高轉換成本', '客戶粘性強'],
-                收入結構: ['主產品利潤低', '耗材利潤高', '長期客戶價值'],
-                優勢: ['高利潤', '強客戶粘性', '長期現金流'],
-                劣勢: ['耗材市場飽和', '消費者反彈', '替代品威脅'],
-                適用條件: ['主產品+耗材清晰', '耗材重複率高', '難以替代'],
-                典型公司: ['HP墨盒', 'Gillette刮鬍刀', '遊戲虛寶'],
-                風險: ['山寨耗材', '消費者抗議', '市場飽和']
+                特点: ['主产品低价', '耗材高利润', '高转换成本', '客户粘性强'],
+                收入结构: ['主产品利润低', '耗材利润高', '长期客户价值'],
+                优势: ['高利润', '强客户粘性', '长期现金流'],
+                劣势: ['耗材市场饱和', '消费者反弹', '替代品威胁'],
+                适用条件: ['主产品+耗材清晰', '耗材重复率高', '难以替代'],
+                典型公司: ['HP墨盒', 'Gillette刮胡刀', '游戏虚宝'],
+                风险: ['山寨耗材', '消费者抗议', '市场饱和']
             }
         };
 
@@ -1312,7 +1312,7 @@
             const resultsDiv = document.getElementById('comparisonResults');
 
             if (selected.length === 0) {
-                resultsDiv.innerHTML = '<p style="color: #718096; font-style: italic;">請選擇至少一個商業模式進行比較...</p>';
+                resultsDiv.innerHTML = '<p style="color: #718096; font-style: italic;">请选择至少一个商业模式进行比较...</p>';
                 return;
             }
 
@@ -1325,36 +1325,36 @@
                         <h3 style="margin-bottom: 15px; color: #667eea; font-size: 1.3em;">${model.icon} ${model.name}</h3>
 
                         <div style="margin-bottom: 20px;">
-                            <h4 style="color: #4a5568; margin-bottom: 8px;">📈 收入結構</h4>
+                            <h4 style="color: #4a5568; margin-bottom: 8px;">📈 收入结构</h4>
                             <ul style="list-style: none; padding: 0; font-size: 0.9em; color: #2d3748;">
-                                ${model.收入結構.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
+                                ${model.收入结构.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
                                     <span style="position: absolute; left: 0;">•</span>${item}
                                 </li>`).join('')}
                             </ul>
                         </div>
 
                         <div style="margin-bottom: 20px;">
-                            <h4 style="color: #10b981; margin-bottom: 8px;">✅ 優勢</h4>
+                            <h4 style="color: #10b981; margin-bottom: 8px;">✅ 优势</h4>
                             <ul style="list-style: none; padding: 0; font-size: 0.9em; color: #2d3748;">
-                                ${model.優勢.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
+                                ${model.优势.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
                                     <span style="position: absolute; left: 0; color: #10b981;">✓</span>${item}
                                 </li>`).join('')}
                             </ul>
                         </div>
 
                         <div style="margin-bottom: 20px;">
-                            <h4 style="color: #ef4444; margin-bottom: 8px;">⚠️ 劣勢</h4>
+                            <h4 style="color: #ef4444; margin-bottom: 8px;">⚠️ 劣势</h4>
                             <ul style="list-style: none; padding: 0; font-size: 0.9em; color: #2d3748;">
-                                ${model.劣勢.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
+                                ${model.劣势.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
                                     <span style="position: absolute; left: 0; color: #ef4444;">✕</span>${item}
                                 </li>`).join('')}
                             </ul>
                         </div>
 
                         <div style="margin-bottom: 20px;">
-                            <h4 style="color: #f59e0b; margin-bottom: 8px;">🎯 適用條件</h4>
+                            <h4 style="color: #f59e0b; margin-bottom: 8px;">🎯 适用条件</h4>
                             <ul style="list-style: none; padding: 0; font-size: 0.9em; color: #2d3748;">
-                                ${model.適用條件.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
+                                ${model.适用条件.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
                                     <span style="position: absolute; left: 0;">→</span>${item}
                                 </li>`).join('')}
                             </ul>
@@ -1366,9 +1366,9 @@
                         </div>
 
                         <div>
-                            <h4 style="color: #ef4444; margin-bottom: 8px;">⚡ 核心風險</h4>
+                            <h4 style="color: #ef4444; margin-bottom: 8px;">⚡ 内核风险</h4>
                             <ul style="list-style: none; padding: 0; font-size: 0.9em; color: #2d3748;">
-                                ${model.風險.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
+                                ${model.风险.map(item => `<li style="padding: 4px 0; padding-left: 20px; position: relative;">
                                     <span style="position: absolute; left: 0;">•</span>${item}
                                 </li>`).join('')}
                             </ul>
@@ -1382,15 +1382,15 @@
             if (selected.length > 1) {
                 html += `
                     <div style="margin-top: 40px; padding: 30px; background: #f0f4f8; border-radius: 12px;">
-                        <h3 style="color: #667eea; margin-bottom: 20px;">📊 快速對比總結</h3>
+                        <h3 style="color: #667eea; margin-bottom: 20px;">📊 快速对比总结</h3>
                         <table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
                             <thead>
                                 <tr style="background: white;">
                                     <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">模式</th>
-                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">初期資本</th>
-                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">擴張速度</th>
-                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">利潤潛力</th>
-                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">護城河強度</th>
+                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">初期资本</th>
+                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">扩张速度</th>
+                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">利润潜力</th>
+                                    <th style="padding: 12px; text-align: left; border-bottom: 2px solid #667eea;">护城河强度</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -1398,11 +1398,11 @@
                                     const model = businessModels[modelKey];
                                     const metrics = {
                                         subscription: ['中等', '中等', '中等', '中等'],
-                                        platform: ['低', '快', '極高', '極強'],
-                                        franchise: ['低', '極快', '中高', '中'],
-                                        freemium: ['中等', '極快', '中等', '中等'],
+                                        platform: ['低', '快', '极高', '极强'],
+                                        franchise: ['低', '极快', '中高', '中'],
+                                        freemium: ['中等', '极快', '中等', '中等'],
                                         dtc: ['中高', '中等', '高', '中'],
-                                        razor: ['低', '中等', '極高', '高']
+                                        razor: ['低', '中等', '极高', '高']
                                     };
                                     return `<tr style="border-bottom: 1px solid #e2e8f0;">
                                         <td style="padding: 12px; font-weight: 600;">${model.icon} ${model.name}</td>
@@ -1423,152 +1423,152 @@
 
         // BMC Details
         const bmcDetails = {
-            '關鍵夥伴': {
-                title: '關鍵夥伴 (Key Partners)',
+            '关键伙伴': {
+                title: '关键伙伴 (Key Partners)',
                 content: `
-                    <h4>定義</h4>
-                    <p>幫助企業實現商業模式的外部組織和個人。</p>
-                    <h4>類型</h4>
+                    <h4>定义</h4>
+                    <p>帮助企业实现商业模式的外部组织和个人。</p>
+                    <h4>类型</h4>
                     <ul>
-                        <li>戰略聯盟：同業或異業的合作夥伴</li>
-                        <li>合作關係：為了共同利益的合作</li>
-                        <li>供應商：提供所需的資源</li>
-                        <li>分銷商：幫助銷售產品的通路</li>
+                        <li>战略联盟：同业或异业的合作伙伴</li>
+                        <li>合作关系：为了共同利益的合作</li>
+                        <li>供应商：提供所需的资源</li>
+                        <li>分销商：帮助销售产品的渠道</li>
                     </ul>
                     <h4>重要性</h4>
-                    <p>通過夥伴關係可以降低風險、取得資源、拓展能力和市場。</p>
+                    <p>通过伙伴关系可以降低风险、取得资源、拓展能力和市场。</p>
                 `
             },
-            '關鍵活動': {
-                title: '關鍵活動 (Key Activities)',
+            '关键活动': {
+                title: '关键活动 (Key Activities)',
                 content: `
-                    <h4>定義</h4>
-                    <p>企業為實現其價值主張和運營所必須進行的最重要活動。</p>
-                    <h4>四大類型</h4>
+                    <h4>定义</h4>
+                    <p>企业为实现其价值主张和运营所必须进行的最重要活动。</p>
+                    <h4>四大类型</h4>
                     <ul>
-                        <li>生產：製造或創造產品</li>
-                        <li>問題解決：提供解決方案和諮詢</li>
-                        <li>平台運營：管理平台和生態</li>
-                        <li>網路運營：連接使用者和參與者</li>
+                        <li>生产：制造或创造产品</li>
+                        <li>问题解决：提供解决方案和咨询</li>
+                        <li>平台运营：管理平台和生态</li>
+                        <li>网络运营：连接用户和参与者</li>
                     </ul>
-                    <h4>優化方向</h4>
-                    <p>識別核心活動，外包非核心業務，建立核心競爭力。</p>
+                    <h4>优化方向</h4>
+                    <p>识别内核活动，外包非核心业务，创建内核竞争力。</p>
                 `
             },
-            '關鍵資源': {
-                title: '關鍵資源 (Key Resources)',
+            '关键资源': {
+                title: '关键资源 (Key Resources)',
                 content: `
-                    <h4>定義</h4>
-                    <p>企業為實現商業模式所需的物質、智力、人力和金融資源。</p>
-                    <h4>資源類型</h4>
+                    <h4>定义</h4>
+                    <p>企业为实现商业模式所需的物质、智力、人力和金融资源。</p>
+                    <h4>资源类型</h4>
                     <ul>
-                        <li>物質資源：廠房、設備、基礎設施</li>
-                        <li>智力資源：專利、品牌、數據、聲譽</li>
-                        <li>人力資源：員工、專家、團隊</li>
-                        <li>金融資源：現金、信用線、股權投資</li>
+                        <li>物质资源：厂房、设备、基础设施</li>
+                        <li>智力资源：专利、品牌、数据、声誉</li>
+                        <li>人力资源：员工、专家、团队</li>
+                        <li>金融资源：现金、信用线、股权投资</li>
                     </ul>
                     <h4>管理策略</h4>
-                    <p>集中投資於關鍵資源，優化資源配置，建立防護壁壘。</p>
+                    <p>集中投资于关键资源，优化资源配置，创建防护壁垒。</p>
                 `
             },
-            '價值主張': {
-                title: '價值主張 (Value Proposition)',
+            '价值主张': {
+                title: '价值主张 (Value Proposition)',
                 content: `
-                    <h4>定義</h4>
-                    <p>企業向客戶承諾提供的核心價值和解決的問題。</p>
-                    <h4>價值來源</h4>
+                    <h4>定义</h4>
+                    <p>企业向客户承诺提供的核心价值和解决的问题。</p>
+                    <h4>价值来源</h4>
                     <ul>
-                        <li>性能改進：更好、更快、更強</li>
-                        <li>成本削減：更低的價格</li>
-                        <li>設計和品牌：外觀和感覺</li>
-                        <li>便利性和可達性：容易取得</li>
-                        <li>風險降低：安全可靠</li>
+                        <li>性能改进：更好、更快、更强</li>
+                        <li>成本削减：更低的价格</li>
+                        <li>设计和品牌：外观和感觉</li>
+                        <li>便利性和可达性：容易取得</li>
+                        <li>风险降低：安全可靠</li>
                     </ul>
                     <h4>策略</h4>
-                    <p>準確識別目標客戶的痛點，提供獨特的價值主張。</p>
+                    <p>准确识别目标客户的痛点，提供独特的价值主张。</p>
                 `
             },
-            '顧客關係': {
-                title: '顧客關係 (Customer Relationships)',
+            '顾客关系': {
+                title: '顾客关系 (Customer Relationships)',
                 content: `
-                    <h4>定義</h4>
-                    <p>企業與客戶建立和維持的關係類型。</p>
-                    <h4>關係類型</h4>
+                    <h4>定义</h4>
+                    <p>企业与客户创建和维持的关系类型。</p>
+                    <h4>关系类型</h4>
                     <ul>
-                        <li>個人協助：一對一的服務和互動</li>
-                        <li>自助服務：客戶自主取得資訊和服務</li>
-                        <li>自動化服務：系統化和標準化服務</li>
-                        <li>社區：建立客戶社區和互動平台</li>
-                        <li>共同創造：客戶參與產品開發</li>
+                        <li>个人协助：一对一的服务和交互</li>
+                        <li>自助服务：客户自主取得信息和服务</li>
+                        <li>自动化服务：系统化和标准化服务</li>
+                        <li>社区：创建客户社区和交互平台</li>
+                        <li>共同创造：客户参与产品开发</li>
                     </ul>
-                    <h4>目標</h4>
-                    <p>建立長期客戶關係，提高客戶滿意度和忠誠度。</p>
+                    <h4>目标</h4>
+                    <p>创建长期客户关系，提高客户满意度和忠诚度。</p>
                 `
             },
-            '通路': {
-                title: '通路 (Channels)',
+            '渠道': {
+                title: '渠道 (Channels)',
                 content: `
-                    <h4>定義</h4>
-                    <p>企業與客戶溝通、銷售和交付價值的途徑。</p>
-                    <h4>通路組成</h4>
+                    <h4>定义</h4>
+                    <p>企业与客户沟通、销售和交付价值的途径。</p>
+                    <h4>渠道组成</h4>
                     <ul>
-                        <li>認知：如何讓客戶了解產品</li>
-                        <li>評估：如何幫助客戶評價產品</li>
-                        <li>購買：如何讓客戶購買</li>
-                        <li>交付：如何交付產品/服務</li>
-                        <li>售後：如何提供售後支持</li>
+                        <li>认知：如何让客户了解产品</li>
+                        <li>评估：如何帮助客户评价产品</li>
+                        <li>购买：如何让客户购买</li>
+                        <li>交付：如何交付产品/服务</li>
+                        <li>售后：如何提供售后支持</li>
                     </ul>
-                    <h4>優化</h4>
-                    <p>整合多種通路，創造無縫的客戶體驗，提高轉化率。</p>
+                    <h4>优化</h4>
+                    <p>集成多种渠道，创造无缝的客户体验，提高转化率。</p>
                 `
             },
-            '目標客層': {
-                title: '目標客層 (Customer Segments)',
+            '目标客层': {
+                title: '目标客层 (Customer Segments)',
                 content: `
-                    <h4>定義</h4>
-                    <p>企業希望服務和創造價值的客戶群體。</p>
-                    <h4>分類維度</h4>
+                    <h4>定义</h4>
+                    <p>企业希望服务和创造价值的客户群体。</p>
+                    <h4>分类维度</h4>
                     <ul>
-                        <li>人口統計：年齡、性別、收入等</li>
-                        <li>地理位置：地區、國家、氣候等</li>
-                        <li>心理特徵：價值觀、生活方式等</li>
-                        <li>行為特徵：購買習慣、使用頻率等</li>
+                        <li>人口统计：年龄、性别、收入等</li>
+                        <li>地理位置：地区、国家、气候等</li>
+                        <li>心理特征：价值观、生活方式等</li>
+                        <li>行为特征：购买习惯、使用频率等</li>
                     </ul>
                     <h4>策略</h4>
-                    <p>明確界定目標客層，針對性地設計產品和服務，提高市場效率。</p>
+                    <p>明确界定目标客层，针对性地设计产品和服务，提高市场效率。</p>
                 `
             },
-            '成本結構': {
-                title: '成本結構 (Cost Structure)',
+            '成本结构': {
+                title: '成本结构 (Cost Structure)',
                 content: `
-                    <h4>定義</h4>
-                    <p>為實現商業模式而產生的所有成本。</p>
-                    <h4>成本類型</h4>
+                    <h4>定义</h4>
+                    <p>为实现商业模式而产生的所有成本。</p>
+                    <h4>成本类型</h4>
                     <ul>
-                        <li>固定成本：不隨產出變化的成本</li>
-                        <li>變動成本：隨產出變化的成本</li>
-                        <li>規模經濟：隨產量增加而降低的成本</li>
-                        <li>範疇經濟：多個產品共享成本</li>
+                        <li>固定成本：不随产出变化的成本</li>
+                        <li>变动成本：随产出变化的成本</li>
+                        <li>规模经济：随产量增加而降低的成本</li>
+                        <li>范畴经济：多个产品共享成本</li>
                     </ul>
                     <h4>控制方向</h4>
-                    <p>降低成本、優化支出、實現規模經濟、提高效率。</p>
+                    <p>降低成本、优化支出、实现规模经济、提高效率。</p>
                 `
             },
             '收益流': {
                 title: '收益流 (Revenue Streams)',
                 content: `
-                    <h4>定義</h4>
-                    <p>企業為客戶提供價值而獲得的回報。</p>
+                    <h4>定义</h4>
+                    <p>企业为客户提供价值而获得的回报。</p>
                     <h4>收益方式</h4>
                     <ul>
-                        <li>銷售收入：直接銷售產品或服務</li>
-                        <li>訂閱費：定期收取費用</li>
-                        <li>許可費：授權使用智慧財產權</li>
-                        <li>廣告收入：向廣告商收費</li>
-                        <li>佣金：從交易中取得百分比</li>
+                        <li>销售收入：直接销售产品或服务</li>
+                        <li>订阅费：定期收取费用</li>
+                        <li>许可费：授权使用知识产权权</li>
+                        <li>广告收入：向广告商收费</li>
+                        <li>佣金：从交易中取得百分比</li>
                     </ul>
-                    <h4>優化策略</h4>
-                    <p>多元化收入來源，提高客戶終身價值，建立可持續的盈利模式。</p>
+                    <h4>优化策略</h4>
+                    <p>多元化收入来源，提高客户终身价值，创建可持续的盈利模式。</p>
                 `
             }
         };

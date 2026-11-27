@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>投資與企業估值 - 互動圖表</title>
+    <title>投资与企业估值 - 交互图表</title>
     <style>
         * {
             margin: 0;
@@ -104,7 +104,7 @@
             }
         }
 
-        /* Tab 1: 投資工具比較 */
+        /* Tab 1: 投资工具比较 */
         .tools-header {
             display: flex;
             gap: 10px;
@@ -257,7 +257,7 @@
             color: #475569;
         }
 
-        /* Tab 2: 估值計算機 */
+        /* Tab 2: 估值计算机 */
         .calculator-section {
             margin-bottom: 40px;
         }
@@ -445,7 +445,7 @@
             color: #475569;
         }
 
-        /* Tab 3: 資產配置模擬器 */
+        /* Tab 3: 资产配置模拟器 */
         .allocation-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -639,7 +639,7 @@
             color: white;
         }
 
-        /* Tab 4: 投資心理偏誤 */
+        /* Tab 4: 投资心理偏误 */
         .biases-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -796,63 +796,63 @@
 <body>
     <div class="container">
         <header>
-            <h1>📊 投資與企業估值</h1>
-            <p class="subtitle">互動式學習工具</p>
+            <h1>📊 投资与企业估值</h1>
+            <p class="subtitle">交互式学习工具</p>
         </header>
 
         <!-- Tabs Navigation -->
         <div class="tabs-nav">
-            <button class="tab-btn active" onclick="switchTab('tools')">投資工具比較</button>
-            <button class="tab-btn" onclick="switchTab('valuation')">估值計算機</button>
-            <button class="tab-btn" onclick="switchTab('allocation')">資產配置模擬器</button>
-            <button class="tab-btn" onclick="switchTab('biases')">投資心理偏誤</button>
+            <button class="tab-btn active" onclick="switchTab('tools')">投资工具比较</button>
+            <button class="tab-btn" onclick="switchTab('valuation')">估值计算机</button>
+            <button class="tab-btn" onclick="switchTab('allocation')">资产配置模拟器</button>
+            <button class="tab-btn" onclick="switchTab('biases')">投资心理偏误</button>
         </div>
 
         <!-- Tabs Container -->
         <div class="tabs-container">
-            <!-- Tab 1: 投資工具比較 -->
+            <!-- Tab 1: 投资工具比较 -->
             <div id="tools" class="tab-content active">
                 <div class="tools-header">
-                    <button class="sort-btn active" onclick="sortTools('default')">預設排序</button>
-                    <button class="sort-btn" onclick="sortTools('risk')">按風險排序</button>
-                    <button class="sort-btn" onclick="sortTools('return')">按預期報酬排序</button>
+                    <button class="sort-btn active" onclick="sortTools('default')">默认排序</button>
+                    <button class="sort-btn" onclick="sortTools('risk')">按风险排序</button>
+                    <button class="sort-btn" onclick="sortTools('return')">按预期报酬排序</button>
                 </div>
                 <div class="tools-grid" id="toolsGrid"></div>
             </div>
 
-            <!-- Tab 2: 估值計算機 -->
+            <!-- Tab 2: 估值计算机 -->
             <div id="valuation" class="tab-content">
-                <!-- Section A: 相對估值法 -->
+                <!-- Section A: 相对估值法 -->
                 <div class="calculator-section">
-                    <h2 class="section-title">相對估值法</h2>
+                    <h2 class="section-title">相对估值法</h2>
                     <div class="input-grid">
                         <div class="input-group">
-                            <label>每股盈餘 (EPS) - 元</label>
+                            <label>每股盈余 (EPS) - 元</label>
                             <input type="number" id="eps" value="5.2" step="0.1">
                         </div>
                         <div class="input-group">
-                            <label>股價 - 元</label>
+                            <label>股价 - 元</label>
                             <input type="number" id="stockPrice" value="520" step="1">
                         </div>
                         <div class="input-group">
-                            <label>每股淨值 (BPS) - 元</label>
+                            <label>每股净值 (BPS) - 元</label>
                             <input type="number" id="bps" value="45" step="0.1">
                         </div>
                         <div class="input-group">
-                            <label>EBITDA - 百萬元</label>
+                            <label>EBITDA - 百万元</label>
                             <input type="number" id="ebitda" value="1200" step="10">
                         </div>
                         <div class="input-group">
-                            <label>企業價值 (EV) - 百萬元</label>
+                            <label>企业价值 (EV) - 百万元</label>
                             <input type="number" id="ev" value="8000" step="10">
                         </div>
                         <div class="input-group">
-                            <label>盈餘成長率 (%) - 預期5年平均</label>
+                            <label>盈余成长率 (%) - 预期5年平均</label>
                             <input type="number" id="growthRate" value="12" step="0.5">
                         </div>
                     </div>
 
-                    <button class="sort-btn active" onclick="calculateRelativeValuation()" style="width: auto; margin-top: 10px;">計算估值指標</button>
+                    <button class="sort-btn active" onclick="calculateRelativeValuation()" style="width: auto; margin-top: 10px;">计算估值指针</button>
 
                     <div class="results-grid" id="relativeResults" style="margin-top: 30px; display: none;">
                         <div class="result-card" id="peCard">
@@ -861,7 +861,7 @@
                             <div class="result-interpretation" id="peInterpretation"></div>
                         </div>
                         <div class="result-card" id="pbCard">
-                            <div class="result-label">股價淨值比 (PB)</div>
+                            <div class="result-label">股价净值比 (PB)</div>
                             <div class="result-value" id="pbValue">0.00</div>
                             <div class="result-interpretation" id="pbInterpretation"></div>
                         </div>
@@ -878,74 +878,74 @@
                     </div>
                 </div>
 
-                <!-- Section B: DCF 簡易計算 -->
+                <!-- Section B: DCF 简易计算 -->
                 <div class="calculator-section">
-                    <h2 class="section-title">DCF 折現現金流量估值法</h2>
+                    <h2 class="section-title">DCF 折现现金流量估值法</h2>
 
                     <div class="dcf-formula">
-                        <strong>企業價值 = Σ(FCF_t / (1+r)^t) + 終端價值 / (1+r)^n</strong><br>
+                        <strong>企业价值 = Σ(FCF_t / (1+r)^t) + 终端价值 / (1+r)^n</strong><br>
                         <br>
-                        其中：FCF = 自由現金流 | r = 折現率 | t = 年份 | 終端價值 = FCF_5 × (1+g) / (r-g)
+                        其中：FCF = 自由现金流 | r = 折现率 | t = 年份 | 终端价值 = FCF_5 × (1+g) / (r-g)
                     </div>
 
                     <div class="input-grid">
                         <div class="input-group">
-                            <label>第1年 FCF (百萬元)</label>
+                            <label>第1年 FCF (百万元)</label>
                             <input type="number" id="fcf1" value="500" step="10">
                         </div>
                         <div class="input-group">
-                            <label>第2年 FCF (百萬元)</label>
+                            <label>第2年 FCF (百万元)</label>
                             <input type="number" id="fcf2" value="550" step="10">
                         </div>
                         <div class="input-group">
-                            <label>第3年 FCF (百萬元)</label>
+                            <label>第3年 FCF (百万元)</label>
                             <input type="number" id="fcf3" value="605" step="10">
                         </div>
                         <div class="input-group">
-                            <label>第4年 FCF (百萬元)</label>
+                            <label>第4年 FCF (百万元)</label>
                             <input type="number" id="fcf4" value="665" step="10">
                         </div>
                         <div class="input-group">
-                            <label>第5年 FCF (百萬元)</label>
+                            <label>第5年 FCF (百万元)</label>
                             <input type="number" id="fcf5" value="732" step="10">
                         </div>
                         <div class="input-group">
-                            <label>折現率 (%) - WACC</label>
+                            <label>折现率 (%) - WACC</label>
                             <input type="number" id="discountRate" value="8" step="0.5">
                         </div>
                         <div class="input-group">
-                            <label>永續成長率 (%)</label>
+                            <label>永续成长率 (%)</label>
                             <input type="number" id="perpetualGrowth" value="2.5" step="0.5">
                         </div>
                         <div class="input-group">
-                            <label>流通股數 (百萬股)</label>
+                            <label>流通股数 (百万股)</label>
                             <input type="number" id="sharesOutstanding" value="100" step="1">
                         </div>
                     </div>
 
-                    <button class="sort-btn active" onclick="calculateDCF()" style="width: auto; margin-top: 10px;">計算DCF估值</button>
+                    <button class="sort-btn active" onclick="calculateDCF()" style="width: auto; margin-top: 10px;">计算DCF估值</button>
 
                     <div class="results-grid" id="dcfResults" style="margin-top: 30px; display: none;">
                         <div class="result-card">
-                            <div class="result-label">企業內在價值</div>
+                            <div class="result-label">企业内在价值</div>
                             <div class="result-value" id="enterpriseValue">0.00</div>
-                            <div style="font-size: 0.8rem; color: #475569; margin-top: 5px;">百萬元</div>
+                            <div style="font-size: 0.8rem; color: #475569; margin-top: 5px;">百万元</div>
                         </div>
                         <div class="result-card">
-                            <div class="result-label">每股內在價值</div>
+                            <div class="result-label">每股内在价值</div>
                             <div class="result-value" id="intrinsicPerShare">0.00</div>
                             <div style="font-size: 0.8rem; color: #475569; margin-top: 5px;">元</div>
                         </div>
                     </div>
 
                     <div class="chart-container">
-                        <div class="chart-title">各年現金流折現值貢獻</div>
+                        <div class="chart-title">各年现金流折现值贡献</div>
                         <div class="bar-chart" id="dcfChart"></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 3: 資產配置模擬器 -->
+            <!-- Tab 3: 资产配置模拟器 -->
             <div id="allocation" class="tab-content">
                 <div class="allocation-container">
                     <div class="sliders-section">
@@ -959,7 +959,7 @@
 
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>債券 (Bond)</span>
+                                <span>债券 (Bond)</span>
                                 <span class="slider-value" id="bondPercent">30%</span>
                             </div>
                             <input type="range" id="bondSlider" min="0" max="100" value="30" oninput="updateAllocation()">
@@ -967,7 +967,7 @@
 
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>不動產 (Real Estate)</span>
+                                <span>不动产 (Real Estate)</span>
                                 <span class="slider-value" id="rePercent">10%</span>
                             </div>
                             <input type="range" id="reSlider" min="0" max="100" value="10" oninput="updateAllocation()">
@@ -975,7 +975,7 @@
 
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>現金 (Cash)</span>
+                                <span>现金 (Cash)</span>
                                 <span class="slider-value" id="cashPercent">10%</span>
                             </div>
                             <input type="range" id="cashSlider" min="0" max="100" value="10" oninput="updateAllocation()" disabled>
@@ -990,11 +990,11 @@
 
                 <div class="metrics-cards">
                     <div class="metric-card">
-                        <div class="metric-name">預期年報酬率</div>
+                        <div class="metric-name">预期年报酬率</div>
                         <div class="metric-value" id="expectedReturn">7.5%</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-name">預期波動度 (風險)</div>
+                        <div class="metric-name">预期波动度 (风险)</div>
                         <div class="metric-value" id="volatility">8.2%</div>
                     </div>
                     <div class="metric-card">
@@ -1004,23 +1004,23 @@
                 </div>
 
                 <div class="preset-portfolios">
-                    <div class="preset-title">快速選擇預設投資組合</div>
+                    <div class="preset-title">快速选择默认投资组合</div>
                     <div class="preset-buttons">
-                        <button class="preset-btn" onclick="loadPreset('aggressive')">積極型 (80/10/5/5)</button>
-                        <button class="preset-btn active" onclick="loadPreset('balanced')">穩健型 (50/30/10/10)</button>
+                        <button class="preset-btn" onclick="loadPreset('aggressive')">积极型 (80/10/5/5)</button>
+                        <button class="preset-btn active" onclick="loadPreset('balanced')">稳健型 (50/30/10/10)</button>
                         <button class="preset-btn" onclick="loadPreset('conservative')">保守型 (20/50/10/20)</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tab 4: 投資心理偏誤 -->
+            <!-- Tab 4: 投资心理偏误 -->
             <div id="biases" class="tab-content">
                 <div class="biases-grid" id="biasesGrid"></div>
             </div>
         </div>
 
         <footer>
-            <p>此互動工具僅供教育用途。投資決策應諮詢專業人士。© 2026</p>
+            <p>此交互工具仅供教育用途。投资决策应咨询专业人士。© 2026</p>
         </footer>
     </div>
 
@@ -1059,19 +1059,19 @@
                 returnRange: '5-15%',
                 liquidity: '高',
                 minimum: '100元',
-                bestFor: '長期成長型投資者',
-                pros: ['高成長潛力', '流動性高', '可獲得股息'],
-                cons: ['波動性大', '風險較高', '需時間研究']
+                bestFor: '长期成长型投资者',
+                pros: ['高成长潜力', '流动性高', '可获得股息'],
+                cons: ['波动性大', '风险较高', '需时间研究']
             },
             {
-                name: '債券',
+                name: '债券',
                 risk: 2,
                 returnRange: '2-5%',
                 liquidity: '中',
                 minimum: '1,000元',
-                bestFor: '保守型、年長投資者',
-                pros: ['報酬穩定', '風險低', '可預測收入'],
-                cons: ['報酬率低', '面臨利率風險', '流動性相對低']
+                bestFor: '保守型、年长投资者',
+                pros: ['报酬稳定', '风险低', '可预测收入'],
+                cons: ['报酬率低', '面临利率风险', '流动性相对低']
             },
             {
                 name: '共同基金/ETF',
@@ -1079,19 +1079,19 @@
                 returnRange: '4-10%',
                 liquidity: '高',
                 minimum: '500元',
-                bestFor: '分散投資者',
-                pros: ['分散風險', '專業管理', '易於投資'],
-                cons: ['費用較高', '報酬不確定', '透明度變化']
+                bestFor: '分散投资者',
+                pros: ['分散风险', '专业管理', '易于投资'],
+                cons: ['费用较高', '报酬不确定', '透明度变化']
             },
             {
-                name: '不動產',
+                name: '不动产',
                 risk: 3,
                 returnRange: '3-8%',
                 liquidity: '低',
-                minimum: '50萬元以上',
-                bestFor: '長期投資者',
-                pros: ['實物資產', '穩定現金流', '槓桿投資'],
-                cons: ['高初始投資', '流動性差', '維護成本高']
+                minimum: '50万元以上',
+                bestFor: '长期投资者',
+                pros: ['实物资产', '稳定现金流', '杠杆投资'],
+                cons: ['高初始投资', '流动性差', '维护成本高']
             },
             {
                 name: '衍生性商品',
@@ -1099,9 +1099,9 @@
                 returnRange: '10-50%',
                 liquidity: '高',
                 minimum: '1,000元',
-                bestFor: '有經驗的交易者',
-                pros: ['高報酬潛力', '靈活策略', '對沖工具'],
-                cons: ['極高風險', '複雜性高', '可能全損']
+                bestFor: '有经验的交易者',
+                pros: ['高报酬潜力', '灵活策略', '对冲工具'],
+                cons: ['极高风险', '复杂性高', '可能全损']
             },
             {
                 name: '定存',
@@ -1109,9 +1109,9 @@
                 returnRange: '0.5-2%',
                 liquidity: '低',
                 minimum: '1元',
-                bestFor: '保守型、短期儲蓄',
-                pros: ['安全穩定', '利息保障', '易於操作'],
-                cons: ['報酬極低', '不抗通膨', '資金被綁定']
+                bestFor: '保守型、短期储蓄',
+                pros: ['安全稳定', '利息保障', '易于操作'],
+                cons: ['报酬极低', '不抗通胀', '资金被绑定']
             }
         ];
 
@@ -1144,23 +1144,23 @@
                 card.innerHTML = `
                     <div class="tool-card-title">${tool.name}</div>
                     <div class="risk-indicator">
-                        <div class="risk-label">風險</div>
+                        <div class="risk-label">风险</div>
                         ${riskStars}
                     </div>
                     <div class="tool-detail">
-                        <span class="detail-label">預期報酬</span>
+                        <span class="detail-label">预期报酬</span>
                         <span class="detail-value">${tool.returnRange}</span>
                     </div>
                     <div class="tool-detail">
-                        <span class="detail-label">流動性</span>
+                        <span class="detail-label">流动性</span>
                         <span class="detail-value">${tool.liquidity}</span>
                     </div>
                     <div class="tool-detail">
-                        <span class="detail-label">最低投資</span>
+                        <span class="detail-label">最低投资</span>
                         <span class="detail-value">${tool.minimum}</span>
                     </div>
                     <div class="tool-detail">
-                        <span class="detail-label">最適投資者</span>
+                        <span class="detail-label">最适投资者</span>
                         <span class="detail-value">${tool.bestFor}</span>
                     </div>
                 `;
@@ -1183,11 +1183,11 @@
                 expandedContent.innerHTML = `
                     <div class="pros-cons">
                         <div class="pros">
-                            <div class="pros-title">✓ 優點</div>
+                            <div class="pros-title">✓ 优点</div>
                             <ul>${prosList}</ul>
                         </div>
                         <div class="cons">
-                            <div class="cons-title">✗ 缺點</div>
+                            <div class="cons-title">✗ 缺点</div>
                             <ul>${consList}</ul>
                         </div>
                     </div>
@@ -1227,19 +1227,19 @@
                 if (type === 'pe') {
                     if (numValue < 15) return { text: '便宜', class: 'cheap' };
                     if (numValue < 25) return { text: '合理', class: 'fair' };
-                    return { text: '昂貴', class: 'expensive' };
+                    return { text: '昂贵', class: 'expensive' };
                 } else if (type === 'pb') {
                     if (numValue < 1.5) return { text: '便宜', class: 'cheap' };
                     if (numValue < 3) return { text: '合理', class: 'fair' };
-                    return { text: '昂貴', class: 'expensive' };
+                    return { text: '昂贵', class: 'expensive' };
                 } else if (type === 'evEbitda') {
                     if (numValue < 8) return { text: '便宜', class: 'cheap' };
                     if (numValue < 12) return { text: '合理', class: 'fair' };
-                    return { text: '昂貴', class: 'expensive' };
+                    return { text: '昂贵', class: 'expensive' };
                 } else if (type === 'peg') {
                     if (numValue < 1) return { text: '便宜', class: 'cheap' };
                     if (numValue < 2) return { text: '合理', class: 'fair' };
-                    return { text: '昂貴', class: 'expensive' };
+                    return { text: '昂贵', class: 'expensive' };
                 }
                 return '';
             }
@@ -1344,7 +1344,7 @@
                 <div class="bar" style="height: ${terminalBarHeight}px; background: linear-gradient(180deg, #8b5cf6 0%, #6d28d9 100%);">
                     <div class="bar-value">${pvTerminal.toFixed(0)}</div>
                 </div>
-                <div class="bar-label">終端價值</div>
+                <div class="bar-label">终端价值</div>
             `;
             chart.appendChild(terminalItem);
         }
@@ -1400,7 +1400,7 @@
             svg.innerHTML = '';
 
             const colors = ['#3b82f6', '#ef4444', '#f59e0b', '#10b981'];
-            const labels = ['股票', '債券', '不動產', '現金'];
+            const labels = ['股票', '债券', '不动产', '现金'];
             const values = [stock, bond, re, cash];
 
             let currentAngle = -90;
@@ -1500,46 +1500,46 @@
         // ============ Tab 4: Investment Biases ============
         const biases = [
             {
-                name: '過度自信',
+                name: '过度自信',
                 emoji: '😎',
-                definition: '高估自己的知識和預測能力',
-                example: '散戶認為自己能打敗市場，頻繁交易導致績效不佳',
-                solution: '定期檢視績效，採用被動投資，相信市場效率'
+                definition: '高估自己的知识和预测能力',
+                example: '散户认为自己能打败市场，频繁交易导致绩效不佳',
+                solution: '定期查看绩效，采用被动投资，相信市场效率'
             },
             {
-                name: '損失趨避',
+                name: '损失趋避',
                 emoji: '😰',
-                definition: '害怕損失的心理強於獲利的喜悅',
-                example: '股票下跌時恐慌賣出，錯過後續反彈',
-                solution: '建立投資計畫，堅守長期目標，控制情緒反應'
+                definition: '害怕损失的心理强于利润的喜悦',
+                example: '股票下跌时恐慌卖出，错过后续反弹',
+                solution: '创建投资计划，坚守长期目标，控制情绪反应'
             },
             {
-                name: '從眾效應',
+                name: '从众效应',
                 emoji: '🐑',
-                definition: '跟隨大眾決策而非獨立判斷',
-                example: '看到朋友賺錢就盲目跟風買股，形成泡沫',
-                solution: '進行充分研究，設定個人標準，獨立思考'
+                definition: '跟随大众决策而非独立判断',
+                example: '看到朋友赚钱就盲目跟风买股，形成泡沫',
+                solution: '进行充分研究，设置个人标准，独立思考'
             },
             {
-                name: '定錨效應',
+                name: '定锚效应',
                 emoji: '⚓',
-                definition: '過度依賴第一個數字資訊做決策',
-                example: '股票曾經跌到100元，現在200元就認為便宜',
-                solution: '使用基本面分析，不依賴歷史價位參考'
+                definition: '过度依赖第一个数字信息做决策',
+                example: '股票曾经跌到100元，现在200元就认为便宜',
+                solution: '使用基本面分析，不依赖历史价位参考'
             },
             {
-                name: '近因偏誤',
+                name: '近因偏误',
                 emoji: '📺',
-                definition: '過度重視最近發生的事件',
-                example: '因最近一次虧損就放棄長期投資計畫',
-                solution: '回顧長期績效，忽略短期波動，保持耐心'
+                definition: '过度重视最近发生的事件',
+                example: '因最近一次亏损就放弃长期投资计划',
+                solution: '回顾长期绩效，忽略短期波动，保持耐心'
             },
             {
-                name: '處分效應',
+                name: '处分效应',
                 emoji: '📈',
-                definition: '急著賣出賺錢的部位，持有虧損部位',
-                example: '股票漲到賺50%就賣，虧損股則一直持有',
-                solution: '基於基本面決策，使用止損機制，平衡獲利/虧損'
+                definition: '急着卖出赚钱的部位，持有亏损部位',
+                example: '股票涨到赚50%就卖，亏损股则一直持有',
+                solution: '基于基本面决策，使用止损机制，平衡利润/亏损'
             }
         ];
 
@@ -1558,12 +1558,12 @@
                         <div class="bias-card-front">
                             <div class="bias-emoji">${bias.emoji}</div>
                             <div class="bias-name">${bias.name}</div>
-                            <div class="bias-hint">點擊以查看詳細</div>
+                            <div class="bias-hint">点击以查看详细</div>
                         </div>
                         <div class="bias-card-back">
-                            <div class="bias-definition"><strong>定義：</strong> ${bias.definition}</div>
+                            <div class="bias-definition"><strong>定义：</strong> ${bias.definition}</div>
                             <div class="bias-example">
-                                <div class="bias-example-title">💡 實例</div>
+                                <div class="bias-example-title">💡 实例</div>
                                 ${bias.example}
                             </div>
                             <div class="bias-solution">
